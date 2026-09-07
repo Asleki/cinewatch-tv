@@ -1,0 +1,12 @@
+{
+  "name": "@cinewatch/web",
+  "version": "0.0.0",
+  "private": true,
+  "description": "CineWatch TV web application boundary; implementation begins in CWTV.V1.2.4.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": {
+    "node": ">=24.18.0 <25",
+    "npm": ">=12 <13"
+  }
+}

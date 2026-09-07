@@ -21,17 +21,17 @@ CineWatch TV is not intended to be a TMDB clone, a YouTube channel, or an unlice
 
 ## Release lifecycle
 
-- **V1 — Development:** approximately 6 months; private, invite-only development and testing; initially four authorized testers; no commercial activity.
-- **V2 — Production + Research:** approximately 12 months; production-grade deployment, still noncommercial; AI/ML research only where the applicable data/content rights explicitly permit it.
+- **V1 — Development:** private, invite-only development and testing; initially four authorized testers; no commercial activity.
+- **V2 — Production + Research:** production-grade deployment, still noncommercial; AI/ML research only where applicable data/content rights explicitly permit it.
 - **V3 — Commercial:** future commercial release after required provider, API, content, distribution, and other commercial rights are qualified.
 
 ## Legacy repository
 
 `Asleki/CineWatchStream` is retained as the **Legacy Product Source of Truth** for styling intent, page concepts, content taxonomy, interaction history, and prior integration evidence.
 
-It is **not** the runtime authority for V1 authentication, backend architecture, persistent state, legal playback decisions, secrets, payments, deployment, or security.
+It is **not** runtime authority for V1 authentication, backend architecture, persistent state, legal playback decisions, secrets, payments, deployment, or security.
 
-## Architecture authority
+## Governance and architecture authority
 
 The approved V1 blueprint source is:
 
@@ -41,24 +41,41 @@ Its signed human-readable approval companion is:
 
 `docs/blueprints/CineWatch_Tv_V1_Blueprint_001.pdf`
 
+The approved engineering architecture is:
+
+`docs/architecture/CineWatch_TV_V1_Engineering_Architecture_Selection_001.md`
+
 The current API/content-rights qualification register is:
 
 `docs/governance/CineWatch_TV_V1_API_Content_Rights_Qualification_Register_001.md`
 
-## Initial engineering direction
+## Engineering foundation
 
-The blueprint currently targets:
+The initial V1 engineering direction is:
 
-- AWS-hosted services;
-- PostgreSQL as the authoritative CineWatch data store;
-- a CineWatch-owned backend/API boundary;
-- a modular frontend with a governed design system;
-- real authentication and user state;
-- provider-neutral rights and availability contracts;
-- future NexVox search/inference integration without making AI a V1 blocker;
-- future NexiLabs simulation-realm integration without making NexiLabs monetary systems a V1 dependency.
+- Next.js + TypeScript web boundary under `apps/web`;
+- FastAPI + Python backend boundary under `services/api`;
+- PostgreSQL 17 server target with an independent `cinewatch_dev` database authority;
+- npm workspaces with one root `package-lock.json`;
+- Node 24 and npm 12 toolchain lines;
+- Python 3.14 toolchain line;
+- FastAPI OpenAPI as future runtime API-schema authority;
+- Termux-supported local engineering with Linux CI authoritative for platform-specific production builds;
+- AWS development followed by a governed AWS-to-Azure migration during V1;
+- NPP integration, when needed, through governed provider/service contracts rather than shared application tables.
 
-The exact application stack and deployable repository tree are established in the next engineering milestone after Blueprint 001 is reviewed and approved.
+## Repository boundaries
+
+```text
+apps/web            CineWatch web application boundary
+services/api        CineWatch backend service boundary
+packages/contracts  Shared/generated API-contract boundary
+scripts             Repository engineering and qualification scripts
+tests               Cross-cutting repository qualification
+docs                Blueprint, governance, architecture, and decisions
+```
+
+Product-feature implementation is introduced only by its owning milestone.
 
 ## Security
 
@@ -67,13 +84,13 @@ Never commit:
 - passwords;
 - API keys;
 - OAuth client secrets;
-- AWS credentials;
+- AWS or Azure credentials;
 - database credentials;
 - private certificates or signing keys;
 - private contracts or confidential provider correspondence;
 - personal access tokens.
 
-Use environment variables, AWS Secrets Manager, or another approved secret store when the relevant infrastructure milestone begins.
+Use environment variables and approved secret stores when the relevant infrastructure milestone begins.
 
 ## Licensing
 
@@ -81,6 +98,6 @@ No open-source license has been selected for this repository. Until an explicit 
 
 ## Current milestone
 
-**CWTV.V1.1 — Brand, Experience, Legacy, Rights & Governance Foundation**
+**CWTV.V1.2.2 — Repository Tree & Toolchain Foundation**
 
-The repository begins with documentation and governance authority before production application code is introduced.
+This milestone establishes repository structure and toolchain authority only. It does not implement Discover, Watch, Explore, My CineWatch, authentication, database schemas, provider integrations, rights enforcement, or playback.

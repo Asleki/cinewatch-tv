@@ -1,0 +1,22 @@
+{
+  "name": "cinewatch-tv",
+  "version": "0.0.0",
+  "private": true,
+  "description": "CineWatch TV V1 engineering workspace",
+  "license": "UNLICENSED",
+  "packageManager": "npm@12.0.2",
+  "engines": {
+    "node": ">=24.18.0 <25",
+    "npm": ">=12 <13"
+  },
+  "workspaces": [
+    "apps/web",
+    "packages/contracts"
+  ],
+  "scripts": {
+    "check:runtime": "bash scripts/check_runtime.sh",
+    "check:tree": "python scripts/check_repository_tree.py",
+    "test:repository": "python -m unittest discover -s tests/repository -p 'test_*.py'",
+    "check": "npm run check:tree && npm run test:repository"
+  }
+}
