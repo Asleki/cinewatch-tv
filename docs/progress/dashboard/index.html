@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>CineWatch TV Engineering Chronicle</title>
+  <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">CineWatch TV · Private V1 Engineering</p>
+      <h1>CineWatch TV Engineering Chronicle</h1>
+      <p class="lede">Append-only engineering progress, failures, corrections, timing evidence and commit lineage.</p>
+    </div>
+    <div class="status-pill" id="current-milestone">Loading…</div>
+  </header>
+
+  <main>
+    <section aria-labelledby="summary-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current state</p>
+          <h2 id="summary-heading">Progress summary</h2>
+        </div>
+        <p class="muted">Only milestones that actually started are counted.</p>
+      </div>
+      <div class="summary-grid" id="summary-grid"></div>
+      <div class="overall-progress" aria-label="Tracked milestone completion">
+        <div class="progress-meta"><span>Tracked milestones qualified</span><strong id="overall-progress-label">—</strong></div>
+        <div class="progress-track"><div class="progress-bar" id="overall-progress-bar"></div></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="milestones-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Milestones</p>
+          <h2 id="milestones-heading">Append-only milestone progress</h2>
+        </div>
+      </div>
+      <div class="milestone-list" id="milestone-list"></div>
+    </section>
+
+    <section class="two-column" aria-label="Difficulty and timing">
+      <article class="panel">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">Evidence-based</p>
+            <h2>Observed difficulty</h2>
+          </div>
+          <span class="muted">1–5</span>
+        </div>
+        <div id="difficulty-chart" class="chart" role="img" aria-label="Observed difficulty by tracked milestone"></div>
+        <p class="footnote">Derived from recorded failures, blockers, corrections and repeated timed qualification cycles. It is not a subjective quality grade.</p>
+      </article>
+      <article class="panel">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">Timing integrity</p>
+            <h2>Recorded time</h2>
+          </div>
+        </div>
+        <div id="timing-list" class="timing-list"></div>
+        <p class="footnote">Timestamp gaps are never assumed to be breaks. Paused time appears only when explicit pause/resume events exist.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="failures-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Learning record</p>
+          <h2 id="failures-heading">Failures and corrections</h2>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Milestone</th><th>Time</th><th>Component</th><th>Failure</th><th>Correction</th></tr></thead>
+          <tbody id="failures-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="two-column" aria-label="Artifacts and commits">
+      <article class="panel">
+        <div class="section-heading compact"><div><p class="eyebrow">Delivery evidence</p><h2>Artifacts</h2></div></div>
+        <div id="artifact-list" class="stack-list"></div>
+      </article>
+      <article class="panel">
+        <div class="section-heading compact"><div><p class="eyebrow">Repository</p><h2>Commit lineage</h2></div></div>
+        <div id="commit-list" class="stack-list"></div>
+      </article>
+    </section>
+
+    <section aria-labelledby="timeline-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Chronology</p>
+          <h2 id="timeline-heading">Engineering event timeline</h2>
+        </div>
+        <span class="muted" id="ledger-head">—</span>
+      </div>
+      <div id="timeline" class="timeline"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Source of truth: <code>docs/progress/activity/engineering-events.jsonl</code></p>
+    <p>Generated projections must not be edited by hand.</p>
+  </footer>
+
+  <div id="load-error" class="load-error" hidden>
+    <strong>Dashboard data could not be loaded.</strong>
+    <span>Serve this directory over HTTP, for example: <code>python -m http.server 8090 -d docs/progress/dashboard</code></span>
+  </div>
+
+  <script src="./dashboard.js" defer></script>
+</body>
+</html>
