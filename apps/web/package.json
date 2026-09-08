@@ -2,11 +2,31 @@
   "name": "@cinewatch/web",
   "version": "0.0.0",
   "private": true,
-  "description": "CineWatch TV web application boundary; implementation begins in CWTV.V1.2.4.",
+  "description": "CineWatch TV V1 web application",
   "license": "UNLICENSED",
   "type": "module",
   "engines": {
     "node": ">=24.18.0 <25",
     "npm": ">=12 <13"
+  },
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.4",
+    "typescript": "6.0.3"
   }
 }

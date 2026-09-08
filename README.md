@@ -98,6 +98,6 @@ No open-source license has been selected for this repository. Until an explicit 
 
 ## Current milestone
 
-**CWTV.V1.2.2 — Repository Tree & Toolchain Foundation**
+**CWTV.V1.2.4 — Frontend Application Skeleton**
 
-This milestone establishes repository structure and toolchain authority only. It does not implement Discover, Watch, Explore, My CineWatch, authentication, database schemas, provider integrations, rights enforcement, or playback.
+The repository now contains qualified repository/toolchain and FastAPI backend foundations. CWTV.V1.2.4 introduces the first Next.js App Router runtime boundary while keeping Discover, Watch, Explore, My CineWatch, authentication, database schemas, provider integrations, rights enforcement, playback, and final design assets out of scope.

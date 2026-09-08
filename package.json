@@ -17,6 +17,11 @@
     "check:runtime": "bash scripts/check_runtime.sh",
     "check:tree": "python scripts/check_repository_tree.py",
     "test:repository": "python -m unittest discover -s tests/repository -p 'test_*.py'",
-    "check": "npm run check:tree && npm run test:repository"
+    "check": "npm run check:tree && npm run check:frontend && npm run test:repository",
+    "check:frontend": "python scripts/check_frontend_skeleton.py",
+    "dev:web": "npm run dev -w @cinewatch/web",
+    "build:web": "npm run build -w @cinewatch/web",
+    "lint:web": "npm run lint -w @cinewatch/web",
+    "typecheck:web": "npm run typecheck -w @cinewatch/web"
   }
 }
