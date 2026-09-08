@@ -3,7 +3,7 @@
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import Field
+from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 EnvironmentName = Literal["local", "development", "private-beta", "staging", "production"]
@@ -24,6 +24,7 @@ class Settings(BaseSettings):
     app_name: str = Field(default="CineWatch TV", validation_alias="CINEWATCH_APP_NAME")
     service_name: str = Field(default="cinewatch-api", validation_alias="CINEWATCH_SERVICE_NAME")
     log_level: LogLevelName = Field(default="INFO", validation_alias="CINEWATCH_LOG_LEVEL")
+    database_url: SecretStr | None = Field(default=None, validation_alias="DATABASE_URL")
 
 
 @lru_cache(maxsize=1)

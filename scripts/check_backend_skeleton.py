@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Deterministically qualify the CWTV.V1.2.3 backend skeleton without importing dependencies."""
+"""Qualify the enduring backend skeleton while permitting milestone-owned persistence."""
 
 from __future__ import annotations
 
@@ -33,9 +33,6 @@ REQUIRED = (
 )
 
 FORBIDDEN_DEPENDENCY_MARKERS = (
-    "sqlalchemy",
-    "psycopg",
-    "alembic",
     "boto",
     "cognito",
     "authlib",
@@ -66,8 +63,8 @@ print("PASS  FastAPI runtime dependencies")
 
 for forbidden in FORBIDDEN_DEPENDENCY_MARKERS:
     if forbidden in joined:
-        fail(f"premature dependency introduced: {forbidden}")
-print("PASS  no database/auth/provider dependencies")
+        fail(f"premature auth/provider/cloud dependency introduced: {forbidden}")
+print("PASS  no premature auth/provider/cloud dependencies")
 
 application = (API / "cinewatch_api" / "application.py").read_text(encoding="utf-8")
 system = (API / "cinewatch_api" / "api" / "system.py").read_text(encoding="utf-8")
@@ -80,5 +77,5 @@ if "RequestIdMiddleware" not in application:
     fail("request ID middleware not installed")
 print("PASS  system and V1 routing contracts")
 
-print("PASS  CWTV.V1.2.3 backend skeleton policy")
+print("PASS  enduring CineWatch backend skeleton policy")
 sys.exit(0)
