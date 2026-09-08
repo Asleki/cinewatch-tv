@@ -173,3 +173,20 @@ Never write any of the following into the chronicle:
 - cookies or session secrets.
 
 The chronicle stores evidence summaries, hashes and non-secret identifiers only.
+
+## Responsive visual qualification contract
+
+The dashboard must remain fully usable without page-level horizontal scrolling on mobile, tablet, or desktop viewports. Long artifact names, SHA-256 values, event types, summaries, commit metadata, and failure details must wrap within their owning card or panel.
+
+The responsive projection uses:
+
+- a colored but accessible dark engineering palette;
+- distinct semantic accents for progress, qualification, failures, corrections and evidence;
+- a responsive difficulty chart that sizes to its container instead of imposing a fixed minimum width;
+- a desktop failure table that wraps safely and a mobile card-style representation with no horizontal table scroll;
+- responsive timeline, artifact and commit layouts;
+- progressive card/reveal and progress-bar animation;
+- `prefers-reduced-motion` support so animation is never mandatory;
+- no external fonts, CDN assets or web dependencies.
+
+Visual styling remains a projection concern only. It does not modify the append-only engineering ledger or change milestone facts.

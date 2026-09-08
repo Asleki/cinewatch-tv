@@ -155,6 +155,35 @@ def main() -> int:
         fail("dashboard foundation must not depend on external web assets")
     pass_line("self-contained private dashboard and noindex policy")
 
+    responsive_markers = [
+        "overflow-x: clip",
+        "@media (max-width: 760px)",
+        "@media (prefers-reduced-motion: reduce)",
+        ".summary-card:nth-child(4)",
+        ".chart .line",
+        "table-layout: fixed",
+    ]
+    for marker in responsive_markers:
+        if marker not in css:
+            fail(f"responsive visual contract marker missing: {marker}")
+    prohibited_overflow_markers = [
+        "min-width: 520px",
+        "min-width: 780px",
+        ".chart { min-height: 280px; overflow-x: auto;",
+    ]
+    for marker in prohibited_overflow_markers:
+        if marker in css:
+            fail(f"horizontal-scroll dashboard pattern remains: {marker}")
+    js_markers = [
+        "getBoundingClientRect().width",
+        "IntersectionObserver",
+        "renderDifficulty(dashboardData)",
+    ]
+    for marker in js_markers:
+        if marker not in js:
+            fail(f"responsive dashboard runtime marker missing: {marker}")
+    pass_line("responsive no-horizontal-scroll and visual-experience policy")
+
     tracked_generated = [path for path in repo.rglob("*") if path.is_file() and ("__pycache__" in path.parts or path.suffix == ".pyc")]
     # Generated Python files may exist locally after tests, but they must never be tracked.
     tracked = subprocess.run(

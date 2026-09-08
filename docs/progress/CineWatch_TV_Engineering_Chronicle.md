@@ -7,12 +7,12 @@
 
 - **Current milestone:** `CWTV.V1.2.5.1`
 - **Tracked milestones:** 7
-- **Qualified milestones:** 6
-- **Tracked milestone completion:** 85.7%
-- **Recorded failed events:** 6
-- **Recorded corrections:** 5
+- **Qualified milestones:** 7
+- **Tracked milestone completion:** 100.0%
+- **Recorded failed events:** 7
+- **Recorded corrections:** 6
 - **Commit events:** 6
-- **Ledger head:** `CWTV-EVT-000056` / `57b9d627d415f5a7df45882153bf45bbdde3c3b367719985b1a7890f3f472701`
+- **Ledger head:** `CWTV-EVT-000065` / `f1fe84efe275bc78446ac292ccc55bcbad9a856ec045d22d3930533863d0f904`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -26,7 +26,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.3` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | not preserved | not preserved |
 | `CWTV.V1.2.4` | QUALIFIED | 100% | 3.5/5 | 2 | 2 | not preserved | not preserved |
 | `CWTV.V1.2.5` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | not preserved | not preserved |
-| `CWTV.V1.2.5.1` | IN_PROGRESS | 60% | 3.3/5 | 2 | 1 | not preserved | 7s |
+| `CWTV.V1.2.5.1` | QUALIFIED | 100% | 4.6/5 | 3 | 2 | 1h 10m 54s | 8s |
 
 ## Failure and correction history
 
@@ -38,6 +38,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.5` | time not preserved | offline-migration-environment | Offline migration qualification exported DATABASE_URL into the later settings test and violated the optional-database configuration contract. | CWTV.V1.2.5_R1 |
 | `CWTV.V1.2.5.1` | 2026-09-08T02:31:12Z | engineering-chronicle | Chronicle static qualification failed. | — |
 | `CWTV.V1.2.5.1` | 2026-09-08T02:31:57Z | repository-tests | Repository regression after chronicle foundation failed. | — |
+| `CWTV.V1.2.5.1` | time not preserved | progress-dashboard | Rendered dashboard was structurally accurate but failed responsive visual qualification. | CWTV.V1.2.5.1_R2 |
 
 ## Commit lineage
 
@@ -61,6 +62,9 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `CWTV.V1.2.5.1_R1_Self_Recording_Projection_Consistency_Correction.zip` — SHA-256 `cc6290c87690065f97e2d25efc1bc17311684d3dc66d25b6ca4ae97c12d9dee1` — CORRECTION_ARTIFACT_GENERATED (2026-09-08T02:36:07Z)
 - `CWTV.V1.2.5.1_R1_Self_Recording_Projection_Consistency_Correction.zip` — SHA-256 `cc6290c87690065f97e2d25efc1bc17311684d3dc66d25b6ca4ae97c12d9dee1` — CORRECTION_ARTIFACT_VERIFIED (2026-09-08T04:37:42+02:00)
 - `CWTV.V1.2.5.1_R1_Self_Recording_Projection_Consistency_Correction.zip` — SHA-256 `cc6290c87690065f97e2d25efc1bc17311684d3dc66d25b6ca4ae97c12d9dee1` — CORRECTION_ARTIFACT_EXTRACTED (2026-09-08T04:37:55+02:00)
+- `CWTV.V1.2.5.1_R2_Responsive_Visual_Experience_Correction.zip` — SHA-256 `cc12b7656bcb4f63ae5103d3fbfccd8e79cfd5469ff85c0600cf6fb564dc356a` — CORRECTION_ARTIFACT_GENERATED (2026-09-08T02:58:22Z)
+- `CWTV.V1.2.5.1_R2_Responsive_Visual_Experience_Correction.zip` — SHA-256 `cc12b7656bcb4f63ae5103d3fbfccd8e79cfd5469ff85c0600cf6fb564dc356a` — CORRECTION_ARTIFACT_VERIFIED (2026-09-08T05:05:59+02:00)
+- `CWTV.V1.2.5.1_R2_Responsive_Visual_Experience_Correction.zip` — SHA-256 `cc12b7656bcb4f63ae5103d3fbfccd8e79cfd5469ff85c0600cf6fb564dc356a` — CORRECTION_ARTIFACT_EXTRACTED (2026-09-08T05:06:10+02:00)
 
 ## Event timeline
 
@@ -120,6 +124,15 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-08T02:38:41Z** · `CWTV.V1.2.5.1` · `REPOSITORY_REGRESSION_PASSED` · **PASS** — Repository regression after Chronicle R1 passed. Duration: 2s. Evidence: exit_code=0
 - **2026-09-08T02:38:51Z** · `CWTV.V1.2.5.1` · `DASHBOARD_RUNTIME_STARTED` · **INFO** — Progress dashboard HTTP runtime smoke after R1 started.
 - **2026-09-08T02:38:53Z** · `CWTV.V1.2.5.1` · `DASHBOARD_RUNTIME_PASSED` · **PASS** — Progress dashboard HTTP runtime smoke after R1 passed. Duration: 2s. Evidence: exit_code=0
+- **time not preserved** · `CWTV.V1.2.5.1` · `VISUAL_QUALIFICATION_FAILED` · **FAILED** — Rendered dashboard was structurally accurate but failed responsive visual qualification. Evidence: Page-level and component horizontal scrolling was visible on mobile; fixed-width chart/table patterns caused overflow.; Visual hierarchy was predominantly grayscale; summary cards, graph, headers and subtitles lacked clear semantic color.; User requested responsive mobile/desktop styling, richer card/graph color and motion.
+- **2026-09-08T02:58:22Z** · `CWTV.V1.2.5.1` · `CORRECTION_ARTIFACT_GENERATED` · **PASS** — R2 responsive visual-experience correction package generated.
+- **2026-09-08T05:05:59+02:00** · `CWTV.V1.2.5.1` · `CORRECTION_ARTIFACT_VERIFIED` · **PASS** — R2 correction archive SHA-256 verified before apply.
+- **2026-09-08T05:06:10+02:00** · `CWTV.V1.2.5.1` · `CORRECTION_ARTIFACT_EXTRACTED` · **PASS** — R2 correction archive extracted locally.
+- **2026-09-08T03:06:20Z** · `CWTV.V1.2.5.1` · `CORRECTION_APPLIED` · **PASS** — R2 removed fixed-width overflow patterns and introduced responsive semantic color, adaptive chart rendering and motion. Evidence: Global page overflow is clipped; chart sizes to its container; desktop table wraps and mobile failures render as stacked cards.; Semantic cyan/green/amber/rose/violet accents and reduced-motion-aware reveal animations added.
+- **2026-09-08T03:06:37Z** · `CWTV.V1.2.5.1` · `DASHBOARD_RUNTIME_STARTED` · **INFO** — Responsive progress dashboard HTTP runtime smoke after R2 started.
+- **2026-09-08T03:06:39Z** · `CWTV.V1.2.5.1` · `DASHBOARD_RUNTIME_PASSED` · **PASS** — Responsive progress dashboard HTTP runtime smoke after R2 passed. Duration: 2s. Evidence: exit_code=0
+- **2026-09-08T03:23:15Z** · `CWTV.V1.2.5.1` · `VISUAL_QUALIFICATION_PASSED` · **PASS** — R2 responsive dashboard visually qualified on mobile and desktop-sized rendering with no destructive horizontal overflow, responsive semantic cards, adaptive difficulty graph, wrapped evidence content, readable failure history and usable timeline presentation
+- **2026-09-08T03:23:22Z** · `CWTV.V1.2.5.1` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.2.5.1 Engineering Chronicle and Progress Dashboard Foundation qualified after static, repository, runtime and visual verification
 
 ## Integrity and timing rules
 
