@@ -48,3 +48,7 @@ python -m uvicorn cinewatch_api.main:app \
 ```
 
 Then inspect `/health`, `/status`, `/api/v1/status`, and `/docs` on the local server.
+
+## OpenAPI contract authority
+
+CWTV.V1.2.6 makes the FastAPI OpenAPI 3.1 projection a governed, checked-in contract. Existing system routes use explicit stable operation IDs. Run `python scripts/export_openapi_contract.py --check` from the repository root to detect schema drift. TypeScript declarations are generated downstream in `packages/contracts`; the API service remains authoritative.

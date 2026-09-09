@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `CWTV.V1.2.5.1`
-- **Tracked milestones:** 7
-- **Qualified milestones:** 7
+- **Current milestone:** `CWTV.V1.2.6`
+- **Tracked milestones:** 8
+- **Qualified milestones:** 8
 - **Tracked milestone completion:** 100.0%
-- **Recorded failed events:** 7
-- **Recorded corrections:** 6
-- **Commit events:** 6
-- **Ledger head:** `CWTV-EVT-000065` / `f1fe84efe275bc78446ac292ccc55bcbad9a856ec045d22d3930533863d0f904`
+- **Recorded failed events:** 8
+- **Recorded corrections:** 7
+- **Commit events:** 7
+- **Ledger head:** `CWTV-EVT-000082` / `9be78acdcbb012cd4d015df953006bded0b825e98d16cc6350c34fedc1f22e9a`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -27,6 +27,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.4` | QUALIFIED | 100% | 3.5/5 | 2 | 2 | not preserved | not preserved |
 | `CWTV.V1.2.5` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | not preserved | not preserved |
 | `CWTV.V1.2.5.1` | QUALIFIED | 100% | 4.6/5 | 3 | 2 | 1h 10m 54s | 8s |
+| `CWTV.V1.2.6` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | 26m 3s | not preserved |
 
 ## Failure and correction history
 
@@ -39,6 +40,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.5.1` | 2026-09-08T02:31:12Z | engineering-chronicle | Chronicle static qualification failed. | — |
 | `CWTV.V1.2.5.1` | 2026-09-08T02:31:57Z | repository-tests | Repository regression after chronicle foundation failed. | — |
 | `CWTV.V1.2.5.1` | time not preserved | progress-dashboard | Rendered dashboard was structurally accurate but failed responsive visual qualification. | CWTV.V1.2.5.1_R2 |
+| `CWTV.V1.2.6` | 2026-09-09T04:52:08Z | api-contracts | Contract runtime qualification failed because the checker assumed openapi-typescript was hoisted into repository-root node_modules. | CWTV.V1.2.6_R1 |
 
 ## Commit lineage
 
@@ -48,6 +50,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `c0324fc80fedca08a7a0fa41cb9adef7e7575869` — feat: establish CineWatch V1 backend service skeleton (2026-09-07T23:06:29+02:00)
 - `7b6a8392d90fb08be9f522e9a182c723f2719cdd` — feat: establish CineWatch V1 frontend application skeleton (2026-09-08T03:25:33+02:00)
 - `678500c0160ac002f8e8585ab4f7560ea22e4d6e` — feat: establish CineWatch V1 PostgreSQL migration foundation (2026-09-08T03:55:07+02:00)
+- `74856ca2738afaa33d33ed7cb1983967fc0355bd` — fix: qualify CineWatch engineering dashboard visual experience (2026-09-08T05:25:09+02:00)
 
 ## Artifacts
 
@@ -65,6 +68,12 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `CWTV.V1.2.5.1_R2_Responsive_Visual_Experience_Correction.zip` — SHA-256 `cc12b7656bcb4f63ae5103d3fbfccd8e79cfd5469ff85c0600cf6fb564dc356a` — CORRECTION_ARTIFACT_GENERATED (2026-09-08T02:58:22Z)
 - `CWTV.V1.2.5.1_R2_Responsive_Visual_Experience_Correction.zip` — SHA-256 `cc12b7656bcb4f63ae5103d3fbfccd8e79cfd5469ff85c0600cf6fb564dc356a` — CORRECTION_ARTIFACT_VERIFIED (2026-09-08T05:05:59+02:00)
 - `CWTV.V1.2.5.1_R2_Responsive_Visual_Experience_Correction.zip` — SHA-256 `cc12b7656bcb4f63ae5103d3fbfccd8e79cfd5469ff85c0600cf6fb564dc356a` — CORRECTION_ARTIFACT_EXTRACTED (2026-09-08T05:06:10+02:00)
+- `CWTV.V1.2.6_OpenAPI_Typed_Contract_Foundation_001.zip` — SHA-256 `3ac3a14e770ade4425bb9f46cf25703e31c35d4732b0ecb02bd76f1cabc7a0b7` — ARTIFACT_GENERATED (2026-09-09T04:28:00Z)
+- `CWTV.V1.2.6_OpenAPI_Typed_Contract_Foundation_001.zip` — SHA-256 `3ac3a14e770ade4425bb9f46cf25703e31c35d4732b0ecb02bd76f1cabc7a0b7` — ARTIFACT_VERIFIED (2026-09-09T06:31:20+02:00)
+- `CWTV.V1.2.6_OpenAPI_Typed_Contract_Foundation_001.zip` — SHA-256 `3ac3a14e770ade4425bb9f46cf25703e31c35d4732b0ecb02bd76f1cabc7a0b7` — ARTIFACT_EXTRACTED (2026-09-09T06:31:34+02:00)
+- `CWTV.V1.2.6_R1_Workspace_Resolved_OpenAPI_TypeScript_Runtime_Correction.zip` — SHA-256 `40bdb6b36693c9867c16f56b8c79a8e7f6ffcc5dc385e2d9933e29be8681cfce` — CORRECTION_ARTIFACT_GENERATED (2026-09-09T04:49:17Z)
+- `CWTV.V1.2.6_R1_Workspace_Resolved_OpenAPI_TypeScript_Runtime_Correction.zip` — SHA-256 `40bdb6b36693c9867c16f56b8c79a8e7f6ffcc5dc385e2d9933e29be8681cfce` — CORRECTION_ARTIFACT_VERIFIED (2026-09-09T06:51:46+02:00)
+- `CWTV.V1.2.6_R1_Workspace_Resolved_OpenAPI_TypeScript_Runtime_Correction.zip` — SHA-256 `40bdb6b36693c9867c16f56b8c79a8e7f6ffcc5dc385e2d9933e29be8681cfce` — CORRECTION_ARTIFACT_EXTRACTED (2026-09-09T06:51:59+02:00)
 
 ## Event timeline
 
@@ -133,6 +142,23 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-08T03:06:39Z** · `CWTV.V1.2.5.1` · `DASHBOARD_RUNTIME_PASSED` · **PASS** — Responsive progress dashboard HTTP runtime smoke after R2 passed. Duration: 2s. Evidence: exit_code=0
 - **2026-09-08T03:23:15Z** · `CWTV.V1.2.5.1` · `VISUAL_QUALIFICATION_PASSED` · **PASS** — R2 responsive dashboard visually qualified on mobile and desktop-sized rendering with no destructive horizontal overflow, responsive semantic cards, adaptive difficulty graph, wrapped evidence content, readable failure history and usable timeline presentation
 - **2026-09-08T03:23:22Z** · `CWTV.V1.2.5.1` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.2.5.1 Engineering Chronicle and Progress Dashboard Foundation qualified after static, repository, runtime and visual verification
+- **2026-09-08T05:25:09+02:00** · `CWTV.V1.2.5.1` · `COMMIT_CREATED` · **PASS** — fix: qualify CineWatch engineering dashboard visual experience Evidence: Recovered at CWTV.V1.2.6 start from Git commit authority.
+- **time not preserved** · `CWTV.V1.2.5.1` · `PUSH_COMPLETED` · **PASS** — CWTV.V1.2.5.1 closure commit is synchronized with origin/main. Evidence: Exact push timestamp was not preserved; synchronization was proven at CWTV.V1.2.6 start.
+- **time not preserved** · `CWTV.V1.2.6` · `BREAK_STARTED` · **PAUSED** — Explicit 24-hour CineWatch break declared after CWTV.V1.2.5.1 while work moved to the separate Nexa Provider Platform project. Evidence: Break was explicit; timestamp gaps are not being used to infer a break.
+- **2026-09-09T06:14:00+02:00** · `CWTV.V1.2.6` · `BREAK_RESUMED` · **RESUMED** — CineWatch engineering resumed after the explicit break. Evidence: Resume observed in the user's Termux session at 06:14 CAT.
+- **2026-09-09T04:28:00Z** · `CWTV.V1.2.6` · `ARTIFACT_GENERATED` · **PASS** — CWTV.V1.2.6 OpenAPI and typed contract foundation delivery generated.
+- **2026-09-09T06:31:20+02:00** · `CWTV.V1.2.6` · `ARTIFACT_VERIFIED` · **PASS** — CWTV.V1.2.6 delivery SHA-256 verified before extraction.
+- **2026-09-09T06:31:34+02:00** · `CWTV.V1.2.6` · `ARTIFACT_EXTRACTED` · **PASS** — CWTV.V1.2.6 delivery extracted for application.
+- **2026-09-09T04:32:01Z** · `CWTV.V1.2.6` · `DELIVERY_APPLIED` · **PASS** — CWTV.V1.2.6 OpenAPI and typed contract foundation files applied. Evidence: No AWS, Azure, PostgreSQL server, provider, auth or product API resource was contacted.
+- **2026-09-09T04:32:01Z** · `CWTV.V1.2.6` · `MILESTONE_STARTED` · **INFO** — CWTV.V1.2.6 OpenAPI and Typed Contract Foundation entered active implementation.
+- **2026-09-09T04:52:08Z** · `CWTV.V1.2.6` · `CONTRACT_RUNTIME_QUALIFICATION_FAILED` · **FAILED** — Contract runtime qualification failed because the checker assumed openapi-typescript was hoisted into repository-root node_modules. Evidence: Error: Cannot find module './node_modules/openapi-typescript/package.json'; contracts:update had already generated successfully with openapi-typescript 7.13.0 through workspace authority.
+- **2026-09-09T04:52:08Z** · `CWTV.V1.2.6` · `ROOT_CAUSE_IDENTIFIED` · **INFO** — The failure was a qualification-script npm layout assumption, not an OpenAPI or TypeScript contract-generation failure. Evidence: @cinewatch/contracts owns openapi-typescript; npm 12 may install the dependency workspace-locally rather than hoist it to root node_modules.
+- **2026-09-09T04:49:17Z** · `CWTV.V1.2.6` · `CORRECTION_ARTIFACT_GENERATED` · **PASS** — CWTV.V1.2.6 R1 workspace-resolved OpenAPI TypeScript runtime correction generated.
+- **2026-09-09T06:51:46+02:00** · `CWTV.V1.2.6` · `CORRECTION_ARTIFACT_VERIFIED` · **PASS** — CWTV.V1.2.6 R1 correction SHA-256 verified.
+- **2026-09-09T06:51:59+02:00** · `CWTV.V1.2.6` · `CORRECTION_ARTIFACT_EXTRACTED` · **PASS** — CWTV.V1.2.6 R1 correction extracted for application.
+- **2026-09-09T04:52:09Z** · `CWTV.V1.2.6` · `CORRECTION_APPLIED` · **PASS** — R1 replaced root-node_modules assumptions with npm workspace resolution for openapi-typescript runtime qualification. Evidence: No API schema or generated contract content was changed by the correction.
+- **2026-09-09T04:55:11Z** · `CWTV.V1.2.6` · `CONTRACT_RUNTIME_QUALIFICATION_PASSED` · **PASS** — R1 workspace-resolved OpenAPI TypeScript runtime qualification passed after removing the invalid root-hoisting assumption Evidence: openapi-typescript 7.13.0 workspace authority PASS; canonical OpenAPI PASS; generated TypeScript drift check PASS; backend OpenAPI tests 3 passed; frontend governed contract typecheck PASS
+- **2026-09-09T04:58:04Z** · `CWTV.V1.2.6` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.2.6 OpenAPI and Typed Contract Foundation qualified after deterministic schema generation, typed contract generation, repository regression and runtime qualification
 
 ## Integrity and timing rules
 

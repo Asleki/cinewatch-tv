@@ -18,3 +18,14 @@ CWTV.V1.2.5 adds:
 
 - `check_database_foundation.py` — static PostgreSQL, dependency, secret-configuration, NPP-separation, and migration-root qualification;
 - `check_database_migrations.sh` — Linux Python qualification of SQLAlchemy/Alembic/Psycopg versions, the single Alembic head, PostgreSQL offline migration SQL, and database-foundation tests without requiring a server.
+
+## CWTV.V1.2.6 OpenAPI and typed contracts
+
+```text
+python scripts/check_contract_foundation.py
+python scripts/export_openapi_contract.py --check
+npm run contracts:update
+npm run contracts:check
+```
+
+`contracts:update` regenerates the canonical OpenAPI JSON from FastAPI and then regenerates the TypeScript declaration package. `contracts:check` is the non-mutating Linux qualification gate.

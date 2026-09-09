@@ -1,24 +1,6 @@
+import type { HealthResponse, StatusResponse } from "@cinewatch/contracts";
+
 import { getPublicApiBaseUrl } from "@/lib/config/public-env";
-
-export type CineWatchEnvironment =
-  | "local"
-  | "development"
-  | "private-beta"
-  | "staging"
-  | "production";
-
-export interface HealthResponse {
-  status: "ok";
-  service: string;
-}
-
-export interface StatusResponse {
-  status: "ready";
-  service: string;
-  application: string;
-  environment: CineWatchEnvironment;
-  api_version: "v1";
-}
 
 async function fetchJson<T>(path: string): Promise<T> {
   const url = new URL(path, getPublicApiBaseUrl());

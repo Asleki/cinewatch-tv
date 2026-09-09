@@ -31,6 +31,7 @@ REQUIRED = (
 )
 
 EXPECTED_RUNTIME = {
+    "@cinewatch/contracts": "0.0.0",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8",

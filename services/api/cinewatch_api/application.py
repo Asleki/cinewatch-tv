@@ -55,6 +55,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         title="CineWatch TV API",
         version=__version__,
         description="CineWatch TV V1 backend service boundary.",
+        openapi_version="3.1.0",
         lifespan=_lifespan(runtime_settings),
     )
     app.state.settings = runtime_settings

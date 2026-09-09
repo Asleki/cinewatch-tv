@@ -2,11 +2,23 @@
   "name": "@cinewatch/contracts",
   "version": "0.0.0",
   "private": true,
-  "description": "CineWatch TV shared API-contract boundary; generated contract implementation begins in CWTV.V1.2.6.",
+  "description": "CineWatch TV generated TypeScript API contract authority derived from canonical OpenAPI.",
   "license": "UNLICENSED",
   "type": "module",
   "engines": {
     "node": ">=24.18.0 <25",
     "npm": ">=12 <13"
+  },
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts"
+    }
+  },
+  "scripts": {
+    "generate": "openapi-typescript ./openapi/cinewatch-v1.openapi.json -o ./src/generated/openapi.d.ts"
+  },
+  "devDependencies": {
+    "openapi-typescript": "7.13.0"
   }
 }
