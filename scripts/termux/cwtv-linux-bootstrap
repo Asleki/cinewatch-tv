@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROLE="${1:-}"
+
+case "$ROLE" in
+  api|web|tests|contracts) ;;
+  *)
+    printf 'FAIL  unsupported Linux bootstrap role: %s\n' "$ROLE" >&2
+    exit 2
+    ;;
+esac
+
+REPO="/workspace/cinewatch-tv"
+NODE_ROOT="/opt/node-v24.18.0-linux-arm64"
+VENV="/root/.venvs/cinewatch-api"
+
+[ -d "$REPO" ] || {
+  printf 'FAIL  CineWatch repository bind is unavailable: %s\n' "$REPO" >&2
+  exit 1
+}
+[ -x "$NODE_ROOT/bin/node" ] || {
+  printf 'FAIL  governed Linux Node runtime is unavailable: %s\n' "$NODE_ROOT" >&2
+  exit 1
+}
+
+unset PGPASSWORD
+unset GH_TOKEN
+unset GITHUB_TOKEN
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset AWS_SESSION_TOKEN
+
+export PATH="$NODE_ROOT/bin:$PATH"
+export PAGER=cat
+export PYTHONDONTWRITEBYTECODE=1
+cd "$REPO"
+
+case "$ROLE" in
+  api)
+    [ -x "$VENV/bin/python" ] || {
+      printf 'FAIL  CineWatch API venv is unavailable: %s\n' "$VENV" >&2
+      exit 1
+    }
+    set +u
+    . "$VENV/bin/activate"
+    set -u
+    export CWTV_API_PORT=8000
+    export PS1='(cinewatch-api) [cwtv:api] \w # '
+    ;;
+  web)
+    unset VIRTUAL_ENV || true
+    export CWTV_WEB_PORT=3000
+    export PS1='[cwtv:web] \w # '
+    ;;
+  tests)
+    [ -x "$VENV/bin/python" ] || {
+      printf 'FAIL  CineWatch API venv is unavailable: %s\n' "$VENV" >&2
+      exit 1
+    }
+    set +u
+    . "$VENV/bin/activate"
+    set -u
+    export PSQL_PAGER=cat
+    export PS1='(cinewatch-api) [cwtv:tests] \w # '
+    ;;
+  contracts)
+    [ -x "$VENV/bin/python" ] || {
+      printf 'FAIL  CineWatch API venv is unavailable: %s\n' "$VENV" >&2
+      exit 1
+    }
+    set +u
+    . "$VENV/bin/activate"
+    set -u
+    export PS1='(cinewatch-api) [cwtv:contracts] \w # '
+    ;;
+esac
+
+printf 'READY CineWatch Linux role=%s repo=%s\n' "$ROLE" "$REPO"
+exec /bin/bash --noprofile --norc -i

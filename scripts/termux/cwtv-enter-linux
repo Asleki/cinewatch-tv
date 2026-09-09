@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROLE="${1:-}"
+REPO="${2:-}"
+
+case "$ROLE" in
+  api|web|tests|contracts) ;;
+  *)
+    printf 'FAIL  unsupported Linux window role: %s\n' "$ROLE" >&2
+    exit 2
+    ;;
+esac
+
+[ -n "$REPO" ] || {
+  printf 'FAIL  repository path is required\n' >&2
+  exit 2
+}
+
+unset PGPASSWORD
+unset GH_TOKEN
+unset GITHUB_TOKEN
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset AWS_SESSION_TOKEN
+
+exec proot-distro login \
+  cwtv-linux \
+  --bind "$REPO:/workspace/cinewatch-tv" \
+  --work-dir /workspace/cinewatch-tv \
+  -- /bin/bash \
+  /workspace/cinewatch-tv/scripts/termux/cwtv-linux-bootstrap \
+  "$ROLE"

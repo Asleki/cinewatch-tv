@@ -1,0 +1,169 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SESSION="${CWTV_TMUX_SESSION:-cinewatch-tv}"
+ATTACH=1
+
+usage() {
+  cat <<'EOF'
+Usage: cwtv-session [--no-attach]
+
+Create or reuse the governed CineWatch TV tmux engineering session.
+
+Options:
+  --no-attach   Create/reuse and validate the session without attaching.
+  -h, --help    Show this help.
+
+Environment overrides:
+  CWTV_TMUX_SESSION   Alternate session name for controlled testing.
+  CWTV_REPO           Alternate CineWatch repository path.
+  CWTV_DOWNLOADS_DIR  Alternate downloads directory.
+EOF
+}
+
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --no-attach) ATTACH=0 ;;
+    -h|--help) usage; exit 0 ;;
+    *)
+      printf 'FAIL  unknown argument: %s\n' "$1" >&2
+      usage >&2
+      exit 2
+      ;;
+  esac
+  shift
+done
+
+resolve_path() {
+  local source="$1"
+  while [ -L "$source" ]; do
+    local dir
+    dir="$(CDPATH= cd -- "$(dirname -- "$source")" && pwd)"
+    source="$(readlink "$source")"
+    case "$source" in
+      /*) ;;
+      *) source="$dir/$source" ;;
+    esac
+  done
+  CDPATH= cd -- "$(dirname -- "$source")" && printf '%s/%s\n' "$PWD" "$(basename -- "$source")"
+}
+
+SELF="$(resolve_path "${BASH_SOURCE[0]}")"
+SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$SELF")" && pwd)"
+DEFAULT_REPO="$(CDPATH= cd -- "$SCRIPT_DIR/../.." && pwd)"
+REPO="${CWTV_REPO:-$DEFAULT_REPO}"
+REPO="$(CDPATH= cd -- "$REPO" && pwd)"
+DOWNLOADS="${CWTV_DOWNLOADS_DIR:-$HOME/storage/downloads}"
+
+fail() {
+  printf 'FAIL  %s\n' "$*" >&2
+  exit 1
+}
+
+for command_name in tmux proot-distro git bash; do
+  command -v "$command_name" >/dev/null 2>&1 || fail "required command is unavailable: $command_name"
+done
+
+[ -d "$REPO/.git" ] || fail "CineWatch repository is not a Git worktree: $REPO"
+[ -f "$REPO/package.json" ] || fail "CineWatch root package.json is missing"
+[ -d "$REPO/apps/web" ] || fail "CineWatch web workspace is missing"
+[ -d "$REPO/services/api" ] || fail "CineWatch API workspace is missing"
+[ -d "$DOWNLOADS" ] || fail "downloads directory is unavailable: $DOWNLOADS"
+
+repo_root="$(git -C "$REPO" rev-parse --show-toplevel)"
+[ "$repo_root" = "$REPO" ] || fail "repository root mismatch: $repo_root"
+
+ENTER_LINUX="$REPO/scripts/termux/cwtv-enter-linux"
+NATIVE_BOOTSTRAP="$REPO/scripts/termux/cwtv-window-bootstrap"
+for script in "$ENTER_LINUX" "$NATIVE_BOOTSTRAP" "$REPO/scripts/termux/cwtv-linux-bootstrap"; do
+  [ -x "$script" ] || fail "workflow script is missing or not executable: $script"
+done
+
+EXPECTED=(api web postgres tests contracts extract git aws chronicle)
+
+shell_join() {
+  local out="" value quoted
+  for value in "$@"; do
+    printf -v quoted '%q' "$value"
+    out+="$quoted "
+  done
+  printf '%s' "${out% }"
+}
+
+validate_existing_session() {
+  local -a actual=()
+  mapfile -t actual < <(tmux list-windows -t "$SESSION" -F '#{window_name}')
+  [ "${#actual[@]}" -eq "${#EXPECTED[@]}" ] || {
+    printf 'FAIL  session %s has %s windows; expected %s\n' "$SESSION" "${#actual[@]}" "${#EXPECTED[@]}" >&2
+    return 1
+  }
+  local i
+  for i in "${!EXPECTED[@]}"; do
+    [ "${actual[$i]}" = "${EXPECTED[$i]}" ] || {
+      printf 'FAIL  session %s window %s is %s; expected %s\n' \
+        "$SESSION" "$i" "${actual[$i]}" "${EXPECTED[$i]}" >&2
+      return 1
+    }
+  done
+}
+
+create_session() {
+  local command_string
+
+  command_string="$(shell_join "$ENTER_LINUX" api "$REPO")"
+  tmux new-session -d -s "$SESSION" -n api -c "$REPO" "$command_string"
+
+  tmux set-option -t "$SESSION" remain-on-exit on >/dev/null
+  tmux set-option -t "$SESSION" allow-rename off >/dev/null
+
+  command_string="$(shell_join "$ENTER_LINUX" web "$REPO")"
+  tmux new-window -d -t "$SESSION:" -n web -c "$REPO" "$command_string"
+
+  command_string="$(shell_join "$NATIVE_BOOTSTRAP" postgres "$REPO" "$DOWNLOADS")"
+  tmux new-window -d -t "$SESSION:" -n postgres -c "$REPO" "$command_string"
+
+  command_string="$(shell_join "$ENTER_LINUX" tests "$REPO")"
+  tmux new-window -d -t "$SESSION:" -n tests -c "$REPO" "$command_string"
+
+  command_string="$(shell_join "$ENTER_LINUX" contracts "$REPO")"
+  tmux new-window -d -t "$SESSION:" -n contracts -c "$REPO" "$command_string"
+
+  command_string="$(shell_join "$NATIVE_BOOTSTRAP" extract "$REPO" "$DOWNLOADS")"
+  tmux new-window -d -t "$SESSION:" -n extract -c "$DOWNLOADS" "$command_string"
+
+  command_string="$(shell_join "$NATIVE_BOOTSTRAP" git "$REPO" "$DOWNLOADS")"
+  tmux new-window -d -t "$SESSION:" -n git -c "$REPO" "$command_string"
+
+  command_string="$(shell_join "$NATIVE_BOOTSTRAP" aws "$REPO" "$DOWNLOADS")"
+  tmux new-window -d -t "$SESSION:" -n aws -c "$REPO" "$command_string"
+
+  command_string="$(shell_join "$NATIVE_BOOTSTRAP" chronicle "$REPO" "$DOWNLOADS")"
+  tmux new-window -d -t "$SESSION:" -n chronicle -c "$REPO" "$command_string"
+
+  local name
+  for name in "${EXPECTED[@]}"; do
+    tmux set-window-option -t "$SESSION:$name" automatic-rename off >/dev/null
+  done
+
+  tmux select-window -t "$SESSION:api"
+}
+
+if tmux has-session -t "$SESSION" 2>/dev/null; then
+  validate_existing_session || fail "existing tmux session is not the governed CineWatch layout"
+  printf 'PASS  reused governed CineWatch tmux session: %s\n' "$SESSION"
+else
+  create_session
+  validate_existing_session || fail "new CineWatch tmux session failed structural validation"
+  printf 'PASS  created governed CineWatch tmux session: %s\n' "$SESSION"
+fi
+
+printf 'PASS  CineWatch session has 9/9 governed windows\n'
+printf 'INFO  repo=%s\n' "$REPO"
+printf 'INFO  use cwtv-session-status for a non-secret readiness report\n'
+
+if [ "$ATTACH" -eq 1 ]; then
+  if [ -n "${TMUX:-}" ]; then
+    exec tmux switch-client -t "$SESSION"
+  fi
+  exec tmux attach-session -t "$SESSION"
+fi

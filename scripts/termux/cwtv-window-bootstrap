@@ -1,0 +1,127 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROLE="${1:-}"
+REPO="${2:-}"
+DOWNLOADS="${3:-$HOME/storage/downloads}"
+
+case "$ROLE" in
+  postgres|extract|git|aws|chronicle) ;;
+  *)
+    printf 'FAIL  unsupported native Termux role: %s\n' "$ROLE" >&2
+    exit 2
+    ;;
+esac
+
+[ -n "$REPO" ] || {
+  printf 'FAIL  repository path is required\n' >&2
+  exit 2
+}
+
+load_config() {
+  local file="$1"
+  local allowed="$2"
+  local line key value
+
+  [ -f "$file" ] || return 0
+
+  while IFS= read -r line || [ -n "$line" ]; do
+    case "$line" in
+      ''|'#'*) continue ;;
+    esac
+
+    case "$line" in
+      *=*) ;;
+      *)
+        printf 'FAIL  invalid CineWatch config line in %s\n' "$file" >&2
+        return 1
+        ;;
+    esac
+
+    key="${line%%=*}"
+    value="${line#*=}"
+
+    case "$key" in
+      *[!A-Z0-9_]*|'')
+        printf 'FAIL  invalid CineWatch config key in %s: %s\n' "$file" "$key" >&2
+        return 1
+        ;;
+    esac
+
+    case " $allowed " in
+      *" $key "*) ;;
+      *)
+        printf 'FAIL  unapproved key in CineWatch config %s: %s\n' "$file" "$key" >&2
+        return 1
+        ;;
+    esac
+
+    export "$key=$value"
+  done < "$file"
+}
+
+unset PGPASSWORD
+unset GH_TOKEN
+unset GITHUB_TOKEN
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset AWS_SESSION_TOKEN
+
+export PAGER=cat
+
+case "$ROLE" in
+  postgres)
+    cd "$REPO"
+    export PSQL_PAGER=cat
+    load_config \
+      "$HOME/.config/cinewatch/postgres.env" \
+      "PGHOST PGPORT PGDATABASE PGUSER PGSSLMODE PGCONNECT_TIMEOUT"
+    export PS1='[cwtv:postgres] \w $ '
+    if [ -f "$HOME/.config/cinewatch/postgres.env" ]; then
+      printf 'READY CineWatch native role=postgres profile=configured\n'
+    else
+      printf 'READY CineWatch native role=postgres profile=reserved\n'
+    fi
+    ;;
+  extract)
+    [ -d "$DOWNLOADS" ] || {
+      printf 'FAIL  downloads directory is unavailable: %s\n' "$DOWNLOADS" >&2
+      exit 1
+    }
+    cd "$DOWNLOADS"
+    export PS1='[cwtv:extract] \w $ '
+    printf 'READY CineWatch native role=extract\n'
+    ;;
+  git)
+    cd "$REPO"
+    export GIT_PAGER=cat
+    export PS1='[cwtv:git] \w $ '
+    printf 'READY CineWatch native role=git\n'
+    ;;
+  aws)
+    cd "$REPO"
+    load_config \
+      "$HOME/.config/cinewatch/aws.env" \
+      "AWS_PROFILE AWS_REGION AWS_DEFAULT_REGION"
+    if [ ! -f "$HOME/.config/cinewatch/aws.env" ] && command -v aws >/dev/null 2>&1; then
+      if aws configure list-profiles 2>/dev/null | grep -Fxq 'cinewatch-dev'; then
+        export AWS_PROFILE=cinewatch-dev
+      fi
+    fi
+    export PS1='[cwtv:aws] \w $ '
+    if command -v aws >/dev/null 2>&1; then
+      printf 'READY CineWatch native role=aws cli=available\n'
+    else
+      printf 'READY CineWatch native role=aws cli=reserved\n'
+    fi
+    ;;
+  chronicle)
+    cd "$REPO"
+    export PYTHONDONTWRITEBYTECODE=1
+    export CWTV_CHRONICLE_PORT=8785
+    export PS1='[cwtv:chronicle] \w $ '
+    printf 'READY CineWatch native role=chronicle\n'
+    ;;
+esac
+
+exec bash --noprofile --norc -i

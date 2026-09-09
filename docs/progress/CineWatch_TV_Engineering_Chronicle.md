@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `CWTV.V1.2.6`
-- **Tracked milestones:** 8
-- **Qualified milestones:** 8
+- **Current milestone:** `CWTV.V1.2.7`
+- **Tracked milestones:** 9
+- **Qualified milestones:** 9
 - **Tracked milestone completion:** 100.0%
-- **Recorded failed events:** 8
-- **Recorded corrections:** 7
-- **Commit events:** 7
-- **Ledger head:** `CWTV-EVT-000082` / `9be78acdcbb012cd4d015df953006bded0b825e98d16cc6350c34fedc1f22e9a`
+- **Recorded failed events:** 11
+- **Recorded corrections:** 8
+- **Commit events:** 8
+- **Ledger head:** `CWTV-EVT-000099` / `1dbdb6cd1c42f97526d6f5e2e880e6f1dd24b9b4c17972eaf6472f9871bd5486`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -28,6 +28,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.5` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | not preserved | not preserved |
 | `CWTV.V1.2.5.1` | QUALIFIED | 100% | 4.6/5 | 3 | 2 | 1h 10m 54s | 8s |
 | `CWTV.V1.2.6` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | 26m 3s | not preserved |
+| `CWTV.V1.2.7` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 1h 26m 3s | not preserved |
 
 ## Failure and correction history
 
@@ -41,6 +42,9 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.5.1` | 2026-09-08T02:31:57Z | repository-tests | Repository regression after chronicle foundation failed. | — |
 | `CWTV.V1.2.5.1` | time not preserved | progress-dashboard | Rendered dashboard was structurally accurate but failed responsive visual qualification. | CWTV.V1.2.5.1_R2 |
 | `CWTV.V1.2.6` | 2026-09-09T04:52:08Z | api-contracts | Contract runtime qualification failed because the checker assumed openapi-typescript was hoisted into repository-root node_modules. | CWTV.V1.2.6_R1 |
+| `CWTV.V1.2.7` | time not preserved | termux-host | CWTV.V1.2.7 native runtime qualification initially failed because the Termux zip packaging utility was unavailable | — |
+| `CWTV.V1.2.7` | time not preserved | termux-host | CWTV.V1.2.7 native runtime qualification initially failed because the Termux zip packaging utility was unavailable | — |
+| `CWTV.V1.2.7` | time not preserved | documentation | Final staged diff qualification detected trailing whitespace in the CWTV.V1.2.7 architecture document and ADR | — |
 
 ## Commit lineage
 
@@ -51,6 +55,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `7b6a8392d90fb08be9f522e9a182c723f2719cdd` — feat: establish CineWatch V1 frontend application skeleton (2026-09-08T03:25:33+02:00)
 - `678500c0160ac002f8e8585ab4f7560ea22e4d6e` — feat: establish CineWatch V1 PostgreSQL migration foundation (2026-09-08T03:55:07+02:00)
 - `74856ca2738afaa33d33ed7cb1983967fc0355bd` — fix: qualify CineWatch engineering dashboard visual experience (2026-09-08T05:25:09+02:00)
+- `e15752642ed22d30b99caadf546214eea15b730f` — feat: establish CineWatch V1 OpenAPI typed contract foundation (2026-09-09T06:58:32+02:00)
 
 ## Artifacts
 
@@ -74,6 +79,9 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `CWTV.V1.2.6_R1_Workspace_Resolved_OpenAPI_TypeScript_Runtime_Correction.zip` — SHA-256 `40bdb6b36693c9867c16f56b8c79a8e7f6ffcc5dc385e2d9933e29be8681cfce` — CORRECTION_ARTIFACT_GENERATED (2026-09-09T04:49:17Z)
 - `CWTV.V1.2.6_R1_Workspace_Resolved_OpenAPI_TypeScript_Runtime_Correction.zip` — SHA-256 `40bdb6b36693c9867c16f56b8c79a8e7f6ffcc5dc385e2d9933e29be8681cfce` — CORRECTION_ARTIFACT_VERIFIED (2026-09-09T06:51:46+02:00)
 - `CWTV.V1.2.6_R1_Workspace_Resolved_OpenAPI_TypeScript_Runtime_Correction.zip` — SHA-256 `40bdb6b36693c9867c16f56b8c79a8e7f6ffcc5dc385e2d9933e29be8681cfce` — CORRECTION_ARTIFACT_EXTRACTED (2026-09-09T06:51:59+02:00)
+- `CWTV.V1.2.7_Termux_Linux_Engineering_Workflow_Foundation_001.zip` — SHA-256 `133eaf539420d9505ed818e8f5d75941cb008f7bc80f8839d7b1961d97ddf9a2` — ARTIFACT_GENERATED (2026-09-09T19:06:44Z)
+- `CWTV.V1.2.7_Termux_Linux_Engineering_Workflow_Foundation_001.zip` — SHA-256 `133eaf539420d9505ed818e8f5d75941cb008f7bc80f8839d7b1961d97ddf9a2` — ARTIFACT_VERIFIED (2026-09-09T21:11:59+02:00)
+- `CWTV.V1.2.7_Termux_Linux_Engineering_Workflow_Foundation_001.zip` — SHA-256 `133eaf539420d9505ed818e8f5d75941cb008f7bc80f8839d7b1961d97ddf9a2` — ARTIFACT_EXTRACTED (2026-09-09T21:12:15+02:00)
 
 ## Event timeline
 
@@ -159,6 +167,23 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-09T04:52:09Z** · `CWTV.V1.2.6` · `CORRECTION_APPLIED` · **PASS** — R1 replaced root-node_modules assumptions with npm workspace resolution for openapi-typescript runtime qualification. Evidence: No API schema or generated contract content was changed by the correction.
 - **2026-09-09T04:55:11Z** · `CWTV.V1.2.6` · `CONTRACT_RUNTIME_QUALIFICATION_PASSED` · **PASS** — R1 workspace-resolved OpenAPI TypeScript runtime qualification passed after removing the invalid root-hoisting assumption Evidence: openapi-typescript 7.13.0 workspace authority PASS; canonical OpenAPI PASS; generated TypeScript drift check PASS; backend OpenAPI tests 3 passed; frontend governed contract typecheck PASS
 - **2026-09-09T04:58:04Z** · `CWTV.V1.2.6` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.2.6 OpenAPI and Typed Contract Foundation qualified after deterministic schema generation, typed contract generation, repository regression and runtime qualification
+- **2026-09-09T06:58:32+02:00** · `CWTV.V1.2.6` · `COMMIT_CREATED` · **PASS** — feat: establish CineWatch V1 OpenAPI typed contract foundation Evidence: Recovered at CWTV.V1.2.7 start from Git commit authority.
+- **time not preserved** · `CWTV.V1.2.6` · `PUSH_COMPLETED` · **PASS** — CWTV.V1.2.6 closure commit is synchronized with origin/main. Evidence: Exact push timestamp was not preserved; synchronization was proven at CWTV.V1.2.7 start.
+- **2026-09-09T07:02:00+02:00** · `CWTV.V1.2.7` · `BREAK_STARTED` · **PAUSED** — CineWatch engineering was explicitly paused because the network was unavailable. Evidence: The user explicitly stated work would resume at 19:00; timestamp gaps are not used to infer breaks.
+- **2026-09-09T20:08:00+02:00** · `CWTV.V1.2.7` · `BREAK_RESUMED` · **RESUMED** — CWTV.V1.2 engineering resumed in Termux after the explicit network break. Evidence: Resume observed in the user's Termux session at 20:08 CAT.
+- **2026-09-09T20:08:00+02:00** · `CWTV.V1.2.7` · `MILESTONE_STARTED` · **INFO** — CWTV.V1.2.7 Termux / Linux Engineering Workflow Foundation entered active implementation.
+- **2026-09-09T20:52:00+02:00** · `CWTV.V1.2.7` · `MANUAL_WORKFLOW_PROVEN` · **PASS** — Manual nine-window CineWatch tmux architecture and role-specific Termux/Linux environments were proven before launcher implementation. Evidence: tmux 3.7c; nine named windows; API/web/tests/contracts Linux authorities; native postgres/extract/git/aws/chronicle roles; Chronicle gates green.
+- **2026-09-09T19:06:44Z** · `CWTV.V1.2.7` · `ARTIFACT_GENERATED` · **PASS** — CWTV.V1.2.7 Termux/Linux engineering workflow delivery generated.
+- **2026-09-09T21:11:59+02:00** · `CWTV.V1.2.7` · `ARTIFACT_VERIFIED` · **PASS** — CWTV.V1.2.7 delivery SHA-256 verified before extraction.
+- **2026-09-09T21:12:15+02:00** · `CWTV.V1.2.7` · `ARTIFACT_EXTRACTED` · **PASS** — CWTV.V1.2.7 delivery extracted for application.
+- **2026-09-09T19:12:25Z** · `CWTV.V1.2.7` · `DELIVERY_APPLIED` · **PASS** — CWTV.V1.2.7 governed Termux/Linux session launcher, status tooling, policy gates and documentation applied. Evidence: No cloud resource, PostgreSQL server, provider API or application server was created or contacted.
+- **time not preserved** · `CWTV.V1.2.7` · `RUNTIME_QUALIFICATION_FAILED` · **FAILED** — CWTV.V1.2.7 native runtime qualification initially failed because the Termux zip packaging utility was unavailable Evidence: cwtv-session-status and check_termux_linux_runtime.sh both reported required native command unavailable: zip.
+- **time not preserved** · `CWTV.V1.2.7` · `RUNTIME_QUALIFICATION_FAILED` · **FAILED** — CWTV.V1.2.7 native runtime qualification initially failed because the Termux zip packaging utility was unavailable Evidence: cwtv-session-status and check_termux_linux_runtime.sh both reported required native command unavailable: zip.
+- **2026-09-09T19:26:28Z** · `CWTV.V1.2.7` · `SESSION_RECOVERY_PROVEN` · **PASS** — The governed CineWatch engineering workspace was recreated successfully after the Termux process and tmux server had been terminated Evidence: cwtv-session --no-attach recreated cinewatch-tv with all nine windows and cwtv-session-status reported every window active.
+- **2026-09-09T19:26:37Z** · `CWTV.V1.2.7` · `RUNTIME_QUALIFICATION_PASSED` · **PASS** — CWTV.V1.2.7 Termux/Linux engineering workflow runtime qualification passed Evidence: Native Termux tools, secret exclusion, command authority, nine-window session, GitHub authentication and qualified Linux runtime all passed.
+- **time not preserved** · `CWTV.V1.2.7` · `STAGED_DIFF_CHECK_FAILED` · **FAILED** — Final staged diff qualification detected trailing whitespace in the CWTV.V1.2.7 architecture document and ADR Evidence: git diff --cached --check identified five Markdown lines with trailing whitespace.
+- **2026-09-09T19:30:52Z** · `CWTV.V1.2.7` · `CORRECTION_APPLIED` · **PASS** — Removed trailing whitespace from the CWTV.V1.2.7 architecture document and ADR and restaged both files Evidence: git diff --check and git diff --cached --check both passed silently after correction.
+- **2026-09-09T19:34:03Z** · `CWTV.V1.2.7` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.2.7 Termux / Linux Engineering Workflow Foundation qualified after static policy, repository regression, governed session recreation, actual Termux restart recovery and native runtime qualification
 
 ## Integrity and timing rules
 

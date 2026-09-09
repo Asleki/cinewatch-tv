@@ -1,0 +1,194 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SESSION="${CWTV_TMUX_SESSION:-cinewatch-tv}"
+
+resolve_path() {
+  local source="$1"
+  while [ -L "$source" ]; do
+    local dir
+    dir="$(CDPATH= cd -- "$(dirname -- "$source")" && pwd)"
+    source="$(readlink "$source")"
+    case "$source" in
+      /*) ;;
+      *) source="$dir/$source" ;;
+    esac
+  done
+  CDPATH= cd -- "$(dirname -- "$source")" && printf '%s/%s\n' "$PWD" "$(basename -- "$source")"
+}
+
+SELF="$(resolve_path "${BASH_SOURCE[0]}")"
+SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$SELF")" && pwd)"
+DEFAULT_REPO="$(CDPATH= cd -- "$SCRIPT_DIR/../.." && pwd)"
+REPO="${CWTV_REPO:-$DEFAULT_REPO}"
+REPO="$(CDPATH= cd -- "$REPO" && pwd)"
+DOWNLOADS="${CWTV_DOWNLOADS_DIR:-$HOME/storage/downloads}"
+
+EXPECTED=(api web postgres tests contracts extract git aws chronicle)
+FAILURES=0
+
+pass() { printf 'PASS  %s\n' "$*"; }
+info() { printf 'INFO  %s\n' "$*"; }
+fail() {
+  printf 'FAIL  %s\n' "$*" >&2
+  FAILURES=$((FAILURES + 1))
+}
+
+printf '=== CINEWATCH TV ENGINEERING SESSION STATUS ===\n'
+printf 'session=%s\n' "$SESSION"
+printf 'repo=%s\n' "$REPO"
+
+for command_name in tmux proot-distro git gh python node npm psql unzip zip sha256sum; do
+  if command -v "$command_name" >/dev/null 2>&1; then
+    pass "native tool available: $command_name"
+  else
+    fail "native tool unavailable: $command_name"
+  fi
+done
+
+if command -v aws >/dev/null 2>&1; then
+  pass "AWS CLI available"
+else
+  info "AWS CLI reserved for later cloud provisioning"
+fi
+
+if [ -d "$DOWNLOADS" ]; then
+  pass "downloads storage available"
+else
+  fail "downloads storage unavailable: $DOWNLOADS"
+fi
+
+if [ -d "$REPO/.git" ]; then
+  pass "CineWatch Git worktree available"
+else
+  fail "CineWatch Git worktree unavailable"
+fi
+
+branch="$(git -C "$REPO" branch --show-current 2>/dev/null || true)"
+head="$(git -C "$REPO" rev-parse HEAD 2>/dev/null || true)"
+printf 'branch=%s\n' "${branch:-<unknown>}"
+printf 'head=%s\n' "${head:-<unknown>}"
+
+if [ -z "$(git -C "$REPO" status --short 2>/dev/null || true)" ]; then
+  info "worktree=CLEAN"
+else
+  info "worktree=DIRTY (allowed during active engineering)"
+fi
+
+for secret_name in \
+  PGPASSWORD \
+  GH_TOKEN \
+  GITHUB_TOKEN \
+  AWS_ACCESS_KEY_ID \
+  AWS_SECRET_ACCESS_KEY \
+  AWS_SESSION_TOKEN
+do
+  if [ -n "${!secret_name:-}" ]; then
+    fail "secret environment variable must not be globally exported in CineWatch workflow: $secret_name"
+  fi
+done
+
+validate_config() {
+  local file="$1"
+  local allowed="$2"
+  local line key
+  [ -f "$file" ] || return 0
+  while IFS= read -r line || [ -n "$line" ]; do
+    case "$line" in
+      ''|'#'*) continue ;;
+    esac
+    case "$line" in
+      *=*) ;;
+      *) fail "invalid config line in $file"; return ;;
+    esac
+    key="${line%%=*}"
+    case " $allowed " in
+      *" $key "*) ;;
+      *) fail "unapproved config key in $file: $key" ;;
+    esac
+  done < "$file"
+}
+
+PG_CONFIG="$HOME/.config/cinewatch/postgres.env"
+AWS_CONFIG="$HOME/.config/cinewatch/aws.env"
+validate_config "$PG_CONFIG" "PGHOST PGPORT PGDATABASE PGUSER PGSSLMODE PGCONNECT_TIMEOUT"
+validate_config "$AWS_CONFIG" "AWS_PROFILE AWS_REGION AWS_DEFAULT_REGION"
+
+if [ -f "$PG_CONFIG" ]; then
+  info "PostgreSQL profile=CONFIGURED (non-secret file)"
+else
+  info "PostgreSQL profile=RESERVED (cloud database not yet provisioned)"
+fi
+
+if [ -f "$HOME/.pgpass" ]; then
+  mode="$(stat -c '%a' "$HOME/.pgpass" 2>/dev/null || true)"
+  if [ "$mode" = "600" ]; then
+    pass ".pgpass permissions are 600"
+  else
+    fail ".pgpass exists but permissions are not 600"
+  fi
+else
+  info ".pgpass=RESERVED"
+fi
+
+if [ -f "$AWS_CONFIG" ]; then
+  info "AWS environment profile=CONFIGURED (non-secret file)"
+else
+  info "AWS environment profile=RESERVED"
+fi
+
+if gh auth status >/dev/null 2>&1; then
+  pass "GitHub CLI persistent authentication available"
+else
+  fail "GitHub CLI authentication is unavailable"
+fi
+
+if proot-distro login \
+  cwtv-linux \
+  --bind "$REPO:/workspace/cinewatch-tv" \
+  --work-dir /workspace/cinewatch-tv \
+  -- /bin/bash --noprofile --norc -c \
+  'set -e
+   test -x /root/.venvs/cinewatch-api/bin/python
+   test -x /opt/node-v24.18.0-linux-arm64/bin/node
+   test "$(cd /workspace/cinewatch-tv && git rev-parse --show-toplevel)" = "/workspace/cinewatch-tv"
+   test "$(/opt/node-v24.18.0-linux-arm64/bin/node --version)" = "v24.18.0"
+   test "$(/opt/node-v24.18.0-linux-arm64/bin/npm --version)" = "12.0.2"
+   test "$(/root/.venvs/cinewatch-api/bin/python --version 2>&1)" = "Python 3.14.4"' \
+  >/dev/null 2>&1
+then
+  pass "qualified Linux runtime authority available"
+else
+  fail "qualified Linux runtime authority probe failed"
+fi
+
+if tmux has-session -t "$SESSION" 2>/dev/null; then
+  pass "tmux session exists: $SESSION"
+  mapfile -t actual < <(tmux list-windows -t "$SESSION" -F '#{window_name}')
+  if [ "${#actual[@]}" -eq "${#EXPECTED[@]}" ]; then
+    pass "tmux session has 9/9 windows"
+  else
+    fail "tmux session has ${#actual[@]} windows; expected 9"
+  fi
+  for i in "${!EXPECTED[@]}"; do
+    if [ "${actual[$i]:-<missing>}" = "${EXPECTED[$i]}" ]; then
+      dead="$(tmux display-message -p -t "$SESSION:${EXPECTED[$i]}" '#{pane_dead}' 2>/dev/null || echo 1)"
+      if [ "$dead" = "0" ]; then
+        pass "window ${EXPECTED[$i]} active"
+      else
+        fail "window ${EXPECTED[$i]} is not active"
+      fi
+    else
+      fail "window index $i is ${actual[$i]:-<missing>}; expected ${EXPECTED[$i]}"
+    fi
+  done
+else
+  fail "tmux session does not exist: $SESSION"
+fi
+
+if [ "$FAILURES" -ne 0 ]; then
+  printf 'FAIL  CineWatch engineering session status has %s failure(s)\n' "$FAILURES" >&2
+  exit 1
+fi
+
+pass "CWTV.V1.2.7 Termux/Linux engineering session readiness"
