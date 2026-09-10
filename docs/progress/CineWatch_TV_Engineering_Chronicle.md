@@ -7,12 +7,12 @@
 
 - **Current milestone:** `CWTV.V1.2.8`
 - **Tracked milestones:** 10
-- **Qualified milestones:** 9
-- **Tracked milestone completion:** 90.0%
+- **Qualified milestones:** 10
+- **Tracked milestone completion:** 100.0%
 - **Recorded failed events:** 13
 - **Recorded corrections:** 12
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000123` / `5ef8fd3b908c6603597ed29783e43f90f2ff44fd4071435cefcc9787f76d5a4b`
+- **Ledger head:** `CWTV-EVT-000124` / `f012515e8862436e7c709095771b4051293743870bd5dfd6016f41f2686044c2`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -29,7 +29,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.5.1` | QUALIFIED | 100% | 4.6/5 | 3 | 2 | 1h 10m 54s | 8s |
 | `CWTV.V1.2.6` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | 26m 3s | not preserved |
 | `CWTV.V1.2.7` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 1h 26m 3s | not preserved |
-| `CWTV.V1.2.8` | IN_PROGRESS | 60% | 4.4/5 | 2 | 4 | not preserved | not preserved |
+| `CWTV.V1.2.8` | QUALIFIED | 100% | 4.4/5 | 2 | 4 | 6h 49m 22s | not preserved |
 
 ## Failure and correction history
 
@@ -222,6 +222,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-10T00:28:29Z** · `CWTV.V1.2.8` · `CORRECTION_APPLIED` · **PASS** — Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance. Evidence: Local pip-audit uses a temporary venv with no persistent scanner package; Dependabot remains the update path.
 - **2026-09-10T02:28:19+02:00** · `CWTV.V1.2.8` · `CORRECTION_ARTIFACT_VERIFIED` · **PASS** — CWTV.V1.2.8 R3 scope/storage correction SHA-256 verified.
 - **2026-09-10T00:46:35Z** · `CWTV.V1.2.8` · `LOCAL_QUALIFICATION_PASSED` · **PASS** — CWTV.V1.2.8 local Linux CI security and quality qualification passed across repository, contracts, backend, frontend, offline database migrations and dependency security gates
+- **2026-09-10T02:31:22Z** · `CWTV.V1.2.8` · `MILESTONE_QUALIFIED` · **PASS** — CWTV.V1.2.8 CI / Security / Quality Foundation remotely qualified on main at cf47aa4; GitHub Actions run 34429017377 concluded SUCCESS with Linux quality gate and Dependency and secret gate passing
 
 ## Integrity and timing rules
 

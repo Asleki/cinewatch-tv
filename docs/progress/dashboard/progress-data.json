@@ -3858,6 +3858,27 @@
       "summary": "CWTV.V1.2.8 local Linux CI security and quality qualification passed across repository, contracts, backend, frontend, offline database migrations and dependency security gates",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "ci-security-quality",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000124",
+      "event_sha256": "f012515e8862436e7c709095771b4051293743870bd5dfd6016f41f2686044c2",
+      "event_type": "MILESTONE_QUALIFIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.2.8",
+      "occurred_at": "2026-09-10T02:31:22Z",
+      "previous_event_sha256": "5ef8fd3b908c6603597ed29783e43f90f2ff44fd4071435cefcc9787f76d5a4b",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 124,
+      "summary": "CWTV.V1.2.8 CI / Security / Quality Foundation remotely qualified on main at cf47aa4; GitHub Actions run 34429017377 concluded SUCCESS with Linux quality gate and Dependency and secret gate passing",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -4174,9 +4195,9 @@
     }
   ],
   "ledger": {
-    "event_count": 123,
-    "head_event_id": "CWTV-EVT-000123",
-    "head_sha256": "5ef8fd3b908c6603597ed29783e43f90f2ff44fd4071435cefcc9787f76d5a4b"
+    "event_count": 124,
+    "head_event_id": "CWTV-EVT-000124",
+    "head_sha256": "f012515e8862436e7c709095771b4051293743870bd5dfd6016f41f2686044c2"
   },
   "milestones": [
     {
@@ -4394,22 +4415,22 @@
         "Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.",
         "Replaced the ineffective parent-scoped Redocly override with a root-global js-yaml 4.3.2 override."
       ],
-      "elapsed_label": "not preserved",
-      "elapsed_seconds": null,
+      "elapsed_label": "6h 49m 22s",
+      "elapsed_seconds": 24562.0,
       "failure_count": 2,
       "milestone": "CWTV.V1.2.8",
       "observed_difficulty": 4.4,
       "paused_label": "not preserved",
       "paused_seconds": null,
       "planned_complexity": null,
-      "progress_percent": 60,
+      "progress_percent": 100,
       "recorded_command_runtime_label": "not preserved",
       "recorded_command_runtime_seconds": 0.0,
       "session_data_present": false,
-      "status": "IN_PROGRESS"
+      "status": "QUALIFIED"
     }
   ],
-  "projection_as_of": "2026-09-10T00:46:35+00:00",
+  "projection_as_of": "2026-09-10T02:31:22+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 33,
@@ -4417,9 +4438,9 @@
     "corrections": 12,
     "current_milestone": "CWTV.V1.2.8",
     "failed_events": 13,
-    "passed_events": 85,
-    "qualified_milestones": 9,
-    "tracked_completion_percent": 90.0,
+    "passed_events": 86,
+    "qualified_milestones": 10,
+    "tracked_completion_percent": 100.0,
     "tracked_milestones": 10
   }
 }
