@@ -12,7 +12,7 @@
 - **Recorded failed events:** 14
 - **Recorded corrections:** 16
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000139` / `61401edc7f172877c1e2058b8a666412618290589ccc5a5365a290efc704683f`
+- **Ledger head:** `CWTV-EVT-000140` / `4fc7896c9d59e58891e630fc1716b6096fc37b4241097bb6f1f6e1973aa940d2`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -248,6 +248,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-10T15:10:13Z** · `CWTV.V1.3.1` · `ARTIFACT_APPLIED` · **PASS** — Applied the NexVox Projection Boundary Guard R2, advancing the CineWatch Engineering Workflow to Revision 003 and adding mechanical enforcement that projection commits may change only generator-owned NexVox projection paths.
 - **2026-09-10T15:10:27Z** · `CWTV.V1.3.1` · `CORRECTION_APPLIED` · **PASS** — Added regression protection for the source/projection boundary defect exposed by malformed commit 3f9f175. Future commits marked NexVox-Projection true must fail validation if they contain ordinary source, architecture, workflow, or Chronicle paths.
 - **2026-09-10T18:50:05Z** · `CWTV.V1.3.1` · `ARTIFACT_APPLIED` · **PASS** — Applied the A3 Signature Cinematic selection-lock delivery, preserving the approved CineWatch TV brand-direction evidence and mechanical qualification gate.
+- **2026-09-10T19:19:21Z** · `CWTV.V1.3.1` · `DESIGN_DIRECTION_SELECTED` · **QUALIFIED** — Human approval selected A3 — Signature Cinematic as the CineWatch TV Aperture C descendant for production-geometry engineering; concept-board pixels remain non-production evidence. Evidence: docs/architecture/CineWatch_TV_V1_A3_Signature_Cinematic_Selection_Lock_001.md; docs/architecture/evidence/CineWatch_TV_V1_A3_Signature_Cinematic_Selected_Direction_001.png; docs/architecture/evidence/CineWatch_TV_V1_A3_Signature_Cinematic_Selected_Direction_001.json
 
 ## Integrity and timing rules
 
