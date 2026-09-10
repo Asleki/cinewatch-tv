@@ -4251,6 +4251,48 @@
       "summary": "Applied the candidate CineWatch TV V1 Brand and Streaming Signature Authority, converting selected Aperture C Concept A into governed requirements for mark geometry, wordmark, themes, favicon, PWA, SEO/social identity, motion, accessibility, provenance, and production qualification.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": "3f9f175407d217e70aeb27420332fe44543e4ea8",
+      "component": "NEXVOX_ENGINEERING_KNOWLEDGE",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000135",
+      "event_sha256": "a6e3f332f9a0e0ef640eab01c3d82a6827f6a539b87e82f75fc1a83107efe8b9",
+      "event_type": "BLOCKER_IDENTIFIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T14:40:28Z",
+      "previous_event_sha256": "1d566ba866b6f549c90663e8bc427c602e53ece3d63096b26e8df938225546c3",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 135,
+      "summary": "Detected a NexVox source/projection boundary violation in commit 3f9f175: a commit marked NexVox-Projection true also contains the CineWatch Brand and Streaming Signature Authority and Chronicle source changes. The already-pushed commit is preserved as historical evidence and will not be rewritten.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "NEXVOX_ENGINEERING_KNOWLEDGE",
+      "correction": "CWTV-NEXVOX-PROJECTION-BOUNDARY-R1",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000136",
+      "event_sha256": "4f841435f181450d50a64656e793c76ef094cf4868fe4ea8434f7a62c2496d1c",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T14:40:38Z",
+      "previous_event_sha256": "a6e3f332f9a0e0ef640eab01c3d82a6827f6a539b87e82f75fc1a83107efe8b9",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 136,
+      "summary": "Applied append-only recovery for malformed projection 3f9f175 by preserving the pushed commit, establishing a new ordinary source boundary from the corrective engineering record, and requiring the next NexVox projection to target that new source commit.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -4564,12 +4606,33 @@
       "summary": "R1 dependency-resolution qualification failed because npm 12.0.2 recognized the Redocly-scoped js-yaml override but retained js-yaml 4.3.1 in the installed Redocly subtree.",
       "timestamp_precision": "exact",
       "timestamp_source": "terminal-screenshot-minute"
+    },
+    {
+      "artifact": null,
+      "commit": "3f9f175407d217e70aeb27420332fe44543e4ea8",
+      "component": "NEXVOX_ENGINEERING_KNOWLEDGE",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000135",
+      "event_sha256": "a6e3f332f9a0e0ef640eab01c3d82a6827f6a539b87e82f75fc1a83107efe8b9",
+      "event_type": "BLOCKER_IDENTIFIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T14:40:28Z",
+      "previous_event_sha256": "1d566ba866b6f549c90663e8bc427c602e53ece3d63096b26e8df938225546c3",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 135,
+      "summary": "Detected a NexVox source/projection boundary violation in commit 3f9f175: a commit marked NexVox-Projection true also contains the CineWatch Brand and Streaming Signature Authority and Chronicle source changes. The already-pushed commit is preserved as historical evidence and will not be rewritten.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "ledger": {
-    "event_count": 134,
-    "head_event_id": "CWTV-EVT-000134",
-    "head_sha256": "1d566ba866b6f549c90663e8bc427c602e53ece3d63096b26e8df938225546c3"
+    "event_count": 136,
+    "head_event_id": "CWTV-EVT-000136",
+    "head_sha256": "4f841435f181450d50a64656e793c76ef094cf4868fe4ea8434f7a62c2496d1c"
   },
   "milestones": [
     {
@@ -4804,18 +4867,19 @@
     {
       "active_session_label": "0s",
       "active_session_seconds": 0.0,
-      "blocker_count": 0,
+      "blocker_count": 1,
       "break_count": 0,
-      "correction_count": 2,
+      "correction_count": 3,
       "corrections": [
         "CWTV-NEXVOX-FOUNDATION-001-R1-DOC-CONSISTENCY",
+        "CWTV-NEXVOX-PROJECTION-BOUNDARY-R1",
         "CWTV.V1.3.1-R1-WHITESPACE"
       ],
       "elapsed_label": "not preserved",
       "elapsed_seconds": null,
-      "failure_count": 0,
+      "failure_count": 1,
       "milestone": "CWTV.V1.3.1",
-      "observed_difficulty": 1.9,
+      "observed_difficulty": 3.6,
       "paused_label": "0s",
       "paused_seconds": 0.0,
       "planned_complexity": null,
@@ -4826,15 +4890,15 @@
       "status": "IN_PROGRESS"
     }
   ],
-  "projection_as_of": "2026-09-10T14:34:22+00:00",
+  "projection_as_of": "2026-09-10T14:40:38+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 39,
     "commits": 9,
-    "corrections": 14,
+    "corrections": 15,
     "current_milestone": "CWTV.V1.3.1",
-    "failed_events": 13,
-    "passed_events": 94,
+    "failed_events": 14,
+    "passed_events": 95,
     "qualified_milestones": 10,
     "tracked_completion_percent": 90.9,
     "tracked_milestones": 11

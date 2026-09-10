@@ -9,10 +9,10 @@
 - **Tracked milestones:** 11
 - **Qualified milestones:** 10
 - **Tracked milestone completion:** 90.9%
-- **Recorded failed events:** 13
-- **Recorded corrections:** 14
+- **Recorded failed events:** 14
+- **Recorded corrections:** 15
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000134` / `1d566ba866b6f549c90663e8bc427c602e53ece3d63096b26e8df938225546c3`
+- **Ledger head:** `CWTV-EVT-000136` / `4f841435f181450d50a64656e793c76ef094cf4868fe4ea8434f7a62c2496d1c`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -30,7 +30,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.6` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | 26m 3s | not preserved |
 | `CWTV.V1.2.7` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 1h 26m 3s | not preserved |
 | `CWTV.V1.2.8` | QUALIFIED | 100% | 4.4/5 | 2 | 4 | 6h 49m 22s | not preserved |
-| `CWTV.V1.3.1` | IN_PROGRESS | 15% | 1.9/5 | 0 | 2 | not preserved | not preserved |
+| `CWTV.V1.3.1` | IN_PROGRESS | 15% | 3.6/5 | 1 | 3 | not preserved | not preserved |
 
 ## Failure and correction history
 
@@ -49,6 +49,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.7` | time not preserved | documentation | Final staged diff qualification detected trailing whitespace in the CWTV.V1.2.7 architecture document and ADR | — |
 | `CWTV.V1.2.8` | 2026-09-10T01:34:00+02:00 | npm-supply-chain | V1.2.8 security runtime qualification detected a high-severity js-yaml advisory in the OpenAPI contract-generation dependency path. | — |
 | `CWTV.V1.2.8` | 2026-09-10T02:08:00+02:00 | npm-supply-chain | R1 dependency-resolution qualification failed because npm 12.0.2 recognized the Redocly-scoped js-yaml override but retained js-yaml 4.3.1 in the installed Redocly subtree. | — |
+| `CWTV.V1.3.1` | 2026-09-10T14:40:28Z | NEXVOX_ENGINEERING_KNOWLEDGE | Detected a NexVox source/projection boundary violation in commit 3f9f175: a commit marked NexVox-Projection true also contains the CineWatch Brand and Streaming Signature Authority and Chronicle source changes. The already-pushed commit is preserved as historical evidence and will not be rewritten. | — |
 
 ## Commit lineage
 
@@ -240,6 +241,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-10T14:17:28Z** · `CWTV.V1.3.1` · `DECISION_APPLIED` · **PASS** — Selected Concept A — Aperture C as the CineWatch TV V1 brand identity direction. The concept is approved for refinement into the governed logo, mark, wordmark, dark/light variants, favicon, PWA icon, and SEO asset family; final geometry and production assets remain subject to qualification.
 - **2026-09-10T14:22:21Z** · `CWTV.V1.3.1` · `WORK_SESSION_STARTED` · **INFO** — Started CineWatch TV Aperture C Streaming Signature engineering following Concept A selection. Scope includes governed mark geometry, wordmark relationship, dark/light/monochrome behavior, typography, color language, favicon, PWA, SEO/social, motion, accessibility, asset provenance, and production qualification requirements.
 - **2026-09-10T14:34:22Z** · `CWTV.V1.3.1` · `ARTIFACT_APPLIED` · **PASS** — Applied the candidate CineWatch TV V1 Brand and Streaming Signature Authority, converting selected Aperture C Concept A into governed requirements for mark geometry, wordmark, themes, favicon, PWA, SEO/social identity, motion, accessibility, provenance, and production qualification.
+- **2026-09-10T14:40:28Z** · `CWTV.V1.3.1` · `BLOCKER_IDENTIFIED` · **FAILED** — Detected a NexVox source/projection boundary violation in commit 3f9f175: a commit marked NexVox-Projection true also contains the CineWatch Brand and Streaming Signature Authority and Chronicle source changes. The already-pushed commit is preserved as historical evidence and will not be rewritten.
+- **2026-09-10T14:40:38Z** · `CWTV.V1.3.1` · `CORRECTION_APPLIED` · **PASS** — Applied append-only recovery for malformed projection 3f9f175 by preserving the pushed commit, establishing a new ordinary source boundary from the corrective engineering record, and requiring the next NexVox projection to target that new source commit.
 
 ## Integrity and timing rules
 
