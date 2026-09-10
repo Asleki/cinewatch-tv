@@ -5,6 +5,14 @@ repo_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$repo_root"
 
 python_bin="${CWTV_API_PYTHON:-$repo_root/services/api/.venv/bin/python}"
+
+if [[ "$python_bin" != */* ]]; then
+  resolved_python="$(command -v -- "$python_bin" || true)"
+  if [[ -n "$resolved_python" ]]; then
+    python_bin="$resolved_python"
+  fi
+fi
+
 port="${CWTV_API_TEST_PORT:-8877}"
 log_file="${TMPDIR:-/tmp}/cwtv-v123-uvicorn.log"
 
