@@ -913,6 +913,30 @@
       "summary": "Applied the NexVox Engineering Knowledge Foundation R1 repository overlay, establishing the governed engineering-training corpus, deterministic generators, validation, CI integration, and workflow authority.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch_TV_V1_Brand_and_Streaming_Signature_Authority_001.md",
+        "sha256": "5aff70dd9c2f2efdd6d555f95359cca591766d686a7d0c65a6265e4396c489aa"
+      },
+      "commit": null,
+      "component": "BRAND_SIGNATURE",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000134",
+      "event_sha256": "1d566ba866b6f549c90663e8bc427c602e53ece3d63096b26e8df938225546c3",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T14:34:22Z",
+      "previous_event_sha256": "018993e46acdaa859e00fba671c364e13a152d38bcb1ba9ea01cec1341ae34d2",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 134,
+      "summary": "Applied the candidate CineWatch TV V1 Brand and Streaming Signature Authority, converting selected Aperture C Concept A into governed requirements for mark geometry, wordmark, themes, favicon, PWA, SEO/social identity, motion, accessibility, provenance, and production qualification.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "commits": [
@@ -4161,6 +4185,72 @@
       "summary": "Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "BRAND_IDENTITY",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000132",
+      "event_sha256": "6bda02fb11976c61b1c146b8c27534412c59d25b975f52dc23267d0bf0f3bca0",
+      "event_type": "DECISION_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T14:17:28Z",
+      "previous_event_sha256": "3dcc2eb4b91dcff4219d4302906d270e85088263fe4c86fb9d35488fd8a600f5",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 132,
+      "summary": "Selected Concept A — Aperture C as the CineWatch TV V1 brand identity direction. The concept is approved for refinement into the governed logo, mark, wordmark, dark/light variants, favicon, PWA icon, and SEO asset family; final geometry and production assets remain subject to qualification.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "BRAND_SIGNATURE",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000133",
+      "event_sha256": "018993e46acdaa859e00fba671c364e13a152d38bcb1ba9ea01cec1341ae34d2",
+      "event_type": "WORK_SESSION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T14:22:21Z",
+      "previous_event_sha256": "6bda02fb11976c61b1c146b8c27534412c59d25b975f52dc23267d0bf0f3bca0",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 133,
+      "summary": "Started CineWatch TV Aperture C Streaming Signature engineering following Concept A selection. Scope includes governed mark geometry, wordmark relationship, dark/light/monochrome behavior, typography, color language, favicon, PWA, SEO/social, motion, accessibility, asset provenance, and production qualification requirements.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch_TV_V1_Brand_and_Streaming_Signature_Authority_001.md",
+        "sha256": "5aff70dd9c2f2efdd6d555f95359cca591766d686a7d0c65a6265e4396c489aa"
+      },
+      "commit": null,
+      "component": "BRAND_SIGNATURE",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000134",
+      "event_sha256": "1d566ba866b6f549c90663e8bc427c602e53ece3d63096b26e8df938225546c3",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T14:34:22Z",
+      "previous_event_sha256": "018993e46acdaa859e00fba671c364e13a152d38bcb1ba9ea01cec1341ae34d2",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 134,
+      "summary": "Applied the candidate CineWatch TV V1 Brand and Streaming Signature Authority, converting selected Aperture C Concept A into governed requirements for mark geometry, wordmark, themes, favicon, PWA, SEO/social identity, motion, accessibility, provenance, and production qualification.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -4477,9 +4567,9 @@
     }
   ],
   "ledger": {
-    "event_count": 131,
-    "head_event_id": "CWTV-EVT-000131",
-    "head_sha256": "3dcc2eb4b91dcff4219d4302906d270e85088263fe4c86fb9d35488fd8a600f5"
+    "event_count": 134,
+    "head_event_id": "CWTV-EVT-000134",
+    "head_sha256": "1d566ba866b6f549c90663e8bc427c602e53ece3d63096b26e8df938225546c3"
   },
   "milestones": [
     {
@@ -4712,8 +4802,8 @@
       "status": "QUALIFIED"
     },
     {
-      "active_session_label": "not preserved",
-      "active_session_seconds": null,
+      "active_session_label": "0s",
+      "active_session_seconds": 0.0,
       "blocker_count": 0,
       "break_count": 0,
       "correction_count": 2,
@@ -4726,25 +4816,25 @@
       "failure_count": 0,
       "milestone": "CWTV.V1.3.1",
       "observed_difficulty": 1.9,
-      "paused_label": "not preserved",
-      "paused_seconds": null,
+      "paused_label": "0s",
+      "paused_seconds": 0.0,
       "planned_complexity": null,
       "progress_percent": 15,
       "recorded_command_runtime_label": "not preserved",
       "recorded_command_runtime_seconds": 0.0,
-      "session_data_present": false,
+      "session_data_present": true,
       "status": "IN_PROGRESS"
     }
   ],
-  "projection_as_of": "2026-09-10T12:30:15+00:00",
+  "projection_as_of": "2026-09-10T14:34:22+00:00",
   "schema_version": "1.0",
   "summary": {
-    "artifacts": 38,
+    "artifacts": 39,
     "commits": 9,
     "corrections": 14,
     "current_milestone": "CWTV.V1.3.1",
     "failed_events": 13,
-    "passed_events": 92,
+    "passed_events": 94,
     "qualified_milestones": 10,
     "tracked_completion_percent": 90.9,
     "tracked_milestones": 11

@@ -12,7 +12,7 @@
 - **Recorded failed events:** 13
 - **Recorded corrections:** 14
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000131` / `3dcc2eb4b91dcff4219d4302906d270e85088263fe4c86fb9d35488fd8a600f5`
+- **Ledger head:** `CWTV-EVT-000134` / `1d566ba866b6f549c90663e8bc427c602e53ece3d63096b26e8df938225546c3`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -102,6 +102,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `CineWatch_TV_V1_Competitive_Design_Intelligence_001.md` — SHA-256 `e6afd702ab421b3f72f9e6c56d1eb522c6f7eecc8db9e84c57440a2977089109` — CORRECTION_APPLIED (2026-09-10T07:13:31Z)
 - `CineWatch_TV_V1_Design_System_and_Asset_Foundation_001.md` — SHA-256 `ac7c20176beacc8d9d7874c3ddb617394c33643d64e46345d1ecfe85c598e344` — CORRECTION_APPLIED (2026-09-10T07:13:39Z)
 - `CWTV_NexVox_Engineering_Knowledge_Foundation_001_R1_REPO_OVERLAY.zip` — SHA-256 `a61a666831d7ebcde39a08ddf64b4939c065ca381b8079c3fd92a78df13a2edd` — ARTIFACT_APPLIED (2026-09-10T12:30:06Z)
+- `CineWatch_TV_V1_Brand_and_Streaming_Signature_Authority_001.md` — SHA-256 `5aff70dd9c2f2efdd6d555f95359cca591766d686a7d0c65a6265e4396c489aa` — ARTIFACT_APPLIED (2026-09-10T14:34:22Z)
 
 ## Event timeline
 
@@ -236,6 +237,9 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-10T07:13:39Z** · `CWTV.V1.3.1` · `CORRECTION_APPLIED` · **PASS** — Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 - **2026-09-10T12:30:06Z** · `CWTV.V1.3.1` · `ARTIFACT_APPLIED` · **PASS** — Applied the NexVox Engineering Knowledge Foundation R1 repository overlay, establishing the governed engineering-training corpus, deterministic generators, validation, CI integration, and workflow authority.
 - **2026-09-10T12:30:15Z** · `CWTV.V1.3.1` · `CORRECTION_APPLIED` · **PASS** — Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.
+- **2026-09-10T14:17:28Z** · `CWTV.V1.3.1` · `DECISION_APPLIED` · **PASS** — Selected Concept A — Aperture C as the CineWatch TV V1 brand identity direction. The concept is approved for refinement into the governed logo, mark, wordmark, dark/light variants, favicon, PWA icon, and SEO asset family; final geometry and production assets remain subject to qualification.
+- **2026-09-10T14:22:21Z** · `CWTV.V1.3.1` · `WORK_SESSION_STARTED` · **INFO** — Started CineWatch TV Aperture C Streaming Signature engineering following Concept A selection. Scope includes governed mark geometry, wordmark relationship, dark/light/monochrome behavior, typography, color language, favicon, PWA, SEO/social, motion, accessibility, asset provenance, and production qualification requirements.
+- **2026-09-10T14:34:22Z** · `CWTV.V1.3.1` · `ARTIFACT_APPLIED` · **PASS** — Applied the candidate CineWatch TV V1 Brand and Streaming Signature Authority, converting selected Aperture C Concept A into governed requirements for mark geometry, wordmark, themes, favicon, PWA, SEO/social identity, motion, accessibility, provenance, and production qualification.
 
 ## Integrity and timing rules
 
