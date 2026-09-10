@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `b087de6409b86314fe7ad59468cb37548ddd64ea`
+**Source commit:** `a95c4a2d25c23382fd0196350f9dbe1723be839f`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
@@ -108,13 +108,13 @@ Failure: R1 dependency-resolution qualification failed because npm 12.0.2 recogn
 
 Correction: Replaced the ineffective parent-scoped Redocly override with a root-global js-yaml 4.3.2 override.
 
-## CWTV-FC-00014 - CWTV.V1.2.8
+## CWTV-FC-00014 - CWTV.V1.3.1
 
-State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
+State: `CORRECTED`
 
-Failure: No FAILED ledger event recorded.
+Failure: Detected a NexVox source/projection boundary violation in commit 3f9f175: a commit marked NexVox-Projection true also contains the CineWatch Brand and Streaming Signature Authority and Chronicle source changes. The already-pushed commit is preserved as historical evidence and will not be rewritten.
 
-Correction: Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.
+Correction: Applied append-only recovery for malformed projection 3f9f175 by preserving the pushed commit, establishing a new ordinary source boundary from the corrective engineering record, and requiring the next NexVox projection to target that new source commit.
 
 ## CWTV-FC-00015 - CWTV.V1.2.8
 
@@ -122,15 +122,15 @@ State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
 Failure: No FAILED ledger event recorded.
 
-Correction: Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance.
+Correction: Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.
 
-## CWTV-FC-00016 - CWTV.V1.3.1
+## CWTV-FC-00016 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
 Failure: No FAILED ledger event recorded.
 
-Correction: Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
+Correction: Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance.
 
 ## CWTV-FC-00017 - CWTV.V1.3.1
 
@@ -138,9 +138,17 @@ State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
 Failure: No FAILED ledger event recorded.
 
-Correction: Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
+Correction: Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
 ## CWTV-FC-00018 - CWTV.V1.3.1
+
+State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
+
+Failure: No FAILED ledger event recorded.
+
+Correction: Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
+
+## CWTV-FC-00019 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
