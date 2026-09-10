@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `CWTV.V1.2.8`
-- **Tracked milestones:** 10
+- **Current milestone:** `CWTV.V1.3.1`
+- **Tracked milestones:** 11
 - **Qualified milestones:** 10
-- **Tracked milestone completion:** 100.0%
+- **Tracked milestone completion:** 90.9%
 - **Recorded failed events:** 13
-- **Recorded corrections:** 12
+- **Recorded corrections:** 13
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000124` / `f012515e8862436e7c709095771b4051293743870bd5dfd6016f41f2686044c2`
+- **Ledger head:** `CWTV-EVT-000129` / `0a523dd37b0f15a0ee6bfa1a0cd3e3009ed22a7dde8563ed0f6064d5ddf4892e`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -30,6 +30,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.6` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | 26m 3s | not preserved |
 | `CWTV.V1.2.7` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 1h 26m 3s | not preserved |
 | `CWTV.V1.2.8` | QUALIFIED | 100% | 4.4/5 | 2 | 4 | 6h 49m 22s | not preserved |
+| `CWTV.V1.3.1` | IN_PROGRESS | 15% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 
 ## Failure and correction history
 
@@ -96,6 +97,10 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `CWTV.V1.2.8_R2_js-yaml_Global_Resolution_Correction.zip` — SHA-256 `07d9351e04b3aef6295ba5101bd01da77c5bd1f7f3a0e6c676b21e28c8026fd1` — CORRECTION_ARTIFACT_VERIFIED (2026-09-10T02:15:41+02:00)
 - `CWTV.V1.2.8_R2_js-yaml_Global_Resolution_Correction.zip` — SHA-256 `07d9351e04b3aef6295ba5101bd01da77c5bd1f7f3a0e6c676b21e28c8026fd1` — CORRECTION_ARTIFACT_EXTRACTED (2026-09-10T02:15:43+02:00)
 - `CWTV.V1.2.8_R3_Scope_and_Storage_Hygiene_Correction.zip` — SHA-256 `56742259784b798455b2ab13523ce33b118855f9222bf7d9a0f76fc64db14eb6` — CORRECTION_ARTIFACT_VERIFIED (2026-09-10T02:28:19+02:00)
+- `CineWatch_TV_V1_Competitive_Design_Intelligence_001.md` — SHA-256 `8773bad0c2b0bd0725fe200c1a9862eb28d51e9572d42fb066a8418575fbfdc3` — ARTIFACT_GENERATED (2026-09-10T07:07:32Z)
+- `CineWatch_TV_V1_Design_System_and_Asset_Foundation_001.md` — SHA-256 `4786199179c1532e2ffea6de52e4bdd546dd6c0f6a306ddb9484b4edc59ff9fa` — ARTIFACT_GENERATED (2026-09-10T07:07:39Z)
+- `CineWatch_TV_V1_Competitive_Design_Intelligence_001.md` — SHA-256 `e6afd702ab421b3f72f9e6c56d1eb522c6f7eecc8db9e84c57440a2977089109` — CORRECTION_APPLIED (2026-09-10T07:13:31Z)
+- `CineWatch_TV_V1_Design_System_and_Asset_Foundation_001.md` — SHA-256 `ac7c20176beacc8d9d7874c3ddb617394c33643d64e46345d1ecfe85c598e344` — CORRECTION_APPLIED (2026-09-10T07:13:39Z)
 
 ## Event timeline
 
@@ -223,6 +228,11 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-10T02:28:19+02:00** · `CWTV.V1.2.8` · `CORRECTION_ARTIFACT_VERIFIED` · **PASS** — CWTV.V1.2.8 R3 scope/storage correction SHA-256 verified.
 - **2026-09-10T00:46:35Z** · `CWTV.V1.2.8` · `LOCAL_QUALIFICATION_PASSED` · **PASS** — CWTV.V1.2.8 local Linux CI security and quality qualification passed across repository, contracts, backend, frontend, offline database migrations and dependency security gates
 - **2026-09-10T02:31:22Z** · `CWTV.V1.2.8` · `MILESTONE_QUALIFIED` · **PASS** — CWTV.V1.2.8 CI / Security / Quality Foundation remotely qualified on main at cf47aa4; GitHub Actions run 34429017377 concluded SUCCESS with Linux quality gate and Dependency and secret gate passing
+- **2026-09-10T06:27:47Z** · `CWTV.V1.3.1` · `MILESTONE_STARTED` · **INFO** — Started CWTV.V1.3.1 Design System Evidence and Competitive Intelligence: current V1 baseline inspected, legacy CineWatchStream reference audit established, competitive benchmark scope defined, and CSS-first semantic HTML design direction approved.
+- **2026-09-10T07:07:32Z** · `CWTV.V1.3.1` · `ARTIFACT_GENERATED` · **PASS** — Generated the candidate CineWatch TV V1 competitive design intelligence authority from current V1 baseline evidence, legacy CineWatchStream analysis, and cross-domain design research.
+- **2026-09-10T07:07:39Z** · `CWTV.V1.3.1` · `ARTIFACT_GENERATED` · **PASS** — Generated the candidate CineWatch TV V1 design system and asset foundation authority, including semantic HTML, CSS-first architecture, selective Tailwind use, responsive recomposition, accessibility, rights-aware UI, and governed asset principles.
+- **2026-09-10T07:13:31Z** · `CWTV.V1.3.1` · `CORRECTION_APPLIED` · **PASS** — Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
+- **2026-09-10T07:13:39Z** · `CWTV.V1.3.1` · `CORRECTION_APPLIED` · **PASS** — Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
 ## Integrity and timing rules
 

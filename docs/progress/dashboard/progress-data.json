@@ -793,6 +793,102 @@
       "summary": "CWTV.V1.2.8 R3 scope/storage correction SHA-256 verified.",
       "timestamp_precision": "exact",
       "timestamp_source": "terminal"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch_TV_V1_Competitive_Design_Intelligence_001.md",
+        "sha256": "8773bad0c2b0bd0725fe200c1a9862eb28d51e9572d42fb066a8418575fbfdc3"
+      },
+      "commit": null,
+      "component": "DESIGN_SYSTEM",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000126",
+      "event_sha256": "0f6c30cb2e860c4df698d1e799d782073b18c453e27221897d88a843272cc8ae",
+      "event_type": "ARTIFACT_GENERATED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T07:07:32Z",
+      "previous_event_sha256": "55fba3e54751f095352c5e49292a6faa9d093db6a2922db1c27d0a9b62b6df0b",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 126,
+      "summary": "Generated the candidate CineWatch TV V1 competitive design intelligence authority from current V1 baseline evidence, legacy CineWatchStream analysis, and cross-domain design research.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch_TV_V1_Design_System_and_Asset_Foundation_001.md",
+        "sha256": "4786199179c1532e2ffea6de52e4bdd546dd6c0f6a306ddb9484b4edc59ff9fa"
+      },
+      "commit": null,
+      "component": "DESIGN_SYSTEM",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000127",
+      "event_sha256": "adf6b375db8d5573e86605958ed7bae0248ed85e2a396da04b301e6a79ba8cd1",
+      "event_type": "ARTIFACT_GENERATED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T07:07:39Z",
+      "previous_event_sha256": "0f6c30cb2e860c4df698d1e799d782073b18c453e27221897d88a843272cc8ae",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 127,
+      "summary": "Generated the candidate CineWatch TV V1 design system and asset foundation authority, including semantic HTML, CSS-first architecture, selective Tailwind use, responsive recomposition, accessibility, rights-aware UI, and governed asset principles.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch_TV_V1_Competitive_Design_Intelligence_001.md",
+        "sha256": "e6afd702ab421b3f72f9e6c56d1eb522c6f7eecc8db9e84c57440a2977089109"
+      },
+      "commit": null,
+      "component": "DESIGN_SYSTEM",
+      "correction": "CWTV.V1.3.1-R1-WHITESPACE",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000128",
+      "event_sha256": "66d9c30330a297e3cb16a036af8c0099025d1eedadef6139135685cc9897149a",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T07:13:31Z",
+      "previous_event_sha256": "adf6b375db8d5573e86605958ed7bae0248ed85e2a396da04b301e6a79ba8cd1",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 128,
+      "summary": "Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch_TV_V1_Design_System_and_Asset_Foundation_001.md",
+        "sha256": "ac7c20176beacc8d9d7874c3ddb617394c33643d64e46345d1ecfe85c598e344"
+      },
+      "commit": null,
+      "component": "DESIGN_SYSTEM",
+      "correction": "CWTV.V1.3.1-R1-WHITESPACE",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000129",
+      "event_sha256": "0a523dd37b0f15a0ee6bfa1a0cd3e3009ed22a7dde8563ed0f6064d5ddf4892e",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T07:13:39Z",
+      "previous_event_sha256": "66d9c30330a297e3cb16a036af8c0099025d1eedadef6139135685cc9897149a",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 129,
+      "summary": "Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "commits": [
@@ -3879,6 +3975,123 @@
       "summary": "CWTV.V1.2.8 CI / Security / Quality Foundation remotely qualified on main at cf47aa4; GitHub Actions run 34429017377 concluded SUCCESS with Linux quality gate and Dependency and secret gate passing",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "DESIGN_SYSTEM",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000125",
+      "event_sha256": "55fba3e54751f095352c5e49292a6faa9d093db6a2922db1c27d0a9b62b6df0b",
+      "event_type": "MILESTONE_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T06:27:47Z",
+      "previous_event_sha256": "f012515e8862436e7c709095771b4051293743870bd5dfd6016f41f2686044c2",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 125,
+      "summary": "Started CWTV.V1.3.1 Design System Evidence and Competitive Intelligence: current V1 baseline inspected, legacy CineWatchStream reference audit established, competitive benchmark scope defined, and CSS-first semantic HTML design direction approved.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch_TV_V1_Competitive_Design_Intelligence_001.md",
+        "sha256": "8773bad0c2b0bd0725fe200c1a9862eb28d51e9572d42fb066a8418575fbfdc3"
+      },
+      "commit": null,
+      "component": "DESIGN_SYSTEM",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000126",
+      "event_sha256": "0f6c30cb2e860c4df698d1e799d782073b18c453e27221897d88a843272cc8ae",
+      "event_type": "ARTIFACT_GENERATED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T07:07:32Z",
+      "previous_event_sha256": "55fba3e54751f095352c5e49292a6faa9d093db6a2922db1c27d0a9b62b6df0b",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 126,
+      "summary": "Generated the candidate CineWatch TV V1 competitive design intelligence authority from current V1 baseline evidence, legacy CineWatchStream analysis, and cross-domain design research.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch_TV_V1_Design_System_and_Asset_Foundation_001.md",
+        "sha256": "4786199179c1532e2ffea6de52e4bdd546dd6c0f6a306ddb9484b4edc59ff9fa"
+      },
+      "commit": null,
+      "component": "DESIGN_SYSTEM",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000127",
+      "event_sha256": "adf6b375db8d5573e86605958ed7bae0248ed85e2a396da04b301e6a79ba8cd1",
+      "event_type": "ARTIFACT_GENERATED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T07:07:39Z",
+      "previous_event_sha256": "0f6c30cb2e860c4df698d1e799d782073b18c453e27221897d88a843272cc8ae",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 127,
+      "summary": "Generated the candidate CineWatch TV V1 design system and asset foundation authority, including semantic HTML, CSS-first architecture, selective Tailwind use, responsive recomposition, accessibility, rights-aware UI, and governed asset principles.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch_TV_V1_Competitive_Design_Intelligence_001.md",
+        "sha256": "e6afd702ab421b3f72f9e6c56d1eb522c6f7eecc8db9e84c57440a2977089109"
+      },
+      "commit": null,
+      "component": "DESIGN_SYSTEM",
+      "correction": "CWTV.V1.3.1-R1-WHITESPACE",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000128",
+      "event_sha256": "66d9c30330a297e3cb16a036af8c0099025d1eedadef6139135685cc9897149a",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T07:13:31Z",
+      "previous_event_sha256": "adf6b375db8d5573e86605958ed7bae0248ed85e2a396da04b301e6a79ba8cd1",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 128,
+      "summary": "Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch_TV_V1_Design_System_and_Asset_Foundation_001.md",
+        "sha256": "ac7c20176beacc8d9d7874c3ddb617394c33643d64e46345d1ecfe85c598e344"
+      },
+      "commit": null,
+      "component": "DESIGN_SYSTEM",
+      "correction": "CWTV.V1.3.1-R1-WHITESPACE",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000129",
+      "event_sha256": "0a523dd37b0f15a0ee6bfa1a0cd3e3009ed22a7dde8563ed0f6064d5ddf4892e",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T07:13:39Z",
+      "previous_event_sha256": "66d9c30330a297e3cb16a036af8c0099025d1eedadef6139135685cc9897149a",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 129,
+      "summary": "Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -4195,9 +4408,9 @@
     }
   ],
   "ledger": {
-    "event_count": 124,
-    "head_event_id": "CWTV-EVT-000124",
-    "head_sha256": "f012515e8862436e7c709095771b4051293743870bd5dfd6016f41f2686044c2"
+    "event_count": 129,
+    "head_event_id": "CWTV-EVT-000129",
+    "head_sha256": "0a523dd37b0f15a0ee6bfa1a0cd3e3009ed22a7dde8563ed0f6064d5ddf4892e"
   },
   "milestones": [
     {
@@ -4428,19 +4641,42 @@
       "recorded_command_runtime_seconds": 0.0,
       "session_data_present": false,
       "status": "QUALIFIED"
+    },
+    {
+      "active_session_label": "not preserved",
+      "active_session_seconds": null,
+      "blocker_count": 0,
+      "break_count": 0,
+      "correction_count": 1,
+      "corrections": [
+        "CWTV.V1.3.1-R1-WHITESPACE"
+      ],
+      "elapsed_label": "not preserved",
+      "elapsed_seconds": null,
+      "failure_count": 0,
+      "milestone": "CWTV.V1.3.1",
+      "observed_difficulty": 1.4,
+      "paused_label": "not preserved",
+      "paused_seconds": null,
+      "planned_complexity": null,
+      "progress_percent": 15,
+      "recorded_command_runtime_label": "not preserved",
+      "recorded_command_runtime_seconds": 0.0,
+      "session_data_present": false,
+      "status": "IN_PROGRESS"
     }
   ],
-  "projection_as_of": "2026-09-10T02:31:22+00:00",
+  "projection_as_of": "2026-09-10T07:13:39+00:00",
   "schema_version": "1.0",
   "summary": {
-    "artifacts": 33,
+    "artifacts": 37,
     "commits": 9,
-    "corrections": 12,
-    "current_milestone": "CWTV.V1.2.8",
+    "corrections": 13,
+    "current_milestone": "CWTV.V1.3.1",
     "failed_events": 13,
-    "passed_events": 86,
+    "passed_events": 90,
     "qualified_milestones": 10,
-    "tracked_completion_percent": 100.0,
-    "tracked_milestones": 10
+    "tracked_completion_percent": 90.9,
+    "tracked_milestones": 11
   }
 }
