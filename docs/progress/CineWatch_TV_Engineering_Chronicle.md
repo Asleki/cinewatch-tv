@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `CWTV.V1.2.7`
-- **Tracked milestones:** 9
+- **Current milestone:** `CWTV.V1.2.8`
+- **Tracked milestones:** 10
 - **Qualified milestones:** 9
-- **Tracked milestone completion:** 100.0%
-- **Recorded failed events:** 11
-- **Recorded corrections:** 8
-- **Commit events:** 8
-- **Ledger head:** `CWTV-EVT-000099` / `1dbdb6cd1c42f97526d6f5e2e880e6f1dd24b9b4c17972eaf6472f9871bd5486`
+- **Tracked milestone completion:** 90.0%
+- **Recorded failed events:** 13
+- **Recorded corrections:** 12
+- **Commit events:** 9
+- **Ledger head:** `CWTV-EVT-000123` / `5ef8fd3b908c6603597ed29783e43f90f2ff44fd4071435cefcc9787f76d5a4b`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -29,6 +29,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.5.1` | QUALIFIED | 100% | 4.6/5 | 3 | 2 | 1h 10m 54s | 8s |
 | `CWTV.V1.2.6` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | 26m 3s | not preserved |
 | `CWTV.V1.2.7` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 1h 26m 3s | not preserved |
+| `CWTV.V1.2.8` | IN_PROGRESS | 60% | 4.4/5 | 2 | 4 | not preserved | not preserved |
 
 ## Failure and correction history
 
@@ -45,6 +46,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.7` | time not preserved | termux-host | CWTV.V1.2.7 native runtime qualification initially failed because the Termux zip packaging utility was unavailable | — |
 | `CWTV.V1.2.7` | time not preserved | termux-host | CWTV.V1.2.7 native runtime qualification initially failed because the Termux zip packaging utility was unavailable | — |
 | `CWTV.V1.2.7` | time not preserved | documentation | Final staged diff qualification detected trailing whitespace in the CWTV.V1.2.7 architecture document and ADR | — |
+| `CWTV.V1.2.8` | 2026-09-10T01:34:00+02:00 | npm-supply-chain | V1.2.8 security runtime qualification detected a high-severity js-yaml advisory in the OpenAPI contract-generation dependency path. | — |
+| `CWTV.V1.2.8` | 2026-09-10T02:08:00+02:00 | npm-supply-chain | R1 dependency-resolution qualification failed because npm 12.0.2 recognized the Redocly-scoped js-yaml override but retained js-yaml 4.3.1 in the installed Redocly subtree. | — |
 
 ## Commit lineage
 
@@ -56,6 +59,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `678500c0160ac002f8e8585ab4f7560ea22e4d6e` — feat: establish CineWatch V1 PostgreSQL migration foundation (2026-09-08T03:55:07+02:00)
 - `74856ca2738afaa33d33ed7cb1983967fc0355bd` — fix: qualify CineWatch engineering dashboard visual experience (2026-09-08T05:25:09+02:00)
 - `e15752642ed22d30b99caadf546214eea15b730f` — feat: establish CineWatch V1 OpenAPI typed contract foundation (2026-09-09T06:58:32+02:00)
+- `50a453e1efccba0d963d2990b7c6a528fc35ffcf` — feat: establish CineWatch Termux Linux engineering workflow (2026-09-09T21:34:35+02:00)
 
 ## Artifacts
 
@@ -82,6 +86,16 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `CWTV.V1.2.7_Termux_Linux_Engineering_Workflow_Foundation_001.zip` — SHA-256 `133eaf539420d9505ed818e8f5d75941cb008f7bc80f8839d7b1961d97ddf9a2` — ARTIFACT_GENERATED (2026-09-09T19:06:44Z)
 - `CWTV.V1.2.7_Termux_Linux_Engineering_Workflow_Foundation_001.zip` — SHA-256 `133eaf539420d9505ed818e8f5d75941cb008f7bc80f8839d7b1961d97ddf9a2` — ARTIFACT_VERIFIED (2026-09-09T21:11:59+02:00)
 - `CWTV.V1.2.7_Termux_Linux_Engineering_Workflow_Foundation_001.zip` — SHA-256 `133eaf539420d9505ed818e8f5d75941cb008f7bc80f8839d7b1961d97ddf9a2` — ARTIFACT_EXTRACTED (2026-09-09T21:12:15+02:00)
+- `CWTV.V1.2.8_CI_Security_Quality_Foundation_001.zip` — SHA-256 `38e896e58f93759d9ccc35752211feb20017932cef23f53b5a6fcfded3815a02` — ARTIFACT_GENERATED (2026-09-09T19:50:31Z)
+- `CWTV.V1.2.8_CI_Security_Quality_Foundation_001.zip` — SHA-256 `38e896e58f93759d9ccc35752211feb20017932cef23f53b5a6fcfded3815a02` — ARTIFACT_VERIFIED (2026-09-10T01:23:46+02:00)
+- `CWTV.V1.2.8_CI_Security_Quality_Foundation_001.zip` — SHA-256 `38e896e58f93759d9ccc35752211feb20017932cef23f53b5a6fcfded3815a02` — ARTIFACT_EXTRACTED (2026-09-10T01:24:00+02:00)
+- `CWTV.V1.2.8_R1_js-yaml_Supply_Chain_Security_Correction.zip` — SHA-256 `8dbb96dd8a62db572c08ad52eb4062655e6c1909f33875d81324141cc53584b5` — CORRECTION_ARTIFACT_GENERATED (2026-09-09T23:51:37Z)
+- `CWTV.V1.2.8_R1_js-yaml_Supply_Chain_Security_Correction.zip` — SHA-256 `8dbb96dd8a62db572c08ad52eb4062655e6c1909f33875d81324141cc53584b5` — CORRECTION_ARTIFACT_VERIFIED (2026-09-10T01:56:37+02:00)
+- `CWTV.V1.2.8_R1_js-yaml_Supply_Chain_Security_Correction.zip` — SHA-256 `8dbb96dd8a62db572c08ad52eb4062655e6c1909f33875d81324141cc53584b5` — CORRECTION_ARTIFACT_EXTRACTED (2026-09-10T01:56:39+02:00)
+- `CWTV.V1.2.8_R2_js-yaml_Global_Resolution_Correction.zip` — SHA-256 `07d9351e04b3aef6295ba5101bd01da77c5bd1f7f3a0e6c676b21e28c8026fd1` — CORRECTION_ARTIFACT_GENERATED (2026-09-10T00:14:10Z)
+- `CWTV.V1.2.8_R2_js-yaml_Global_Resolution_Correction.zip` — SHA-256 `07d9351e04b3aef6295ba5101bd01da77c5bd1f7f3a0e6c676b21e28c8026fd1` — CORRECTION_ARTIFACT_VERIFIED (2026-09-10T02:15:41+02:00)
+- `CWTV.V1.2.8_R2_js-yaml_Global_Resolution_Correction.zip` — SHA-256 `07d9351e04b3aef6295ba5101bd01da77c5bd1f7f3a0e6c676b21e28c8026fd1` — CORRECTION_ARTIFACT_EXTRACTED (2026-09-10T02:15:43+02:00)
+- `CWTV.V1.2.8_R3_Scope_and_Storage_Hygiene_Correction.zip` — SHA-256 `56742259784b798455b2ab13523ce33b118855f9222bf7d9a0f76fc64db14eb6` — CORRECTION_ARTIFACT_VERIFIED (2026-09-10T02:28:19+02:00)
 
 ## Event timeline
 
@@ -184,6 +198,30 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **time not preserved** · `CWTV.V1.2.7` · `STAGED_DIFF_CHECK_FAILED` · **FAILED** — Final staged diff qualification detected trailing whitespace in the CWTV.V1.2.7 architecture document and ADR Evidence: git diff --cached --check identified five Markdown lines with trailing whitespace.
 - **2026-09-09T19:30:52Z** · `CWTV.V1.2.7` · `CORRECTION_APPLIED` · **PASS** — Removed trailing whitespace from the CWTV.V1.2.7 architecture document and ADR and restaged both files Evidence: git diff --check and git diff --cached --check both passed silently after correction.
 - **2026-09-09T19:34:03Z** · `CWTV.V1.2.7` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.2.7 Termux / Linux Engineering Workflow Foundation qualified after static policy, repository regression, governed session recreation, actual Termux restart recovery and native runtime qualification
+- **2026-09-09T21:34:35+02:00** · `CWTV.V1.2.7` · `COMMIT_CREATED` · **PASS** — feat: establish CineWatch Termux Linux engineering workflow Evidence: Recovered at CWTV.V1.2.8 start from Git commit authority.
+- **time not preserved** · `CWTV.V1.2.7` · `PUSH_COMPLETED` · **PASS** — CWTV.V1.2.7 closure commit is synchronized with origin/main. Evidence: Exact push timestamp was not preserved; synchronization was proven at CWTV.V1.2.8 start.
+- **2026-09-09T21:42:00+02:00** · `CWTV.V1.2.8` · `BASELINE_INSPECTED` · **PASS** — CWTV.V1.2.8 live baseline inspection confirmed a clean repository with no existing GitHub workflow authority and all prior qualification scripts present. Evidence: main and origin/main matched 50a453e1efccba0d963d2990b7c6a528fc35ffcf; .github contained no workflow files; seven repository tests existed before this milestone.
+- **2026-09-09T21:42:00+02:00** · `CWTV.V1.2.8` · `MILESTONE_STARTED` · **INFO** — CWTV.V1.2.8 CI / Security / Quality Foundation entered implementation.
+- **2026-09-09T19:50:31Z** · `CWTV.V1.2.8` · `ARTIFACT_GENERATED` · **PASS** — CWTV.V1.2.8 CI/security/quality delivery generated.
+- **2026-09-10T01:23:46+02:00** · `CWTV.V1.2.8` · `ARTIFACT_VERIFIED` · **PASS** — CWTV.V1.2.8 delivery SHA-256 verified before extraction.
+- **2026-09-10T01:24:00+02:00** · `CWTV.V1.2.8` · `ARTIFACT_EXTRACTED` · **PASS** — CWTV.V1.2.8 delivery extracted for application.
+- **2026-09-09T23:24:14Z** · `CWTV.V1.2.8` · `DELIVERY_APPLIED` · **PASS** — CWTV.V1.2.8 GitHub CI workflow, least-privilege security policy, dependency monitoring and qualification gates applied. Evidence: No cloud resource, database, provider service or deployment environment was created or contacted by APPLY.sh.
+- **2026-09-10T01:34:00+02:00** · `CWTV.V1.2.8` · `SECURITY_RUNTIME_QUALIFICATION_FAILED` · **FAILED** — V1.2.8 security runtime qualification detected a high-severity js-yaml advisory in the OpenAPI contract-generation dependency path. Evidence: npm audit reported GHSA-2883-xcg3-v3hh through @redocly/openapi-core 1.34.19 -> js-yaml 4.3.1; the security script stopped before pip-audit.
+- **2026-09-10T01:41:00+02:00** · `CWTV.V1.2.8` · `ROOT_CAUSE_IDENTIFIED` · **INFO** — The vulnerable js-yaml resolution is isolated to openapi-typescript 7.13.0 -> @redocly/openapi-core 1.34.19; the ESLint path already resolves js-yaml 4.3.2. Evidence: npm ls proved @redocly/openapi-core -> js-yaml 4.3.1 and @eslint/eslintrc -> js-yaml 4.3.2.
+- **2026-09-09T23:51:37Z** · `CWTV.V1.2.8` · `CORRECTION_ARTIFACT_GENERATED` · **PASS** — CWTV.V1.2.8 R1 js-yaml supply-chain security correction generated.
+- **2026-09-10T01:56:37+02:00** · `CWTV.V1.2.8` · `CORRECTION_ARTIFACT_VERIFIED` · **PASS** — CWTV.V1.2.8 R1 correction SHA-256 verified.
+- **2026-09-10T01:56:39+02:00** · `CWTV.V1.2.8` · `CORRECTION_ARTIFACT_EXTRACTED` · **PASS** — CWTV.V1.2.8 R1 correction extracted.
+- **2026-09-09T23:56:48Z** · `CWTV.V1.2.8` · `CORRECTION_APPLIED` · **PASS** — Applied a root-scoped @redocly/openapi-core -> js-yaml 4.3.2 override without changing openapi-typescript 7.13.0. Evidence: R1 replaces package.json and strengthens static/runtime policy. package-lock regeneration remains an explicit Linux-authority step.
+- **2026-09-10T02:08:00+02:00** · `CWTV.V1.2.8` · `SECURITY_RUNTIME_QUALIFICATION_FAILED` · **FAILED** — R1 dependency-resolution qualification failed because npm 12.0.2 recognized the Redocly-scoped js-yaml override but retained js-yaml 4.3.1 in the installed Redocly subtree. Evidence: npm ls reported js-yaml@4.3.1 invalid: 4.3.2 from @redocly/openapi-core after lock regeneration and npm ci.
+- **2026-09-10T02:12:00+02:00** · `CWTV.V1.2.8` · `ROOT_CAUSE_IDENTIFIED` · **INFO** — Lock inspection confirmed Redocly still declared and nested js-yaml 4.3.1 while the repository root already held js-yaml 4.3.2; npm uses hoisted strategy with legacy-peer-deps disabled. Evidence: package-lock inspection showed Redocly dependency 4.3.1, nested js-yaml 4.3.1 and root js-yaml 4.3.2.
+- **2026-09-10T00:14:10Z** · `CWTV.V1.2.8` · `CORRECTION_ARTIFACT_GENERATED` · **PASS** — CWTV.V1.2.8 R2 js-yaml global-resolution correction generated.
+- **2026-09-10T02:15:41+02:00** · `CWTV.V1.2.8` · `CORRECTION_ARTIFACT_VERIFIED` · **PASS** — CWTV.V1.2.8 R2 correction SHA-256 verified.
+- **2026-09-10T02:15:43+02:00** · `CWTV.V1.2.8` · `CORRECTION_ARTIFACT_EXTRACTED` · **PASS** — CWTV.V1.2.8 R2 correction extracted.
+- **2026-09-10T00:15:52Z** · `CWTV.V1.2.8` · `CORRECTION_APPLIED` · **PASS** — Replaced the ineffective parent-scoped Redocly override with a root-global js-yaml 4.3.2 override. Evidence: R2 preserves openapi-typescript 7.13.0 and @redocly/openapi-core 1.34.19; package-lock regeneration remains a Linux-authority step.
+- **2026-09-10T00:28:29Z** · `CWTV.V1.2.8` · `CORRECTION_APPLIED` · **PASS** — Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state. Evidence: V1.2.8 remains a CI/security/quality foundation; dependency-tree surgery is not retained.
+- **2026-09-10T00:28:29Z** · `CWTV.V1.2.8` · `CORRECTION_APPLIED` · **PASS** — Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance. Evidence: Local pip-audit uses a temporary venv with no persistent scanner package; Dependabot remains the update path.
+- **2026-09-10T02:28:19+02:00** · `CWTV.V1.2.8` · `CORRECTION_ARTIFACT_VERIFIED` · **PASS** — CWTV.V1.2.8 R3 scope/storage correction SHA-256 verified.
+- **2026-09-10T00:46:35Z** · `CWTV.V1.2.8` · `LOCAL_QUALIFICATION_PASSED` · **PASS** — CWTV.V1.2.8 local Linux CI security and quality qualification passed across repository, contracts, backend, frontend, offline database migrations and dependency security gates
 
 ## Integrity and timing rules
 

@@ -1,0 +1,146 @@
+name: CineWatch CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cwtv-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  PAGER: cat
+  PSQL_PAGER: cat
+
+jobs:
+  quality:
+    name: Linux quality gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+          cache: pip
+          cache-dependency-path: services/api/pyproject.toml
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24.18.0"
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install Python dependencies
+        run: python -m pip install -e 'services/api[test]'
+
+      - name: Install Node dependencies
+        run: npm ci --ignore-scripts --no-audit --fund=false
+
+      - name: CI security and quality policy
+        run: python scripts/check_ci_security_quality.py
+
+      - name: Repository foundation policies
+        run: |
+          python scripts/check_repository_tree.py
+          python scripts/check_backend_skeleton.py
+          python scripts/check_frontend_skeleton.py
+          python scripts/check_database_foundation.py
+          python scripts/check_contract_foundation.py
+          python scripts/check_termux_linux_workflow.py
+          python scripts/check_engineering_chronicle.py
+
+      - name: Repository regression
+        run: python -m unittest discover -s tests/repository -p 'test_*.py'
+
+      - name: Canonical OpenAPI drift gate
+        run: python scripts/export_openapi_contract.py --check
+
+      - name: Contract runtime qualification
+        env:
+          CWTV_API_PYTHON: python
+        run: bash scripts/check_contract_runtime.sh
+
+      - name: Backend runtime qualification
+        env:
+          CWTV_API_PYTHON: python
+        run: bash scripts/check_backend_runtime.sh
+
+      - name: Frontend runtime qualification
+        run: bash scripts/check_frontend_runtime.sh
+
+      - name: Offline database migration qualification
+        env:
+          CWTV_API_PYTHON: python
+        run: bash scripts/check_database_migrations.sh
+
+      - name: Tracked-file drift and whitespace gate
+        run: |
+          git diff --check
+          git diff --exit-code
+
+  security:
+    name: Dependency and secret gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+          cache: pip
+          cache-dependency-path: services/api/pyproject.toml
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24.18.0"
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install application dependencies
+        run: |
+          python -m pip install -e 'services/api[test]'
+          python -m pip install 'pip-audit==2.10.1'
+          npm ci --ignore-scripts --no-audit --fund=false
+
+      - name: Tracked secret and CI-policy scan
+        run: python scripts/check_ci_security_quality.py --scan-repository
+
+      - name: Python dependency consistency
+        run: python -m pip check
+
+      - name: Python vulnerability audit
+        run: python -m pip_audit --strict services/api
+
+      - name: Production dependency vulnerability gate
+        run: npm audit --omit=dev --audit-level=high
+
+      - name: Full npm advisory report
+        continue-on-error: true
+        run: npm audit --audit-level=high
+
+      - name: Final whitespace gate
+        run: git diff --check
