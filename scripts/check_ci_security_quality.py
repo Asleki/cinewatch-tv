@@ -187,6 +187,7 @@ def main() -> int:
             "check_contract_foundation.py",
             "check_termux_linux_workflow.py",
             "check_engineering_chronicle.py",
+            "check_nexvox_engineering_corpus.py",
             "unittest discover -s tests/repository",
             "export_openapi_contract.py --check",
             "check_contract_runtime.sh",

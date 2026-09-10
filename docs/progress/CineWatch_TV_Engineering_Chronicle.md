@@ -10,9 +10,9 @@
 - **Qualified milestones:** 10
 - **Tracked milestone completion:** 90.9%
 - **Recorded failed events:** 13
-- **Recorded corrections:** 13
+- **Recorded corrections:** 14
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000129` / `0a523dd37b0f15a0ee6bfa1a0cd3e3009ed22a7dde8563ed0f6064d5ddf4892e`
+- **Ledger head:** `CWTV-EVT-000131` / `3dcc2eb4b91dcff4219d4302906d270e85088263fe4c86fb9d35488fd8a600f5`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -30,7 +30,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.6` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | 26m 3s | not preserved |
 | `CWTV.V1.2.7` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 1h 26m 3s | not preserved |
 | `CWTV.V1.2.8` | QUALIFIED | 100% | 4.4/5 | 2 | 4 | 6h 49m 22s | not preserved |
-| `CWTV.V1.3.1` | IN_PROGRESS | 15% | 1.4/5 | 0 | 1 | not preserved | not preserved |
+| `CWTV.V1.3.1` | IN_PROGRESS | 15% | 1.9/5 | 0 | 2 | not preserved | not preserved |
 
 ## Failure and correction history
 
@@ -101,6 +101,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `CineWatch_TV_V1_Design_System_and_Asset_Foundation_001.md` — SHA-256 `4786199179c1532e2ffea6de52e4bdd546dd6c0f6a306ddb9484b4edc59ff9fa` — ARTIFACT_GENERATED (2026-09-10T07:07:39Z)
 - `CineWatch_TV_V1_Competitive_Design_Intelligence_001.md` — SHA-256 `e6afd702ab421b3f72f9e6c56d1eb522c6f7eecc8db9e84c57440a2977089109` — CORRECTION_APPLIED (2026-09-10T07:13:31Z)
 - `CineWatch_TV_V1_Design_System_and_Asset_Foundation_001.md` — SHA-256 `ac7c20176beacc8d9d7874c3ddb617394c33643d64e46345d1ecfe85c598e344` — CORRECTION_APPLIED (2026-09-10T07:13:39Z)
+- `CWTV_NexVox_Engineering_Knowledge_Foundation_001_R1_REPO_OVERLAY.zip` — SHA-256 `a61a666831d7ebcde39a08ddf64b4939c065ca381b8079c3fd92a78df13a2edd` — ARTIFACT_APPLIED (2026-09-10T12:30:06Z)
 
 ## Event timeline
 
@@ -233,6 +234,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-10T07:07:39Z** · `CWTV.V1.3.1` · `ARTIFACT_GENERATED` · **PASS** — Generated the candidate CineWatch TV V1 design system and asset foundation authority, including semantic HTML, CSS-first architecture, selective Tailwind use, responsive recomposition, accessibility, rights-aware UI, and governed asset principles.
 - **2026-09-10T07:13:31Z** · `CWTV.V1.3.1` · `CORRECTION_APPLIED` · **PASS** — Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 - **2026-09-10T07:13:39Z** · `CWTV.V1.3.1` · `CORRECTION_APPLIED` · **PASS** — Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
+- **2026-09-10T12:30:06Z** · `CWTV.V1.3.1` · `ARTIFACT_APPLIED` · **PASS** — Applied the NexVox Engineering Knowledge Foundation R1 repository overlay, establishing the governed engineering-training corpus, deterministic generators, validation, CI integration, and workflow authority.
+- **2026-09-10T12:30:15Z** · `CWTV.V1.3.1` · `CORRECTION_APPLIED` · **PASS** — Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.
 
 ## Integrity and timing rules
 

@@ -1,0 +1,30 @@
+event_id,sequence,milestone,event_type,result,occurred_at,commit,summary
+CWTV-EVT-000004,4,CWTV.V1.1,MILESTONE_QUALIFIED,QUALIFIED,2026-09-07T11:19:16+02:00,56c4ffd711615d94a50d213387a74ce5acd36d09,CWTV.V1.1 closed and qualified at repository commit 56c4ffd.
+CWTV-EVT-000008,8,CWTV.V1.2.1,MILESTONE_QUALIFIED,QUALIFIED,2026-09-07T20:16:36+02:00,fd6e8855b4ddd80feba561bfb22c47380a618f85,CWTV.V1.2.1 closed and qualified at repository commit fd6e885.
+CWTV-EVT-000010,10,CWTV.V1.2.2,RUNTIME_QUALIFICATION_PASSED,PASS,,,Repository/runtime qualification passed on the Android Termux development environment.
+CWTV-EVT-000012,12,CWTV.V1.2.2,MILESTONE_QUALIFIED,QUALIFIED,2026-09-07T20:45:00+02:00,d050344387a963e0c3336a010fcef1ab7644eadd,CWTV.V1.2.2 closed and qualified at repository commit d050344.
+CWTV-EVT-000017,17,CWTV.V1.2.3,RUNTIME_QUALIFICATION_PASSED,PASS,,,Backend tests and live Uvicorn smoke passed in Ubuntu PRoot.
+CWTV-EVT-000019,19,CWTV.V1.2.3,MILESTONE_QUALIFIED,QUALIFIED,2026-09-07T23:06:29+02:00,c0324fc80fedca08a7a0fa41cb9adef7e7575869,CWTV.V1.2.3 closed and qualified at repository commit c0324fc.
+CWTV-EVT-000026,26,CWTV.V1.2.4,RUNTIME_QUALIFICATION_PASSED,PASS,,,"Frontend lint, typecheck, production build and live static-route smoke all passed."
+CWTV-EVT-000028,28,CWTV.V1.2.4,MILESTONE_QUALIFIED,QUALIFIED,2026-09-08T03:25:33+02:00,7b6a8392d90fb08be9f522e9a182c723f2719cdd,CWTV.V1.2.4 closed and qualified at repository commit 7b6a839.
+CWTV-EVT-000032,32,CWTV.V1.2.5,MIGRATION_QUALIFICATION_FAILED,FAILED,,,Offline migration qualification exported DATABASE_URL into the later settings test and violated the optional-database configuration contract.
+CWTV-EVT-000035,35,CWTV.V1.2.5,RUNTIME_QUALIFICATION_PASSED,PASS,,,Database migration qualification and backend runtime regression passed after R1.
+CWTV-EVT-000037,37,CWTV.V1.2.5,MILESTONE_QUALIFIED,QUALIFIED,2026-09-08T03:55:07+02:00,678500c0160ac002f8e8585ab4f7560ea22e4d6e,CWTV.V1.2.5 closed and qualified at repository commit 678500c.
+CWTV-EVT-000043,43,CWTV.V1.2.5.1,STATIC_QUALIFICATION_STARTED,INFO,2026-09-08T02:31:12Z,,Chronicle static qualification started.
+CWTV-EVT-000044,44,CWTV.V1.2.5.1,STATIC_QUALIFICATION_FAILED,FAILED,2026-09-08T02:31:12Z,,Chronicle static qualification failed.
+CWTV-EVT-000051,51,CWTV.V1.2.5.1,STATIC_QUALIFICATION_STARTED,INFO,2026-09-08T02:38:18Z,,Chronicle static qualification after R1 started.
+CWTV-EVT-000052,52,CWTV.V1.2.5.1,STATIC_QUALIFICATION_PASSED,PASS,2026-09-08T02:38:21Z,,Chronicle static qualification after R1 passed.
+CWTV-EVT-000057,57,CWTV.V1.2.5.1,VISUAL_QUALIFICATION_FAILED,FAILED,,,Rendered dashboard was structurally accurate but failed responsive visual qualification.
+CWTV-EVT-000064,64,CWTV.V1.2.5.1,VISUAL_QUALIFICATION_PASSED,PASS,2026-09-08T03:23:15Z,,"R2 responsive dashboard visually qualified on mobile and desktop-sized rendering with no destructive horizontal overflow, responsive semantic cards, adaptive difficulty graph, wrapped evidence content, readable failure history and usable timeline presentation"
+CWTV-EVT-000065,65,CWTV.V1.2.5.1,MILESTONE_QUALIFIED,QUALIFIED,2026-09-08T03:23:22Z,,"CWTV.V1.2.5.1 Engineering Chronicle and Progress Dashboard Foundation qualified after static, repository, runtime and visual verification"
+CWTV-EVT-000075,75,CWTV.V1.2.6,CONTRACT_RUNTIME_QUALIFICATION_FAILED,FAILED,2026-09-09T04:52:08Z,,Contract runtime qualification failed because the checker assumed openapi-typescript was hoisted into repository-root node_modules.
+CWTV-EVT-000081,81,CWTV.V1.2.6,CONTRACT_RUNTIME_QUALIFICATION_PASSED,PASS,2026-09-09T04:55:11Z,,R1 workspace-resolved OpenAPI TypeScript runtime qualification passed after removing the invalid root-hoisting assumption
+CWTV-EVT-000082,82,CWTV.V1.2.6,MILESTONE_QUALIFIED,QUALIFIED,2026-09-09T04:58:04Z,,"CWTV.V1.2.6 OpenAPI and Typed Contract Foundation qualified after deterministic schema generation, typed contract generation, repository regression and runtime qualification"
+CWTV-EVT-000093,93,CWTV.V1.2.7,RUNTIME_QUALIFICATION_FAILED,FAILED,,,CWTV.V1.2.7 native runtime qualification initially failed because the Termux zip packaging utility was unavailable
+CWTV-EVT-000094,94,CWTV.V1.2.7,RUNTIME_QUALIFICATION_FAILED,FAILED,,,CWTV.V1.2.7 native runtime qualification initially failed because the Termux zip packaging utility was unavailable
+CWTV-EVT-000096,96,CWTV.V1.2.7,RUNTIME_QUALIFICATION_PASSED,PASS,2026-09-09T19:26:37Z,,CWTV.V1.2.7 Termux/Linux engineering workflow runtime qualification passed
+CWTV-EVT-000099,99,CWTV.V1.2.7,MILESTONE_QUALIFIED,QUALIFIED,2026-09-09T19:34:03Z,,"CWTV.V1.2.7 Termux / Linux Engineering Workflow Foundation qualified after static policy, repository regression, governed session recreation, actual Termux restart recovery and native runtime qualification"
+CWTV-EVT-000108,108,CWTV.V1.2.8,SECURITY_RUNTIME_QUALIFICATION_FAILED,FAILED,2026-09-10T01:34:00+02:00,,V1.2.8 security runtime qualification detected a high-severity js-yaml advisory in the OpenAPI contract-generation dependency path.
+CWTV-EVT-000114,114,CWTV.V1.2.8,SECURITY_RUNTIME_QUALIFICATION_FAILED,FAILED,2026-09-10T02:08:00+02:00,,R1 dependency-resolution qualification failed because npm 12.0.2 recognized the Redocly-scoped js-yaml override but retained js-yaml 4.3.1 in the installed Redocly subtree.
+CWTV-EVT-000123,123,CWTV.V1.2.8,LOCAL_QUALIFICATION_PASSED,PASS,2026-09-10T00:46:35Z,,"CWTV.V1.2.8 local Linux CI security and quality qualification passed across repository, contracts, backend, frontend, offline database migrations and dependency security gates"
+CWTV-EVT-000124,124,CWTV.V1.2.8,MILESTONE_QUALIFIED,PASS,2026-09-10T02:31:22Z,,CWTV.V1.2.8 CI / Security / Quality Foundation remotely qualified on main at cf47aa4; GitHub Actions run 34429017377 concluded SUCCESS with Linux quality gate and Dependency and secret gate passing

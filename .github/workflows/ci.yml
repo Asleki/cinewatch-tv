@@ -68,6 +68,7 @@ jobs:
           python scripts/check_contract_foundation.py
           python scripts/check_termux_linux_workflow.py
           python scripts/check_engineering_chronicle.py
+          python scripts/check_nexvox_engineering_corpus.py
 
       - name: Repository regression
         run: python -m unittest discover -s tests/repository -p 'test_*.py'

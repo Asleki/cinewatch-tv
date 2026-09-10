@@ -1,0 +1,72 @@
+schema_version: "1.0"
+dataset_id: "CWTV-NEXVOX-ENGINEERING-001"
+
+enums:
+  training_eligibility:
+    - "TRAINING_ELIGIBLE"
+    - "TRAINING_REVIEW_REQUIRED"
+    - "REFERENCE_ONLY"
+    - "TRAINING_PROHIBITED"
+
+records:
+  source_record:
+    required:
+      - path
+      - blob_sha
+      - sha256
+      - bytes
+      - authority_domain
+      - source_role
+      - training_eligibility
+  commit_record:
+    required:
+      - commit
+      - parents
+      - author_at
+      - committer_at
+      - subject
+      - files_changed
+      - additions
+      - deletions
+  knowledge_record:
+    required:
+      - schema_version
+      - record_id
+      - source_commit
+      - source_path
+      - authority_domain
+      - source_role
+      - training_eligibility
+      - transformation
+      - content_sha256
+      - content
+  history_record:
+    required:
+      - schema_version
+      - record_id
+      - commit
+      - commit_sequence
+      - status
+      - source_path
+      - training_eligibility
+      - transformation
+      - content_sha256
+      - content
+  conversation_source:
+    required:
+      - source_id
+      - source_kind
+      - availability
+      - verbatim
+      - transformation
+      - human_validation
+      - training_eligibility
+      - summary
+
+integrity:
+  hash_algorithm: "sha256"
+  git_hash_algorithm: "sha1"
+  jsonl_one_object_per_line: true
+  csv_encoding: "utf-8"
+  newline: "LF"
+  deterministic_projection: true

@@ -889,6 +889,30 @@
       "summary": "Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_NexVox_Engineering_Knowledge_Foundation_001_R1_REPO_OVERLAY.zip",
+        "sha256": "a61a666831d7ebcde39a08ddf64b4939c065ca381b8079c3fd92a78df13a2edd"
+      },
+      "commit": null,
+      "component": "NEXVOX_ENGINEERING_KNOWLEDGE",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000130",
+      "event_sha256": "e70f68f39d3cea7801af896ee4a6589a6c1918162a4fb240208093a02bc574a9",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T12:30:06Z",
+      "previous_event_sha256": "0a523dd37b0f15a0ee6bfa1a0cd3e3009ed22a7dde8563ed0f6064d5ddf4892e",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 130,
+      "summary": "Applied the NexVox Engineering Knowledge Foundation R1 repository overlay, establishing the governed engineering-training corpus, deterministic generators, validation, CI integration, and workflow authority.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "commits": [
@@ -4092,6 +4116,51 @@
       "summary": "Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_NexVox_Engineering_Knowledge_Foundation_001_R1_REPO_OVERLAY.zip",
+        "sha256": "a61a666831d7ebcde39a08ddf64b4939c065ca381b8079c3fd92a78df13a2edd"
+      },
+      "commit": null,
+      "component": "NEXVOX_ENGINEERING_KNOWLEDGE",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000130",
+      "event_sha256": "e70f68f39d3cea7801af896ee4a6589a6c1918162a4fb240208093a02bc574a9",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T12:30:06Z",
+      "previous_event_sha256": "0a523dd37b0f15a0ee6bfa1a0cd3e3009ed22a7dde8563ed0f6064d5ddf4892e",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 130,
+      "summary": "Applied the NexVox Engineering Knowledge Foundation R1 repository overlay, establishing the governed engineering-training corpus, deterministic generators, validation, CI integration, and workflow authority.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "NEXVOX_ENGINEERING_KNOWLEDGE",
+      "correction": "CWTV-NEXVOX-FOUNDATION-001-R1-DOC-CONSISTENCY",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000131",
+      "event_sha256": "3dcc2eb4b91dcff4219d4302906d270e85088263fe4c86fb9d35488fd8a600f5",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T12:30:15Z",
+      "previous_event_sha256": "e70f68f39d3cea7801af896ee4a6589a6c1918162a4fb240208093a02bc574a9",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 131,
+      "summary": "Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -4408,9 +4477,9 @@
     }
   ],
   "ledger": {
-    "event_count": 129,
-    "head_event_id": "CWTV-EVT-000129",
-    "head_sha256": "0a523dd37b0f15a0ee6bfa1a0cd3e3009ed22a7dde8563ed0f6064d5ddf4892e"
+    "event_count": 131,
+    "head_event_id": "CWTV-EVT-000131",
+    "head_sha256": "3dcc2eb4b91dcff4219d4302906d270e85088263fe4c86fb9d35488fd8a600f5"
   },
   "milestones": [
     {
@@ -4647,15 +4716,16 @@
       "active_session_seconds": null,
       "blocker_count": 0,
       "break_count": 0,
-      "correction_count": 1,
+      "correction_count": 2,
       "corrections": [
+        "CWTV-NEXVOX-FOUNDATION-001-R1-DOC-CONSISTENCY",
         "CWTV.V1.3.1-R1-WHITESPACE"
       ],
       "elapsed_label": "not preserved",
       "elapsed_seconds": null,
       "failure_count": 0,
       "milestone": "CWTV.V1.3.1",
-      "observed_difficulty": 1.4,
+      "observed_difficulty": 1.9,
       "paused_label": "not preserved",
       "paused_seconds": null,
       "planned_complexity": null,
@@ -4666,15 +4736,15 @@
       "status": "IN_PROGRESS"
     }
   ],
-  "projection_as_of": "2026-09-10T07:13:39+00:00",
+  "projection_as_of": "2026-09-10T12:30:15+00:00",
   "schema_version": "1.0",
   "summary": {
-    "artifacts": 37,
+    "artifacts": 38,
     "commits": 9,
-    "corrections": 13,
+    "corrections": 14,
     "current_milestone": "CWTV.V1.3.1",
     "failed_events": 13,
-    "passed_events": 90,
+    "passed_events": 92,
     "qualified_milestones": 10,
     "tracked_completion_percent": 90.9,
     "tracked_milestones": 11

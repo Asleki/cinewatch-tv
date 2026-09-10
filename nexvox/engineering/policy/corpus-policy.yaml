@@ -1,0 +1,86 @@
+schema_version: "1.0"
+dataset_id: "CWTV-NEXVOX-ENGINEERING-001"
+status: "CANDIDATE"
+policy_revision: "001"
+
+authority_precedence:
+  engineering_history:
+    - "git_commit_graph"
+    - "docs/progress/activity/engineering-events.jsonl"
+    - "derived_reconciliation"
+  milestone_status:
+    - "docs/progress/activity/engineering-events.jsonl"
+    - "docs/progress/CineWatch_TV_Engineering_Chronicle.md"
+    - "docs/progress/dashboard/progress-data.json"
+    - "README.md descriptive status"
+  product_architecture:
+    - "approved_blueprint"
+    - "approved_architecture_and_adrs"
+    - "qualified_implementation"
+  api_contracts:
+    - "backend_api_authority"
+    - "governed_openapi_projection"
+    - "generated_typescript_declaration"
+  signed_blueprint:
+    - "blueprint_markdown_substantive_authority"
+    - "signed_pdf_attestation_and_hash"
+
+training_states:
+  - "TRAINING_ELIGIBLE"
+  - "TRAINING_REVIEW_REQUIRED"
+  - "REFERENCE_ONLY"
+  - "TRAINING_PROHIBITED"
+
+review_required_paths:
+  - "docs/governance/CineWatch_TV_V1_API_Content_Rights_Qualification_Register_001.md"
+  - "docs/architecture/CineWatch_TV_V1_Competitive_Design_Intelligence_001.md"
+
+reference_only_paths:
+  - "package-lock.json"
+  - "apps/web/next-env.d.ts"
+  - "packages/contracts/src/generated/openapi.d.ts"
+  - "packages/contracts/openapi/cinewatch-v1.openapi.json"
+  - "docs/progress/CineWatch_TV_Engineering_Chronicle.md"
+  - "docs/progress/dashboard/progress-data.json"
+  - "docs/blueprints/CineWatch_Tv_V1_Blueprint_001.pdf"
+
+reference_only_patterns:
+  - "**/.gitkeep"
+  - "nexvox/engineering/datasets/**"
+  - "nexvox/engineering/manifests/**"
+  - "nexvox/engineering/narratives/**"
+  - "nexvox/engineering/DATASET_CARD.md"
+  - "nexvox/engineering/checksums.sha256"
+
+prohibited_content:
+  - "passwords"
+  - "access_tokens"
+  - "authorization_headers"
+  - "private_keys"
+  - "cloud_credentials"
+  - "database_urls_with_credentials"
+  - "private_provider_payloads_without_training_permission"
+  - "unrelated_personal_data"
+
+conversation_policy:
+  default_state: "TRAINING_REVIEW_REQUIRED"
+  memory_summary_is_verbatim: false
+  human_validation_required_for_training: true
+  preserve_transformation_provenance: true
+
+projection_policy:
+  normal_commit_requires_projection_before_push: true
+  projection_trailer: "NexVox-Projection: true"
+  source_commit_trailer: "NexVox-Source-Commit: <sha40>"
+  projection_commits_trigger_projection: false
+  generated_outputs_are_recursive_sources: false
+
+sharding:
+  markdown_soft_limit_bytes: 1048576
+  csv_jsonl_soft_limit_bytes: 5242880
+  local_pdf_soft_limit_bytes: 5242880
+
+local_pdf:
+  tracked: false
+  authority: false
+  purpose: "human preservation and offline review"

@@ -4,7 +4,7 @@
 **Product:** CineWatch TV
 **Repository:** `Asleki/cinewatch-tv`
 **Status:** `LOCKED`
-**Revision:** `001`
+**Revision:** `002`
 **Effective date:** `2026-09-10`
 
 ---
@@ -257,7 +257,9 @@ Typical responsibilities:
 - engineering chronicle inspection;
 - progress dashboard generation;
 - dashboard governance records;
-- milestone evidence preservation.
+- milestone evidence preservation;
+- NexVox engineering-corpus generation after a non-projection source commit;
+- mandatory local-only NexVox PDF regeneration after every ordinary non-projection source commit.
 
 This is the preferred window for creating or updating durable engineering-workflow governance documents such as this file, followed by qualification in `3:tests` and Version Control in `6:git`.
 
@@ -304,9 +306,15 @@ run repository/policy validation
   ↓
 run diff integrity checks
   ↓
-6:git — Version Control
+6:git — create the normal engineering source commit
   ↓
-commit + push
+8:chronicle — build NexVox engineering corpus for that exact commit
+  ↓
+3:tests — verify NexVox corpus determinism/integrity
+  ↓
+6:git — create one NexVox projection commit
+  ↓
+push source + projection commits
   ↓
 3:tests — GitHub CI verification
   ↓
@@ -316,7 +324,11 @@ remote qualification proof
   ↓
 dashboard rebuild + verification
   ↓
-6:git — persist closure/progress record
+6:git — persist closure/progress source commit
+  ↓
+8:chronicle + 3:tests + 6:git — sync its NexVox projection
+  ↓
+push closure + projection commits
   ↓
 formal milestone lock
 ```
@@ -595,11 +607,13 @@ fix: resolve migration CI Python runtime
 
 ## 13.4 Push
 
-Push only after local qualification is green:
+Push only after local qualification is green **and the required NexVox projection commit has been created for the preceding non-projection engineering commit**.
 
 ```bash
 git push
 ```
+
+A `NexVox-Projection: true` commit is exempt from creating another projection.
 
 Then leave `6:git` and verify GitHub Actions from `3:tests`.
 
@@ -753,9 +767,13 @@ browser projection verified
   ↓
 closure/progress files staged in 6:git
   ↓
-closure commit
+closure source commit
   ↓
-closure push to main
+NexVox corpus sync for exact closure source commit
+  ↓
+NexVox projection commit
+  ↓
+closure + projection push to main
   ↓
 MILESTONE LOCKED
 ```
@@ -947,6 +965,70 @@ When changing this file:
 8. commit;
 9. push to `main`;
 10. use the new revision as the baseline thereafter.
+
+---
+
+# 25. NexVox engineering knowledge synchronization
+
+The governed engineering-knowledge corpus lives under:
+
+```text
+nexvox/engineering/
+```
+
+Its purpose is to teach NexVox how CineWatch TV was engineered while preserving exact source provenance, training eligibility, failures, corrections, decisions, and Git history. It is separate from future CineWatch user/search/recommendation training datasets.
+
+## 25.1 Source and projection commits
+
+A Git commit cannot contain its own final SHA inside its tree. Therefore CineWatch uses a two-commit synchronization model.
+
+For every ordinary non-projection engineering commit:
+
+1. create the normal engineering source commit in `6:git`;
+2. leave `6:git`;
+3. in `8:chronicle`, run `python scripts/build_nexvox_engineering_corpus.py --source-commit <SOURCE_SHA>`;
+4. regenerate the local preservation copy with `python scripts/build_nexvox_engineering_pdf.py`; the PDF remains outside Git and is mandatory for every ordinary non-projection source commit;
+5. in `3:tests`, run `python scripts/check_nexvox_engineering_corpus.py` plus relevant regression/integrity checks;
+6. return to `6:git`;
+7. stage the generated NexVox corpus explicitly;
+8. create one projection commit with exact trailers;
+9. push the source and projection commits together.
+
+Required projection commit trailers:
+
+```text
+NexVox-Source-Commit: <40-character source SHA>
+NexVox-Projection: true
+```
+
+A projection commit SHALL NOT trigger another projection.
+
+## 25.2 Authority and training eligibility
+
+Git remains canonical for commit/file history. `docs/progress/activity/engineering-events.jsonl` remains canonical for recorded engineering activity. NexVox files are projections, indexes, reconciliations, and curated knowledge records.
+
+Every source/record must remain one of:
+
+```text
+TRAINING_ELIGIBLE
+TRAINING_REVIEW_REQUIRED
+REFERENCE_ONLY
+TRAINING_PROHIBITED
+```
+
+Inspection does not imply training permission. Unknown training permission is not permission. Generated projections must not be recursively duplicated into training records.
+
+## 25.3 Failure preservation
+
+The corpus must preserve failures and corrections. When conversation/terminal evidence proves a failure that was not recorded as a FAILED engineering-ledger event, the discrepancy must be represented through provenance/reconciliation rather than by rewriting the append-only ledger.
+
+## 25.4 Local-only PDF
+
+The NexVox engineering PDF is a human-readable preservation projection only. It must be generated outside the Git worktree and must never become repository authority.
+
+## 25.5 CI expectation
+
+The repository NexVox checker must validate corpus layout, source-commit binding, checksums, JSONL content hashes, training-eligibility boundaries, conversation provenance, secret-value exclusion, and deterministic regeneration.
 
 ---
 

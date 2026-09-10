@@ -29,3 +29,13 @@ npm run contracts:check
 ```
 
 `contracts:update` regenerates the canonical OpenAPI JSON from FastAPI and then regenerates the TypeScript declaration package. `contracts:check` is the non-mutating Linux qualification gate.
+
+## NexVox engineering knowledge
+
+```text
+python scripts/build_nexvox_engineering_corpus.py --source-commit <SHA>
+python scripts/check_nexvox_engineering_corpus.py
+python scripts/build_nexvox_engineering_pdf.py
+```
+
+The corpus generator projects an exact Git source commit into the governed `nexvox/engineering` knowledge layer. The checker validates source binding, checksums, record hashes, eligibility boundaries, conversation provenance, secret exclusion, and deterministic regeneration. The PDF is local-only, does not participate in CI authority, and must be regenerated after every ordinary non-projection source commit once the corpus is rebuilt for that exact source commit.

@@ -73,6 +73,7 @@ packages/contracts  Shared/generated API-contract boundary
 scripts             Repository engineering and qualification scripts
 tests               Cross-cutting repository qualification
 docs                Blueprint, governance, architecture, and decisions
+nexvox              Governed NexVox engineering-knowledge corpus
 ```
 
 Product-feature implementation is introduced only by its owning milestone.
@@ -98,6 +99,6 @@ No open-source license has been selected for this repository. Until an explicit 
 
 ## Current milestone
 
-**CWTV.V1.2.4 — Frontend Application Skeleton**
+**CWTV.V1.3.1 — Design System Evidence & Competitive Intelligence**
 
-The repository now contains qualified repository/toolchain and FastAPI backend foundations. CWTV.V1.2.4 introduces the first Next.js App Router runtime boundary while keeping Discover, Watch, Explore, My CineWatch, authentication, database schemas, provider integrations, rights enforcement, playback, and final design assets out of scope.
+The repository has completed the V1.2 engineering foundation through CI/security qualification and has entered V1.3 design-system work. CWTV.V1.3.1 establishes design evidence, competitive intelligence, semantic HTML/CSS direction, responsive and accessibility principles, and the candidate design-system/asset authority before user-facing design implementation.
