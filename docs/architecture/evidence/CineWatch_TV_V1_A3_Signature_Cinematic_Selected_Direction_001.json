@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "decision_id": "CWTV.V1.3.1-A3-SELECTION",
+  "product": "CineWatch TV",
+  "canonical_human_facing_casing": "CineWatch TV",
+  "repository": "Asleki/cinewatch-tv",
+  "source_baseline_commit": "233301bf98da58e7c871a03158518b09e7369c90",
+  "parent_identity_family": "Concept A — Aperture C",
+  "selected_candidate": {
+    "id": "A3",
+    "name": "Signature Cinematic",
+    "status": "SELECTED"
+  },
+  "non_selected_candidates": [
+    {
+      "id": "A1",
+      "name": "Signature Balanced"
+    },
+    {
+      "id": "A2",
+      "name": "Signature Geometric"
+    },
+    {
+      "id": "A4",
+      "name": "Signature Compact"
+    },
+    {
+      "id": "A5",
+      "name": "Signature Monochrome"
+    },
+    {
+      "id": "A6",
+      "name": "Signature Premium"
+    }
+  ],
+  "evidence": {
+    "path": "docs/architecture/evidence/CineWatch_TV_V1_A3_Signature_Cinematic_Selected_Direction_001.png",
+    "format": "PNG",
+    "width": 1448,
+    "height": 1086,
+    "sha256": "a0da8a1259fd72886d86af8591f32d32cf90487bc412a8fef07239ef07b0ed1c",
+    "classification": "APPROVED_SELECTION_EVIDENCE",
+    "production_asset": false,
+    "production_geometry_authorized": false
+  },
+  "approval": {
+    "human_approved": true,
+    "approved_on": "2026-09-10",
+    "scope": "A3 brand-direction selection only"
+  },
+  "next_mini_milestone": {
+    "id": "CWTV.V1.3.2",
+    "name": "CineWatch Production Brand Geometry Foundation"
+  }
+}

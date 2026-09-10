@@ -12,7 +12,7 @@
 - **Recorded failed events:** 14
 - **Recorded corrections:** 16
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000138` / `daf1bc13913afc19a64d1fd262b4f682d3771e72bcccadd292b19e5be06b146f`
+- **Ledger head:** `CWTV-EVT-000139` / `61401edc7f172877c1e2058b8a666412618290589ccc5a5365a290efc704683f`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -105,6 +105,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `CWTV_NexVox_Engineering_Knowledge_Foundation_001_R1_REPO_OVERLAY.zip` — SHA-256 `a61a666831d7ebcde39a08ddf64b4939c065ca381b8079c3fd92a78df13a2edd` — ARTIFACT_APPLIED (2026-09-10T12:30:06Z)
 - `CineWatch_TV_V1_Brand_and_Streaming_Signature_Authority_001.md` — SHA-256 `5aff70dd9c2f2efdd6d555f95359cca591766d686a7d0c65a6265e4396c489aa` — ARTIFACT_APPLIED (2026-09-10T14:34:22Z)
 - `CWTV_NexVox_Projection_Boundary_Guard_R2.zip` — SHA-256 `7c4c915efac38609ca46ca94a01c888fd1a10423fc447b35a3c12b092836a71a` — ARTIFACT_APPLIED (2026-09-10T15:10:13Z)
+- `CWTV_V1.3.1_A3_Signature_Cinematic_Selection_Lock_001.zip` — SHA-256 `7c92d7b208488dde4057719a9826d621966568a9106b48d3c0186f97d333c1a4` — ARTIFACT_APPLIED (2026-09-10T18:50:05Z)
 
 ## Event timeline
 
@@ -246,6 +247,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-10T14:40:38Z** · `CWTV.V1.3.1` · `CORRECTION_APPLIED` · **PASS** — Applied append-only recovery for malformed projection 3f9f175 by preserving the pushed commit, establishing a new ordinary source boundary from the corrective engineering record, and requiring the next NexVox projection to target that new source commit.
 - **2026-09-10T15:10:13Z** · `CWTV.V1.3.1` · `ARTIFACT_APPLIED` · **PASS** — Applied the NexVox Projection Boundary Guard R2, advancing the CineWatch Engineering Workflow to Revision 003 and adding mechanical enforcement that projection commits may change only generator-owned NexVox projection paths.
 - **2026-09-10T15:10:27Z** · `CWTV.V1.3.1` · `CORRECTION_APPLIED` · **PASS** — Added regression protection for the source/projection boundary defect exposed by malformed commit 3f9f175. Future commits marked NexVox-Projection true must fail validation if they contain ordinary source, architecture, workflow, or Chronicle paths.
+- **2026-09-10T18:50:05Z** · `CWTV.V1.3.1` · `ARTIFACT_APPLIED` · **PASS** — Applied the A3 Signature Cinematic selection-lock delivery, preserving the approved CineWatch TV brand-direction evidence and mechanical qualification gate.
 
 ## Integrity and timing rules
 
