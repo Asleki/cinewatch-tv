@@ -81,3 +81,7 @@ logs/
 downloads/
 artifacts/
 generated/
+
+# Governed generated CineWatch API contract
+!packages/contracts/src/generated/
+!packages/contracts/src/generated/openapi.d.ts
