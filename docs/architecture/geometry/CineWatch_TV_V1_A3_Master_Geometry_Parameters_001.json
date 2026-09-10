@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "geometry_id": "CWTV-V1-A3-MASTER-GEOMETRY-PARAMETERS-001",
+  "algorithm_id": "cinewatch-a3-annular-aperture-c/v1",
+  "status": "CANDIDATE_PARAMETER_BASELINE",
+  "production_asset_authorized": false,
+  "selection": {
+    "family": "Concept A — Aperture C",
+    "candidate_id": "A3",
+    "candidate_name": "Signature Cinematic",
+    "canonical_human_facing_brand": "CineWatch TV",
+    "selection_lock": "docs/architecture/CineWatch_TV_V1_A3_Signature_Cinematic_Selection_Lock_001.md"
+  },
+  "coordinate_system": {
+    "view_box": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "design_unit": "unit",
+    "origin": "top-left",
+    "x_axis": "right",
+    "y_axis": "down",
+    "angle_zero_axis": "+x",
+    "angle_positive_direction": "clockwise",
+    "angle_unit": "millidegree",
+    "coordinate_quantum_milliunit": 1,
+    "rounding_mode": "half_even"
+  },
+  "optical_frame": {
+    "geometric_frame_center": [
+      512,
+      512
+    ],
+    "mark_center": [
+      524,
+      512
+    ],
+    "optical_offset": [
+      12,
+      0
+    ],
+    "outer_radius": 420,
+    "inner_radius": 228,
+    "ring_thickness": 192,
+    "minimum_viewbox_margin": 80
+  },
+  "opening": {
+    "outer": {
+      "center_mdeg": 0,
+      "width_mdeg": 80000,
+      "lower_edge_mdeg": 40000,
+      "upper_edge_mdeg": 320000,
+      "occupied_arc_mdeg": 280000
+    },
+    "inner": {
+      "center_mdeg": 12000,
+      "width_mdeg": 92000,
+      "lower_edge_mdeg": 58000,
+      "upper_edge_mdeg": 326000,
+      "occupied_arc_mdeg": 268000
+    },
+    "intent": "forward-facing asymmetric cinematic C opening"
+  },
+  "segmentation": {
+    "count": 6,
+    "index_order": "clockwise-from-lower-opening-edge",
+    "outer_gap_mdeg": 5600,
+    "inner_gap_mdeg": 5600,
+    "outer_segment_span_mdeg": 42000,
+    "inner_segment_span_mdeg": 40000,
+    "connector_model": "cubic-tangent-bridge",
+    "outer_control_length_milli_thickness": 340,
+    "inner_control_length_milli_thickness": 300,
+    "connector_intent": "consistent clockwise aperture sweep without dominant play-triangle read"
+  },
+  "rendering_contract": {
+    "vector_first": true,
+    "stroke": "none",
+    "fill_rule": "nonzero",
+    "monochrome_geometry_authoritative": true,
+    "gradient_authoritative": false,
+    "embedded_raster_allowed": false,
+    "provider_color_allowed": false,
+    "deterministic_path_decimal_places": 3
+  },
+  "qualification_contract": {
+    "native_review_sizes_px": [
+      16,
+      24,
+      32,
+      64,
+      128,
+      192,
+      512
+    ],
+    "master_direct_use_min_px": 64,
+    "tiny_variant_review_sizes_px": [
+      16,
+      24,
+      32
+    ],
+    "tiny_variant_status": "NOT_YET_DEFINED",
+    "minimum_projected_inner_gap_at_64_px": 1.35,
+    "required_contexts": [
+      "monochrome",
+      "dark",
+      "light",
+      "mark-only",
+      "horizontal-lockup",
+      "favicon",
+      "app-icon",
+      "maskable-icon",
+      "seo-card",
+      "large-screen"
+    ]
+  },
+  "non_authorizations": [
+    "final SVG master",
+    "final wordmark geometry",
+    "final typography",
+    "final hexadecimal brand colors",
+    "production gradients",
+    "favicon installation",
+    "PWA icon installation",
+    "SEO asset installation",
+    "motion",
+    "public deployment"
+  ],
+  "next_gate": {
+    "milestone": "CWTV.V1.3.2.2",
+    "name": "A3 Deterministic Master Vector Construction & Visual Qualification"
+  }
+}

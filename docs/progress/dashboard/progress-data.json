@@ -985,6 +985,30 @@
       "summary": "Applied the A3 Signature Cinematic selection-lock delivery, preserving the approved CineWatch TV brand-direction evidence and mechanical qualification gate.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_V1.3.2.1_A3_Master_Geometry_Parameterization_001.zip",
+        "sha256": "43abd867f587aa82bf102259a880be8c0da26e2a535da546f94c8816047c02d5"
+      },
+      "commit": null,
+      "component": "BRAND_GEOMETRY",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000141",
+      "event_sha256": "b1acf20e225345586a14b2fd8aa109caedd7e91a0bfb466d7b43f9017053c412",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.2.1",
+      "occurred_at": "2026-09-10T20:01:02Z",
+      "previous_event_sha256": "4fc7896c9d59e58891e630fc1716b6096fc37b4241097bb6f1f6e1973aa940d2",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 141,
+      "summary": "Applied the A3 Master Geometry Parameterization 001 delivery, establishing a deterministic candidate parameter baseline without installing production SVG assets.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "commits": [
@@ -4439,6 +4463,59 @@
       "summary": "Human approval selected A3 — Signature Cinematic as the CineWatch TV Aperture C descendant for production-geometry engineering; concept-board pixels remain non-production evidence.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_V1.3.2.1_A3_Master_Geometry_Parameterization_001.zip",
+        "sha256": "43abd867f587aa82bf102259a880be8c0da26e2a535da546f94c8816047c02d5"
+      },
+      "commit": null,
+      "component": "BRAND_GEOMETRY",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000141",
+      "event_sha256": "b1acf20e225345586a14b2fd8aa109caedd7e91a0bfb466d7b43f9017053c412",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.2.1",
+      "occurred_at": "2026-09-10T20:01:02Z",
+      "previous_event_sha256": "4fc7896c9d59e58891e630fc1716b6096fc37b4241097bb6f1f6e1973aa940d2",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 141,
+      "summary": "Applied the A3 Master Geometry Parameterization 001 delivery, establishing a deterministic candidate parameter baseline without installing production SVG assets.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "BRAND_GEOMETRY",
+      "correction": null,
+      "details": {
+        "algorithmId": "cinewatch-a3-annular-aperture-c/v1",
+        "canonicalBrandCasing": "CineWatch TV",
+        "segmentCount": "6",
+        "selectedCandidate": "A3"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000142",
+      "event_sha256": "2f6a906dd627b6a5b36d7df11864d5087a671edaba32d9a5a412e43545b749a2",
+      "event_type": "GEOMETRY_PARAMETERIZATION_ESTABLISHED",
+      "evidence": [
+        "docs/architecture/CineWatch_TV_V1_A3_Master_Geometry_Parameterization_001.md",
+        "docs/architecture/geometry/CineWatch_TV_V1_A3_Master_Geometry_Parameters_001.json"
+      ],
+      "milestone": "CWTV.V1.3.2.1",
+      "occurred_at": "2026-09-10T20:01:16Z",
+      "previous_event_sha256": "b1acf20e225345586a14b2fd8aa109caedd7e91a0bfb466d7b43f9017053c412",
+      "result": "QUALIFIED",
+      "schema_version": "1.0",
+      "sequence": 142,
+      "summary": "Established the deterministic A3 Signature Cinematic geometry parameter model: 1024-unit coordinate authority, six-segment Aperture C construction, asymmetric forward opening, optical centering, monochrome-first structure, and explicit no-raster-tracing boundary.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -4776,9 +4853,9 @@
     }
   ],
   "ledger": {
-    "event_count": 140,
-    "head_event_id": "CWTV-EVT-000140",
-    "head_sha256": "4fc7896c9d59e58891e630fc1716b6096fc37b4241097bb6f1f6e1973aa940d2"
+    "event_count": 142,
+    "head_event_id": "CWTV-EVT-000142",
+    "head_sha256": "2f6a906dd627b6a5b36d7df11864d5087a671edaba32d9a5a412e43545b749a2"
   },
   "milestones": [
     {
@@ -5035,19 +5112,40 @@
       "recorded_command_runtime_seconds": 0.0,
       "session_data_present": true,
       "status": "IN_PROGRESS"
+    },
+    {
+      "active_session_label": "not preserved",
+      "active_session_seconds": null,
+      "blocker_count": 0,
+      "break_count": 0,
+      "correction_count": 0,
+      "corrections": [],
+      "elapsed_label": "not preserved",
+      "elapsed_seconds": null,
+      "failure_count": 0,
+      "milestone": "CWTV.V1.3.2.1",
+      "observed_difficulty": 1.0,
+      "paused_label": "not preserved",
+      "paused_seconds": null,
+      "planned_complexity": null,
+      "progress_percent": 0,
+      "recorded_command_runtime_label": "not preserved",
+      "recorded_command_runtime_seconds": 0.0,
+      "session_data_present": false,
+      "status": "IN_PROGRESS"
     }
   ],
-  "projection_as_of": "2026-09-10T19:19:21+00:00",
+  "projection_as_of": "2026-09-10T20:01:16+00:00",
   "schema_version": "1.0",
   "summary": {
-    "artifacts": 41,
+    "artifacts": 42,
     "commits": 9,
     "corrections": 16,
-    "current_milestone": "CWTV.V1.3.1",
+    "current_milestone": "CWTV.V1.3.2.1",
     "failed_events": 14,
-    "passed_events": 99,
+    "passed_events": 101,
     "qualified_milestones": 10,
-    "tracked_completion_percent": 90.9,
-    "tracked_milestones": 11
+    "tracked_completion_percent": 83.3,
+    "tracked_milestones": 12
   }
 }
