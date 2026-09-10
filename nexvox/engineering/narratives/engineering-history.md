@@ -1,10 +1,10 @@
 # CineWatch Engineering History
 
-**Source commit:** `20e851e5eb0577831b0b05bc3cb6c92ee6319e43`
+**Source commit:** `7f6dc58a51f202991c562255a472f40d00584c58`
 
 This is a deterministic NexVox narrative projection. Git remains the canonical commit authority and `engineering-events.jsonl` remains the canonical engineering-activity ledger.
 
-The source history contains **27 reachable commits**, **186 current tracked files**, and **140 engineering events**.
+The source history contains **29 reachable commits**, **190 current tracked files**, and **142 engineering events**.
 
 ## Commit sequence
 
@@ -35,6 +35,8 @@ The source history contains **27 reachable commits**, **186 current tracked file
 - `233301b` - chore(nexvox): sync engineering corpus for 7ce6168
 - `974d6b6` - docs: lock A3 Signature Cinematic selection
 - `20e851e` - docs: record A3 Signature Cinematic selection
+- `eed3112` - chore(nexvox): sync engineering corpus for 20e851e
+- `7f6dc58` - feat: parameterize A3 master geometry
 
 ## Milestone state
 
@@ -49,3 +51,4 @@ The source history contains **27 reachable commits**, **186 current tracked file
 - `CWTV.V1.2.7`: events=17, qualified=true, failures=3, corrections=1
 - `CWTV.V1.2.8`: events=23, qualified=true, failures=2, corrections=11
 - `CWTV.V1.3.1`: events=16, qualified=true, failures=1, corrections=5
+- `CWTV.V1.3.2.1`: events=2, qualified=true, failures=0, corrections=0
