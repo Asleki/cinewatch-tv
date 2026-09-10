@@ -1009,6 +1009,84 @@
       "summary": "Applied the A3 Master Geometry Parameterization 001 delivery, establishing a deterministic candidate parameter baseline without installing production SVG assets.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_V1.3.2.3_Production_Brand_Asset_Browser_Qualification_001.zip",
+        "sha256": "20f658af00d7daf4676dce24b7351035cfd2659383bf34a534d92e27712b01d6"
+      },
+      "commit": null,
+      "component": "BRAND_ASSETS",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000143",
+      "event_sha256": "ab6d9e02930ba99a0927bb81a629a9ff7d012ea94093318484f50223fa14383a",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-10T22:15:45Z",
+      "previous_event_sha256": "2f6a906dd627b6a5b36d7df11864d5087a671edaba32d9a5a412e43545b749a2",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 143,
+      "summary": "Applied the CineWatch TV production-brand browser qualification delivery, installing the real R1A/M1 candidate asset family and the development-only browser proof route.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_V1.3.2.3_R1_Browser_Qualification_Layout_and_Asset_Framing_Correction.zip",
+        "sha256": "987a8db3a96f0e977bddc2e24bb773ef0a3c5a1cee829120154c28dd1b87ce19"
+      },
+      "commit": null,
+      "component": "BRAND_ASSETS",
+      "correction": null,
+      "details": {
+        "correction": "R1_BROWSER_LAYOUT_AND_ASSET_FRAMING"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000146",
+      "event_sha256": "cd1158b7af00ffb9a946313a354b9b6034fe17f8490b27caa70bdba8d5056a92",
+      "event_type": "DELIVERY_CORRECTION_APPLIED",
+      "evidence": [
+        "apps/web/src/app/brand-qualification/brand-qualification.module.css",
+        "apps/web/public/brand/cinewatch-lockup-on-light.svg",
+        "apps/web/public/seo/cinewatch-og-1200x630.png"
+      ],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-10T22:52:00Z",
+      "previous_event_sha256": "e8f681c19fb34990360551449344d7e6622b746f900ef909312c19ddbaa8932d",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 146,
+      "summary": "Corrected the CineWatch TV browser qualification layout, lockup framing, SEO/social framing, and CSS Modules scope while preserving R1A and M1 geometry.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_V1.3.2.3_R2_Production_Brand_Asset_Browser_Approval_Lock.zip",
+        "sha256": "99704dbe775adce7f970b2230df4ad56442141112a5e99a16b3ae3be90688638"
+      },
+      "commit": null,
+      "component": "BRAND_ASSETS",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000147",
+      "event_sha256": "bfd6ef9f34be83dca52dc61a65e1f8dc71fc8d70afe11d588b5cc6f951ee03fa",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-10T23:28:24Z",
+      "previous_event_sha256": "cd1158b7af00ffb9a946313a354b9b6034fe17f8490b27caa70bdba8d5056a92",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 147,
+      "summary": "Applied the final CineWatch TV production-brand browser approval lock after successful real-browser qualification.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "commits": [
@@ -4516,6 +4594,172 @@
       "summary": "Established the deterministic A3 Signature Cinematic geometry parameter model: 1024-unit coordinate authority, six-segment Aperture C construction, asymmetric forward opening, optical centering, monochrome-first structure, and explicit no-raster-tracing boundary.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_V1.3.2.3_Production_Brand_Asset_Browser_Qualification_001.zip",
+        "sha256": "20f658af00d7daf4676dce24b7351035cfd2659383bf34a534d92e27712b01d6"
+      },
+      "commit": null,
+      "component": "BRAND_ASSETS",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000143",
+      "event_sha256": "ab6d9e02930ba99a0927bb81a629a9ff7d012ea94093318484f50223fa14383a",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-10T22:15:45Z",
+      "previous_event_sha256": "2f6a906dd627b6a5b36d7df11864d5087a671edaba32d9a5a412e43545b749a2",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 143,
+      "summary": "Applied the CineWatch TV production-brand browser qualification delivery, installing the real R1A/M1 candidate asset family and the development-only browser proof route.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "BRAND_ASSETS",
+      "correction": null,
+      "details": {
+        "browserRoute": "/brand-qualification",
+        "masterVariant": "R1A",
+        "microVariant": "M1"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000144",
+      "event_sha256": "0357af78543b8b3c507818e26fe32a03ef804788c00ef85e46e7638ce9f2ea4f",
+      "event_type": "BROWSER_QUALIFICATION_STAGED",
+      "evidence": [
+        "docs/architecture/CineWatch_TV_V1_Production_Brand_Asset_Browser_Qualification_001.md",
+        "docs/architecture/geometry/CineWatch_TV_V1_A3_Production_Geometry_System_001.json"
+      ],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-10T22:15:55Z",
+      "previous_event_sha256": "ab6d9e02930ba99a0927bb81a629a9ff7d012ea94093318484f50223fa14383a",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 144,
+      "summary": "Staged real production-candidate brand files for final human approval in the running CineWatch TV Next.js application. Production authorization remains pending.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "BRAND_ASSETS",
+      "correction": null,
+      "details": {
+        "correction": "LOCAL_CARD_SCOPED_FIGCAPTION",
+        "defect": "CSS_MODULE_PURE_SELECTOR"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000145",
+      "event_sha256": "e8f681c19fb34990360551449344d7e6622b746f900ef909312c19ddbaa8932d",
+      "event_type": "DELIVERY_CORRECTION_APPLIED",
+      "evidence": [
+        "apps/web/src/app/brand-qualification/brand-qualification.module.css"
+      ],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-10T22:25:36Z",
+      "previous_event_sha256": "0357af78543b8b3c507818e26fe32a03ef804788c00ef85e46e7638ce9f2ea4f",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 145,
+      "summary": "Corrected the browser qualification CSS Module by scoping the figcaption selector to the local card class; the Next.js production build now passes.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_V1.3.2.3_R1_Browser_Qualification_Layout_and_Asset_Framing_Correction.zip",
+        "sha256": "987a8db3a96f0e977bddc2e24bb773ef0a3c5a1cee829120154c28dd1b87ce19"
+      },
+      "commit": null,
+      "component": "BRAND_ASSETS",
+      "correction": null,
+      "details": {
+        "correction": "R1_BROWSER_LAYOUT_AND_ASSET_FRAMING"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000146",
+      "event_sha256": "cd1158b7af00ffb9a946313a354b9b6034fe17f8490b27caa70bdba8d5056a92",
+      "event_type": "DELIVERY_CORRECTION_APPLIED",
+      "evidence": [
+        "apps/web/src/app/brand-qualification/brand-qualification.module.css",
+        "apps/web/public/brand/cinewatch-lockup-on-light.svg",
+        "apps/web/public/seo/cinewatch-og-1200x630.png"
+      ],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-10T22:52:00Z",
+      "previous_event_sha256": "e8f681c19fb34990360551449344d7e6622b746f900ef909312c19ddbaa8932d",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 146,
+      "summary": "Corrected the CineWatch TV browser qualification layout, lockup framing, SEO/social framing, and CSS Modules scope while preserving R1A and M1 geometry.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_V1.3.2.3_R2_Production_Brand_Asset_Browser_Approval_Lock.zip",
+        "sha256": "99704dbe775adce7f970b2230df4ad56442141112a5e99a16b3ae3be90688638"
+      },
+      "commit": null,
+      "component": "BRAND_ASSETS",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000147",
+      "event_sha256": "bfd6ef9f34be83dca52dc61a65e1f8dc71fc8d70afe11d588b5cc6f951ee03fa",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-10T23:28:24Z",
+      "previous_event_sha256": "cd1158b7af00ffb9a946313a354b9b6034fe17f8490b27caa70bdba8d5056a92",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 147,
+      "summary": "Applied the final CineWatch TV production-brand browser approval lock after successful real-browser qualification.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "BRAND_ASSETS",
+      "correction": null,
+      "details": {
+        "approvalSurface": "/brand-qualification",
+        "faviconVisualProof": "PASS",
+        "masterMinPx": "64",
+        "masterVariant": "R1A",
+        "micro16Px": "APPROVED",
+        "micro24Px": "APPROVED",
+        "micro32Px": "APPROVED",
+        "microVariant": "M1"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000148",
+      "event_sha256": "56ee6b191666acfdef7fa580c45ab26ed4c90002cd072b90f052e29393678b13",
+      "event_type": "PRODUCTION_BRAND_ASSETS_APPROVED",
+      "evidence": [
+        "docs/architecture/CineWatch_TV_V1_Production_Brand_Asset_Browser_Qualification_001.md",
+        "docs/architecture/geometry/CineWatch_TV_V1_A3_Production_Geometry_System_001.json",
+        "docs/architecture/evidence/CineWatch_TV_V1_Production_Brand_Browser_Approval_001.json"
+      ],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-10T23:28:52Z",
+      "previous_event_sha256": "bfd6ef9f34be83dca52dc61a65e1f8dc71fc8d70afe11d588b5cc6f951ee03fa",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 148,
+      "summary": "Human browser qualification approved the CineWatch TV production brand asset family: R1A for 64 px and above, M1 for 16/24/32 px, browser favicon, lockups, application icons, maskable icon, and SEO/social exports.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -4853,9 +5097,9 @@
     }
   ],
   "ledger": {
-    "event_count": 142,
-    "head_event_id": "CWTV-EVT-000142",
-    "head_sha256": "2f6a906dd627b6a5b36d7df11864d5087a671edaba32d9a5a412e43545b749a2"
+    "event_count": 148,
+    "head_event_id": "CWTV-EVT-000148",
+    "head_sha256": "56ee6b191666acfdef7fa580c45ab26ed4c90002cd072b90f052e29393678b13"
   },
   "milestones": [
     {
@@ -5133,19 +5377,40 @@
       "recorded_command_runtime_seconds": 0.0,
       "session_data_present": false,
       "status": "IN_PROGRESS"
+    },
+    {
+      "active_session_label": "not preserved",
+      "active_session_seconds": null,
+      "blocker_count": 0,
+      "break_count": 0,
+      "correction_count": 0,
+      "corrections": [],
+      "elapsed_label": "not preserved",
+      "elapsed_seconds": null,
+      "failure_count": 0,
+      "milestone": "CWTV.V1.3.2.3",
+      "observed_difficulty": 1.0,
+      "paused_label": "not preserved",
+      "paused_seconds": null,
+      "planned_complexity": null,
+      "progress_percent": 0,
+      "recorded_command_runtime_label": "not preserved",
+      "recorded_command_runtime_seconds": 0.0,
+      "session_data_present": false,
+      "status": "IN_PROGRESS"
     }
   ],
-  "projection_as_of": "2026-09-10T20:01:16+00:00",
+  "projection_as_of": "2026-09-10T23:28:52+00:00",
   "schema_version": "1.0",
   "summary": {
-    "artifacts": 42,
+    "artifacts": 45,
     "commits": 9,
     "corrections": 16,
-    "current_milestone": "CWTV.V1.3.2.1",
+    "current_milestone": "CWTV.V1.3.2.3",
     "failed_events": 14,
-    "passed_events": 101,
+    "passed_events": 107,
     "qualified_milestones": 10,
-    "tracked_completion_percent": 83.3,
-    "tracked_milestones": 12
+    "tracked_completion_percent": 76.9,
+    "tracked_milestones": 13
   }
 }

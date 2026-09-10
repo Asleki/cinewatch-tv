@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `CWTV.V1.3.2.1`
-- **Tracked milestones:** 12
+- **Current milestone:** `CWTV.V1.3.2.3`
+- **Tracked milestones:** 13
 - **Qualified milestones:** 10
-- **Tracked milestone completion:** 83.3%
+- **Tracked milestone completion:** 76.9%
 - **Recorded failed events:** 14
 - **Recorded corrections:** 16
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000142` / `2f6a906dd627b6a5b36d7df11864d5087a671edaba32d9a5a412e43545b749a2`
+- **Ledger head:** `CWTV-EVT-000148` / `56ee6b191666acfdef7fa580c45ab26ed4c90002cd072b90f052e29393678b13`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -32,6 +32,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.8` | QUALIFIED | 100% | 4.4/5 | 2 | 4 | 6h 49m 22s | not preserved |
 | `CWTV.V1.3.1` | IN_PROGRESS | 15% | 4.1/5 | 1 | 4 | not preserved | not preserved |
 | `CWTV.V1.3.2.1` | IN_PROGRESS | 0% | 1.0/5 | 0 | 0 | not preserved | not preserved |
+| `CWTV.V1.3.2.3` | IN_PROGRESS | 0% | 1.0/5 | 0 | 0 | not preserved | not preserved |
 
 ## Failure and correction history
 
@@ -108,6 +109,9 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `CWTV_NexVox_Projection_Boundary_Guard_R2.zip` — SHA-256 `7c4c915efac38609ca46ca94a01c888fd1a10423fc447b35a3c12b092836a71a` — ARTIFACT_APPLIED (2026-09-10T15:10:13Z)
 - `CWTV_V1.3.1_A3_Signature_Cinematic_Selection_Lock_001.zip` — SHA-256 `7c92d7b208488dde4057719a9826d621966568a9106b48d3c0186f97d333c1a4` — ARTIFACT_APPLIED (2026-09-10T18:50:05Z)
 - `CWTV_V1.3.2.1_A3_Master_Geometry_Parameterization_001.zip` — SHA-256 `43abd867f587aa82bf102259a880be8c0da26e2a535da546f94c8816047c02d5` — ARTIFACT_APPLIED (2026-09-10T20:01:02Z)
+- `CWTV_V1.3.2.3_Production_Brand_Asset_Browser_Qualification_001.zip` — SHA-256 `20f658af00d7daf4676dce24b7351035cfd2659383bf34a534d92e27712b01d6` — ARTIFACT_APPLIED (2026-09-10T22:15:45Z)
+- `CWTV_V1.3.2.3_R1_Browser_Qualification_Layout_and_Asset_Framing_Correction.zip` — SHA-256 `987a8db3a96f0e977bddc2e24bb773ef0a3c5a1cee829120154c28dd1b87ce19` — DELIVERY_CORRECTION_APPLIED (2026-09-10T22:52:00Z)
+- `CWTV_V1.3.2.3_R2_Production_Brand_Asset_Browser_Approval_Lock.zip` — SHA-256 `99704dbe775adce7f970b2230df4ad56442141112a5e99a16b3ae3be90688638` — ARTIFACT_APPLIED (2026-09-10T23:28:24Z)
 
 ## Event timeline
 
@@ -253,6 +257,12 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-10T19:19:21Z** · `CWTV.V1.3.1` · `DESIGN_DIRECTION_SELECTED` · **QUALIFIED** — Human approval selected A3 — Signature Cinematic as the CineWatch TV Aperture C descendant for production-geometry engineering; concept-board pixels remain non-production evidence. Evidence: docs/architecture/CineWatch_TV_V1_A3_Signature_Cinematic_Selection_Lock_001.md; docs/architecture/evidence/CineWatch_TV_V1_A3_Signature_Cinematic_Selected_Direction_001.png; docs/architecture/evidence/CineWatch_TV_V1_A3_Signature_Cinematic_Selected_Direction_001.json
 - **2026-09-10T20:01:02Z** · `CWTV.V1.3.2.1` · `ARTIFACT_APPLIED` · **PASS** — Applied the A3 Master Geometry Parameterization 001 delivery, establishing a deterministic candidate parameter baseline without installing production SVG assets.
 - **2026-09-10T20:01:16Z** · `CWTV.V1.3.2.1` · `GEOMETRY_PARAMETERIZATION_ESTABLISHED` · **QUALIFIED** — Established the deterministic A3 Signature Cinematic geometry parameter model: 1024-unit coordinate authority, six-segment Aperture C construction, asymmetric forward opening, optical centering, monochrome-first structure, and explicit no-raster-tracing boundary. Evidence: docs/architecture/CineWatch_TV_V1_A3_Master_Geometry_Parameterization_001.md; docs/architecture/geometry/CineWatch_TV_V1_A3_Master_Geometry_Parameters_001.json
+- **2026-09-10T22:15:45Z** · `CWTV.V1.3.2.3` · `ARTIFACT_APPLIED` · **PASS** — Applied the CineWatch TV production-brand browser qualification delivery, installing the real R1A/M1 candidate asset family and the development-only browser proof route.
+- **2026-09-10T22:15:55Z** · `CWTV.V1.3.2.3` · `BROWSER_QUALIFICATION_STAGED` · **PASS** — Staged real production-candidate brand files for final human approval in the running CineWatch TV Next.js application. Production authorization remains pending. Evidence: docs/architecture/CineWatch_TV_V1_Production_Brand_Asset_Browser_Qualification_001.md; docs/architecture/geometry/CineWatch_TV_V1_A3_Production_Geometry_System_001.json
+- **2026-09-10T22:25:36Z** · `CWTV.V1.3.2.3` · `DELIVERY_CORRECTION_APPLIED` · **PASS** — Corrected the browser qualification CSS Module by scoping the figcaption selector to the local card class; the Next.js production build now passes. Evidence: apps/web/src/app/brand-qualification/brand-qualification.module.css
+- **2026-09-10T22:52:00Z** · `CWTV.V1.3.2.3` · `DELIVERY_CORRECTION_APPLIED` · **PASS** — Corrected the CineWatch TV browser qualification layout, lockup framing, SEO/social framing, and CSS Modules scope while preserving R1A and M1 geometry. Evidence: apps/web/src/app/brand-qualification/brand-qualification.module.css; apps/web/public/brand/cinewatch-lockup-on-light.svg; apps/web/public/seo/cinewatch-og-1200x630.png
+- **2026-09-10T23:28:24Z** · `CWTV.V1.3.2.3` · `ARTIFACT_APPLIED` · **PASS** — Applied the final CineWatch TV production-brand browser approval lock after successful real-browser qualification.
+- **2026-09-10T23:28:52Z** · `CWTV.V1.3.2.3` · `PRODUCTION_BRAND_ASSETS_APPROVED` · **PASS** — Human browser qualification approved the CineWatch TV production brand asset family: R1A for 64 px and above, M1 for 16/24/32 px, browser favicon, lockups, application icons, maskable icon, and SEO/social exports. Evidence: docs/architecture/CineWatch_TV_V1_Production_Brand_Asset_Browser_Qualification_001.md; docs/architecture/geometry/CineWatch_TV_V1_A3_Production_Geometry_System_001.json; docs/architecture/evidence/CineWatch_TV_V1_Production_Brand_Browser_Approval_001.json
 
 ## Integrity and timing rules
 

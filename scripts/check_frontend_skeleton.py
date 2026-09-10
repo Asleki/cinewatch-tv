@@ -23,11 +23,21 @@ REQUIRED = (
     "apps/web/src/app/global-error.tsx",
     "apps/web/src/app/robots.ts",
     "apps/web/src/app/manifest.ts",
+    "apps/web/src/app/brand-qualification/page.tsx",
+    "apps/web/src/app/brand-qualification/brand-qualification.module.css",
     "apps/web/src/lib/config/public-env.ts",
     "apps/web/src/lib/api/system-client.ts",
-    "apps/web/public/brand/.gitkeep",
-    "apps/web/public/icons/.gitkeep",
-    "apps/web/public/seo/.gitkeep",
+    "apps/web/public/brand/asset-manifest.json",
+    "apps/web/public/brand/cinewatch-mark-r1a-full.svg",
+    "apps/web/public/brand/cinewatch-mark-m1-full.svg",
+    "apps/web/public/brand/cinewatch-lockup-on-light.svg",
+    "apps/web/public/brand/cinewatch-lockup-on-dark.svg",
+    "apps/web/public/icons/cinewatch-favicon-16.png",
+    "apps/web/public/icons/cinewatch-favicon-32.png",
+    "apps/web/public/icons/cinewatch-app-icon-192.png",
+    "apps/web/public/icons/cinewatch-app-icon-512.png",
+    "apps/web/public/icons/cinewatch-maskable-icon-512.png",
+    "apps/web/public/seo/cinewatch-og-1200x630.png",
 )
 
 EXPECTED_RUNTIME = {
@@ -76,7 +86,7 @@ def load_json(path: Path) -> dict:
 def main() -> int:
     missing = [path for path in REQUIRED if not (ROOT / path).is_file()]
     if missing:
-        fail("missing frontend skeleton paths: " + ", ".join(missing))
+        fail("missing frontend paths: " + ", ".join(missing))
 
     if (WEB / "src" / "app" / "api").exists():
         fail("Next.js API route boundary is forbidden; FastAPI owns application APIs")
@@ -127,17 +137,42 @@ def main() -> int:
         fail("frontend source contains forbidden provider authority markers: " + ", ".join(markers))
 
     for directory in (WEB / "public/brand", WEB / "public/icons", WEB / "public/seo"):
-        actual = sorted(path.name for path in directory.iterdir())
-        if actual != [".gitkeep"]:
-            fail(f"{directory.relative_to(ROOT)} must reserve location only until V1.3")
+        if (directory / ".gitkeep").exists():
+            fail(f"{directory.relative_to(ROOT)}/.gitkeep must be removed after qualified assets are installed")
+
+    route = (WEB / "src/app/brand-qualification/page.tsx").read_text(encoding="utf-8")
+    if 'process.env.NODE_ENV === "production"' not in route or "notFound()" not in route:
+        fail("brand qualification route must remain development-only")
+
+    layout = (WEB / "src/app/layout.tsx").read_text(encoding="utf-8")
+    for token in (
+        "/icons/cinewatch-favicon-16.png",
+        "/icons/cinewatch-favicon-32.png",
+        "/icons/cinewatch-app-icon-180.png",
+        "/seo/cinewatch-og-1200x630.png",
+    ):
+        if token not in layout:
+            fail(f"layout metadata missing brand asset reference: {token}")
+
+    manifest = (WEB / "src/app/manifest.ts").read_text(encoding="utf-8")
+    for token in (
+        "/icons/cinewatch-app-icon-192.png",
+        "/icons/cinewatch-app-icon-512.png",
+        "/icons/cinewatch-maskable-icon-512.png",
+    ):
+        if token not in manifest:
+            fail(f"PWA manifest missing icon: {token}")
 
     print("PASS  frontend skeleton paths")
     print("PASS  Next.js and React dependency authority")
     print("PASS  TypeScript 6 strict configuration")
     print("PASS  FastAPI remains application API authority")
     print("PASS  private-beta robots and public-env policy")
-    print("PASS  asset locations reserved without premature brand assets")
+    print("PASS  qualified brand asset locations replace reservation-only .gitkeep files")
+    print("PASS  development-only browser qualification route")
+    print("PASS  browser metadata and PWA manifest reference real production-candidate files")
     print("PASS  CWTV.V1.2.4 frontend skeleton policy")
+    print("PASS  CWTV.V1.3.2.3 browser qualification staging policy")
     return 0
 
 

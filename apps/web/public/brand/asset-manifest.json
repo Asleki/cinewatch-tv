@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "asset_family": "CineWatch TV V1 A3 R1A + M1",
+  "status": "PRODUCTION_BROWSER_QUALIFIED",
+  "master_min_px": 64,
+  "micro_native_sizes_px": [
+    16,
+    24,
+    32
+  ],
+  "brand_name": "CineWatch TV",
+  "assets": [
+    {
+      "path": "apps/web/public/brand/cinewatch-lockup-on-dark.svg",
+      "sha256": "511add2c88078605ee08ab6a305755c4d2081c6a0282b0cf0fe13a00cfd82277",
+      "role": "brand",
+      "type": "image/svg+xml"
+    },
+    {
+      "path": "apps/web/public/brand/cinewatch-lockup-on-light.svg",
+      "sha256": "10f2cb30cda3e5506af2fd6278149a511ff5753610b9f01d3071073ff3c504dc",
+      "role": "brand",
+      "type": "image/svg+xml"
+    },
+    {
+      "path": "apps/web/public/brand/cinewatch-mark-m1-full.svg",
+      "sha256": "fc53d6e30e41434858ac1ac3ee96abf9663adf60d2c0f2a0193042e34f3b2b10",
+      "role": "brand",
+      "type": "image/svg+xml"
+    },
+    {
+      "path": "apps/web/public/brand/cinewatch-mark-r1a-black.svg",
+      "sha256": "ea46902a8b712c188016ecfef8410b551a7b1c6c506f0ecbccbc1fd10fbed4d4",
+      "role": "brand",
+      "type": "image/svg+xml"
+    },
+    {
+      "path": "apps/web/public/brand/cinewatch-mark-r1a-full.svg",
+      "sha256": "6f9d58204588321b5103dc744d0b804818bf94ef7a0bb722892ae6d8ac3da918",
+      "role": "brand",
+      "type": "image/svg+xml"
+    },
+    {
+      "path": "apps/web/public/brand/cinewatch-mark-r1a-white.svg",
+      "sha256": "1a7fa017b645727047a6754642513324fb07890f8089c301fc8f8e7488e57359",
+      "role": "brand",
+      "type": "image/svg+xml"
+    },
+    {
+      "path": "apps/web/public/brand/cinewatch-wordmark-on-dark.svg",
+      "sha256": "228522f86176e88f4a2b098928444ee24c6402e214592f053f54d1af352c1413",
+      "role": "brand",
+      "type": "image/svg+xml"
+    },
+    {
+      "path": "apps/web/public/brand/cinewatch-wordmark-on-light.svg",
+      "sha256": "c64ef1d47ed967a69db10eae8b9c3a3241b465cc3c1b83d4d4e51c2f6dbb1a2f",
+      "role": "brand",
+      "type": "image/svg+xml"
+    },
+    {
+      "path": "apps/web/public/icons/cinewatch-app-icon-180.png",
+      "sha256": "ed300fc7f4973945b3bcfe488b467f6eb024ce02658826a6d206c1f1d7ce3634",
+      "role": "icon",
+      "width": 180,
+      "height": 180,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/icons/cinewatch-app-icon-192.png",
+      "sha256": "f855aebf6c737aca595bb5bb3a12b7481cccabb9d08863ebb06c6cd1ac0c69b3",
+      "role": "icon",
+      "width": 192,
+      "height": 192,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/icons/cinewatch-app-icon-512.png",
+      "sha256": "a9942d2a81449e2d22a0abb2a5a62746508d5fe7e580d87c2971375af9dae582",
+      "role": "icon",
+      "width": 512,
+      "height": 512,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/icons/cinewatch-app-icon-light-512.png",
+      "sha256": "a206286d0e5d9051788340e7f8b071e8f9a9ed998b070821d1a551cb884b16a3",
+      "role": "icon",
+      "width": 512,
+      "height": 512,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/icons/cinewatch-favicon-16.png",
+      "sha256": "1a8b2d62a230d9d67aa8323a7ec378d47931d09770a75a3f78a22a90139ddfae",
+      "role": "icon",
+      "width": 16,
+      "height": 16,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/icons/cinewatch-favicon-32.png",
+      "sha256": "a687480b4c15e6fd4fe1e450289a6b76350cb54fec2e34f0d7a07c95178512ef",
+      "role": "icon",
+      "width": 32,
+      "height": 32,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/icons/cinewatch-favicon-48.png",
+      "sha256": "17b979a6e6c9ed837bd33906438ee98301d2021f3cfd3efcbf81dab72196a793",
+      "role": "icon",
+      "width": 48,
+      "height": 48,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/icons/cinewatch-maskable-icon-512.png",
+      "sha256": "e581ce67daf51456f54d8473a7754d8b893619a5f79d166397aa4694a750283a",
+      "role": "icon",
+      "width": 512,
+      "height": 512,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/icons/cinewatch-micro-16.png",
+      "sha256": "94188854cdbe087de1a62d2db3135443dac771c5e372a1b07107327b652e5fe8",
+      "role": "icon",
+      "width": 16,
+      "height": 16,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/icons/cinewatch-micro-24.png",
+      "sha256": "e2fb2654ecfe0e2c251816abca49c9b03c222454a87b44411d4fb441bd91ca1a",
+      "role": "icon",
+      "width": 24,
+      "height": 24,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/icons/cinewatch-micro-32.png",
+      "sha256": "bae18edf0cae3ab738fd39717605456d671be08ebfc158b916d72fd6e4d07d0a",
+      "role": "icon",
+      "width": 32,
+      "height": 32,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/seo/cinewatch-og-1200x630.png",
+      "sha256": "d05a63712ac75e90d8dc2bd7640701486c62bab7e20bcac10654b2b1cd27f91f",
+      "role": "seo",
+      "width": 1200,
+      "height": 630,
+      "type": "image/png"
+    },
+    {
+      "path": "apps/web/public/seo/cinewatch-social-1080x1080.png",
+      "sha256": "a094d2aa6236c56eee1c00d559301c47a8f7f1b397b41616e97f5d63a68f7cac",
+      "role": "seo",
+      "width": 1080,
+      "height": 1080,
+      "type": "image/png"
+    }
+  ],
+  "correction": {
+    "id": "CWTV.V1.3.2.3-R1",
+    "reason": "browser layout and asset framing correction",
+    "production_asset_authorized": false
+  },
+  "production_asset_authorized": true,
+  "approval": {
+    "status": "APPROVED",
+    "approved_at": "2026-09-11T01:18:00+02:00",
+    "human_review": "browser runtime",
+    "route": "/brand-qualification",
+    "master_variant": "R1A",
+    "micro_variant": "M1",
+    "micro_sizes_px": {
+      "16": "APPROVED",
+      "24": "APPROVED",
+      "32": "APPROVED"
+    },
+    "favicon_visual_proof": "PASS",
+    "revisit_allowed": true
+  }
+}

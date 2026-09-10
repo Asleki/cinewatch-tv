@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "evidence_id": "CWTV-V1.3.2.3-BROWSER-APPROVAL-001",
+  "milestone": "CWTV.V1.3.2.3",
+  "revision": "R2",
+  "approved_at": "2026-09-11T01:18:00+02:00",
+  "approval_surface": "running Next.js browser route /brand-qualification",
+  "decision": "APPROVED",
+  "master": {
+    "variant": "R1A",
+    "min_px": 64,
+    "status": "APPROVED"
+  },
+  "micro": {
+    "variant": "M1",
+    "sizes_px": {
+      "16": "APPROVED",
+      "24": "APPROVED",
+      "32": "APPROVED"
+    },
+    "future_16px_optical_refinement_allowed": true
+  },
+  "favicon": {
+    "visual_proof": "PASS",
+    "browser": "Chrome",
+    "exact_source_size_observable": false
+  },
+  "delivery_chain": [
+    {
+      "artifact": "CWTV_V1.3.2.3_Production_Brand_Asset_Browser_Qualification_001.zip",
+      "sha256": "20f658af00d7daf4676dce24b7351035cfd2659383bf34a534d92e27712b01d6"
+    },
+    {
+      "artifact": "CWTV_V1.3.2.3_R1_Browser_Qualification_Layout_and_Asset_Framing_Correction.zip",
+      "sha256": "987a8db3a96f0e977bddc2e24bb773ef0a3c5a1cee829120154c28dd1b87ce19"
+    },
+    {
+      "artifact": "CWTV_V1.3.2.3_R2_Production_Brand_Asset_Browser_Approval_Lock.zip",
+      "sha256": "SELF_RECORDED_OUTSIDE_PACKAGE"
+    }
+  ],
+  "notes": [
+    "The final human approval occurred in the browser, not on a static approval board.",
+    "The 16 px result is accepted for this milestone and remains revisitable later."
+  ]
+}

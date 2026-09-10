@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "system_id": "CWTV-V1-A3-PRODUCTION-GEOMETRY-SYSTEM-001",
+  "status": "PRODUCTION_BROWSER_QUALIFIED",
+  "production_asset_authorized": true,
+  "baseline_commit": "6f140affbeacb646bfd90089b0e9b008e88be955",
+  "brand_name": "CineWatch TV",
+  "wordmark_rule": {
+    "CineWatch": "single text color per background context",
+    "TV": "#16DDE3",
+    "on_light_CineWatch": "#071A2D",
+    "on_dark_CineWatch": "#FFFFFF",
+    "runtime_font_dependency": false,
+    "vector_outline_source": "Inter ExtraBold glyph outlines; font file is not shipped"
+  },
+  "palette_candidate": {
+    "navy": "#071A2D",
+    "navy_2": "#0B2A40",
+    "aqua": "#16DDE3",
+    "teal": "#05B8C0",
+    "deep_teal": "#006D78",
+    "deepest_teal": "#004B5A",
+    "near_white": "#F7FBFC",
+    "black": "#111111",
+    "white": "#FFFFFF"
+  },
+  "master": {
+    "id": "R1A",
+    "name": "Clear Chord",
+    "use_min_px": 64,
+    "segment_count": 6,
+    "outer_gap_mdeg": 5600,
+    "inner_gap_mdeg": 5600,
+    "outer_segment_span_mdeg": 42000,
+    "inner_segment_span_mdeg": 40000,
+    "inner_radius": 228,
+    "connector_model": "straight-chord",
+    "source_parameter_authority": "docs/architecture/geometry/CineWatch_TV_V1_A3_Master_Geometry_Parameters_001.json"
+  },
+  "micro": {
+    "id": "M1",
+    "name": "Six-Blade Wide Gap",
+    "native_sizes_px": [
+      16,
+      24,
+      32
+    ],
+    "segment_count": 6,
+    "outer_gap_mdeg": 11600,
+    "inner_gap_mdeg": 11600,
+    "outer_segment_span_mdeg": 37000,
+    "inner_segment_span_mdeg": 35000,
+    "inner_radius": 214,
+    "connector_model": "straight-chord"
+  },
+  "gradient_candidate": {
+    "segment_gradients": [
+      {
+        "segment": 1,
+        "stops": [
+          "#19E5E2",
+          "#06B8C1",
+          "#005C69"
+        ]
+      },
+      {
+        "segment": 2,
+        "stops": [
+          "#006574",
+          "#0AB6BE",
+          "#19E5E2"
+        ]
+      },
+      {
+        "segment": 3,
+        "stops": [
+          "#0ED5D5",
+          "#058F9B",
+          "#004A59"
+        ]
+      },
+      {
+        "segment": 4,
+        "stops": [
+          "#004D5B",
+          "#098C98",
+          "#13D6D6"
+        ]
+      },
+      {
+        "segment": 5,
+        "stops": [
+          "#15DBDA",
+          "#07919D",
+          "#004A59"
+        ]
+      },
+      {
+        "segment": 6,
+        "stops": [
+          "#00606D",
+          "#0CBCC1",
+          "#1BE2DF"
+        ]
+      }
+    ],
+    "geometry_authoritative": false,
+    "browser_approval_required": true
+  },
+  "browser_gate": {
+    "route": "/brand-qualification",
+    "development_only": true,
+    "approval_event_after_human_review": "PRODUCTION_BRAND_ASSETS_APPROVED",
+    "human_approval": {
+      "status": "APPROVED",
+      "approved_at": "2026-09-11T01:18:00+02:00",
+      "review_surface": "/brand-qualification",
+      "review_context": "real Next.js browser runtime",
+      "micro_16_px": "ACCEPTED",
+      "micro_24_px": "ACCEPTED",
+      "micro_32_px": "ACCEPTED",
+      "favicon_visual_proof": "PASS",
+      "favicon_note": "Chrome visibly displayed the CineWatch aperture-C favicon in the active Brand Qualification history/tab surface; exact source size selection remains browser-controlled.",
+      "revisit_policy": "The 16 px optical result is accepted for V1.3.2.3 and may be revisited later without reopening the approved 24/32 px M1 or 64 px+ R1A regimes."
+    },
+    "approval_event": "PRODUCTION_BRAND_ASSETS_APPROVED"
+  }
+}
