@@ -5,6 +5,13 @@ ROOT="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
 cd "$ROOT"
 
 API_PYTHON="${CWTV_API_PYTHON:-$ROOT/services/api/.venv/bin/python}"
+
+if [[ "$API_PYTHON" != */* ]]; then
+  resolved_python="$(command -v -- "$API_PYTHON" || true)"
+  if [[ -n "$resolved_python" ]]; then
+    API_PYTHON="$resolved_python"
+  fi
+fi
 if [ ! -x "$API_PYTHON" ]; then
   printf 'FAIL  backend virtualenv Python not found: %s\n' "$API_PYTHON" >&2
   printf 'Set CWTV_API_PYTHON to the qualified Linux backend Python.\n' >&2
