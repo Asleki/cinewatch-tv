@@ -4,7 +4,7 @@
 **Product:** CineWatch TV
 **Repository:** `Asleki/cinewatch-tv`
 **Status:** `LOCKED`
-**Revision:** `002`
+**Revision:** `003`
 **Effective date:** `2026-09-10`
 
 ---
@@ -1003,6 +1003,8 @@ NexVox-Projection: true
 
 A projection commit SHALL NOT trigger another projection.
 
+A projection commit may change **only generator-owned NexVox projection paths**. Architecture documents, Chronicle/event sources, application code, tests, workflow files, static NexVox authority/policy/schema files, or any other non-generated path must remain in an ordinary source commit. `scripts/check_nexvox_engineering_corpus.py` must fail the projection gate when a commit carrying `NexVox-Projection: true` changes any non-generator-owned path.
+
 ## 25.2 Authority and training eligibility
 
 Git remains canonical for commit/file history. `docs/progress/activity/engineering-events.jsonl` remains canonical for recorded engineering activity. NexVox files are projections, indexes, reconciliations, and curated knowledge records.
@@ -1028,7 +1030,7 @@ The NexVox engineering PDF is a human-readable preservation projection only. It 
 
 ## 25.5 CI expectation
 
-The repository NexVox checker must validate corpus layout, source-commit binding, checksums, JSONL content hashes, training-eligibility boundaries, conversation provenance, secret-value exclusion, and deterministic regeneration.
+The repository NexVox checker must validate corpus layout, source-commit binding, **projection-path purity**, checksums, JSONL content hashes, training-eligibility boundaries, conversation provenance, secret-value exclusion, and deterministic regeneration.
 
 ---
 

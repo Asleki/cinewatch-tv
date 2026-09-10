@@ -71,6 +71,12 @@ GENERATED = {
     "checksums.sha256",
 }
 
+ALLOWED_PROJECTION_PATHS = {f"nexvox/engineering/{rel}" for rel in GENERATED}
+
+
+def projection_path_violations(paths: set[str]) -> list[str]:
+    return sorted(path for path in paths if path not in ALLOWED_PROJECTION_PATHS)
+
 
 def fail(msg: str) -> None:
     print(f"FAIL  {msg}", file=sys.stderr)
@@ -131,6 +137,18 @@ def main() -> int:
         if not m or m.group(1) != source or parent != source:
             fail("projection commit trailers/parent do not match sync-state source_commit")
         ok("projection commit binds exactly to preceding source commit")
+
+        changed_paths = {
+            line.strip()
+            for line in run_git("diff-tree", "--no-commit-id", "--name-only", "-r", "HEAD").splitlines()
+            if line.strip()
+        }
+        if not changed_paths:
+            fail("projection commit contains no changed files")
+        violations = projection_path_violations(changed_paths)
+        if violations:
+            fail("projection commit changes non-generator-owned paths: " + ", ".join(violations))
+        ok("projection commit changes only generator-owned corpus paths")
 
     checksum_lines = (CORPUS / "checksums.sha256").read_text(encoding="utf-8").splitlines()
     seen = set()

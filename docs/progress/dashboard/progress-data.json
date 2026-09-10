@@ -937,6 +937,30 @@
       "summary": "Applied the candidate CineWatch TV V1 Brand and Streaming Signature Authority, converting selected Aperture C Concept A into governed requirements for mark geometry, wordmark, themes, favicon, PWA, SEO/social identity, motion, accessibility, provenance, and production qualification.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_NexVox_Projection_Boundary_Guard_R2.zip",
+        "sha256": "7c4c915efac38609ca46ca94a01c888fd1a10423fc447b35a3c12b092836a71a"
+      },
+      "commit": null,
+      "component": "NEXVOX_ENGINEERING_KNOWLEDGE",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000137",
+      "event_sha256": "6b52c7a6e85ce3f652fa00c3cdeeef79fdb84d4342392f87f4d780ed6a92f211",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T15:10:13Z",
+      "previous_event_sha256": "4f841435f181450d50a64656e793c76ef094cf4868fe4ea8434f7a62c2496d1c",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 137,
+      "summary": "Applied the NexVox Projection Boundary Guard R2, advancing the CineWatch Engineering Workflow to Revision 003 and adding mechanical enforcement that projection commits may change only generator-owned NexVox projection paths.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "commits": [
@@ -4293,6 +4317,51 @@
       "summary": "Applied append-only recovery for malformed projection 3f9f175 by preserving the pushed commit, establishing a new ordinary source boundary from the corrective engineering record, and requiring the next NexVox projection to target that new source commit.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CWTV_NexVox_Projection_Boundary_Guard_R2.zip",
+        "sha256": "7c4c915efac38609ca46ca94a01c888fd1a10423fc447b35a3c12b092836a71a"
+      },
+      "commit": null,
+      "component": "NEXVOX_ENGINEERING_KNOWLEDGE",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000137",
+      "event_sha256": "6b52c7a6e85ce3f652fa00c3cdeeef79fdb84d4342392f87f4d780ed6a92f211",
+      "event_type": "ARTIFACT_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T15:10:13Z",
+      "previous_event_sha256": "4f841435f181450d50a64656e793c76ef094cf4868fe4ea8434f7a62c2496d1c",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 137,
+      "summary": "Applied the NexVox Projection Boundary Guard R2, advancing the CineWatch Engineering Workflow to Revision 003 and adding mechanical enforcement that projection commits may change only generator-owned NexVox projection paths.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "NEXVOX_ENGINEERING_KNOWLEDGE",
+      "correction": "CWTV-NEXVOX-PROJECTION-BOUNDARY-GUARD-R2",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000138",
+      "event_sha256": "daf1bc13913afc19a64d1fd262b4f682d3771e72bcccadd292b19e5be06b146f",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.1",
+      "occurred_at": "2026-09-10T15:10:27Z",
+      "previous_event_sha256": "6b52c7a6e85ce3f652fa00c3cdeeef79fdb84d4342392f87f4d780ed6a92f211",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 138,
+      "summary": "Added regression protection for the source/projection boundary defect exposed by malformed commit 3f9f175. Future commits marked NexVox-Projection true must fail validation if they contain ordinary source, architecture, workflow, or Chronicle paths.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -4630,9 +4699,9 @@
     }
   ],
   "ledger": {
-    "event_count": 136,
-    "head_event_id": "CWTV-EVT-000136",
-    "head_sha256": "4f841435f181450d50a64656e793c76ef094cf4868fe4ea8434f7a62c2496d1c"
+    "event_count": 138,
+    "head_event_id": "CWTV-EVT-000138",
+    "head_sha256": "daf1bc13913afc19a64d1fd262b4f682d3771e72bcccadd292b19e5be06b146f"
   },
   "milestones": [
     {
@@ -4869,9 +4938,10 @@
       "active_session_seconds": 0.0,
       "blocker_count": 1,
       "break_count": 0,
-      "correction_count": 3,
+      "correction_count": 4,
       "corrections": [
         "CWTV-NEXVOX-FOUNDATION-001-R1-DOC-CONSISTENCY",
+        "CWTV-NEXVOX-PROJECTION-BOUNDARY-GUARD-R2",
         "CWTV-NEXVOX-PROJECTION-BOUNDARY-R1",
         "CWTV.V1.3.1-R1-WHITESPACE"
       ],
@@ -4879,7 +4949,7 @@
       "elapsed_seconds": null,
       "failure_count": 1,
       "milestone": "CWTV.V1.3.1",
-      "observed_difficulty": 3.6,
+      "observed_difficulty": 4.1,
       "paused_label": "0s",
       "paused_seconds": 0.0,
       "planned_complexity": null,
@@ -4890,15 +4960,15 @@
       "status": "IN_PROGRESS"
     }
   ],
-  "projection_as_of": "2026-09-10T14:40:38+00:00",
+  "projection_as_of": "2026-09-10T15:10:27+00:00",
   "schema_version": "1.0",
   "summary": {
-    "artifacts": 39,
+    "artifacts": 40,
     "commits": 9,
-    "corrections": 15,
+    "corrections": 16,
     "current_milestone": "CWTV.V1.3.1",
     "failed_events": 14,
-    "passed_events": 95,
+    "passed_events": 97,
     "qualified_milestones": 10,
     "tracked_completion_percent": 90.9,
     "tracked_milestones": 11
