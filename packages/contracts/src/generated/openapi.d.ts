@@ -4,6 +4,26 @@
  */
 
 export interface paths {
+    "/api/v1/home": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * CineWatch V1 homepage
+         * @description Return a provider-neutral homepage assembled from TMDb.
+         */
+        get: operations["v1_home"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/status": {
         parameters: {
             query?: never;
@@ -70,6 +90,135 @@ export interface components {
              */
             status: "ok";
         };
+        /**
+         * HomeItem
+         * @description Provider-neutral item consumed by CineWatch homepage clients.
+         */
+        HomeItem: {
+            /** Backdrop Url */
+            backdrop_url?: string | null;
+            /** Date */
+            date?: string | null;
+            /** Known For Department */
+            known_for_department?: string | null;
+            /** Media Gaps */
+            media_gaps?: components["schemas"]["HomeMediaGap"][];
+            /**
+             * Media Type
+             * @enum {string}
+             */
+            media_type: "movie" | "tv" | "person";
+            /** Overview */
+            overview?: string | null;
+            /** Popularity */
+            popularity?: number | null;
+            /** Poster Url */
+            poster_url?: string | null;
+            /** Profile Url */
+            profile_url?: string | null;
+            /**
+             * Provider
+             * @default tmdb
+             * @constant
+             */
+            provider: "tmdb";
+            /** Provider Id */
+            provider_id: number;
+            rating?: components["schemas"]["HomeRating"] | null;
+            /** Title */
+            title: string;
+        };
+        /**
+         * HomeMediaGap
+         * @description Stable missing-media instruction emitted by CineWatch.
+         */
+        HomeMediaGap: {
+            /**
+             * Asset Kind
+             * @enum {string}
+             */
+            asset_kind: "profile" | "logo" | "poster" | "backdrop";
+            /** Entity Name */
+            entity_name: string;
+            /**
+             * Entity Type
+             * @enum {string}
+             */
+            entity_type: "person" | "network" | "movie" | "tv";
+            /**
+             * Provider
+             * @default tmdb
+             * @constant
+             */
+            provider: "tmdb";
+            /** Provider Id */
+            provider_id: number;
+            /** Public Path */
+            public_path: string;
+            /**
+             * Remediation
+             * @enum {string}
+             */
+            remediation: "AWAITING_HUMAN_RESEARCH" | "GENERATION_ALLOWED";
+            /** Suggested Filename */
+            suggested_filename: string;
+        };
+        /**
+         * HomeRating
+         * @description Normalized rating metadata retained from the primary provider.
+         */
+        HomeRating: {
+            /** Count */
+            count: number;
+            /**
+             * Scale
+             * @default 10
+             * @constant
+             */
+            scale: 10;
+            /**
+             * Source
+             * @default tmdb
+             * @constant
+             */
+            source: "tmdb";
+            /** Value */
+            value: number;
+        };
+        /**
+         * HomeResponse
+         * @description Canonical V1 homepage payload.
+         */
+        HomeResponse: {
+            hero?: components["schemas"]["HomeItem"] | null;
+            /**
+             * Primary Provider
+             * @default tmdb
+             * @constant
+             */
+            primary_provider: "tmdb";
+            /**
+             * Schema Version
+             * @default 1.0
+             * @constant
+             */
+            schema_version: "1.0";
+            sections: components["schemas"]["HomeSections"];
+        };
+        /**
+         * HomeSections
+         * @description Bounded homepage rails owned by the CineWatch API.
+         */
+        HomeSections: {
+            /** Popular Movies */
+            popular_movies?: components["schemas"]["HomeItem"][];
+            /** Popular Tv */
+            popular_tv?: components["schemas"]["HomeItem"][];
+            /** Trending */
+            trending?: components["schemas"]["HomeItem"][];
+            /** Trending People */
+            trending_people?: components["schemas"]["HomeItem"][];
+        };
         /** StatusResponse */
         StatusResponse: {
             /**
@@ -103,6 +252,26 @@ export interface components {
 }
 export type $defs = Record<string, never>;
 export interface operations {
+    v1_home: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HomeResponse"];
+                };
+            };
+        };
+    };
     v1_system_status: {
         parameters: {
             query?: never;

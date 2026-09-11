@@ -21,6 +21,316 @@
         "title": "HealthResponse",
         "type": "object"
       },
+      "HomeItem": {
+        "additionalProperties": false,
+        "description": "Provider-neutral item consumed by CineWatch homepage clients.",
+        "properties": {
+          "backdrop_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Backdrop Url"
+          },
+          "date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date"
+          },
+          "known_for_department": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Known For Department"
+          },
+          "media_gaps": {
+            "items": {
+              "$ref": "#/components/schemas/HomeMediaGap"
+            },
+            "title": "Media Gaps",
+            "type": "array"
+          },
+          "media_type": {
+            "enum": [
+              "movie",
+              "tv",
+              "person"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "overview": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overview"
+          },
+          "popularity": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Popularity"
+          },
+          "poster_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poster Url"
+          },
+          "profile_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Profile Url"
+          },
+          "provider": {
+            "const": "tmdb",
+            "default": "tmdb",
+            "title": "Provider",
+            "type": "string"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "rating": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HomeRating"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": {
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider_id",
+          "media_type",
+          "title"
+        ],
+        "title": "HomeItem",
+        "type": "object"
+      },
+      "HomeMediaGap": {
+        "additionalProperties": false,
+        "description": "Stable missing-media instruction emitted by CineWatch.",
+        "properties": {
+          "asset_kind": {
+            "enum": [
+              "profile",
+              "logo",
+              "poster",
+              "backdrop"
+            ],
+            "title": "Asset Kind",
+            "type": "string"
+          },
+          "entity_name": {
+            "minLength": 1,
+            "title": "Entity Name",
+            "type": "string"
+          },
+          "entity_type": {
+            "enum": [
+              "person",
+              "network",
+              "movie",
+              "tv"
+            ],
+            "title": "Entity Type",
+            "type": "string"
+          },
+          "provider": {
+            "const": "tmdb",
+            "default": "tmdb",
+            "title": "Provider",
+            "type": "string"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "public_path": {
+            "minLength": 1,
+            "title": "Public Path",
+            "type": "string"
+          },
+          "remediation": {
+            "enum": [
+              "AWAITING_HUMAN_RESEARCH",
+              "GENERATION_ALLOWED"
+            ],
+            "title": "Remediation",
+            "type": "string"
+          },
+          "suggested_filename": {
+            "minLength": 1,
+            "title": "Suggested Filename",
+            "type": "string"
+          }
+        },
+        "required": [
+          "entity_type",
+          "provider_id",
+          "entity_name",
+          "asset_kind",
+          "remediation",
+          "suggested_filename",
+          "public_path"
+        ],
+        "title": "HomeMediaGap",
+        "type": "object"
+      },
+      "HomeRating": {
+        "additionalProperties": false,
+        "description": "Normalized rating metadata retained from the primary provider.",
+        "properties": {
+          "count": {
+            "minimum": 0.0,
+            "title": "Count",
+            "type": "integer"
+          },
+          "scale": {
+            "const": 10,
+            "default": 10,
+            "title": "Scale",
+            "type": "integer"
+          },
+          "source": {
+            "const": "tmdb",
+            "default": "tmdb",
+            "title": "Source",
+            "type": "string"
+          },
+          "value": {
+            "maximum": 10.0,
+            "minimum": 0.0,
+            "title": "Value",
+            "type": "number"
+          }
+        },
+        "required": [
+          "value",
+          "count"
+        ],
+        "title": "HomeRating",
+        "type": "object"
+      },
+      "HomeResponse": {
+        "additionalProperties": false,
+        "description": "Canonical V1 homepage payload.",
+        "properties": {
+          "hero": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HomeItem"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "primary_provider": {
+            "const": "tmdb",
+            "default": "tmdb",
+            "title": "Primary Provider",
+            "type": "string"
+          },
+          "schema_version": {
+            "const": "1.0",
+            "default": "1.0",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "sections": {
+            "$ref": "#/components/schemas/HomeSections"
+          }
+        },
+        "required": [
+          "sections"
+        ],
+        "title": "HomeResponse",
+        "type": "object"
+      },
+      "HomeSections": {
+        "additionalProperties": false,
+        "description": "Bounded homepage rails owned by the CineWatch API.",
+        "properties": {
+          "popular_movies": {
+            "items": {
+              "$ref": "#/components/schemas/HomeItem"
+            },
+            "title": "Popular Movies",
+            "type": "array"
+          },
+          "popular_tv": {
+            "items": {
+              "$ref": "#/components/schemas/HomeItem"
+            },
+            "title": "Popular Tv",
+            "type": "array"
+          },
+          "trending": {
+            "items": {
+              "$ref": "#/components/schemas/HomeItem"
+            },
+            "title": "Trending",
+            "type": "array"
+          },
+          "trending_people": {
+            "items": {
+              "$ref": "#/components/schemas/HomeItem"
+            },
+            "title": "Trending People",
+            "type": "array"
+          }
+        },
+        "title": "HomeSections",
+        "type": "object"
+      },
       "StatusResponse": {
         "additionalProperties": false,
         "properties": {
@@ -73,6 +383,28 @@
   },
   "openapi": "3.1.0",
   "paths": {
+    "/api/v1/home": {
+      "get": {
+        "description": "Return a provider-neutral homepage assembled from TMDb.",
+        "operationId": "v1_home",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HomeResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "CineWatch V1 homepage",
+        "tags": [
+          "home"
+        ]
+      }
+    },
     "/api/v1/status": {
       "get": {
         "operationId": "v1_system_status",

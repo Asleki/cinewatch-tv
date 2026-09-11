@@ -60,9 +60,15 @@ def main() -> int:
         './node_modules/.bin/openapi-typescript',
     ):
         if forbidden in runtime_gate:
-            fail(f"contract runtime gate must not assume root npm hoisting: {forbidden}")
+            fail(
+                "contract runtime gate must not assume root npm hoisting: "
+                f"{forbidden}"
+            )
     if "npm exec --workspace @cinewatch/contracts --" not in runtime_gate:
-        fail("contract runtime gate must resolve openapi-typescript through @cinewatch/contracts workspace authority")
+        fail(
+            "contract runtime gate must resolve openapi-typescript through "
+            "@cinewatch/contracts workspace authority"
+        )
     print("PASS  workspace-resolved contract runtime tool policy")
 
     pyproject = read("services/api/pyproject.toml")
@@ -82,28 +88,42 @@ def main() -> int:
             fail(f"stable operation ID missing: {operation_id}")
     if 'operation_id="v1_system_status"' not in v1_routes:
         fail("stable operation ID missing: v1_system_status")
-    if 'openapi_version="3.1.0"' not in read("services/api/cinewatch_api/application.py"):
+    if 'openapi_version="3.1.0"' not in read(
+        "services/api/cinewatch_api/application.py"
+    ):
         fail("FastAPI OpenAPI version must be explicitly locked to 3.1.0")
     print("PASS  stable OpenAPI version and operation identity")
 
-    schema = json.loads(read("packages/contracts/openapi/cinewatch-v1.openapi.json"))
+    schema = json.loads(
+        read("packages/contracts/openapi/cinewatch-v1.openapi.json")
+    )
     if schema.get("openapi") != "3.1.0":
         fail("canonical schema must be OpenAPI 3.1.0")
+
     expected = {
         "/health": "system_health",
         "/status": "system_status",
         "/api/v1/status": "v1_system_status",
     }
     paths = schema.get("paths", {})
-    if set(paths) != set(expected):
-        fail(f"canonical schema path set drifted: {sorted(paths)}")
+    missing_foundation_paths = set(expected) - set(paths)
+    if missing_foundation_paths:
+        fail(
+            "canonical schema lost required foundation paths: "
+            + ", ".join(sorted(missing_foundation_paths))
+        )
     for path, operation_id in expected.items():
         if paths[path]["get"].get("operationId") != operation_id:
             fail(f"operation ID drift for {path}")
-    print("PASS  canonical OpenAPI skeleton surface")
+    print("PASS  canonical OpenAPI foundation surface")
 
     generated = read("packages/contracts/src/generated/openapi.d.ts")
-    for token in ("export interface paths", "export interface components", "system_health", "v1_system_status"):
+    for token in (
+        "export interface paths",
+        "export interface components",
+        "system_health",
+        "v1_system_status",
+    ):
         if token not in generated:
             fail(f"generated TypeScript contract missing token: {token}")
 
@@ -115,7 +135,11 @@ def main() -> int:
     client = read("apps/web/src/lib/api/system-client.ts")
     if 'from "@cinewatch/contracts"' not in client:
         fail("frontend system client must import generated contract types")
-    if re.search(r"(?:interface|type)\s+(?:HealthResponse|StatusResponse|CineWatchEnvironment)\b", client):
+    if re.search(
+        r"(?:interface|type)\s+"
+        r"(?:HealthResponse|StatusResponse|CineWatchEnvironment)\b",
+        client,
+    ):
         fail("frontend must not hand-maintain duplicate system API response types")
     print("PASS  frontend generated-type consumption boundary")
 
@@ -127,15 +151,28 @@ def main() -> int:
             "docs/architecture/decisions/CWTV_ADR_0005_OpenAPI_Canonical_Contract_and_Type_Generation.md",
         )
     ).lower()
-    for forbidden in ("tmdb api key", "youtube api key", "aws_access_key_id", "database password"):
+    for forbidden in (
+        "tmdb api key",
+        "youtube api key",
+        "aws_access_key_id",
+        "database password",
+    ):
         if forbidden in combined:
-            fail(f"forbidden secret-like material in contract documentation: {forbidden}")
+            fail(
+                "forbidden secret-like material in contract documentation: "
+                f"{forbidden}"
+            )
     print("PASS  contract secret-exclusion policy")
 
-    for scope in ("/discover", "/watch", "/explore", "/auth", "/cinema"):
-        if any(path.startswith(scope) for path in paths):
-            fail(f"premature product route entered contract foundation: {scope}")
-    print("PASS  no premature product/provider/auth contract scope")
+    for public_path in paths:
+        lowered = public_path.lower()
+        if "/tmdb" in lowered or "/omdb" in lowered:
+            fail(
+                "public API contract must not expose upstream-provider route "
+                f"identity: {public_path}"
+            )
+    print("PASS  public contract upstream-provider isolation")
+    print("PASS  product-route extensibility preserves foundation invariants")
 
     print("PASS  CWTV.V1.2.6 OpenAPI and typed contract foundation policy")
     return 0

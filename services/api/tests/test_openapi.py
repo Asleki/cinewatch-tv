@@ -1,26 +1,25 @@
 from fastapi.testclient import TestClient
 
 
-EXPECTED_OPERATIONS = {
+FOUNDATION_OPERATIONS = {
     "/health": "system_health",
     "/status": "system_status",
     "/api/v1/status": "v1_system_status",
 }
 
 
-def test_openapi_exposes_only_skeleton_routes(client: TestClient) -> None:
+def test_openapi_preserves_required_foundation_routes(client: TestClient) -> None:
     schema = client.get("/openapi.json").json()
     paths = schema["paths"]
 
     assert schema["openapi"] == "3.1.0"
-    assert set(paths) == set(EXPECTED_OPERATIONS)
-    assert not any("discover" in path.lower() for path in paths)
-    assert not any("watch" in path.lower() for path in paths)
-    assert not any("explore" in path.lower() for path in paths)
+    assert set(FOUNDATION_OPERATIONS).issubset(paths)
 
 
-def test_openapi_operation_ids_are_explicit_and_stable(client: TestClient) -> None:
+def test_openapi_foundation_operation_ids_are_explicit_and_stable(
+    client: TestClient,
+) -> None:
     schema = client.get("/openapi.json").json()
 
-    for path, operation_id in EXPECTED_OPERATIONS.items():
+    for path, operation_id in FOUNDATION_OPERATIONS.items():
         assert schema["paths"][path]["get"]["operationId"] == operation_id

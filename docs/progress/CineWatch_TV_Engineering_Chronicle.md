@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `none`
-- **Tracked milestones:** 14
-- **Qualified milestones:** 14
-- **Tracked milestone completion:** 100.0%
+- **Current milestone:** `CWTV.V1.3.3.2`
+- **Tracked milestones:** 16
+- **Qualified milestones:** 15
+- **Tracked milestone completion:** 93.8%
 - **Recorded failed events:** 14
-- **Recorded corrections:** 28
+- **Recorded corrections:** 29
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000153` / `b6aefde15cdc99e5c687f95e7fc3fc142bd6b2952ed57bc16a148429c202dfac`
+- **Ledger head:** `CWTV-EVT-000156` / `86724f6aba33e43b8806046839e133d636e15b37d9c28f8ca8d3eca13039db1f`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -34,6 +34,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.2.1` | QUALIFIED | 100% | 1.0/5 | 0 | 0 | not preserved | not preserved |
 | `CWTV.V1.3.2.3` | QUALIFIED | 100% | 2.8/5 | 0 | 4 | not preserved | not preserved |
 | `CWTV.V1.3.3.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
+| `CWTV.V1.3.3.2` | IN_PROGRESS | 5% | 1.0/5 | 0 | 0 | not preserved | not preserved |
+| `CWTV.V1.3.3.2.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 
 ## Failure and correction history
 
@@ -269,6 +271,9 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-11T00:18:09Z** · `CWTV.V1.3.2.3` · `DASHBOARD_PROJECTION_CORRECTION_APPLIED` · **PASS** — Corrected the residual dashboard projection defects found in browser review: governed correction events now populate milestone correction counts, and a fully qualified tracked set no longer reports the last qualified milestone as current. Evidence: scripts/build_progress_dashboard.py; scripts/check_engineering_chronicle.py
 - **2026-09-11T14:23:15Z** · `CWTV.V1.3.3.1` · `DELIVERY_CORRECTION_APPLIED` · **PASS** — Corrected GitHub Actions quality checkout so NexVox projection validation can resolve and verify its exact source commit lineage. Evidence: docs/architecture/evidence/CineWatch_TV_V1_3_3_1_R1_NexVox_CI_Projection_History_Checkout_Correction_001.md
 - **2026-09-11T15:05:48Z** · `CWTV.V1.3.3.1` · `MILESTONE_QUALIFIED` · **QUALIFIED** — Qualified the CineWatch TV local provider runtime, secret boundary, media fallback authority, and remote CI acceptance. Evidence: docs/architecture/evidence/CineWatch_TV_V1_3_3_1_R1_NexVox_CI_Projection_History_Checkout_Correction_001.md
+- **2026-09-11T15:50:57Z** · `CWTV.V1.3.3.2` · `MILESTONE_STARTED` · **INFO** — Started the CineWatch TV TMDb real-data homepage foundation.
+- **2026-09-11T19:28:56Z** · `CWTV.V1.3.3.2.1` · `CORRECTION_APPLIED` · **PASS** — Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion Evidence: docs/architecture/evidence/CineWatch_TV_V1_3_3_2_1_R1_OpenAPI_Foundation_Test_Neutralization_Correction_001.md; services/api/tests/test_openapi.py
+- **2026-09-11T19:31:53Z** · `CWTV.V1.3.3.2.1` · `MILESTONE_QUALIFIED` · **QUALIFIED** — Qualified Homepage Data Contract and TMDb Aggregation Authority after live provider proof, contract propagation, R1 OpenAPI test neutralization, API regression, repository regression, and governance checks Evidence: docs/architecture/CineWatch_TV_V1_TMDb_Real_Data_Homepage_Foundation_001.md; docs/architecture/decisions/CWTV_ADR_0009_Homepage_Data_Contract_and_TMDb_Aggregation_Authority.md; docs/architecture/evidence/CineWatch_TV_V1_3_3_2_1_R1_OpenAPI_Foundation_Test_Neutralization_Correction_001.md
 
 ## Integrity and timing rules
 

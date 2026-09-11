@@ -4899,6 +4899,90 @@
       "summary": "Qualified the CineWatch TV local provider runtime, secret boundary, media fallback authority, and remote CI acceptance.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "tmdb-real-data-homepage",
+      "correction": null,
+      "details": {
+        "browser_qualification": "required before milestone qualification",
+        "database_scope": "no new persistence authority unless explicitly qualified",
+        "frontend_provider_access": "CineWatch API contract only",
+        "primary_provider": "TMDb",
+        "provider_credentials": "server-side local secret boundary only",
+        "secondary_provider": "OMDb only when governed fallback or enrichment is required"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000154",
+      "event_sha256": "ff4d0263a4869e6857ea1e5836a4850e9dc1a8fd402f6c20c21bb31407e0ba79",
+      "event_type": "MILESTONE_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-11T15:50:57Z",
+      "previous_event_sha256": "b6aefde15cdc99e5c687f95e7fc3fc142bd6b2952ed57bc16a148429c202dfac",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 154,
+      "summary": "Started the CineWatch TV TMDb real-data homepage foundation.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "openapi-contract",
+      "correction": "CWTV.V1.3.3.2.1-R1",
+      "details": {
+        "api_tests": "30_passed",
+        "repository_tests": "16_passed"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000155",
+      "event_sha256": "ab75ed3b8be5789ef5d149bb2915517f09adc29b98fdd2994a64ade95e6c8e89",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "docs/architecture/evidence/CineWatch_TV_V1_3_3_2_1_R1_OpenAPI_Foundation_Test_Neutralization_Correction_001.md",
+        "services/api/tests/test_openapi.py"
+      ],
+      "milestone": "CWTV.V1.3.3.2.1",
+      "occurred_at": "2026-09-11T19:28:56Z",
+      "previous_event_sha256": "ff4d0263a4869e6857ea1e5836a4850e9dc1a8fd402f6c20c21bb31407e0ba79",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 155,
+      "summary": "Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "homepage-data-foundation",
+      "correction": null,
+      "details": {
+        "api_tests": "30_passed",
+        "homepage_tests": "4_passed",
+        "repository_tests": "16_passed"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000156",
+      "event_sha256": "86724f6aba33e43b8806046839e133d636e15b37d9c28f8ca8d3eca13039db1f",
+      "event_type": "MILESTONE_QUALIFIED",
+      "evidence": [
+        "docs/architecture/CineWatch_TV_V1_TMDb_Real_Data_Homepage_Foundation_001.md",
+        "docs/architecture/decisions/CWTV_ADR_0009_Homepage_Data_Contract_and_TMDb_Aggregation_Authority.md",
+        "docs/architecture/evidence/CineWatch_TV_V1_3_3_2_1_R1_OpenAPI_Foundation_Test_Neutralization_Correction_001.md"
+      ],
+      "milestone": "CWTV.V1.3.3.2.1",
+      "occurred_at": "2026-09-11T19:31:53Z",
+      "previous_event_sha256": "ab75ed3b8be5789ef5d149bb2915517f09adc29b98fdd2994a64ade95e6c8e89",
+      "result": "QUALIFIED",
+      "schema_version": "1.0",
+      "sequence": 156,
+      "summary": "Qualified Homepage Data Contract and TMDb Aggregation Authority after live provider proof, contract propagation, R1 OpenAPI test neutralization, API regression, repository regression, and governance checks",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -5236,9 +5320,9 @@
     }
   ],
   "ledger": {
-    "event_count": 153,
-    "head_event_id": "CWTV-EVT-000153",
-    "head_sha256": "b6aefde15cdc99e5c687f95e7fc3fc142bd6b2952ed57bc16a148429c202dfac"
+    "event_count": 156,
+    "head_event_id": "CWTV-EVT-000156",
+    "head_sha256": "86724f6aba33e43b8806046839e133d636e15b37d9c28f8ca8d3eca13039db1f"
   },
   "milestones": [
     {
@@ -5572,19 +5656,63 @@
       "recorded_command_runtime_seconds": 0.0,
       "session_data_present": false,
       "status": "QUALIFIED"
+    },
+    {
+      "active_session_label": "not preserved",
+      "active_session_seconds": null,
+      "blocker_count": 0,
+      "break_count": 0,
+      "correction_count": 0,
+      "corrections": [],
+      "elapsed_label": "not preserved",
+      "elapsed_seconds": null,
+      "failure_count": 0,
+      "milestone": "CWTV.V1.3.3.2",
+      "observed_difficulty": 1.0,
+      "paused_label": "not preserved",
+      "paused_seconds": null,
+      "planned_complexity": null,
+      "progress_percent": 5,
+      "recorded_command_runtime_label": "not preserved",
+      "recorded_command_runtime_seconds": 0.0,
+      "session_data_present": false,
+      "status": "IN_PROGRESS"
+    },
+    {
+      "active_session_label": "not preserved",
+      "active_session_seconds": null,
+      "blocker_count": 0,
+      "break_count": 0,
+      "correction_count": 1,
+      "corrections": [
+        "CWTV.V1.3.3.2.1-R1"
+      ],
+      "elapsed_label": "not preserved",
+      "elapsed_seconds": null,
+      "failure_count": 0,
+      "milestone": "CWTV.V1.3.3.2.1",
+      "observed_difficulty": 1.4,
+      "paused_label": "not preserved",
+      "paused_seconds": null,
+      "planned_complexity": null,
+      "progress_percent": 100,
+      "recorded_command_runtime_label": "not preserved",
+      "recorded_command_runtime_seconds": 0.0,
+      "session_data_present": false,
+      "status": "QUALIFIED"
     }
   ],
-  "projection_as_of": "2026-09-11T15:05:48+00:00",
+  "projection_as_of": "2026-09-11T19:31:53+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 45,
     "commits": 9,
-    "corrections": 28,
-    "current_milestone": null,
+    "corrections": 29,
+    "current_milestone": "CWTV.V1.3.3.2",
     "failed_events": 14,
-    "passed_events": 112,
-    "qualified_milestones": 14,
-    "tracked_completion_percent": 100.0,
-    "tracked_milestones": 14
+    "passed_events": 114,
+    "qualified_milestones": 15,
+    "tracked_completion_percent": 93.8,
+    "tracked_milestones": 16
   }
 }
