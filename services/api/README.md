@@ -4,7 +4,7 @@ This directory is the governed CineWatch TV FastAPI backend service boundary.
 
 `CWTV.V1.2.3` established the backend service skeleton. `CWTV.V1.2.5` adds the PostgreSQL application boundary: secret database configuration, SQLAlchemy metadata/engine/session factories, Psycopg 3, and the single Alembic migration lineage.
 
-It still does not introduce authentication, providers, rights, playback, Discover, Watch, Explore, My CineWatch, cinema, NexVox features, or product-domain database tables.
+CWTV.V1.3.3.1 introduces the first server-only provider adapters and local secret boundary without adding product-domain API routes. Authentication, rights enforcement, playback, Discover, Watch, Explore, My CineWatch, cinema, NexVox product features, and product-domain database tables remain out of scope.
 
 ## Linux development setup
 
@@ -52,3 +52,24 @@ Then inspect `/health`, `/status`, `/api/v1/status`, and `/docs` on the local se
 ## OpenAPI contract authority
 
 CWTV.V1.2.6 makes the FastAPI OpenAPI 3.1 projection a governed, checked-in contract. Existing system routes use explicit stable operation IDs. Run `python scripts/export_openapi_contract.py --check` from the repository root to detect schema drift. TypeScript declarations are generated downstream in `packages/contracts`; the API service remains authoritative.
+
+
+## Local provider runtime
+
+Create a root `.env.local` for real local credentials; never commit it. The initial keys are `TMDB_API_KEY` and `OMDB_API_KEY`. TMDb is primary and OMDb is enrichment-only.
+
+After installing the API dependencies, explicit live probes are:
+
+```bash
+python scripts/probe_provider_runtime.py tmdb
+python scripts/probe_provider_runtime.py omdb --imdb-id tt0111161
+```
+
+CI does not use live provider credentials. Provider adapter tests use deterministic mocked HTTP responses.
+
+Fallback media is reconciled with:
+
+```bash
+python scripts/reconcile_provider_fallbacks.py
+python scripts/reconcile_provider_fallbacks.py --check
+```

@@ -66,6 +66,7 @@ jobs:
           python scripts/check_frontend_skeleton.py
           python scripts/check_database_foundation.py
           python scripts/check_contract_foundation.py
+          python scripts/check_provider_runtime.py
           python scripts/check_termux_linux_workflow.py
           python scripts/check_engineering_chronicle.py
           python scripts/check_nexvox_engineering_corpus.py

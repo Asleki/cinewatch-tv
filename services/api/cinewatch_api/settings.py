@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     """Normalized backend settings loaded from environment variables or root .env."""
 
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=(".env", ".env.local"),
         env_file_encoding="utf-8",
         extra="ignore",
         populate_by_name=True,
@@ -25,6 +25,8 @@ class Settings(BaseSettings):
     service_name: str = Field(default="cinewatch-api", validation_alias="CINEWATCH_SERVICE_NAME")
     log_level: LogLevelName = Field(default="INFO", validation_alias="CINEWATCH_LOG_LEVEL")
     database_url: SecretStr | None = Field(default=None, validation_alias="DATABASE_URL")
+    tmdb_api_key: SecretStr | None = Field(default=None, validation_alias="TMDB_API_KEY")
+    omdb_api_key: SecretStr | None = Field(default=None, validation_alias="OMDB_API_KEY")
 
 
 @lru_cache(maxsize=1)

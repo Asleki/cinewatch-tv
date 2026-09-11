@@ -1,0 +1,1 @@
+"""CineWatch media authority helpers."""

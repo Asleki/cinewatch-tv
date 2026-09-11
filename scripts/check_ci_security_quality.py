@@ -89,11 +89,20 @@ def scan_repository(repo: Path) -> None:
         "PostgreSQL password assignment": re.compile(
             r"(?m)^\s*PGPASSWORD\s*[:=]\s*[\"']?[^<\s#][^\s#]{5,}"
         ),
+        "provider API key assignment": re.compile(
+            r"(?m)^[ \t]*(?:TMDB|OMDB|WATCHMODE|NASA|NEWS)_API_KEY"
+            r"[ \t]*[:=][ \t]*[\"']?[^<\s#][^\s#]{5,}"
+        ),
+        "provider access token assignment": re.compile(
+            r"(?m)^[ \t]*(?:GENIUS|KINO_CHECK|KINOCHECK)_ACCESS_TOKEN"
+            r"[ \t]*[:=][ \t]*[\"']?[^<\s#][^\s#]{8,}"
+        ),
     }
 
     for path in repository_files(repo):
         rel = path.relative_to(repo).as_posix()
-        if rel in forbidden_paths:
+        env_name = Path(rel).name
+        if rel in forbidden_paths or (env_name.startswith(".env") and env_name != ".env.example"):
             fail(f"forbidden tracked secret file: {rel}")
 
         try:
@@ -251,6 +260,8 @@ def main() -> int:
 
         required_ignore = (
             ".env",
+            ".env.*",
+            "!.env.example",
             "*.key",
             "secrets/",
             ".aws/",

@@ -39,3 +39,8 @@ python scripts/build_nexvox_engineering_pdf.py
 ```
 
 The corpus generator projects an exact Git source commit into the governed `nexvox/engineering` knowledge layer. The checker validates source binding, checksums, record hashes, eligibility boundaries, conversation provenance, secret exclusion, and deterministic regeneration. The PDF is local-only, does not participate in CI authority, and must be regenerated after every ordinary non-projection source commit once the corpus is rebuilt for that exact source commit.
+
+
+## Provider runtime and media fallback
+
+`check_provider_runtime.py` qualifies the CWTV.V1.3.3.1 provider/secret/media policy. `probe_provider_runtime.py` is an explicit local-only live credential probe for TMDb or OMDb. `reconcile_provider_fallbacks.py` validates deterministic WebP fallback names and regenerates the public fallback manifest.

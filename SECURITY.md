@@ -31,3 +31,7 @@ provider, GitHub PAT, AWS, Azure, or other application secrets.
 
 Cloud deployment and production incident-response policy are outside
 CWTV.V1.2.8 and will be governed by later milestones.
+
+## Local provider credentials
+
+Real provider credentials used during private V1 development belong only in ignored root `.env.local` files or process environment variables. `.env.example` contains names only. Provider secrets must never use a `NEXT_PUBLIC_` prefix, enter browser source, appear in tracked screenshots, or be committed through forced Git staging. `scripts/check_ci_security_quality.py` rejects tracked `.env*` files other than `.env.example` and detects concrete provider-key assignments.

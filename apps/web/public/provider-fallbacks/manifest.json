@@ -1,0 +1,5 @@
+{
+  "schema_version": "1.0",
+  "generator": "scripts/reconcile_provider_fallbacks.py",
+  "entries": []
+}
