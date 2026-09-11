@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `8482db2168531bcc290a6f051743605d9aab4d11`
+**Source commit:** `06d6e0ad6753eb676104fc5c1de900d261209f52`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
@@ -163,3 +163,11 @@ State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 Failure: No FAILED ledger event recorded.
 
 Correction: Added regression protection for the source/projection boundary defect exposed by malformed commit 3f9f175. Future commits marked NexVox-Projection true must fail validation if they contain ordinary source, architecture, workflow, or Chronicle paths.
+
+## CWTV-FC-00021 - CWTV.V1.3.3.2.1
+
+State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
+
+Failure: No FAILED ledger event recorded.
+
+Correction: Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion

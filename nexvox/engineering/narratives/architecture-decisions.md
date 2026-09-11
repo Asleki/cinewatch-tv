@@ -1,6 +1,6 @@
 # CineWatch Architecture and Decisions
 
-**Source commit:** `8482db2168531bcc290a6f051743605d9aab4d11`
+**Source commit:** `06d6e0ad6753eb676104fc5c1de900d261209f52`
 
 This projection summarizes ADRs and architecture evidence; source documents remain authoritative.
 
@@ -51,3 +51,9 @@ Source: `docs/architecture/decisions/CWTV_ADR_0007_Linux_CI_Least_Privilege_and_
 Source: `docs/architecture/decisions/CWTV_ADR_0008_Provider_Runtime_and_Media_Fallback_Authority.md`
 
 FastAPI remains the exclusive provider-policy boundary. TMDb is the primary entertainment-data upstream; OMDb begins as a capability-specific enrichment provider. Next.js consumes CineWatch-owned API contracts only. Real local credentials are stored only in ignored `.env.local` or process environment values and are represented by backend `SecretStr` settings. CI uses mocks and never receives provider secrets. Live provider qualification is explicit and local-only. Missing provider media is represented as a deterministic media gap. Fallback assets use stable provider/entity identities in WebP filenames and a generated manifest. Real-person profiles require human research and authentic-source selection; synthetic person likenesses are prohibited. Neutral generated fallback media is allowed for logos and backdrops, provided it does not masquerade as official rightsholder artwork. Posters remain human-research remediation until explicitly changed.
+
+## CWTV-ADR-0009 - CWTV ADR 0009 - Homepage Data Contract and TMDb Aggregation Authority
+
+Source: `docs/architecture/decisions/CWTV_ADR_0009_Homepage_Data_Contract_and_TMDb_Aggregation_Authority.md`
+
+CineWatch adopts `GET /api/v1/home` as the first V1 product-data endpoint. TMDb is the primary upstream. The CineWatch API owns aggregation, normalization, rating representation, image URL construction, missing-media detection, and the public response contract. The frontend will consume the generated CineWatch contract and will not call TMDb directly. OMDb is not an unconditional dependency of this endpoint. The V1.2.6 contract checker is updated once at its actual obsolete assumption: system routes become required subset invariants rather than an exact enumeration of every route in the product. Homepage-specific expectations move into `scripts/check_homepage_data_foundation.py`.

@@ -1,10 +1,10 @@
 # CineWatch Engineering History
 
-**Source commit:** `8482db2168531bcc290a6f051743605d9aab4d11`
+**Source commit:** `06d6e0ad6753eb676104fc5c1de900d261209f52`
 
 This is a deterministic NexVox narrative projection. Git remains the canonical commit authority and `engineering-events.jsonl` remains the canonical engineering-activity ledger.
 
-The source history contains **39 reachable commits**, **238 current tracked files**, and **153 engineering events**.
+The source history contains **41 reachable commits**, **249 current tracked files**, and **156 engineering events**.
 
 ## Commit sequence
 
@@ -47,6 +47,8 @@ The source history contains **39 reachable commits**, **238 current tracked file
 - `e40a70a` - fix: provide NexVox lineage history to CI
 - `a2cfb4e` - chore(nexvox): sync engineering corpus for e40a70a
 - `8482db2` - docs: qualify CineWatch provider runtime milestone
+- `c44735c` - chore(nexvox): sync engineering corpus for 8482db2
+- `06d6e0a` - feat: establish TMDb homepage data foundation
 
 ## Milestone state
 
@@ -64,3 +66,5 @@ The source history contains **39 reachable commits**, **238 current tracked file
 - `CWTV.V1.3.2.1`: events=2, qualified=true, failures=0, corrections=0
 - `CWTV.V1.3.2.3`: events=9, qualified=true, failures=0, corrections=4
 - `CWTV.V1.3.3.1`: events=2, qualified=true, failures=0, corrections=1
+- `CWTV.V1.3.3.2`: events=1, qualified=false, failures=0, corrections=0
+- `CWTV.V1.3.3.2.1`: events=2, qualified=true, failures=0, corrections=1
