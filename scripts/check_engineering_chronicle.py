@@ -136,6 +136,52 @@ def main() -> int:
         fail("dashboard lost qualified historical milestones")
     if data["summary"]["tracked_milestones"] < 7:
         fail("dashboard lost the initial started-milestone lineage")
+    milestone_by_id = {
+        item["milestone"]: item
+        for item in data["milestones"]
+    }
+
+    qualified_by_result = {
+        event["milestone"]
+        for event in events
+        if event["result"] == "QUALIFIED"
+    }
+
+    for milestone in qualified_by_result:
+        item = milestone_by_id.get(milestone)
+        if item is None:
+            fail(f"qualified milestone missing from dashboard: {milestone}")
+        if item["status"] != "QUALIFIED" or item["progress_percent"] != 100:
+            fail(
+                "dashboard failed QUALIFIED-result semantics for "
+                f"{milestone}"
+            )
+
+    for milestone, group in (
+        (milestone, [e for e in events if e["milestone"] == milestone])
+        for milestone in milestone_by_id
+    ):
+        if any("CORRECTION" in e["event_type"] for e in group):
+            if milestone_by_id[milestone]["correction_count"] < 1:
+                fail(
+                    "dashboard failed correction-event semantics for "
+                    f"{milestone}"
+                )
+
+    pass_line("dashboard QUALIFIED-result and correction-event semantics")
+
+    if (
+        data["summary"]["qualified_milestones"]
+        == data["summary"]["tracked_milestones"]
+        and data["summary"]["current_milestone"] is not None
+    ):
+        fail(
+            "dashboard current milestone must be null when every "
+            "tracked milestone is qualified"
+        )
+
+    pass_line("fully-qualified dashboard has no current milestone")
+
     if args.bootstrap_gate:
         if data["summary"]["current_milestone"] != "CWTV.V1.2.5.1":
             fail("bootstrap current milestone must be CWTV.V1.2.5.1")

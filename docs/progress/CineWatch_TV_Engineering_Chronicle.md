@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `CWTV.V1.3.2.3`
+- **Current milestone:** `none`
 - **Tracked milestones:** 13
-- **Qualified milestones:** 10
-- **Tracked milestone completion:** 76.9%
+- **Qualified milestones:** 13
+- **Tracked milestone completion:** 100.0%
 - **Recorded failed events:** 14
-- **Recorded corrections:** 16
+- **Recorded corrections:** 27
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000148` / `56ee6b191666acfdef7fa580c45ab26ed4c90002cd072b90f052e29393678b13`
+- **Ledger head:** `CWTV-EVT-000151` / `f3a94d250300c0eaabcbc4ec535aeba390c1cdbaf4bdad88ee5a05a9374ee819`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -29,10 +29,10 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.5.1` | QUALIFIED | 100% | 4.6/5 | 3 | 2 | 1h 10m 54s | 8s |
 | `CWTV.V1.2.6` | QUALIFIED | 100% | 2.2/5 | 1 | 1 | 26m 3s | not preserved |
 | `CWTV.V1.2.7` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 1h 26m 3s | not preserved |
-| `CWTV.V1.2.8` | QUALIFIED | 100% | 4.4/5 | 2 | 4 | 6h 49m 22s | not preserved |
-| `CWTV.V1.3.1` | IN_PROGRESS | 15% | 4.1/5 | 1 | 4 | not preserved | not preserved |
-| `CWTV.V1.3.2.1` | IN_PROGRESS | 0% | 1.0/5 | 0 | 0 | not preserved | not preserved |
-| `CWTV.V1.3.2.3` | IN_PROGRESS | 0% | 1.0/5 | 0 | 0 | not preserved | not preserved |
+| `CWTV.V1.2.8` | QUALIFIED | 100% | 5.0/5 | 2 | 11 | 6h 49m 22s | not preserved |
+| `CWTV.V1.3.1` | QUALIFIED | 100% | 4.1/5 | 1 | 4 | not preserved | not preserved |
+| `CWTV.V1.3.2.1` | QUALIFIED | 100% | 1.0/5 | 0 | 0 | not preserved | not preserved |
+| `CWTV.V1.3.2.3` | QUALIFIED | 100% | 2.8/5 | 0 | 4 | not preserved | not preserved |
 
 ## Failure and correction history
 
@@ -263,6 +263,9 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-10T22:52:00Z** · `CWTV.V1.3.2.3` · `DELIVERY_CORRECTION_APPLIED` · **PASS** — Corrected the CineWatch TV browser qualification layout, lockup framing, SEO/social framing, and CSS Modules scope while preserving R1A and M1 geometry. Evidence: apps/web/src/app/brand-qualification/brand-qualification.module.css; apps/web/public/brand/cinewatch-lockup-on-light.svg; apps/web/public/seo/cinewatch-og-1200x630.png
 - **2026-09-10T23:28:24Z** · `CWTV.V1.3.2.3` · `ARTIFACT_APPLIED` · **PASS** — Applied the final CineWatch TV production-brand browser approval lock after successful real-browser qualification.
 - **2026-09-10T23:28:52Z** · `CWTV.V1.3.2.3` · `PRODUCTION_BRAND_ASSETS_APPROVED` · **PASS** — Human browser qualification approved the CineWatch TV production brand asset family: R1A for 64 px and above, M1 for 16/24/32 px, browser favicon, lockups, application icons, maskable icon, and SEO/social exports. Evidence: docs/architecture/CineWatch_TV_V1_Production_Brand_Asset_Browser_Qualification_001.md; docs/architecture/geometry/CineWatch_TV_V1_A3_Production_Geometry_System_001.json; docs/architecture/evidence/CineWatch_TV_V1_Production_Brand_Browser_Approval_001.json
+- **2026-09-11T00:14:45Z** · `CWTV.V1.3.2.3` · `DASHBOARD_PROJECTION_CORRECTION_APPLIED` · **PASS** — Corrected the Engineering Progress Dashboard projection semantics after browser qualification showed qualified brand milestones and governed correction events were being under-reported. Evidence: scripts/build_progress_dashboard.py; scripts/check_engineering_chronicle.py
+- **2026-09-11T00:14:53Z** · `CWTV.V1.3.2.3` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.3.2.3 closed and qualified after production brand assets passed repository qualification and human browser approval. Evidence: docs/architecture/CineWatch_TV_V1_Production_Brand_Asset_Browser_Qualification_001.md; docs/architecture/evidence/CineWatch_TV_V1_Production_Brand_Browser_Approval_001.json
+- **2026-09-11T00:18:09Z** · `CWTV.V1.3.2.3` · `DASHBOARD_PROJECTION_CORRECTION_APPLIED` · **PASS** — Corrected the residual dashboard projection defects found in browser review: governed correction events now populate milestone correction counts, and a fully qualified tracked set no longer reports the last qualified milestone as current. Evidence: scripts/build_progress_dashboard.py; scripts/check_engineering_chronicle.py
 
 ## Integrity and timing rules
 

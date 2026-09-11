@@ -52,8 +52,19 @@ def event_time_label(event: dict[str, Any]) -> str:
     return event["occurred_at"]
 
 
+def is_qualification_event(event: dict[str, Any]) -> bool:
+    return (
+        event["event_type"] == "MILESTONE_QUALIFIED"
+        or event["result"] == "QUALIFIED"
+    )
+
+
+def is_correction_event(event: dict[str, Any]) -> bool:
+    return "CORRECTION" in event["event_type"]
+
+
 def milestone_progress(events: list[dict[str, Any]]) -> int:
-    if any(event["event_type"] == "MILESTONE_QUALIFIED" for event in events):
+    if any(is_qualification_event(event) for event in events):
         return 100
     progress = 0
     for event in events:
@@ -72,7 +83,7 @@ def observed_difficulty(events: list[dict[str, Any]]) -> float:
     corrections = {
         event["correction"] or event["summary"]
         for event in events
-        if event["event_type"] in {"CORRECTION_GENERATED", "CORRECTION_APPLIED"}
+        if is_correction_event(event)
     }
     completed_cycles = sum(
         event["event_type"].endswith("_PASSED") and event["duration_seconds"] is not None for event in events
@@ -150,7 +161,7 @@ def build_model(events: list[dict[str, Any]]) -> dict[str, Any]:
 
     milestones: list[dict[str, Any]] = []
     for milestone, group in milestone_events.items():
-        qualified = any(event["event_type"] == "MILESTONE_QUALIFIED" for event in group)
+        qualified = any(is_qualification_event(event) for event in group)
         started_event = next((event for event in group if event["event_type"] == "MILESTONE_STARTED"), group[0])
         planned_complexity = started_event["details"].get("planned_complexity")
         elapsed_seconds, elapsed_label = elapsed_metric(group)
@@ -160,7 +171,7 @@ def build_model(events: list[dict[str, Any]]) -> dict[str, Any]:
         correction_names = sorted({
             event["correction"] or event["summary"]
             for event in group
-            if event["event_type"] in {"CORRECTION_GENERATED", "CORRECTION_APPLIED"}
+            if is_correction_event(event)
         })
         milestones.append({
             "milestone": milestone,
@@ -178,7 +189,14 @@ def build_model(events: list[dict[str, Any]]) -> dict[str, Any]:
         })
 
     qualified_count = sum(item["status"] == "QUALIFIED" for item in milestones)
-    current = next((item["milestone"] for item in reversed(milestones) if item["status"] != "QUALIFIED"), milestones[-1]["milestone"] if milestones else None)
+    current = next(
+        (
+            item["milestone"]
+            for item in reversed(milestones)
+            if item["status"] != "QUALIFIED"
+        ),
+        None,
+    )
     exact_times = [parse_timestamp(event["occurred_at"]) for event in events if event["occurred_at"]]
     as_of = max(exact_times).isoformat() if exact_times else None
     event_failures = [event for event in events if event["result"] == "FAILED"]

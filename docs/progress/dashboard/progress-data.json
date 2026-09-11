@@ -4760,6 +4760,88 @@
       "summary": "Human browser qualification approved the CineWatch TV production brand asset family: R1A for 64 px and above, M1 for 16/24/32 px, browser favicon, lockups, application icons, maskable icon, and SEO/social exports.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "PROGRESS_DASHBOARD",
+      "correction": null,
+      "details": {
+        "correctionRule": "ANY_EVENT_TYPE_CONTAINING_CORRECTION",
+        "qualificationRule": "RESULT_QUALIFIED_OR_MILESTONE_QUALIFIED"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000149",
+      "event_sha256": "aedb7c90bc5e3e15149b664b9fc1b2c69a9c0ec226291c4e05c5029c8cef8756",
+      "event_type": "DASHBOARD_PROJECTION_CORRECTION_APPLIED",
+      "evidence": [
+        "scripts/build_progress_dashboard.py",
+        "scripts/check_engineering_chronicle.py"
+      ],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-11T00:14:45Z",
+      "previous_event_sha256": "56ee6b191666acfdef7fa580c45ab26ed4c90002cd072b90f052e29393678b13",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 149,
+      "summary": "Corrected the Engineering Progress Dashboard projection semantics after browser qualification showed qualified brand milestones and governed correction events were being under-reported.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "BRAND_ASSETS",
+      "correction": null,
+      "details": {
+        "masterVariant": "R1A",
+        "microVariant": "M1",
+        "productionBrowserQualified": "true"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000150",
+      "event_sha256": "5832a0b7c3490aad2365e4c1522295dfa96b7236ab89c67e6ef976b6ff62c0ed",
+      "event_type": "MILESTONE_QUALIFIED",
+      "evidence": [
+        "docs/architecture/CineWatch_TV_V1_Production_Brand_Asset_Browser_Qualification_001.md",
+        "docs/architecture/evidence/CineWatch_TV_V1_Production_Brand_Browser_Approval_001.json"
+      ],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-11T00:14:53Z",
+      "previous_event_sha256": "aedb7c90bc5e3e15149b664b9fc1b2c69a9c0ec226291c4e05c5029c8cef8756",
+      "result": "QUALIFIED",
+      "schema_version": "1.0",
+      "sequence": 150,
+      "summary": "CWTV.V1.3.2.3 closed and qualified after production brand assets passed repository qualification and human browser approval.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "PROGRESS_DASHBOARD",
+      "correction": null,
+      "details": {
+        "completedCurrentMilestone": "NULL",
+        "correctionCounter": "ALL_CORRECTION_EVENTS"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000151",
+      "event_sha256": "f3a94d250300c0eaabcbc4ec535aeba390c1cdbaf4bdad88ee5a05a9374ee819",
+      "event_type": "DASHBOARD_PROJECTION_CORRECTION_APPLIED",
+      "evidence": [
+        "scripts/build_progress_dashboard.py",
+        "scripts/check_engineering_chronicle.py"
+      ],
+      "milestone": "CWTV.V1.3.2.3",
+      "occurred_at": "2026-09-11T00:18:09Z",
+      "previous_event_sha256": "5832a0b7c3490aad2365e4c1522295dfa96b7236ab89c67e6ef976b6ff62c0ed",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 151,
+      "summary": "Corrected the residual dashboard projection defects found in browser review: governed correction events now populate milestone correction counts, and a fully qualified tracked set no longer reports the last qualified milestone as current.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -5097,9 +5179,9 @@
     }
   ],
   "ledger": {
-    "event_count": 148,
-    "head_event_id": "CWTV-EVT-000148",
-    "head_sha256": "56ee6b191666acfdef7fa580c45ab26ed4c90002cd072b90f052e29393678b13"
+    "event_count": 151,
+    "head_event_id": "CWTV-EVT-000151",
+    "head_sha256": "f3a94d250300c0eaabcbc4ec535aeba390c1cdbaf4bdad88ee5a05a9374ee819"
   },
   "milestones": [
     {
@@ -5310,9 +5392,16 @@
       "active_session_seconds": null,
       "blocker_count": 0,
       "break_count": 0,
-      "correction_count": 4,
+      "correction_count": 11,
       "corrections": [
         "Applied a root-scoped @redocly/openapi-core -> js-yaml 4.3.2 override without changing openapi-typescript 7.13.0.",
+        "CWTV.V1.2.8 R1 correction SHA-256 verified.",
+        "CWTV.V1.2.8 R1 correction extracted.",
+        "CWTV.V1.2.8 R1 js-yaml supply-chain security correction generated.",
+        "CWTV.V1.2.8 R2 correction SHA-256 verified.",
+        "CWTV.V1.2.8 R2 correction extracted.",
+        "CWTV.V1.2.8 R2 js-yaml global-resolution correction generated.",
+        "CWTV.V1.2.8 R3 scope/storage correction SHA-256 verified.",
         "Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance.",
         "Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.",
         "Replaced the ineffective parent-scoped Redocly override with a root-global js-yaml 4.3.2 override."
@@ -5321,7 +5410,7 @@
       "elapsed_seconds": 24562.0,
       "failure_count": 2,
       "milestone": "CWTV.V1.2.8",
-      "observed_difficulty": 4.4,
+      "observed_difficulty": 5.0,
       "paused_label": "not preserved",
       "paused_seconds": null,
       "planned_complexity": null,
@@ -5351,11 +5440,11 @@
       "paused_label": "0s",
       "paused_seconds": 0.0,
       "planned_complexity": null,
-      "progress_percent": 15,
+      "progress_percent": 100,
       "recorded_command_runtime_label": "not preserved",
       "recorded_command_runtime_seconds": 0.0,
       "session_data_present": true,
-      "status": "IN_PROGRESS"
+      "status": "QUALIFIED"
     },
     {
       "active_session_label": "not preserved",
@@ -5372,45 +5461,50 @@
       "paused_label": "not preserved",
       "paused_seconds": null,
       "planned_complexity": null,
-      "progress_percent": 0,
+      "progress_percent": 100,
       "recorded_command_runtime_label": "not preserved",
       "recorded_command_runtime_seconds": 0.0,
       "session_data_present": false,
-      "status": "IN_PROGRESS"
+      "status": "QUALIFIED"
     },
     {
       "active_session_label": "not preserved",
       "active_session_seconds": null,
       "blocker_count": 0,
       "break_count": 0,
-      "correction_count": 0,
-      "corrections": [],
+      "correction_count": 4,
+      "corrections": [
+        "Corrected the CineWatch TV browser qualification layout, lockup framing, SEO/social framing, and CSS Modules scope while preserving R1A and M1 geometry.",
+        "Corrected the Engineering Progress Dashboard projection semantics after browser qualification showed qualified brand milestones and governed correction events were being under-reported.",
+        "Corrected the browser qualification CSS Module by scoping the figcaption selector to the local card class; the Next.js production build now passes.",
+        "Corrected the residual dashboard projection defects found in browser review: governed correction events now populate milestone correction counts, and a fully qualified tracked set no longer reports the last qualified milestone as current."
+      ],
       "elapsed_label": "not preserved",
       "elapsed_seconds": null,
       "failure_count": 0,
       "milestone": "CWTV.V1.3.2.3",
-      "observed_difficulty": 1.0,
+      "observed_difficulty": 2.8,
       "paused_label": "not preserved",
       "paused_seconds": null,
       "planned_complexity": null,
-      "progress_percent": 0,
+      "progress_percent": 100,
       "recorded_command_runtime_label": "not preserved",
       "recorded_command_runtime_seconds": 0.0,
       "session_data_present": false,
-      "status": "IN_PROGRESS"
+      "status": "QUALIFIED"
     }
   ],
-  "projection_as_of": "2026-09-10T23:28:52+00:00",
+  "projection_as_of": "2026-09-11T00:18:09+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 45,
     "commits": 9,
-    "corrections": 16,
-    "current_milestone": "CWTV.V1.3.2.3",
+    "corrections": 27,
+    "current_milestone": null,
     "failed_events": 14,
-    "passed_events": 107,
-    "qualified_milestones": 10,
-    "tracked_completion_percent": 76.9,
+    "passed_events": 110,
+    "qualified_milestones": 13,
+    "tracked_completion_percent": 100.0,
     "tracked_milestones": 13
   }
 }
