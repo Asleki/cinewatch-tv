@@ -1,6 +1,6 @@
 # CineWatch Engineering Methods
 
-**Source commit:** `66ab95a0580dbad3fb19e325c32fe20280ac3314`
+**Source commit:** `3b65789d8888a7765e2747dbd9cbd1730e4fd4c2`
 
 ## Core method
 

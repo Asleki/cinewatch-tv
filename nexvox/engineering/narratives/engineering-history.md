@@ -1,10 +1,10 @@
 # CineWatch Engineering History
 
-**Source commit:** `66ab95a0580dbad3fb19e325c32fe20280ac3314`
+**Source commit:** `3b65789d8888a7765e2747dbd9cbd1730e4fd4c2`
 
 This is a deterministic NexVox narrative projection. Git remains the canonical commit authority and `engineering-events.jsonl` remains the canonical engineering-activity ledger.
 
-The source history contains **33 reachable commits**, **216 current tracked files**, and **151 engineering events**.
+The source history contains **35 reachable commits**, **236 current tracked files**, and **151 engineering events**.
 
 ## Commit sequence
 
@@ -41,6 +41,8 @@ The source history contains **33 reachable commits**, **216 current tracked file
 - `17a07d1` - feat: qualify CineWatch production brand assets
 - `67709f5` - chore(nexvox): sync engineering corpus for 17a07d1
 - `66ab95a` - fix: align progress dashboard milestone semantics
+- `6ecb5ad` - chore(nexvox): sync engineering corpus for 66ab95a
+- `3b65789` - feat: establish provider runtime and media fallback authority
 
 ## Milestone state
 

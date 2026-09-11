@@ -1,6 +1,6 @@
 # CineWatch Architecture and Decisions
 
-**Source commit:** `66ab95a0580dbad3fb19e325c32fe20280ac3314`
+**Source commit:** `3b65789d8888a7765e2747dbd9cbd1730e4fd4c2`
 
 This projection summarizes ADRs and architecture evidence; source documents remain authoritative.
 
@@ -45,3 +45,9 @@ Source: `docs/architecture/decisions/CWTV_ADR_0006_Termux_Host_Linux_Runtime_and
 Source: `docs/architecture/decisions/CWTV_ADR_0007_Linux_CI_Least_Privilege_and_Supply_Chain_Gates.md`
 
 1. GitHub-hosted Ubuntu is the remote CI authority. 2. CI runs on pushes to `main`, pull requests targeting `main`, and explicit manual dispatch. 3. Workflow repository permission is `contents: read`. 4. `pull_request_target` is prohibited for the V1 quality workflow. 5. Checkout credentials are not persisted. 6. External GitHub Actions are pinned to full-length commit SHAs. 7. The quality job runs existing CineWatch static, repository and Linux- portable runtime qualifications. 8. The Termux-only runtime checker remains local and is not executed on GitHub-hosted Linux. 9. The security job blocks tracked secret material and known dependency vulnerabilities at the configured policy level. 10. Dependabot monitors npm, pip and GitHub Actions. 11. CI receives no CineWatch database, provider, AWS, Azure or GitHub PAT secrets. 12. Cloud deployment, CodeQL, container scanning and production security operations are deferred until their architecture exists.
+
+## CWTV-ADR-0008 - CWTV ADR 0008 — Provider Runtime and Media Fallback Authority
+
+Source: `docs/architecture/decisions/CWTV_ADR_0008_Provider_Runtime_and_Media_Fallback_Authority.md`
+
+FastAPI remains the exclusive provider-policy boundary. TMDb is the primary entertainment-data upstream; OMDb begins as a capability-specific enrichment provider. Next.js consumes CineWatch-owned API contracts only. Real local credentials are stored only in ignored `.env.local` or process environment values and are represented by backend `SecretStr` settings. CI uses mocks and never receives provider secrets. Live provider qualification is explicit and local-only. Missing provider media is represented as a deterministic media gap. Fallback assets use stable provider/entity identities in WebP filenames and a generated manifest. Real-person profiles require human research and authentic-source selection; synthetic person likenesses are prohibited. Neutral generated fallback media is allowed for logos and backdrops, provided it does not masquerade as official rightsholder artwork. Posters remain human-research remediation until explicitly changed.
