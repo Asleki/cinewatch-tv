@@ -4842,6 +4842,33 @@
       "summary": "Corrected the residual dashboard projection defects found in browser review: governed correction events now populate milestone correction counts, and a fully qualified tracked set no longer reports the last qualified milestone as current.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "CI / NexVox projection lineage",
+      "correction": "CWTV.V1.3.3.1-R1",
+      "details": {
+        "correction": "Quality checkout now uses fetch-depth 0 while persist-credentials remains false; security checkout remains shallow.",
+        "lesson": "New validation requirements must declare their CI checkout and runtime prerequisites when introduced.",
+        "root_cause": "GitHub Actions quality checkout was shallow while NexVox validation requires the projection parent/source commit to exist locally."
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000152",
+      "event_sha256": "959769f1aa448739ac791ec900c1cc1391dcbcc2a0ebab8b982786af6ffdd5e8",
+      "event_type": "DELIVERY_CORRECTION_APPLIED",
+      "evidence": [
+        "docs/architecture/evidence/CineWatch_TV_V1_3_3_1_R1_NexVox_CI_Projection_History_Checkout_Correction_001.md"
+      ],
+      "milestone": "CWTV.V1.3.3.1",
+      "occurred_at": "2026-09-11T14:23:15Z",
+      "previous_event_sha256": "f3a94d250300c0eaabcbc4ec535aeba390c1cdbaf4bdad88ee5a05a9374ee819",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 152,
+      "summary": "Corrected GitHub Actions quality checkout so NexVox projection validation can resolve and verify its exact source commit lineage.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -5179,9 +5206,9 @@
     }
   ],
   "ledger": {
-    "event_count": 151,
-    "head_event_id": "CWTV-EVT-000151",
-    "head_sha256": "f3a94d250300c0eaabcbc4ec535aeba390c1cdbaf4bdad88ee5a05a9374ee819"
+    "event_count": 152,
+    "head_event_id": "CWTV-EVT-000152",
+    "head_sha256": "959769f1aa448739ac791ec900c1cc1391dcbcc2a0ebab8b982786af6ffdd5e8"
   },
   "milestones": [
     {
@@ -5492,19 +5519,42 @@
       "recorded_command_runtime_seconds": 0.0,
       "session_data_present": false,
       "status": "QUALIFIED"
+    },
+    {
+      "active_session_label": "not preserved",
+      "active_session_seconds": null,
+      "blocker_count": 0,
+      "break_count": 0,
+      "correction_count": 1,
+      "corrections": [
+        "CWTV.V1.3.3.1-R1"
+      ],
+      "elapsed_label": "not preserved",
+      "elapsed_seconds": null,
+      "failure_count": 0,
+      "milestone": "CWTV.V1.3.3.1",
+      "observed_difficulty": 1.4,
+      "paused_label": "not preserved",
+      "paused_seconds": null,
+      "planned_complexity": null,
+      "progress_percent": 0,
+      "recorded_command_runtime_label": "not preserved",
+      "recorded_command_runtime_seconds": 0.0,
+      "session_data_present": false,
+      "status": "IN_PROGRESS"
     }
   ],
-  "projection_as_of": "2026-09-11T00:18:09+00:00",
+  "projection_as_of": "2026-09-11T14:23:15+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 45,
     "commits": 9,
-    "corrections": 27,
-    "current_milestone": null,
+    "corrections": 28,
+    "current_milestone": "CWTV.V1.3.3.1",
     "failed_events": 14,
-    "passed_events": 110,
+    "passed_events": 111,
     "qualified_milestones": 13,
-    "tracked_completion_percent": 100.0,
-    "tracked_milestones": 13
+    "tracked_completion_percent": 92.9,
+    "tracked_milestones": 14
   }
 }

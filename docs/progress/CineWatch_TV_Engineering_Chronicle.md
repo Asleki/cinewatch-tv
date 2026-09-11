@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `none`
-- **Tracked milestones:** 13
+- **Current milestone:** `CWTV.V1.3.3.1`
+- **Tracked milestones:** 14
 - **Qualified milestones:** 13
-- **Tracked milestone completion:** 100.0%
+- **Tracked milestone completion:** 92.9%
 - **Recorded failed events:** 14
-- **Recorded corrections:** 27
+- **Recorded corrections:** 28
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000151` / `f3a94d250300c0eaabcbc4ec535aeba390c1cdbaf4bdad88ee5a05a9374ee819`
+- **Ledger head:** `CWTV-EVT-000152` / `959769f1aa448739ac791ec900c1cc1391dcbcc2a0ebab8b982786af6ffdd5e8`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -33,6 +33,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.1` | QUALIFIED | 100% | 4.1/5 | 1 | 4 | not preserved | not preserved |
 | `CWTV.V1.3.2.1` | QUALIFIED | 100% | 1.0/5 | 0 | 0 | not preserved | not preserved |
 | `CWTV.V1.3.2.3` | QUALIFIED | 100% | 2.8/5 | 0 | 4 | not preserved | not preserved |
+| `CWTV.V1.3.3.1` | IN_PROGRESS | 0% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 
 ## Failure and correction history
 
@@ -266,6 +267,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-11T00:14:45Z** · `CWTV.V1.3.2.3` · `DASHBOARD_PROJECTION_CORRECTION_APPLIED` · **PASS** — Corrected the Engineering Progress Dashboard projection semantics after browser qualification showed qualified brand milestones and governed correction events were being under-reported. Evidence: scripts/build_progress_dashboard.py; scripts/check_engineering_chronicle.py
 - **2026-09-11T00:14:53Z** · `CWTV.V1.3.2.3` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.3.2.3 closed and qualified after production brand assets passed repository qualification and human browser approval. Evidence: docs/architecture/CineWatch_TV_V1_Production_Brand_Asset_Browser_Qualification_001.md; docs/architecture/evidence/CineWatch_TV_V1_Production_Brand_Browser_Approval_001.json
 - **2026-09-11T00:18:09Z** · `CWTV.V1.3.2.3` · `DASHBOARD_PROJECTION_CORRECTION_APPLIED` · **PASS** — Corrected the residual dashboard projection defects found in browser review: governed correction events now populate milestone correction counts, and a fully qualified tracked set no longer reports the last qualified milestone as current. Evidence: scripts/build_progress_dashboard.py; scripts/check_engineering_chronicle.py
+- **2026-09-11T14:23:15Z** · `CWTV.V1.3.3.1` · `DELIVERY_CORRECTION_APPLIED` · **PASS** — Corrected GitHub Actions quality checkout so NexVox projection validation can resolve and verify its exact source commit lineage. Evidence: docs/architecture/evidence/CineWatch_TV_V1_3_3_1_R1_NexVox_CI_Projection_History_Checkout_Correction_001.md
 
 ## Integrity and timing rules
 
