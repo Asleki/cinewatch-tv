@@ -3,8 +3,8 @@
 **Dataset ID:** `CWTV-NEXVOX-ENGINEERING-001`
 **Schema version:** `1.0`
 **Generator version:** `1.0.0`
-**Source commit:** `7f6dc58a51f202991c562255a472f40d00584c58`
-**Source commit time:** `2026-09-10T22:10:59+02:00`
+**Source commit:** `17a07d1d8625eabb3ed728d55934cf61789c77b0`
+**Source commit time:** `2026-09-11T01:53:26+02:00`
 **History complete to source commit:** `true`
 
 ## Purpose
@@ -13,23 +13,23 @@ Teach NexVox how CineWatch TV was engineered: architecture, implementation, comm
 
 ## Measured source
 
-- Reachable commits: **29**
-- Current tracked files: **190**
-- Current text lines: **31416**
-- Engineering events: **142**
+- Reachable commits: **31**
+- Current tracked files: **216**
+- Current text lines: **33146**
+- Engineering events: **148**
 - Qualified milestones: **12**
 - Failed events: **14**
 - Recorded correction identities: **16**
-- Symbols indexed: **235**
-- Dependencies/import edges indexed: **328**
-- Current knowledge records: **338**
-- Historical patch records: **220**
+- Symbols indexed: **243**
+- Dependencies/import edges indexed: **343**
+- Current knowledge records: **361**
+- Historical patch records: **253**
 
 ## Current source classification
 
-- TRAINING_ELIGIBLE: **154 files / 2323480 bytes**
+- TRAINING_ELIGIBLE: **183 files / 2589495 bytes**
 - TRAINING_REVIEW_REQUIRED: **2 files / 41187 bytes**
-- REFERENCE_ONLY: **34 files / 2876533 bytes**
+- REFERENCE_ONLY: **31 files / 2976867 bytes**
 - TRAINING_PROHIBITED: **0 files / 0 bytes**
 
 ## Training restriction

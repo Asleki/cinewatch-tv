@@ -1,8 +1,8 @@
 dataset_id: "CWTV-NEXVOX-ENGINEERING-001"
 schema_version: "1.0"
 generator_version: "1.0.0"
-source_commit: "7f6dc58a51f202991c562255a472f40d00584c58"
-source_commit_time: "2026-09-10T22:10:59+02:00"
+source_commit: "17a07d1d8625eabb3ed728d55934cf61789c77b0"
+source_commit_time: "2026-09-11T01:53:26+02:00"
 source_history_complete: true
 projection_mode: "exact_git_commit"
 projection_commit_required_after_source_commit: true
