@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `02ccccf5abe3d6723e6845b73f64ba973dd85c62`
+**Source commit:** `5fd099e130a5bd8b430d96aace0132f7879f218d`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
@@ -116,13 +116,13 @@ Failure: Detected a NexVox source/projection boundary violation in commit 3f9f17
 
 Correction: Applied append-only recovery for malformed projection 3f9f175 by preserving the pushed commit, establishing a new ordinary source boundary from the corrective engineering record, and requiring the next NexVox projection to target that new source commit.
 
-## CWTV-FC-00015 - CWTV.V1.2.8
+## CWTV-FC-00015 - CWTV.V1.3.3.2
 
-State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
+State: `UNPAIRED_FAILURE`
 
-Failure: No FAILED ledger event recorded.
+Failure: Remote Linux CI passed all runtime and migration gates but detected generated Next.js next-env.d.ts drift after the production build.
 
-Correction: Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.
+Correction: No paired correction recorded.
 
 ## CWTV-FC-00016 - CWTV.V1.2.8
 
@@ -130,15 +130,15 @@ State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
 Failure: No FAILED ledger event recorded.
 
-Correction: Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance.
+Correction: Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.
 
-## CWTV-FC-00017 - CWTV.V1.3.1
+## CWTV-FC-00017 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
 Failure: No FAILED ledger event recorded.
 
-Correction: Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
+Correction: Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance.
 
 ## CWTV-FC-00018 - CWTV.V1.3.1
 
@@ -146,7 +146,7 @@ State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
 Failure: No FAILED ledger event recorded.
 
-Correction: Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
+Correction: Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
 ## CWTV-FC-00019 - CWTV.V1.3.1
 
@@ -154,7 +154,7 @@ State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
 Failure: No FAILED ledger event recorded.
 
-Correction: Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.
+Correction: Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
 ## CWTV-FC-00020 - CWTV.V1.3.1
 
@@ -162,9 +162,17 @@ State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
 Failure: No FAILED ledger event recorded.
 
+Correction: Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.
+
+## CWTV-FC-00021 - CWTV.V1.3.1
+
+State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
+
+Failure: No FAILED ledger event recorded.
+
 Correction: Added regression protection for the source/projection boundary defect exposed by malformed commit 3f9f175. Future commits marked NexVox-Projection true must fail validation if they contain ordinary source, architecture, workflow, or Chronicle paths.
 
-## CWTV-FC-00021 - CWTV.V1.3.3.2.1
+## CWTV-FC-00022 - CWTV.V1.3.3.2.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -172,7 +180,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion
 
-## CWTV-FC-00022 - CWTV.V1.3.3.2
+## CWTV-FC-00023 - CWTV.V1.3.3.2
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 

@@ -5,8 +5,8 @@ CWTV-DEP-000003,.github/workflows/ci.yml,actions/setup-node@820762786026740c76f3
 CWTV-DEP-000004,.github/workflows/ci.yml,actions/setup-node@820762786026740c76f36085b0efc47a31fe5020,github_action,actions/setup-node@820762786026740c76f36085b0efc47a31fe5020,45
 CWTV-DEP-000005,.github/workflows/ci.yml,actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97,github_action,actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97,116
 CWTV-DEP-000006,.github/workflows/ci.yml,actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97,github_action,actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97,38
-CWTV-DEP-000007,apps/web/next-env.d.ts,./.next/dev/types/root-params.d.ts,js_side_effect_import,,4
-CWTV-DEP-000008,apps/web/next-env.d.ts,./.next/dev/types/routes.d.ts,js_side_effect_import,,3
+CWTV-DEP-000007,apps/web/next-env.d.ts,./.next/types/root-params.d.ts,js_side_effect_import,,4
+CWTV-DEP-000008,apps/web/next-env.d.ts,./.next/types/routes.d.ts,js_side_effect_import,,3
 CWTV-DEP-000009,apps/web/next.config.ts,next,js_import,,1
 CWTV-DEP-000010,apps/web/package.json,@cinewatch/contracts,npm_dependencies,0.0.0,
 CWTV-DEP-000011,apps/web/package.json,@types/node,npm_devDependencies,24.13.3,
