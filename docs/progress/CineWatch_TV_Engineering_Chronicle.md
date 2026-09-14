@@ -9,10 +9,10 @@
 - **Tracked milestones:** 16
 - **Qualified milestones:** 15
 - **Tracked milestone completion:** 93.8%
-- **Recorded failed events:** 14
-- **Recorded corrections:** 30
+- **Recorded failed events:** 15
+- **Recorded corrections:** 31
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000168` / `c96174e50576c01a46413116709de60e867053e4c6bb4659f8fad472a770ab69`
+- **Ledger head:** `CWTV-EVT-000170` / `e33e605c1fdc056e03f4ba873cdb02b5375c016c2066ad36adb7a4494bfcffbf`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -34,7 +34,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.2.1` | QUALIFIED | 100% | 1.0/5 | 0 | 0 | not preserved | not preserved |
 | `CWTV.V1.3.2.3` | QUALIFIED | 100% | 2.8/5 | 0 | 4 | not preserved | not preserved |
 | `CWTV.V1.3.3.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
-| `CWTV.V1.3.3.2` | IN_PROGRESS | 76% | 1.9/5 | 0 | 1 | not preserved | 1m |
+| `CWTV.V1.3.3.2` | IN_PROGRESS | 76% | 3.2/5 | 1 | 2 | not preserved | 1m |
 | `CWTV.V1.3.3.2.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 
 ## Failure and correction history
@@ -55,6 +55,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.8` | 2026-09-10T01:34:00+02:00 | npm-supply-chain | V1.2.8 security runtime qualification detected a high-severity js-yaml advisory in the OpenAPI contract-generation dependency path. | — |
 | `CWTV.V1.2.8` | 2026-09-10T02:08:00+02:00 | npm-supply-chain | R1 dependency-resolution qualification failed because npm 12.0.2 recognized the Redocly-scoped js-yaml override but retained js-yaml 4.3.1 in the installed Redocly subtree. | — |
 | `CWTV.V1.3.1` | 2026-09-10T14:40:28Z | NEXVOX_ENGINEERING_KNOWLEDGE | Detected a NexVox source/projection boundary violation in commit 3f9f175: a commit marked NexVox-Projection true also contains the CineWatch Brand and Streaming Signature Authority and Chronicle source changes. The already-pushed commit is preserved as historical evidence and will not be rewritten. | — |
+| `CWTV.V1.3.3.2` | 2026-09-14T16:24:48Z | test-02-canonical-reconciliation | Remote Linux CI passed all runtime and migration gates but detected generated Next.js next-env.d.ts drift after the production build. | — |
 
 ## Commit lineage
 
@@ -287,6 +288,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-14T15:09:19Z** · `CWTV.V1.3.3.2` · `RUNTIME_QUALIFICATION_PASSED` · **PASS** — Passed consolidated Test-02 browser runtime qualification against the reconciled CineWatch application. Evidence: Homepage loaded with live catalogue and refined hero experience; Search suggestions resolved live catalogue identities; Discover filtering rendered qualified results; Title detail, cast and recommendations rendered successfully; Where to Watch preserved external-availability versus CineWatch playback separation; News rendered live entertainment results; Stream Now and unfinished product surfaces remained explicitly under development
 - **2026-09-14T15:19:47Z** · `CWTV.V1.3.3.2` · `HUMAN_APPROVAL_RECORDED` · **PASS** — Human browser qualification accepted; no further Test-02 browser testing required before the source commit. Evidence: Human approval recorded after direct mobile browser inspection of the reconciled application.
 - **2026-09-14T16:06:01Z** · `CWTV.V1.3.3.2` · `CORRECTION_APPLIED` · **PASS** — Corrected the stale offline database migration qualification after reconciliation advanced the governed Alembic head from 0001_postgresql_foundation to 0002_missing_media_authority. Evidence: GitHub Actions run 34865056742; scripts/check_database_migrations.sh
+- **2026-09-14T16:24:48Z** · `CWTV.V1.3.3.2` · `CI_QUALIFICATION_FAILED` · **FAILED** — Remote Linux CI passed all runtime and migration gates but detected generated Next.js next-env.d.ts drift after the production build. Evidence: GitHub Actions run 34867861749; Linux quality job 104056137250; Offline database migration qualification passed with 0002_missing_media_authority as the governed Alembic head.; Tracked-file drift gate detected apps/web/next-env.d.ts changing from .next/dev/types imports to .next/types imports.
+- **2026-09-14T16:38:53Z** · `CWTV.V1.3.3.2` · `CI_CORRECTION_QUALIFIED` · **PASS** — Qualified R2 correction for deterministic Next.js production-generated type authority. Evidence: Linux production build completed successfully under Next.js 16.3.4.; Production build deterministically regenerated apps/web/next-env.d.ts from .next/dev/types imports to .next/types imports.; git diff --check passed after production regeneration.
 
 ## Integrity and timing rules
 

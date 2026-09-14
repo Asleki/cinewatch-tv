@@ -5358,6 +5358,65 @@
       "summary": "Corrected the stale offline database migration qualification after reconciliation advanced the governed Alembic head from 0001_postgresql_foundation to 0002_missing_media_authority.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {
+        "correction": "CWTV.V1.3.3.2-R2",
+        "failed_step": "tracked-file-drift",
+        "generated_path": "apps/web/next-env.d.ts"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000169",
+      "event_sha256": "110efafcff317f4bfd37318b2b056a7251bb549f940894ebbce0e1d83e4fe813",
+      "event_type": "CI_QUALIFICATION_FAILED",
+      "evidence": [
+        "GitHub Actions run 34867861749",
+        "Linux quality job 104056137250",
+        "Offline database migration qualification passed with 0002_missing_media_authority as the governed Alembic head.",
+        "Tracked-file drift gate detected apps/web/next-env.d.ts changing from .next/dev/types imports to .next/types imports."
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T16:24:48Z",
+      "previous_event_sha256": "c96174e50576c01a46413116709de60e867053e4c6bb4659f8fad472a770ab69",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 169,
+      "summary": "Remote Linux CI passed all runtime and migration gates but detected generated Next.js next-env.d.ts drift after the production build.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": "CWTV.V1.3.3.2-R2",
+      "details": {
+        "correction_basis": "production_build_regeneration",
+        "failed_ci_run": "34867861749",
+        "generated_path": "apps/web/next-env.d.ts"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000170",
+      "event_sha256": "e33e605c1fdc056e03f4ba873cdb02b5375c016c2066ad36adb7a4494bfcffbf",
+      "event_type": "CI_CORRECTION_QUALIFIED",
+      "evidence": [
+        "Linux production build completed successfully under Next.js 16.3.4.",
+        "Production build deterministically regenerated apps/web/next-env.d.ts from .next/dev/types imports to .next/types imports.",
+        "git diff --check passed after production regeneration."
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T16:38:53Z",
+      "previous_event_sha256": "110efafcff317f4bfd37318b2b056a7251bb549f940894ebbce0e1d83e4fe813",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 170,
+      "summary": "Qualified R2 correction for deterministic Next.js production-generated type authority.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -5692,12 +5751,42 @@
       "summary": "Detected a NexVox source/projection boundary violation in commit 3f9f175: a commit marked NexVox-Projection true also contains the CineWatch Brand and Streaming Signature Authority and Chronicle source changes. The already-pushed commit is preserved as historical evidence and will not be rewritten.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {
+        "correction": "CWTV.V1.3.3.2-R2",
+        "failed_step": "tracked-file-drift",
+        "generated_path": "apps/web/next-env.d.ts"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000169",
+      "event_sha256": "110efafcff317f4bfd37318b2b056a7251bb549f940894ebbce0e1d83e4fe813",
+      "event_type": "CI_QUALIFICATION_FAILED",
+      "evidence": [
+        "GitHub Actions run 34867861749",
+        "Linux quality job 104056137250",
+        "Offline database migration qualification passed with 0002_missing_media_authority as the governed Alembic head.",
+        "Tracked-file drift gate detected apps/web/next-env.d.ts changing from .next/dev/types imports to .next/types imports."
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T16:24:48Z",
+      "previous_event_sha256": "c96174e50576c01a46413116709de60e867053e4c6bb4659f8fad472a770ab69",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 169,
+      "summary": "Remote Linux CI passed all runtime and migration gates but detected generated Next.js next-env.d.ts drift after the production build.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "ledger": {
-    "event_count": 168,
-    "head_event_id": "CWTV-EVT-000168",
-    "head_sha256": "c96174e50576c01a46413116709de60e867053e4c6bb4659f8fad472a770ab69"
+    "event_count": 170,
+    "head_event_id": "CWTV-EVT-000170",
+    "head_sha256": "e33e605c1fdc056e03f4ba873cdb02b5375c016c2066ad36adb7a4494bfcffbf"
   },
   "milestones": [
     {
@@ -6037,15 +6126,16 @@
       "active_session_seconds": null,
       "blocker_count": 1,
       "break_count": 0,
-      "correction_count": 1,
+      "correction_count": 2,
       "corrections": [
-        "CWTV.V1.3.3.2-R1"
+        "CWTV.V1.3.3.2-R1",
+        "CWTV.V1.3.3.2-R2"
       ],
       "elapsed_label": "not preserved",
       "elapsed_seconds": null,
-      "failure_count": 0,
+      "failure_count": 1,
       "milestone": "CWTV.V1.3.3.2",
-      "observed_difficulty": 1.9,
+      "observed_difficulty": 3.2,
       "paused_label": "not preserved",
       "paused_seconds": null,
       "planned_complexity": null,
@@ -6079,15 +6169,15 @@
       "status": "QUALIFIED"
     }
   ],
-  "projection_as_of": "2026-09-14T16:06:01+00:00",
+  "projection_as_of": "2026-09-14T16:38:53+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 46,
     "commits": 9,
-    "corrections": 30,
+    "corrections": 31,
     "current_milestone": "CWTV.V1.3.3.2",
-    "failed_events": 14,
-    "passed_events": 124,
+    "failed_events": 15,
+    "passed_events": 125,
     "qualified_milestones": 15,
     "tracked_completion_percent": 93.8,
     "tracked_milestones": 16
