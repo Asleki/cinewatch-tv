@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
+import SiteFrame from "@/components/site/SiteFrame";
 import { getPublicSiteUrl } from "@/lib/config/public-env";
 
 import "./globals.css";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     default: "CineWatch TV",
     template: "%s | CineWatch TV",
   },
-  description: "CineWatch TV V1 private development application.",
+  description: "CineWatch TV — Stream. Discover. Belong.",
   robots: {
     index: false,
     follow: false,
@@ -44,8 +45,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body><SiteFrame>{children}</SiteFrame></body>
     </html>
   );
 }

@@ -53,6 +53,8 @@ class HomeItem(BaseModel):
     backdrop_url: str | None = None
     profile_url: str | None = None
     known_for_department: str | None = None
+    genre_ids: list[int] = Field(default_factory=list)
+    future_path: str | None = None
     media_gaps: list[HomeMediaGap] = Field(default_factory=list)
 
 
