@@ -35,7 +35,7 @@ PY
 
 auth_heads="$($API_PYTHON -m alembic -c services/api/alembic.ini heads)"
 printf '%s\n' "$auth_heads"
-printf '%s\n' "$auth_heads" | grep -q '^0001_postgresql_foundation (head)$'
+printf '%s\n' "$auth_heads" | grep -q '^0002_missing_media_authority (head)$'
 printf 'PASS  Alembic single-head authority\n'
 
 sql_file="$(mktemp)"
@@ -45,6 +45,7 @@ DATABASE_URL="$OFFLINE_DATABASE_URL" \
 
 grep -q 'CREATE TABLE alembic_version' "$sql_file"
 grep -q '0001_postgresql_foundation' "$sql_file"
+grep -q '0002_missing_media_authority' "$sql_file"
 if grep -qi 'sqlite' "$sql_file"; then
   printf 'FAIL  SQLite material appeared in offline migration SQL\n' >&2
   exit 1

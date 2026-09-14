@@ -10,9 +10,9 @@
 - **Qualified milestones:** 15
 - **Tracked milestone completion:** 93.8%
 - **Recorded failed events:** 14
-- **Recorded corrections:** 29
+- **Recorded corrections:** 30
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000167` / `a7b4c7f18504ef35306811e3123dbfa23ea0de25bb24fa953f492c47e05fb421`
+- **Ledger head:** `CWTV-EVT-000168` / `c96174e50576c01a46413116709de60e867053e4c6bb4659f8fad472a770ab69`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -34,7 +34,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.2.1` | QUALIFIED | 100% | 1.0/5 | 0 | 0 | not preserved | not preserved |
 | `CWTV.V1.3.2.3` | QUALIFIED | 100% | 2.8/5 | 0 | 4 | not preserved | not preserved |
 | `CWTV.V1.3.3.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
-| `CWTV.V1.3.3.2` | IN_PROGRESS | 76% | 1.5/5 | 0 | 0 | not preserved | 1m |
+| `CWTV.V1.3.3.2` | IN_PROGRESS | 76% | 1.9/5 | 0 | 1 | not preserved | 1m |
 | `CWTV.V1.3.3.2.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 
 ## Failure and correction history
@@ -286,6 +286,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-14T10:38:23Z** · `CWTV.V1.3.3.2` · `PROVIDER_RUNTIME_PROBE_PASSED` · **PASS** — Passed consolidated Test-02 external-provider runtime qualification within the canonical CineWatch reconciliation. Evidence: KinoCheck live provider probe; NewsAPI live provider probe; STANDS4 Lyrics live provider probe; Watchmode live provider probe; Apify screenplay actor live provider probe
 - **2026-09-14T15:09:19Z** · `CWTV.V1.3.3.2` · `RUNTIME_QUALIFICATION_PASSED` · **PASS** — Passed consolidated Test-02 browser runtime qualification against the reconciled CineWatch application. Evidence: Homepage loaded with live catalogue and refined hero experience; Search suggestions resolved live catalogue identities; Discover filtering rendered qualified results; Title detail, cast and recommendations rendered successfully; Where to Watch preserved external-availability versus CineWatch playback separation; News rendered live entertainment results; Stream Now and unfinished product surfaces remained explicitly under development
 - **2026-09-14T15:19:47Z** · `CWTV.V1.3.3.2` · `HUMAN_APPROVAL_RECORDED` · **PASS** — Human browser qualification accepted; no further Test-02 browser testing required before the source commit. Evidence: Human approval recorded after direct mobile browser inspection of the reconciled application.
+- **2026-09-14T16:06:01Z** · `CWTV.V1.3.3.2` · `CORRECTION_APPLIED` · **PASS** — Corrected the stale offline database migration qualification after reconciliation advanced the governed Alembic head from 0001_postgresql_foundation to 0002_missing_media_authority. Evidence: GitHub Actions run 34865056742; scripts/check_database_migrations.sh
 
 ## Integrity and timing rules
 

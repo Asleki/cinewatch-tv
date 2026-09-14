@@ -5327,6 +5327,37 @@
       "summary": "Human browser qualification accepted; no further Test-02 browser testing required before the source commit.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "offline-database-migration-qualification",
+      "correction": "CWTV.V1.3.3.2-R1",
+      "details": {
+        "failed_gate": "offline_database_migration_qualification",
+        "governed_head": "0002_missing_media_authority",
+        "local_linux_requalification": "6 passed; 2 deprecation warnings",
+        "offline_chain_0001": "present",
+        "offline_chain_0002": "present",
+        "stale_expected_head": "0001_postgresql_foundation"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000168",
+      "event_sha256": "c96174e50576c01a46413116709de60e867053e4c6bb4659f8fad472a770ab69",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "GitHub Actions run 34865056742",
+        "scripts/check_database_migrations.sh"
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T16:06:01Z",
+      "previous_event_sha256": "a7b4c7f18504ef35306811e3123dbfa23ea0de25bb24fa953f492c47e05fb421",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 168,
+      "summary": "Corrected the stale offline database migration qualification after reconciliation advanced the governed Alembic head from 0001_postgresql_foundation to 0002_missing_media_authority.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -5664,9 +5695,9 @@
     }
   ],
   "ledger": {
-    "event_count": 167,
-    "head_event_id": "CWTV-EVT-000167",
-    "head_sha256": "a7b4c7f18504ef35306811e3123dbfa23ea0de25bb24fa953f492c47e05fb421"
+    "event_count": 168,
+    "head_event_id": "CWTV-EVT-000168",
+    "head_sha256": "c96174e50576c01a46413116709de60e867053e4c6bb4659f8fad472a770ab69"
   },
   "milestones": [
     {
@@ -6006,13 +6037,15 @@
       "active_session_seconds": null,
       "blocker_count": 1,
       "break_count": 0,
-      "correction_count": 0,
-      "corrections": [],
+      "correction_count": 1,
+      "corrections": [
+        "CWTV.V1.3.3.2-R1"
+      ],
       "elapsed_label": "not preserved",
       "elapsed_seconds": null,
       "failure_count": 0,
       "milestone": "CWTV.V1.3.3.2",
-      "observed_difficulty": 1.5,
+      "observed_difficulty": 1.9,
       "paused_label": "not preserved",
       "paused_seconds": null,
       "planned_complexity": null,
@@ -6046,15 +6079,15 @@
       "status": "QUALIFIED"
     }
   ],
-  "projection_as_of": "2026-09-14T15:19:47+00:00",
+  "projection_as_of": "2026-09-14T16:06:01+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 46,
     "commits": 9,
-    "corrections": 29,
+    "corrections": 30,
     "current_milestone": "CWTV.V1.3.3.2",
     "failed_events": 14,
-    "passed_events": 123,
+    "passed_events": 124,
     "qualified_milestones": 15,
     "tracked_completion_percent": 93.8,
     "tracked_milestones": 16
