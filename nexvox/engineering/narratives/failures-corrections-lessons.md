@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `5fd099e130a5bd8b430d96aace0132f7879f218d`
+**Source commit:** `d96d787bac1a81ffe2fc7737aba4b94e10eb9b5e`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
@@ -118,7 +118,7 @@ Correction: Applied append-only recovery for malformed projection 3f9f175 by pre
 
 ## CWTV-FC-00015 - CWTV.V1.3.3.2
 
-State: `UNPAIRED_FAILURE`
+State: `RESOLVED_BY_PASS`
 
 Failure: Remote Linux CI passed all runtime and migration gates but detected generated Next.js next-env.d.ts drift after the production build.
 
