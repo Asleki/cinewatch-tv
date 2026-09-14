@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `2549f45bdd89436061bbeb77ae523ba24622a755`
+**Source commit:** `02ccccf5abe3d6723e6845b73f64ba973dd85c62`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
@@ -171,3 +171,11 @@ State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 Failure: No FAILED ledger event recorded.
 
 Correction: Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion
+
+## CWTV-FC-00022 - CWTV.V1.3.3.2
+
+State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
+
+Failure: No FAILED ledger event recorded.
+
+Correction: Corrected the stale offline database migration qualification after reconciliation advanced the governed Alembic head from 0001_postgresql_foundation to 0002_missing_media_authority.
