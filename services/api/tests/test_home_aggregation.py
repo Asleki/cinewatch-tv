@@ -146,7 +146,7 @@ def test_homepage_aggregation_normalizes_sections_and_media_gaps() -> None:
     assert person.media_gaps[0].asset_kind == "profile"
     assert person.media_gaps[0].remediation == "AWAITING_HUMAN_RESEARCH"
     assert person.media_gaps[0].suggested_filename == (
-        "tmdb-person-30-ada-example.webp"
+        "Ada_Example_profile.webp"
     )
 
     assert tmdb.calls == [

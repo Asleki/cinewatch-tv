@@ -1,0 +1,20 @@
+.card { display: block; min-width: 0; color: var(--cw-text); text-decoration: none; }
+.cardArt { position: relative; display: block; aspect-ratio: 2 / 3; overflow: hidden; border: 1px solid var(--cw-border); border-radius: 12px; background: var(--cw-surface-2); }
+.cardArt img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .22s ease; }
+.card:hover .cardArt img { transform: scale(1.025); }
+.cardArt b { position: absolute; top: 8px; right: 8px; padding: 3px 6px; border-radius: 6px; background: #020b13e6; color: var(--cw-aqua); font-size: .72rem; }
+.card > strong { display: block; margin-top: 8px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: .88rem; }
+.card > small { color: var(--cw-muted); font-size: .74rem; }
+.noArt { width: 100%; height: 100%; display: grid; place-items: center; color: var(--cw-aqua); font-size: 2rem; font-weight: 900; }
+.page { width: min(1440px, 100%); margin: 0 auto; padding: 42px clamp(16px, 4vw, 56px) 80px; }
+.eyebrow { margin: 0 0 4px; color: var(--cw-aqua); font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: .74rem; }
+.page h1 { margin: 0; font-size: clamp(2rem, 5vw, 4.6rem); line-height: 1; letter-spacing: -.04em; }
+.muted { color: var(--cw-muted); }
+.grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px 14px; margin-top: 24px; }
+.empty { min-height: 48vh; display: grid; place-items: center; text-align: center; color: var(--cw-muted); }
+.pager { display: flex; justify-content: center; gap: 12px; margin-top: 34px; }
+.buttonLink { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 0 15px; border: 1px solid var(--cw-border); border-radius: 9px; background: var(--cw-surface); color: var(--cw-text); text-decoration: none; font-weight: 750; }
+.buttonLink:hover { border-color: var(--cw-aqua); }
+@media (max-width: 1040px) { .grid { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+@media (max-width: 700px) { .page { padding-top: 28px; padding-bottom: 100px; } .grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px 10px; } }
+.cardMeta{display:flex!important;align-items:center;gap:7px;margin-top:4px}.cardMeta span{display:inline-flex}

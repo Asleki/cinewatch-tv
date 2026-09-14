@@ -9,6 +9,7 @@ from fastapi import APIRouter, Request
 from cinewatch_api.contracts.home import HomeResponse
 from cinewatch_api.errors import ApiError
 from cinewatch_api.home.aggregation import HomepageAggregator
+from cinewatch_api.api.v1.media_authority import apply_media_authority
 from cinewatch_api.providers.errors import ProviderError
 from cinewatch_api.providers.tmdb import TmdbClient
 from cinewatch_api.settings import Settings
@@ -30,7 +31,8 @@ async def home(request: Request) -> HomeResponse:
         TmdbClient(api_key=settings.tmdb_api_key),
     )
     try:
-        return await aggregator.build()
+        payload = await aggregator.build()
+        return apply_media_authority(request, "apply_home", payload)
     except ProviderError as exc:
         raise ApiError(
             code="HOMEPAGE_DATA_UNAVAILABLE",

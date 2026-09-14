@@ -1,6 +1,1730 @@
 {
   "components": {
     "schemas": {
+      "CatalogBrowseResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogMediaSummary"
+            },
+            "maxItems": 24,
+            "title": "Items",
+            "type": "array"
+          },
+          "kind": {
+            "enum": [
+              "genre",
+              "collection",
+              "country"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "language": {
+            "anyOf": [
+              {
+                "maxLength": 20,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language"
+          },
+          "media_type": {
+            "enum": [
+              "all",
+              "movie",
+              "tv"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "page": {
+            "minimum": 1.0,
+            "title": "Page",
+            "type": "integer"
+          },
+          "slug": {
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Slug",
+            "type": "string"
+          },
+          "sort": {
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Sort",
+            "type": "string"
+          },
+          "title": {
+            "maxLength": 220,
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          },
+          "total_pages": {
+            "minimum": 0.0,
+            "title": "Total Pages",
+            "type": "integer"
+          },
+          "total_results": {
+            "minimum": 0.0,
+            "title": "Total Results",
+            "type": "integer"
+          },
+          "year": {
+            "anyOf": [
+              {
+                "maximum": 2200.0,
+                "minimum": 1800.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Year"
+          }
+        },
+        "required": [
+          "kind",
+          "slug",
+          "title",
+          "page",
+          "total_pages",
+          "total_results",
+          "media_type",
+          "sort"
+        ],
+        "title": "CatalogBrowseResponse",
+        "type": "object"
+      },
+      "CatalogCastMember": {
+        "additionalProperties": false,
+        "properties": {
+          "character": {
+            "anyOf": [
+              {
+                "maxLength": 240,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Character"
+          },
+          "future_path": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Future Path",
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 180,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "profile_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Profile Url"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "provider_id",
+          "name",
+          "future_path"
+        ],
+        "title": "CatalogCastMember",
+        "type": "object"
+      },
+      "CatalogCrewMember": {
+        "additionalProperties": false,
+        "properties": {
+          "department": {
+            "anyOf": [
+              {
+                "maxLength": 120,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Department"
+          },
+          "future_path": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Future Path",
+            "type": "string"
+          },
+          "job": {
+            "anyOf": [
+              {
+                "maxLength": 160,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Job"
+          },
+          "name": {
+            "maxLength": 180,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "profile_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Profile Url"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "provider_id",
+          "name",
+          "future_path"
+        ],
+        "title": "CatalogCrewMember",
+        "type": "object"
+      },
+      "CatalogEpisode": {
+        "additionalProperties": false,
+        "properties": {
+          "air_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Air Date"
+          },
+          "episode_number": {
+            "minimum": 0.0,
+            "title": "Episode Number",
+            "type": "integer"
+          },
+          "name": {
+            "maxLength": 240,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "overview": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overview"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "runtime_minutes": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Runtime Minutes"
+          },
+          "season_number": {
+            "minimum": 0.0,
+            "title": "Season Number",
+            "type": "integer"
+          },
+          "still_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Still Url"
+          }
+        },
+        "required": [
+          "provider_id",
+          "episode_number",
+          "season_number",
+          "name"
+        ],
+        "title": "CatalogEpisode",
+        "type": "object"
+      },
+      "CatalogMediaSummary": {
+        "additionalProperties": false,
+        "properties": {
+          "backdrop_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Backdrop Url"
+          },
+          "future_path": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Future Path",
+            "type": "string"
+          },
+          "media_type": {
+            "enum": [
+              "movie",
+              "tv"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "poster_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poster Url"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "rating": {
+            "anyOf": [
+              {
+                "maximum": 10.0,
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rating"
+          },
+          "title": {
+            "maxLength": 260,
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          },
+          "year": {
+            "anyOf": [
+              {
+                "maximum": 2200.0,
+                "minimum": 1800.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Year"
+          }
+        },
+        "required": [
+          "provider_id",
+          "media_type",
+          "title",
+          "future_path"
+        ],
+        "title": "CatalogMediaSummary",
+        "type": "object"
+      },
+      "CatalogNetwork": {
+        "additionalProperties": false,
+        "properties": {
+          "logo_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Logo Url"
+          },
+          "name": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "provider_id": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provider Id"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "title": "CatalogNetwork",
+        "type": "object"
+      },
+      "CatalogPersonCredit": {
+        "additionalProperties": false,
+        "properties": {
+          "backdrop_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Backdrop Url"
+          },
+          "future_path": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Future Path",
+            "type": "string"
+          },
+          "media_type": {
+            "enum": [
+              "movie",
+              "tv"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "popularity": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Popularity"
+          },
+          "poster_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poster Url"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "role": {
+            "anyOf": [
+              {
+                "maxLength": 240,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Role"
+          },
+          "title": {
+            "maxLength": 260,
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          },
+          "year": {
+            "anyOf": [
+              {
+                "maximum": 2200.0,
+                "minimum": 1800.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Year"
+          }
+        },
+        "required": [
+          "provider_id",
+          "media_type",
+          "title",
+          "future_path"
+        ],
+        "title": "CatalogPersonCredit",
+        "type": "object"
+      },
+      "CatalogPersonResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "biography": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Biography"
+          },
+          "birthday": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Birthday"
+          },
+          "credits": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogPersonCredit"
+            },
+            "maxItems": 40,
+            "title": "Credits",
+            "type": "array"
+          },
+          "crew_credits": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogPersonCredit"
+            },
+            "maxItems": 40,
+            "title": "Crew Credits",
+            "type": "array"
+          },
+          "deathday": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Deathday"
+          },
+          "hero_backdrop_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hero Backdrop Url"
+          },
+          "known_for_department": {
+            "anyOf": [
+              {
+                "maxLength": 160,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Known For Department"
+          },
+          "name": {
+            "maxLength": 220,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "place_of_birth": {
+            "anyOf": [
+              {
+                "maxLength": 260,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Place Of Birth"
+          },
+          "profile_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Profile Url"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "provider_id",
+          "name"
+        ],
+        "title": "CatalogPersonResponse",
+        "type": "object"
+      },
+      "CatalogProviderResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogMediaSummary"
+            },
+            "maxItems": 24,
+            "title": "Items",
+            "type": "array"
+          },
+          "logo_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Logo Url"
+          },
+          "name": {
+            "maxLength": 180,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "official_homepage_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Official Homepage Url"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "region": {
+            "maxLength": 2,
+            "minLength": 2,
+            "title": "Region",
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider_id",
+          "name",
+          "region"
+        ],
+        "title": "CatalogProviderResponse",
+        "type": "object"
+      },
+      "CatalogRating": {
+        "additionalProperties": false,
+        "properties": {
+          "display_value": {
+            "maxLength": 40,
+            "minLength": 1,
+            "title": "Display Value",
+            "type": "string"
+          },
+          "source": {
+            "enum": [
+              "tmdb",
+              "imdb",
+              "rotten_tomatoes",
+              "metacritic"
+            ],
+            "title": "Source",
+            "type": "string"
+          }
+        },
+        "required": [
+          "source",
+          "display_value"
+        ],
+        "title": "CatalogRating",
+        "type": "object"
+      },
+      "CatalogReview": {
+        "additionalProperties": false,
+        "properties": {
+          "author": {
+            "maxLength": 180,
+            "minLength": 1,
+            "title": "Author",
+            "type": "string"
+          },
+          "author_avatar_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Author Avatar Url"
+          },
+          "content": {
+            "minLength": 1,
+            "title": "Content",
+            "type": "string"
+          },
+          "created_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Created At"
+          },
+          "provider_review_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Provider Review Id",
+            "type": "string"
+          },
+          "rating": {
+            "anyOf": [
+              {
+                "maximum": 10.0,
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rating"
+          },
+          "source": {
+            "const": "tmdb",
+            "default": "tmdb",
+            "title": "Source",
+            "type": "string"
+          },
+          "source_label": {
+            "const": "TMDb",
+            "default": "TMDb",
+            "title": "Source Label",
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider_review_id",
+          "author",
+          "content"
+        ],
+        "title": "CatalogReview",
+        "type": "object"
+      },
+      "CatalogReviewsResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "media_type": {
+            "enum": [
+              "movie",
+              "tv"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "page": {
+            "minimum": 1.0,
+            "title": "Page",
+            "type": "integer"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "reviews": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogReview"
+            },
+            "maxItems": 20,
+            "title": "Reviews",
+            "type": "array"
+          },
+          "total_pages": {
+            "minimum": 0.0,
+            "title": "Total Pages",
+            "type": "integer"
+          },
+          "total_results": {
+            "minimum": 0.0,
+            "title": "Total Results",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "provider_id",
+          "media_type",
+          "page",
+          "total_pages",
+          "total_results"
+        ],
+        "title": "CatalogReviewsResponse",
+        "type": "object"
+      },
+      "CatalogSeason": {
+        "additionalProperties": false,
+        "properties": {
+          "air_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Air Date"
+          },
+          "episode_count": {
+            "default": 0,
+            "minimum": 0.0,
+            "title": "Episode Count",
+            "type": "integer"
+          },
+          "name": {
+            "maxLength": 180,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "overview": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overview"
+          },
+          "poster_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poster Url"
+          },
+          "provider_id": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provider Id"
+          },
+          "season_number": {
+            "minimum": 0.0,
+            "title": "Season Number",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "season_number",
+          "name"
+        ],
+        "title": "CatalogSeason",
+        "type": "object"
+      },
+      "CatalogSeasonResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "episodes": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogEpisode"
+            },
+            "maxItems": 100,
+            "title": "Episodes",
+            "type": "array"
+          },
+          "name": {
+            "maxLength": 180,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "overview": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overview"
+          },
+          "poster_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poster Url"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "season_number": {
+            "minimum": 0.0,
+            "title": "Season Number",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "provider_id",
+          "season_number",
+          "name"
+        ],
+        "title": "CatalogSeasonResponse",
+        "type": "object"
+      },
+      "CatalogTitleResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "awards": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Awards"
+          },
+          "backdrop_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Backdrop Url"
+          },
+          "box_office": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Box Office"
+          },
+          "cast": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogCastMember"
+            },
+            "maxItems": 18,
+            "title": "Cast",
+            "type": "array"
+          },
+          "creators": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 12,
+            "title": "Creators",
+            "type": "array"
+          },
+          "crew": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogCrewMember"
+            },
+            "maxItems": 30,
+            "title": "Crew",
+            "type": "array"
+          },
+          "genres": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Genres",
+            "type": "array"
+          },
+          "media_type": {
+            "enum": [
+              "movie",
+              "tv"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "networks": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogNetwork"
+            },
+            "maxItems": 12,
+            "title": "Networks",
+            "type": "array"
+          },
+          "original_language": {
+            "anyOf": [
+              {
+                "maxLength": 20,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Original Language"
+          },
+          "original_title": {
+            "anyOf": [
+              {
+                "maxLength": 260,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Original Title"
+          },
+          "overview": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overview"
+          },
+          "poster_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poster Url"
+          },
+          "production_budget": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Production Budget"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "ratings": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogRating"
+            },
+            "maxItems": 4,
+            "title": "Ratings",
+            "type": "array"
+          },
+          "recommendations": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogMediaSummary"
+            },
+            "maxItems": 12,
+            "title": "Recommendations",
+            "type": "array"
+          },
+          "release_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Release Date"
+          },
+          "revenue": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Revenue"
+          },
+          "review_count": {
+            "default": 0,
+            "minimum": 0.0,
+            "title": "Review Count",
+            "type": "integer"
+          },
+          "reviews": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogReview"
+            },
+            "maxItems": 3,
+            "title": "Reviews",
+            "type": "array"
+          },
+          "runtime_minutes": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Runtime Minutes"
+          },
+          "seasons": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogSeason"
+            },
+            "maxItems": 120,
+            "title": "Seasons",
+            "type": "array"
+          },
+          "status": {
+            "anyOf": [
+              {
+                "maxLength": 120,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status"
+          },
+          "tagline": {
+            "anyOf": [
+              {
+                "maxLength": 600,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tagline"
+          },
+          "title": {
+            "maxLength": 260,
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          },
+          "trailer": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CatalogTrailer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "watch_information_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Watch Information Url"
+          },
+          "watch_providers": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogWatchProvider"
+            },
+            "maxItems": 18,
+            "title": "Watch Providers",
+            "type": "array"
+          },
+          "watch_region": {
+            "anyOf": [
+              {
+                "maxLength": 2,
+                "minLength": 2,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Watch Region"
+          },
+          "writers": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 12,
+            "title": "Writers",
+            "type": "array"
+          },
+          "year": {
+            "anyOf": [
+              {
+                "maximum": 2200.0,
+                "minimum": 1800.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Year"
+          }
+        },
+        "required": [
+          "provider_id",
+          "media_type",
+          "title"
+        ],
+        "title": "CatalogTitleResponse",
+        "type": "object"
+      },
+      "CatalogTrailer": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "maxLength": 240,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "official": {
+            "default": false,
+            "title": "Official",
+            "type": "boolean"
+          },
+          "published_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Published At"
+          },
+          "season_number": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Season Number"
+          },
+          "video_type": {
+            "enum": [
+              "Trailer",
+              "Teaser",
+              "Clip",
+              "Featurette",
+              "Behind the Scenes"
+            ],
+            "title": "Video Type",
+            "type": "string"
+          },
+          "youtube_key": {
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Youtube Key",
+            "type": "string"
+          }
+        },
+        "required": [
+          "youtube_key",
+          "name",
+          "video_type"
+        ],
+        "title": "CatalogTrailer",
+        "type": "object"
+      },
+      "CatalogVideosResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "media_type": {
+            "enum": [
+              "movie",
+              "tv"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "videos": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogTrailer"
+            },
+            "maxItems": 20,
+            "title": "Videos",
+            "type": "array"
+          }
+        },
+        "required": [
+          "provider_id",
+          "media_type"
+        ],
+        "title": "CatalogVideosResponse",
+        "type": "object"
+      },
+      "CatalogWatchProvider": {
+        "additionalProperties": false,
+        "properties": {
+          "logo_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Logo Url"
+          },
+          "monetization_type": {
+            "enum": [
+              "flatrate",
+              "free",
+              "ads",
+              "rent",
+              "buy"
+            ],
+            "title": "Monetization Type",
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "provider_id",
+          "name",
+          "monetization_type"
+        ],
+        "title": "CatalogWatchProvider",
+        "type": "object"
+      },
+      "ExternalAvailabilityResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "media_type": {
+            "enum": [
+              "movie",
+              "tv"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "region": {
+            "maxLength": 8,
+            "minLength": 2,
+            "title": "Region",
+            "type": "string"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/ExternalAvailabilitySource"
+            },
+            "maxItems": 200,
+            "title": "Sources",
+            "type": "array"
+          },
+          "tmdb_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Tmdb Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "media_type",
+          "tmdb_id",
+          "region"
+        ],
+        "title": "ExternalAvailabilityResponse",
+        "type": "object"
+      },
+      "ExternalAvailabilitySource": {
+        "additionalProperties": false,
+        "properties": {
+          "format": {
+            "anyOf": [
+              {
+                "maxLength": 80,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Format"
+          },
+          "name": {
+            "maxLength": 180,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "price": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Price"
+          },
+          "region": {
+            "anyOf": [
+              {
+                "maxLength": 8,
+                "minLength": 2,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Region"
+          },
+          "source_id": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Id"
+          },
+          "source_type": {
+            "anyOf": [
+              {
+                "maxLength": 80,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Type"
+          },
+          "web_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Web Url"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "title": "ExternalAvailabilitySource",
+        "type": "object"
+      },
+      "ExternalTrailer": {
+        "additionalProperties": false,
+        "properties": {
+          "categories": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 10,
+            "title": "Categories",
+            "type": "array"
+          },
+          "language": {
+            "anyOf": [
+              {
+                "maxLength": 20,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language"
+          },
+          "media_type": {
+            "anyOf": [
+              {
+                "enum": [
+                  "movie",
+                  "tv"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Media Type"
+          },
+          "provider_id": {
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Provider Id",
+            "type": "string"
+          },
+          "published_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Published At"
+          },
+          "resource_title": {
+            "anyOf": [
+              {
+                "maxLength": 300,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Resource Title"
+          },
+          "thumbnail_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Thumbnail Url"
+          },
+          "title": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          },
+          "tmdb_id": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tmdb Id"
+          },
+          "youtube_video_id": {
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Youtube Video Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider_id",
+          "youtube_video_id",
+          "title"
+        ],
+        "title": "ExternalTrailer",
+        "type": "object"
+      },
+      "ExternalTrailerLibraryResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "page": {
+            "minimum": 1.0,
+            "title": "Page",
+            "type": "integer"
+          },
+          "total_pages": {
+            "minimum": 0.0,
+            "title": "Total Pages",
+            "type": "integer"
+          },
+          "total_results": {
+            "minimum": 0.0,
+            "title": "Total Results",
+            "type": "integer"
+          },
+          "trailers": {
+            "items": {
+              "$ref": "#/components/schemas/ExternalTrailer"
+            },
+            "maxItems": 50,
+            "title": "Trailers",
+            "type": "array"
+          }
+        },
+        "required": [
+          "page",
+          "total_pages",
+          "total_results"
+        ],
+        "title": "ExternalTrailerLibraryResponse",
+        "type": "object"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "title": "Detail",
+            "type": "array"
+          }
+        },
+        "title": "HTTPValidationError",
+        "type": "object"
+      },
       "HealthResponse": {
         "additionalProperties": false,
         "properties": {
@@ -19,6 +1743,165 @@
           "service"
         ],
         "title": "HealthResponse",
+        "type": "object"
+      },
+      "HomeExternalRating": {
+        "additionalProperties": false,
+        "description": "One secondary rating shown only when an upstream actually supplies it.",
+        "properties": {
+          "display_value": {
+            "maxLength": 32,
+            "minLength": 1,
+            "title": "Display Value",
+            "type": "string"
+          },
+          "source": {
+            "enum": [
+              "imdb",
+              "rotten_tomatoes",
+              "metacritic"
+            ],
+            "title": "Source",
+            "type": "string"
+          }
+        },
+        "required": [
+          "source",
+          "display_value"
+        ],
+        "title": "HomeExternalRating",
+        "type": "object"
+      },
+      "HomeGenreEntry": {
+        "additionalProperties": false,
+        "description": "Merged dynamic TMDb genre identity for homepage discovery.",
+        "properties": {
+          "future_path": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Future Path",
+            "type": "string"
+          },
+          "movie_provider_id": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Movie Provider Id"
+          },
+          "name": {
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "slug": {
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Slug",
+            "type": "string"
+          },
+          "tv_provider_id": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tv Provider Id"
+          }
+        },
+        "required": [
+          "name",
+          "slug",
+          "future_path"
+        ],
+        "title": "HomeGenreEntry",
+        "type": "object"
+      },
+      "HomeGenresResponse": {
+        "additionalProperties": false,
+        "description": "Dynamic movie and television genres used by homepage discovery and search.",
+        "properties": {
+          "genres": {
+            "items": {
+              "$ref": "#/components/schemas/HomeGenreEntry"
+            },
+            "title": "Genres",
+            "type": "array"
+          }
+        },
+        "title": "HomeGenresResponse",
+        "type": "object"
+      },
+      "HomeHeroExperience": {
+        "additionalProperties": false,
+        "description": "Lazy, high-value enrichment for the single homepage hero.",
+        "properties": {
+          "media_type": {
+            "enum": [
+              "movie",
+              "tv"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "quote": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Quote"
+          },
+          "ratings": {
+            "items": {
+              "$ref": "#/components/schemas/HomeExternalRating"
+            },
+            "maxItems": 3,
+            "title": "Ratings",
+            "type": "array"
+          },
+          "trailer": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HomeTrailer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "writers": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 5,
+            "title": "Writers",
+            "type": "array"
+          }
+        },
+        "required": [
+          "provider_id",
+          "media_type"
+        ],
+        "title": "HomeHeroExperience",
         "type": "object"
       },
       "HomeItem": {
@@ -46,6 +1929,24 @@
               }
             ],
             "title": "Date"
+          },
+          "future_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Future Path"
+          },
+          "genre_ids": {
+            "items": {
+              "type": "integer"
+            },
+            "title": "Genre Ids",
+            "type": "array"
           },
           "known_for_department": {
             "anyOf": [
@@ -224,6 +2125,38 @@
         "title": "HomeMediaGap",
         "type": "object"
       },
+      "HomeRailResponse": {
+        "additionalProperties": false,
+        "description": "One bounded lazy homepage discovery rail.",
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/HomeItem"
+            },
+            "maxItems": 12,
+            "title": "Items",
+            "type": "array"
+          },
+          "slug": {
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Slug",
+            "type": "string"
+          },
+          "title": {
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "slug",
+          "title"
+        ],
+        "title": "HomeRailResponse",
+        "type": "object"
+      },
       "HomeRating": {
         "additionalProperties": false,
         "description": "Normalized rating metadata retained from the primary provider.",
@@ -295,6 +2228,94 @@
         "title": "HomeResponse",
         "type": "object"
       },
+      "HomeSearchResponse": {
+        "additionalProperties": false,
+        "description": "Bounded homepage search suggestions from CineWatch's provider boundary.",
+        "properties": {
+          "query": {
+            "maxLength": 100,
+            "minLength": 2,
+            "title": "Query",
+            "type": "string"
+          },
+          "suggestions": {
+            "items": {
+              "$ref": "#/components/schemas/HomeSearchSuggestion"
+            },
+            "maxItems": 8,
+            "title": "Suggestions",
+            "type": "array"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "HomeSearchResponse",
+        "type": "object"
+      },
+      "HomeSearchSuggestion": {
+        "additionalProperties": false,
+        "description": "Lightweight suggestion carrying identity for a future route without navigating now.",
+        "properties": {
+          "future_path": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Future Path",
+            "type": "string"
+          },
+          "image_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Image Url"
+          },
+          "label": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Label",
+            "type": "string"
+          },
+          "media_type": {
+            "enum": [
+              "movie",
+              "tv",
+              "person"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "secondary_text": {
+            "anyOf": [
+              {
+                "maxLength": 120,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Secondary Text"
+          }
+        },
+        "required": [
+          "provider_id",
+          "media_type",
+          "label",
+          "future_path"
+        ],
+        "title": "HomeSearchSuggestion",
+        "type": "object"
+      },
       "HomeSections": {
         "additionalProperties": false,
         "description": "Bounded homepage rails owned by the CineWatch API.",
@@ -329,6 +2350,663 @@
           }
         },
         "title": "HomeSections",
+        "type": "object"
+      },
+      "HomeTrailer": {
+        "additionalProperties": false,
+        "description": "One deterministically selected YouTube trailer or teaser.",
+        "properties": {
+          "name": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "official": {
+            "default": false,
+            "title": "Official",
+            "type": "boolean"
+          },
+          "published_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Published At"
+          },
+          "season_number": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Season Number"
+          },
+          "video_type": {
+            "enum": [
+              "Trailer",
+              "Teaser"
+            ],
+            "title": "Video Type",
+            "type": "string"
+          },
+          "youtube_key": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Youtube Key",
+            "type": "string"
+          }
+        },
+        "required": [
+          "youtube_key",
+          "name",
+          "video_type"
+        ],
+        "title": "HomeTrailer",
+        "type": "object"
+      },
+      "HomeTrailerCard": {
+        "additionalProperties": false,
+        "description": "A homepage trailer card that is guaranteed to have a playable trailer.",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/HomeItem"
+          },
+          "trailer": {
+            "$ref": "#/components/schemas/HomeTrailer"
+          }
+        },
+        "required": [
+          "item",
+          "trailer"
+        ],
+        "title": "HomeTrailerCard",
+        "type": "object"
+      },
+      "HomeTrailerRailResponse": {
+        "additionalProperties": false,
+        "description": "Bounded trailer rail loaded only when its homepage region becomes relevant.",
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/HomeTrailerCard"
+            },
+            "maxItems": 6,
+            "title": "Items",
+            "type": "array"
+          },
+          "slug": {
+            "const": "teasers-trailers",
+            "default": "teasers-trailers",
+            "title": "Slug",
+            "type": "string"
+          },
+          "title": {
+            "const": "Teasers & Trailers",
+            "default": "Teasers & Trailers",
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "title": "HomeTrailerRailResponse",
+        "type": "object"
+      },
+      "LyricsLookupResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "album": {
+            "anyOf": [
+              {
+                "maxLength": 300,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Album"
+          },
+          "ambiguous": {
+            "default": false,
+            "title": "Ambiguous",
+            "type": "boolean"
+          },
+          "artist": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Artist",
+            "type": "string"
+          },
+          "candidate_count": {
+            "default": 0,
+            "minimum": 0.0,
+            "title": "Candidate Count",
+            "type": "integer"
+          },
+          "candidates": {
+            "items": {
+              "$ref": "#/components/schemas/LyricsMatch"
+            },
+            "maxItems": 50,
+            "title": "Candidates",
+            "type": "array"
+          },
+          "match": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LyricsMatch"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "resolved": {
+            "title": "Resolved",
+            "type": "boolean"
+          },
+          "term": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Term",
+            "type": "string"
+          }
+        },
+        "required": [
+          "term",
+          "artist",
+          "resolved"
+        ],
+        "title": "LyricsLookupResponse",
+        "type": "object"
+      },
+      "LyricsMatch": {
+        "additionalProperties": false,
+        "properties": {
+          "album": {
+            "anyOf": [
+              {
+                "maxLength": 300,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Album"
+          },
+          "album_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Album Url"
+          },
+          "artist": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Artist",
+            "type": "string"
+          },
+          "artist_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Artist Url"
+          },
+          "song": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Song",
+            "type": "string"
+          },
+          "song_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Song Url"
+          }
+        },
+        "required": [
+          "song",
+          "artist"
+        ],
+        "title": "LyricsMatch",
+        "type": "object"
+      },
+      "NewsArticle": {
+        "additionalProperties": false,
+        "properties": {
+          "article_url": {
+            "title": "Article Url",
+            "type": "string"
+          },
+          "author": {
+            "anyOf": [
+              {
+                "maxLength": 300,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Author"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "image_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Image Url"
+          },
+          "published_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Published At"
+          },
+          "source": {
+            "$ref": "#/components/schemas/NewsSource"
+          },
+          "title": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "source",
+          "title",
+          "article_url"
+        ],
+        "title": "NewsArticle",
+        "type": "object"
+      },
+      "NewsResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "articles": {
+            "items": {
+              "$ref": "#/components/schemas/NewsArticle"
+            },
+            "maxItems": 20,
+            "title": "Articles",
+            "type": "array"
+          },
+          "page": {
+            "minimum": 1.0,
+            "title": "Page",
+            "type": "integer"
+          },
+          "page_size": {
+            "maximum": 20.0,
+            "minimum": 1.0,
+            "title": "Page Size",
+            "type": "integer"
+          },
+          "query": {
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Query",
+            "type": "string"
+          },
+          "total_results": {
+            "minimum": 0.0,
+            "title": "Total Results",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "query",
+          "page",
+          "page_size",
+          "total_results"
+        ],
+        "title": "NewsResponse",
+        "type": "object"
+      },
+      "NewsSource": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "title": "NewsSource",
+        "type": "object"
+      },
+      "ScriptLookupResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "ambiguous": {
+            "default": false,
+            "title": "Ambiguous",
+            "type": "boolean"
+          },
+          "candidate_count": {
+            "default": 0,
+            "minimum": 0.0,
+            "title": "Candidate Count",
+            "type": "integer"
+          },
+          "match": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ScriptMatch"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "requested_title": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Requested Title",
+            "type": "string"
+          },
+          "resolved": {
+            "title": "Resolved",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "requested_title",
+          "resolved"
+        ],
+        "title": "ScriptLookupResponse",
+        "type": "object"
+      },
+      "ScriptMatch": {
+        "additionalProperties": false,
+        "properties": {
+          "download_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Download Url"
+          },
+          "excerpt": {
+            "anyOf": [
+              {
+                "maxLength": 900,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Excerpt"
+          },
+          "genres": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 20,
+            "title": "Genres",
+            "type": "array"
+          },
+          "has_script_text": {
+            "default": false,
+            "title": "Has Script Text",
+            "type": "boolean"
+          },
+          "scene_count": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scene Count"
+          },
+          "script_format": {
+            "anyOf": [
+              {
+                "maxLength": 40,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Script Format"
+          },
+          "script_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Script Url"
+          },
+          "source": {
+            "anyOf": [
+              {
+                "maxLength": 80,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source"
+          },
+          "title": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          },
+          "word_count": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Word Count"
+          },
+          "writers": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 20,
+            "title": "Writers",
+            "type": "array"
+          },
+          "year": {
+            "anyOf": [
+              {
+                "maximum": 2200.0,
+                "minimum": 1800.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Year"
+          }
+        },
+        "required": [
+          "title"
+        ],
+        "title": "ScriptMatch",
+        "type": "object"
+      },
+      "SearchResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "query": {
+            "maxLength": 100,
+            "minLength": 2,
+            "title": "Query",
+            "type": "string"
+          },
+          "suggestions": {
+            "items": {
+              "$ref": "#/components/schemas/SearchSuggestion"
+            },
+            "maxItems": 5,
+            "title": "Suggestions",
+            "type": "array"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "SearchResponse",
+        "type": "object"
+      },
+      "SearchSuggestion": {
+        "additionalProperties": false,
+        "properties": {
+          "canonical_id": {
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Canonical Id",
+            "type": "string"
+          },
+          "destination": {
+            "maxLength": 360,
+            "minLength": 1,
+            "title": "Destination",
+            "type": "string"
+          },
+          "entity_type": {
+            "enum": [
+              "MOVIE",
+              "TV_SHOW",
+              "PERSON",
+              "GENRE",
+              "NETWORK_PROVIDER"
+            ],
+            "title": "Entity Type",
+            "type": "string"
+          },
+          "image_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Image Url"
+          },
+          "label": {
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Label",
+            "type": "string"
+          },
+          "provider_id": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provider Id"
+          },
+          "secondary_text": {
+            "anyOf": [
+              {
+                "maxLength": 160,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Secondary Text"
+          },
+          "source": {
+            "enum": [
+              "tmdb",
+              "cinewatch"
+            ],
+            "title": "Source",
+            "type": "string"
+          }
+        },
+        "required": [
+          "entity_type",
+          "canonical_id",
+          "label",
+          "destination",
+          "source"
+        ],
+        "title": "SearchSuggestion",
         "type": "object"
       },
       "StatusResponse": {
@@ -373,6 +3051,161 @@
         ],
         "title": "StatusResponse",
         "type": "object"
+      },
+      "ValidationError": {
+        "properties": {
+          "ctx": {
+            "title": "Context",
+            "type": "object"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "title": "Location",
+            "type": "array"
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError",
+        "type": "object"
+      },
+      "VoiceSampleMetadata": {
+        "additionalProperties": false,
+        "properties": {
+          "consent_version": {
+            "const": "CWTV-NEXVOX-CONSENT-R3-001",
+            "title": "Consent Version",
+            "type": "string"
+          },
+          "duration_seconds": {
+            "exclusiveMinimum": 0.0,
+            "maximum": 300.0,
+            "title": "Duration Seconds",
+            "type": "number"
+          },
+          "language": {
+            "maxLength": 40,
+            "minLength": 2,
+            "title": "Language",
+            "type": "string"
+          },
+          "prompt": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Prompt",
+            "type": "string"
+          },
+          "recorded_at": {
+            "maxLength": 80,
+            "minLength": 10,
+            "title": "Recorded At",
+            "type": "string"
+          },
+          "sample_rate": {
+            "maximum": 192000.0,
+            "minimum": 8000.0,
+            "title": "Sample Rate",
+            "type": "integer"
+          },
+          "session_id": {
+            "maxLength": 120,
+            "minLength": 8,
+            "title": "Session Id",
+            "type": "string"
+          },
+          "tester_id": {
+            "enum": [
+              "tester-01",
+              "tester-02",
+              "tester-03",
+              "tester-04"
+            ],
+            "title": "Tester Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tester_id",
+          "session_id",
+          "recorded_at",
+          "language",
+          "prompt",
+          "sample_rate",
+          "duration_seconds",
+          "consent_version"
+        ],
+        "title": "VoiceSampleMetadata",
+        "type": "object"
+      },
+      "VoiceSampleStageRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/VoiceSampleMetadata"
+          },
+          "wav_base64": {
+            "maxLength": 20000000,
+            "minLength": 16,
+            "title": "Wav Base64",
+            "type": "string"
+          }
+        },
+        "required": [
+          "metadata",
+          "wav_base64"
+        ],
+        "title": "VoiceSampleStageRequest",
+        "type": "object"
+      },
+      "VoiceSampleStageResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "retention_status": {
+            "const": "LOCAL_PRIVATE_STAGING",
+            "default": "LOCAL_PRIVATE_STAGING",
+            "title": "Retention Status",
+            "type": "string"
+          },
+          "sample_id": {
+            "maxLength": 120,
+            "minLength": 12,
+            "title": "Sample Id",
+            "type": "string"
+          },
+          "stored": {
+            "title": "Stored",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "sample_id",
+          "stored"
+        ],
+        "title": "VoiceSampleStageResponse",
+        "type": "object"
       }
     }
   },
@@ -383,6 +3216,766 @@
   },
   "openapi": "3.1.0",
   "paths": {
+    "/api/v1/catalog/browse/{kind}/{slug}": {
+      "get": {
+        "operationId": "v1_catalog_browse",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "kind",
+            "required": true,
+            "schema": {
+              "enum": [
+                "genre",
+                "collection",
+                "country"
+              ],
+              "title": "Kind",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "slug",
+            "required": true,
+            "schema": {
+              "maxLength": 120,
+              "minLength": 1,
+              "title": "Slug",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "maximum": 1000,
+              "minimum": 1,
+              "title": "Page",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "media_type",
+            "required": false,
+            "schema": {
+              "default": "all",
+              "enum": [
+                "all",
+                "movie",
+                "tv"
+              ],
+              "title": "Media Type",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "year",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maximum": 2200,
+                  "minimum": 1800,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Year"
+            }
+          },
+          {
+            "in": "query",
+            "name": "language",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 12,
+                  "minLength": 2,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Language"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "popularity.desc",
+              "pattern": "^(popularity|vote_average|primary_release_date|first_air_date)\\.(asc|desc)$",
+              "title": "Sort",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogBrowseResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Filtered CineWatch discovery browse",
+        "tags": [
+          "catalog"
+        ]
+      }
+    },
+    "/api/v1/catalog/person/{provider_id}": {
+      "get": {
+        "operationId": "v1_catalog_person",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "provider_id",
+            "required": true,
+            "schema": {
+              "exclusiveMinimum": 0,
+              "title": "Provider Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogPersonResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "CineWatch person details",
+        "tags": [
+          "catalog"
+        ]
+      }
+    },
+    "/api/v1/catalog/provider/{provider_id}": {
+      "get": {
+        "operationId": "v1_catalog_provider",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "provider_id",
+            "required": true,
+            "schema": {
+              "exclusiveMinimum": 0,
+              "title": "Provider Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "region",
+            "required": false,
+            "schema": {
+              "default": "US",
+              "maxLength": 2,
+              "minLength": 2,
+              "title": "Region",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogProviderResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "CineWatch streaming provider discovery",
+        "tags": [
+          "catalog"
+        ]
+      }
+    },
+    "/api/v1/catalog/title/tv/{provider_id}/season/{season_number}": {
+      "get": {
+        "operationId": "v1_catalog_tv_season",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "provider_id",
+            "required": true,
+            "schema": {
+              "exclusiveMinimum": 0,
+              "title": "Provider Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "path",
+            "name": "season_number",
+            "required": true,
+            "schema": {
+              "minimum": 0,
+              "title": "Season Number",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogSeasonResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "CineWatch television season episodes",
+        "tags": [
+          "catalog"
+        ]
+      }
+    },
+    "/api/v1/catalog/title/{media_type}/{provider_id}": {
+      "get": {
+        "operationId": "v1_catalog_title",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "media_type",
+            "required": true,
+            "schema": {
+              "enum": [
+                "movie",
+                "tv"
+              ],
+              "title": "Media Type",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "provider_id",
+            "required": true,
+            "schema": {
+              "exclusiveMinimum": 0,
+              "title": "Provider Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "region",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Region"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogTitleResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "CineWatch title details",
+        "tags": [
+          "catalog"
+        ]
+      }
+    },
+    "/api/v1/catalog/title/{media_type}/{provider_id}/reviews": {
+      "get": {
+        "operationId": "v1_catalog_title_reviews",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "media_type",
+            "required": true,
+            "schema": {
+              "enum": [
+                "movie",
+                "tv"
+              ],
+              "title": "Media Type",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "provider_id",
+            "required": true,
+            "schema": {
+              "exclusiveMinimum": 0,
+              "title": "Provider Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "maximum": 1000,
+              "minimum": 1,
+              "title": "Page",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogReviewsResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "CineWatch title reviews",
+        "tags": [
+          "catalog"
+        ]
+      }
+    },
+    "/api/v1/catalog/title/{media_type}/{provider_id}/videos": {
+      "get": {
+        "operationId": "v1_catalog_title_videos",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "media_type",
+            "required": true,
+            "schema": {
+              "enum": [
+                "movie",
+                "tv"
+              ],
+              "title": "Media Type",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "provider_id",
+            "required": true,
+            "schema": {
+              "exclusiveMinimum": 0,
+              "title": "Provider Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogVideosResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "CineWatch title videos",
+        "tags": [
+          "catalog"
+        ]
+      }
+    },
+    "/api/v1/external/lyrics": {
+      "get": {
+        "operationId": "v1_external_lyrics",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "term",
+            "required": true,
+            "schema": {
+              "maxLength": 300,
+              "minLength": 1,
+              "title": "Term",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "artist",
+            "required": true,
+            "schema": {
+              "maxLength": 300,
+              "minLength": 1,
+              "title": "Artist",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "album",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 300,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Album"
+            }
+          },
+          {
+            "in": "query",
+            "name": "reference_url",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 1200,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Reference Url"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LyricsLookupResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Lyrics Lookup",
+        "tags": [
+          "external-test"
+        ]
+      }
+    },
+    "/api/v1/external/scripts": {
+      "get": {
+        "operationId": "v1_external_scripts",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "title",
+            "required": true,
+            "schema": {
+              "maxLength": 300,
+              "minLength": 1,
+              "title": "Title",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "year",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maximum": 2200,
+                  "minimum": 1800,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Year"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScriptLookupResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Script Lookup",
+        "tags": [
+          "external-test"
+        ]
+      }
+    },
+    "/api/v1/external/trailers": {
+      "get": {
+        "operationId": "v1_external_trailers",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "maximum": 1000,
+              "minimum": 1,
+              "title": "Page",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "mode",
+            "required": false,
+            "schema": {
+              "default": "latest",
+              "enum": [
+                "latest",
+                "trending"
+              ],
+              "title": "Mode",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExternalTrailerLibraryResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Trailer Library",
+        "tags": [
+          "external-test"
+        ]
+      }
+    },
+    "/api/v1/external/where-to-watch": {
+      "get": {
+        "operationId": "v1_external_where_to_watch",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "media_type",
+            "required": true,
+            "schema": {
+              "enum": [
+                "movie",
+                "tv"
+              ],
+              "title": "Media Type",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "tmdb_id",
+            "required": true,
+            "schema": {
+              "exclusiveMinimum": 0,
+              "title": "Tmdb Id",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "region",
+            "required": false,
+            "schema": {
+              "default": "US",
+              "maxLength": 8,
+              "minLength": 2,
+              "title": "Region",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExternalAvailabilityResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Where To Watch",
+        "tags": [
+          "external-test"
+        ]
+      }
+    },
     "/api/v1/home": {
       "get": {
         "description": "Return a provider-neutral homepage assembled from TMDb.",
@@ -405,6 +3998,304 @@
         ]
       }
     },
+    "/api/v1/home/genres": {
+      "get": {
+        "operationId": "v1_home_genres",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HomeGenresResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Dynamic CineWatch homepage genres",
+        "tags": [
+          "home"
+        ]
+      }
+    },
+    "/api/v1/home/hero/{media_type}/{provider_id}": {
+      "get": {
+        "operationId": "v1_home_hero_experience",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "media_type",
+            "required": true,
+            "schema": {
+              "enum": [
+                "movie",
+                "tv"
+              ],
+              "title": "Media Type",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "provider_id",
+            "required": true,
+            "schema": {
+              "exclusiveMinimum": 0,
+              "title": "Provider Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HomeHeroExperience"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Lazy CineWatch homepage hero enrichment",
+        "tags": [
+          "home"
+        ]
+      }
+    },
+    "/api/v1/home/rails/{slug}": {
+      "get": {
+        "operationId": "v1_home_rail",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "slug",
+            "required": true,
+            "schema": {
+              "maxLength": 80,
+              "minLength": 1,
+              "title": "Slug",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HomeRailResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Lazy CineWatch homepage rail",
+        "tags": [
+          "home"
+        ]
+      }
+    },
+    "/api/v1/home/search": {
+      "get": {
+        "operationId": "v1_home_search",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "q",
+            "required": true,
+            "schema": {
+              "maxLength": 100,
+              "minLength": 2,
+              "title": "Q",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HomeSearchResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "CineWatch homepage search suggestions",
+        "tags": [
+          "home"
+        ]
+      }
+    },
+    "/api/v1/home/trailers": {
+      "get": {
+        "operationId": "v1_home_trailers",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HomeTrailerRailResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Lazy CineWatch homepage trailer rail",
+        "tags": [
+          "home"
+        ]
+      }
+    },
+    "/api/v1/news": {
+      "get": {
+        "operationId": "v1_news",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "q",
+            "required": false,
+            "schema": {
+              "default": "film OR television",
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Q",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "minimum": 1,
+              "title": "Page",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "required": false,
+            "schema": {
+              "default": 12,
+              "maximum": 20,
+              "minimum": 1,
+              "title": "Page Size",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewsResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Live CineWatch entertainment news",
+        "tags": [
+          "news"
+        ]
+      }
+    },
+    "/api/v1/search": {
+      "get": {
+        "operationId": "v1_search",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "q",
+            "required": true,
+            "schema": {
+              "maxLength": 100,
+              "minLength": 2,
+              "title": "Q",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Typed CineWatch entity search",
+        "tags": [
+          "search"
+        ]
+      }
+    },
     "/api/v1/status": {
       "get": {
         "operationId": "v1_system_status",
@@ -423,6 +4314,47 @@
         "summary": "V1 API status",
         "tags": [
           "system"
+        ]
+      }
+    },
+    "/api/v1/voice-lab/samples": {
+      "post": {
+        "operationId": "v1_voice_stage_sample",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceSampleStageRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceSampleStageResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Stage an explicitly accepted NexVox WAV sample",
+        "tags": [
+          "voice-lab"
         ]
       }
     },

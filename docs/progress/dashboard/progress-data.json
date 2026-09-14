@@ -1087,6 +1087,39 @@
       "summary": "Applied the final CineWatch TV production-brand browser approval lock after successful real-browser qualification.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch-tv-test-02_CURRENT_SOURCE_OF_TRUTH.tar.gz",
+        "sha256": "e4738ed811bbc3fbd6530d52d8cea3ba8abb2e48123106dcfb1fc518ef4775a0"
+      },
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {
+        "add_test02_paths": "120",
+        "byte_differences": "0",
+        "byte_matches": "141",
+        "candidate_paths": "141",
+        "missing_paths": "0",
+        "placement_manifest_sha256": "53cf8947d92cf3276c4f5f6b53840e75057b1f6a4ce9c2198db88d9249d01c5f",
+        "replace_main_paths": "21",
+        "source_manifest_sha256": "f114976dc4e1f13c3de8c7111739d8b901c8b104c7ebb9b3501b898dcd21049e"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000158",
+      "event_sha256": "d8cad06cf4e59bf5c54419d8b7c7282331b71f7c31ac1662a8e109f6c08ce242",
+      "event_type": "DELIVERY_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T06:34:02Z",
+      "previous_event_sha256": "1d72bf78e97fa3be15807efe833cf51b54d33355dc868b5d2d7ec488f8ac56d0",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 158,
+      "summary": "Applied the frozen Test-02 product refinement to the canonical reconciliation worktree with exact source-byte parity.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "commits": [
@@ -4983,6 +5016,317 @@
       "summary": "Qualified Homepage Data Contract and TMDb Aggregation Authority after live provider proof, contract propagation, R1 OpenAPI test neutralization, API regression, repository regression, and governance checks",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {
+        "candidate_paths": "141",
+        "existing_main_paths_modified": "21",
+        "initial_merge_policy": "faithful Test-02 adoption over preserved Main engineering governance; behavior corrections deferred",
+        "main_commit": "68a32afa2606ec9536f2259f7ef327f9a42a48ff",
+        "main_paths_deleted": "0",
+        "main_tree": "df993827f56abbe346981248d09617114f2e9998",
+        "new_test02_paths": "120",
+        "test02_archive_sha256": "e4738ed811bbc3fbd6530d52d8cea3ba8abb2e48123106dcfb1fc518ef4775a0",
+        "test02_baseline_commit": "206b7d56114ae2f9a534f143c5d55cd5b557375c",
+        "test02_baseline_tree": "df993827f56abbe346981248d09617114f2e9998",
+        "test02_source_commit": "821f27d9c58700e3488b63e8241994fd1ce9e958"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000157",
+      "event_sha256": "1d72bf78e97fa3be15807efe833cf51b54d33355dc868b5d2d7ec488f8ac56d0",
+      "event_type": "MILESTONE_RESUMED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T06:01:47Z",
+      "previous_event_sha256": "86724f6aba33e43b8806046839e133d636e15b37d9c28f8ca8d3eca13039db1f",
+      "result": "RESUMED",
+      "schema_version": "1.0",
+      "sequence": 157,
+      "summary": "Resumed CWTV.V1.3.3.2 as the canonical reconciliation of the frozen Test-02 product refinement into CineWatch Main.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": {
+        "name": "CineWatch-tv-test-02_CURRENT_SOURCE_OF_TRUTH.tar.gz",
+        "sha256": "e4738ed811bbc3fbd6530d52d8cea3ba8abb2e48123106dcfb1fc518ef4775a0"
+      },
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {
+        "add_test02_paths": "120",
+        "byte_differences": "0",
+        "byte_matches": "141",
+        "candidate_paths": "141",
+        "missing_paths": "0",
+        "placement_manifest_sha256": "53cf8947d92cf3276c4f5f6b53840e75057b1f6a4ce9c2198db88d9249d01c5f",
+        "replace_main_paths": "21",
+        "source_manifest_sha256": "f114976dc4e1f13c3de8c7111739d8b901c8b104c7ebb9b3501b898dcd21049e"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000158",
+      "event_sha256": "d8cad06cf4e59bf5c54419d8b7c7282331b71f7c31ac1662a8e109f6c08ce242",
+      "event_type": "DELIVERY_APPLIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T06:34:02Z",
+      "previous_event_sha256": "1d72bf78e97fa3be15807efe833cf51b54d33355dc868b5d2d7ec488f8ac56d0",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 158,
+      "summary": "Applied the frozen Test-02 product refinement to the canonical reconciliation worktree with exact source-byte parity.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000159",
+      "event_sha256": "efd35f910c9ba7bb6e742632fec3e592ffe1ab5c94c9c2a19d60de3eb488905d",
+      "event_type": "STATIC_QUALIFICATION_PASSED",
+      "evidence": [
+        "scripts/check_refinement_regression.py",
+        "scripts/check_catalog_experience.py",
+        "scripts/check_homepage_experience.py",
+        "scripts/check_provider_runtime.py"
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T06:35:56Z",
+      "previous_event_sha256": "d8cad06cf4e59bf5c54419d8b7c7282331b71f7c31ac1662a8e109f6c08ce242",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 159,
+      "summary": "Qualified the faithfully adopted Test-02 reconciliation baseline against its refinement, catalog, homepage, provider-runtime and whitespace static gates.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {},
+      "duration_seconds": 59.522,
+      "event_id": "CWTV-EVT-000160",
+      "event_sha256": "7e74fd6bde3a184d07aefbe106a3cafe1179e4a30e30b22a05d680e39e7f5308",
+      "event_type": "REPOSITORY_REGRESSION_PASSED",
+      "evidence": [
+        "tests/repository",
+        "git diff --check"
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T06:43:41Z",
+      "previous_event_sha256": "efd35f910c9ba7bb6e742632fec3e592ffe1ab5c94c9c2a19d60de3eb488905d",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 160,
+      "summary": "Passed the canonical repository regression after faithful Test-02 adoption: 19 tests passed with a clean whitespace gate.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "local-backend-regression-termux",
+      "correction": null,
+      "details": {
+        "platform": "Termux Android",
+        "test_execution": "blocked before test collection completed"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000161",
+      "event_sha256": "31c3c20ae519ce31e5036f2767f18cbaf82a571bac452a94d12eed341cf53fbc",
+      "event_type": "BLOCKER_IDENTIFIED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T06:43:49Z",
+      "previous_event_sha256": "7e74fd6bde3a184d07aefbe106a3cafe1179e4a30e30b22a05d680e39e7f5308",
+      "result": "BLOCKED",
+      "schema_version": "1.0",
+      "sequence": 161,
+      "summary": "Local Termux backend regression could not begin because the reconciliation virtual environment does not contain the governed FastAPI runtime dependency stack; Linux qualification remains required.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000162",
+      "event_sha256": "108bf6ad4af7681e8d426958517b040d920b4d7f735e6e7f11d875e5b4de656e",
+      "event_type": "BUILD_PASSED",
+      "evidence": [
+        "npm run lint:web",
+        "npm run typecheck:web",
+        "npm run build:web"
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T06:49:36Z",
+      "previous_event_sha256": "31c3c20ae519ce31e5036f2767f18cbaf82a571bac452a94d12eed341cf53fbc",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 162,
+      "summary": "Passed CineWatch web lint, TypeScript qualification and optimized Next.js production build after faithful Test-02 adoption.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {
+        "full_reconciliation_mirror": "passed",
+        "new_provider_secret_assignments": "none",
+        "source_credentials": "absent"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000163",
+      "event_sha256": "cdc92220ce31ae1d2f307558aba0306f5b0093d86f05b183c97ccbaa7b494843",
+      "event_type": "SECURITY_QUALITY_PASSED",
+      "evidence": [
+        "scripts/check_ci_security_quality.py",
+        ".gitignore"
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T07:10:12Z",
+      "previous_event_sha256": "108bf6ad4af7681e8d426958517b040d920b4d7f735e6e7f11d875e5b4de656e",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 163,
+      "summary": "Qualified the faithful Test-02 reconciliation against CineWatch CI/security policy, a Git-less full-tree secret scan, and explicit new-provider secret-assignment checks.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {
+        "full_reconciliation_mirror": "passed",
+        "new_provider_secret_assignments": "none",
+        "source_credentials": "absent"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000164",
+      "event_sha256": "70f18415d66bc47f2a14682788719afaef656d36b06c0f5a16ef37e688e80c9f",
+      "event_type": "SECURITY_QUALITY_PASSED",
+      "evidence": [
+        "scripts/check_ci_security_quality.py",
+        ".gitignore"
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T07:20:02Z",
+      "previous_event_sha256": "cdc92220ce31ae1d2f307558aba0306f5b0093d86f05b183c97ccbaa7b494843",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 164,
+      "summary": "Qualified the faithful Test-02 reconciliation against CineWatch CI/security policy, a Git-less full-tree secret scan, and explicit new-provider secret-assignment checks.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-provider-runtime-reconciliation",
+      "correction": null,
+      "details": {
+        "apify_identity": "PARTIAL exact title resolved; year not supplied by inspected identity fields",
+        "apify_runtime": "PASS HTTP 201; valid JSON list; 9 dataset items; The Matrix; source imdb",
+        "kinocheck": "PASS HTTP 200; Avengers Endgame; TMDb 299534; IMDb tt4154796",
+        "newsapi": "PASS HTTP 200; provider status ok",
+        "secret_boundary": "no credentials or raw provider payloads recorded",
+        "stands4_lyrics": "PASS HTTP 200; Forever Young by Alphaville resolved",
+        "watchmode": "PASS HTTP 200; 15 US availability sources resolved"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000165",
+      "event_sha256": "5280a01cb415a15ac2dc10d50c07c0e7467a2612703e76e05732b6798cde090b",
+      "event_type": "PROVIDER_RUNTIME_PROBE_PASSED",
+      "evidence": [
+        "KinoCheck live provider probe",
+        "NewsAPI live provider probe",
+        "STANDS4 Lyrics live provider probe",
+        "Watchmode live provider probe",
+        "Apify screenplay actor live provider probe"
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T10:38:23Z",
+      "previous_event_sha256": "70f18415d66bc47f2a14682788719afaef656d36b06c0f5a16ef37e688e80c9f",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 165,
+      "summary": "Passed consolidated Test-02 external-provider runtime qualification within the canonical CineWatch reconciliation.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {
+        "further_browser_testing": "not_required",
+        "human_browser_gate": "passed"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000166",
+      "event_sha256": "d080233efab34ba4a6a00a8a786ee06fb53ae08b310769c11419618a9e8a1070",
+      "event_type": "RUNTIME_QUALIFICATION_PASSED",
+      "evidence": [
+        "Homepage loaded with live catalogue and refined hero experience",
+        "Search suggestions resolved live catalogue identities",
+        "Discover filtering rendered qualified results",
+        "Title detail, cast and recommendations rendered successfully",
+        "Where to Watch preserved external-availability versus CineWatch playback separation",
+        "News rendered live entertainment results",
+        "Stream Now and unfinished product surfaces remained explicitly under development"
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T15:09:19Z",
+      "previous_event_sha256": "5280a01cb415a15ac2dc10d50c07c0e7467a2612703e76e05732b6798cde090b",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 166,
+      "summary": "Passed consolidated Test-02 browser runtime qualification against the reconciled CineWatch application.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "test-02-canonical-reconciliation",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000167",
+      "event_sha256": "a7b4c7f18504ef35306811e3123dbfa23ea0de25bb24fa953f492c47e05fb421",
+      "event_type": "HUMAN_APPROVAL_RECORDED",
+      "evidence": [
+        "Human approval recorded after direct mobile browser inspection of the reconciled application."
+      ],
+      "milestone": "CWTV.V1.3.3.2",
+      "occurred_at": "2026-09-14T15:19:47Z",
+      "previous_event_sha256": "d080233efab34ba4a6a00a8a786ee06fb53ae08b310769c11419618a9e8a1070",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 167,
+      "summary": "Human browser qualification accepted; no further Test-02 browser testing required before the source commit.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -5320,9 +5664,9 @@
     }
   ],
   "ledger": {
-    "event_count": 156,
-    "head_event_id": "CWTV-EVT-000156",
-    "head_sha256": "86724f6aba33e43b8806046839e133d636e15b37d9c28f8ca8d3eca13039db1f"
+    "event_count": 167,
+    "head_event_id": "CWTV-EVT-000167",
+    "head_sha256": "a7b4c7f18504ef35306811e3123dbfa23ea0de25bb24fa953f492c47e05fb421"
   },
   "milestones": [
     {
@@ -5660,7 +6004,7 @@
     {
       "active_session_label": "not preserved",
       "active_session_seconds": null,
-      "blocker_count": 0,
+      "blocker_count": 1,
       "break_count": 0,
       "correction_count": 0,
       "corrections": [],
@@ -5668,13 +6012,13 @@
       "elapsed_seconds": null,
       "failure_count": 0,
       "milestone": "CWTV.V1.3.3.2",
-      "observed_difficulty": 1.0,
+      "observed_difficulty": 1.5,
       "paused_label": "not preserved",
       "paused_seconds": null,
       "planned_complexity": null,
-      "progress_percent": 5,
-      "recorded_command_runtime_label": "not preserved",
-      "recorded_command_runtime_seconds": 0.0,
+      "progress_percent": 76,
+      "recorded_command_runtime_label": "1m",
+      "recorded_command_runtime_seconds": 59.522,
       "session_data_present": false,
       "status": "IN_PROGRESS"
     },
@@ -5702,15 +6046,15 @@
       "status": "QUALIFIED"
     }
   ],
-  "projection_as_of": "2026-09-11T19:31:53+00:00",
+  "projection_as_of": "2026-09-14T15:19:47+00:00",
   "schema_version": "1.0",
   "summary": {
-    "artifacts": 45,
+    "artifacts": 46,
     "commits": 9,
     "corrections": 29,
     "current_milestone": "CWTV.V1.3.3.2",
     "failed_events": 14,
-    "passed_events": 114,
+    "passed_events": 123,
     "qualified_milestones": 15,
     "tracked_completion_percent": 93.8,
     "tracked_milestones": 16

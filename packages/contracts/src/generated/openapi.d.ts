@@ -4,6 +4,193 @@
  */
 
 export interface paths {
+    "/api/v1/catalog/browse/{kind}/{slug}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Filtered CineWatch discovery browse */
+        get: operations["v1_catalog_browse"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/catalog/person/{provider_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** CineWatch person details */
+        get: operations["v1_catalog_person"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/catalog/provider/{provider_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** CineWatch streaming provider discovery */
+        get: operations["v1_catalog_provider"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/catalog/title/tv/{provider_id}/season/{season_number}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** CineWatch television season episodes */
+        get: operations["v1_catalog_tv_season"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/catalog/title/{media_type}/{provider_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** CineWatch title details */
+        get: operations["v1_catalog_title"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/catalog/title/{media_type}/{provider_id}/reviews": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** CineWatch title reviews */
+        get: operations["v1_catalog_title_reviews"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/catalog/title/{media_type}/{provider_id}/videos": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** CineWatch title videos */
+        get: operations["v1_catalog_title_videos"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/external/lyrics": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Lyrics Lookup */
+        get: operations["v1_external_lyrics"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/external/scripts": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Script Lookup */
+        get: operations["v1_external_scripts"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/external/trailers": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Trailer Library */
+        get: operations["v1_external_trailers"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/external/where-to-watch": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Where To Watch */
+        get: operations["v1_external_where_to_watch"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/home": {
         parameters: {
             query?: never;
@@ -24,6 +211,125 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/home/genres": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Dynamic CineWatch homepage genres */
+        get: operations["v1_home_genres"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/home/hero/{media_type}/{provider_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Lazy CineWatch homepage hero enrichment */
+        get: operations["v1_home_hero_experience"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/home/rails/{slug}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Lazy CineWatch homepage rail */
+        get: operations["v1_home_rail"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/home/search": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** CineWatch homepage search suggestions */
+        get: operations["v1_home_search"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/home/trailers": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Lazy CineWatch homepage trailer rail */
+        get: operations["v1_home_trailers"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/news": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Live CineWatch entertainment news */
+        get: operations["v1_news"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/search": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Typed CineWatch entity search */
+        get: operations["v1_search"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/status": {
         parameters: {
             query?: never;
@@ -35,6 +341,23 @@ export interface paths {
         get: operations["v1_system_status"];
         put?: never;
         post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/voice-lab/samples": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Stage an explicitly accepted NexVox WAV sample */
+        post: operations["v1_voice_stage_sample"];
         delete?: never;
         options?: never;
         head?: never;
@@ -79,6 +402,458 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        /** CatalogBrowseResponse */
+        CatalogBrowseResponse: {
+            /** Items */
+            items?: components["schemas"]["CatalogMediaSummary"][];
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "genre" | "collection" | "country";
+            /** Language */
+            language?: string | null;
+            /**
+             * Media Type
+             * @enum {string}
+             */
+            media_type: "all" | "movie" | "tv";
+            /** Page */
+            page: number;
+            /** Slug */
+            slug: string;
+            /** Sort */
+            sort: string;
+            /** Title */
+            title: string;
+            /** Total Pages */
+            total_pages: number;
+            /** Total Results */
+            total_results: number;
+            /** Year */
+            year?: number | null;
+        };
+        /** CatalogCastMember */
+        CatalogCastMember: {
+            /** Character */
+            character?: string | null;
+            /** Future Path */
+            future_path: string;
+            /** Name */
+            name: string;
+            /** Profile Url */
+            profile_url?: string | null;
+            /** Provider Id */
+            provider_id: number;
+        };
+        /** CatalogCrewMember */
+        CatalogCrewMember: {
+            /** Department */
+            department?: string | null;
+            /** Future Path */
+            future_path: string;
+            /** Job */
+            job?: string | null;
+            /** Name */
+            name: string;
+            /** Profile Url */
+            profile_url?: string | null;
+            /** Provider Id */
+            provider_id: number;
+        };
+        /** CatalogEpisode */
+        CatalogEpisode: {
+            /** Air Date */
+            air_date?: string | null;
+            /** Episode Number */
+            episode_number: number;
+            /** Name */
+            name: string;
+            /** Overview */
+            overview?: string | null;
+            /** Provider Id */
+            provider_id: number;
+            /** Runtime Minutes */
+            runtime_minutes?: number | null;
+            /** Season Number */
+            season_number: number;
+            /** Still Url */
+            still_url?: string | null;
+        };
+        /** CatalogMediaSummary */
+        CatalogMediaSummary: {
+            /** Backdrop Url */
+            backdrop_url?: string | null;
+            /** Future Path */
+            future_path: string;
+            /**
+             * Media Type
+             * @enum {string}
+             */
+            media_type: "movie" | "tv";
+            /** Poster Url */
+            poster_url?: string | null;
+            /** Provider Id */
+            provider_id: number;
+            /** Rating */
+            rating?: number | null;
+            /** Title */
+            title: string;
+            /** Year */
+            year?: number | null;
+        };
+        /** CatalogNetwork */
+        CatalogNetwork: {
+            /** Logo Url */
+            logo_url?: string | null;
+            /** Name */
+            name: string;
+            /** Provider Id */
+            provider_id?: number | null;
+        };
+        /** CatalogPersonCredit */
+        CatalogPersonCredit: {
+            /** Backdrop Url */
+            backdrop_url?: string | null;
+            /** Future Path */
+            future_path: string;
+            /**
+             * Media Type
+             * @enum {string}
+             */
+            media_type: "movie" | "tv";
+            /** Popularity */
+            popularity?: number | null;
+            /** Poster Url */
+            poster_url?: string | null;
+            /** Provider Id */
+            provider_id: number;
+            /** Role */
+            role?: string | null;
+            /** Title */
+            title: string;
+            /** Year */
+            year?: number | null;
+        };
+        /** CatalogPersonResponse */
+        CatalogPersonResponse: {
+            /** Biography */
+            biography?: string | null;
+            /** Birthday */
+            birthday?: string | null;
+            /** Credits */
+            credits?: components["schemas"]["CatalogPersonCredit"][];
+            /** Crew Credits */
+            crew_credits?: components["schemas"]["CatalogPersonCredit"][];
+            /** Deathday */
+            deathday?: string | null;
+            /** Hero Backdrop Url */
+            hero_backdrop_url?: string | null;
+            /** Known For Department */
+            known_for_department?: string | null;
+            /** Name */
+            name: string;
+            /** Place Of Birth */
+            place_of_birth?: string | null;
+            /** Profile Url */
+            profile_url?: string | null;
+            /** Provider Id */
+            provider_id: number;
+        };
+        /** CatalogProviderResponse */
+        CatalogProviderResponse: {
+            /** Items */
+            items?: components["schemas"]["CatalogMediaSummary"][];
+            /** Logo Url */
+            logo_url?: string | null;
+            /** Name */
+            name: string;
+            /** Official Homepage Url */
+            official_homepage_url?: string | null;
+            /** Provider Id */
+            provider_id: number;
+            /** Region */
+            region: string;
+        };
+        /** CatalogRating */
+        CatalogRating: {
+            /** Display Value */
+            display_value: string;
+            /**
+             * Source
+             * @enum {string}
+             */
+            source: "tmdb" | "imdb" | "rotten_tomatoes" | "metacritic";
+        };
+        /** CatalogReview */
+        CatalogReview: {
+            /** Author */
+            author: string;
+            /** Author Avatar Url */
+            author_avatar_url?: string | null;
+            /** Content */
+            content: string;
+            /** Created At */
+            created_at?: string | null;
+            /** Provider Review Id */
+            provider_review_id: string;
+            /** Rating */
+            rating?: number | null;
+            /**
+             * Source
+             * @default tmdb
+             * @constant
+             */
+            source: "tmdb";
+            /**
+             * Source Label
+             * @default TMDb
+             * @constant
+             */
+            source_label: "TMDb";
+        };
+        /** CatalogReviewsResponse */
+        CatalogReviewsResponse: {
+            /**
+             * Media Type
+             * @enum {string}
+             */
+            media_type: "movie" | "tv";
+            /** Page */
+            page: number;
+            /** Provider Id */
+            provider_id: number;
+            /** Reviews */
+            reviews?: components["schemas"]["CatalogReview"][];
+            /** Total Pages */
+            total_pages: number;
+            /** Total Results */
+            total_results: number;
+        };
+        /** CatalogSeason */
+        CatalogSeason: {
+            /** Air Date */
+            air_date?: string | null;
+            /**
+             * Episode Count
+             * @default 0
+             */
+            episode_count: number;
+            /** Name */
+            name: string;
+            /** Overview */
+            overview?: string | null;
+            /** Poster Url */
+            poster_url?: string | null;
+            /** Provider Id */
+            provider_id?: number | null;
+            /** Season Number */
+            season_number: number;
+        };
+        /** CatalogSeasonResponse */
+        CatalogSeasonResponse: {
+            /** Episodes */
+            episodes?: components["schemas"]["CatalogEpisode"][];
+            /** Name */
+            name: string;
+            /** Overview */
+            overview?: string | null;
+            /** Poster Url */
+            poster_url?: string | null;
+            /** Provider Id */
+            provider_id: number;
+            /** Season Number */
+            season_number: number;
+        };
+        /** CatalogTitleResponse */
+        CatalogTitleResponse: {
+            /** Awards */
+            awards?: string | null;
+            /** Backdrop Url */
+            backdrop_url?: string | null;
+            /** Box Office */
+            box_office?: string | null;
+            /** Cast */
+            cast?: components["schemas"]["CatalogCastMember"][];
+            /** Creators */
+            creators?: string[];
+            /** Crew */
+            crew?: components["schemas"]["CatalogCrewMember"][];
+            /** Genres */
+            genres?: string[];
+            /**
+             * Media Type
+             * @enum {string}
+             */
+            media_type: "movie" | "tv";
+            /** Networks */
+            networks?: components["schemas"]["CatalogNetwork"][];
+            /** Original Language */
+            original_language?: string | null;
+            /** Original Title */
+            original_title?: string | null;
+            /** Overview */
+            overview?: string | null;
+            /** Poster Url */
+            poster_url?: string | null;
+            /** Production Budget */
+            production_budget?: number | null;
+            /** Provider Id */
+            provider_id: number;
+            /** Ratings */
+            ratings?: components["schemas"]["CatalogRating"][];
+            /** Recommendations */
+            recommendations?: components["schemas"]["CatalogMediaSummary"][];
+            /** Release Date */
+            release_date?: string | null;
+            /** Revenue */
+            revenue?: number | null;
+            /**
+             * Review Count
+             * @default 0
+             */
+            review_count: number;
+            /** Reviews */
+            reviews?: components["schemas"]["CatalogReview"][];
+            /** Runtime Minutes */
+            runtime_minutes?: number | null;
+            /** Seasons */
+            seasons?: components["schemas"]["CatalogSeason"][];
+            /** Status */
+            status?: string | null;
+            /** Tagline */
+            tagline?: string | null;
+            /** Title */
+            title: string;
+            trailer?: components["schemas"]["CatalogTrailer"] | null;
+            /** Watch Information Url */
+            watch_information_url?: string | null;
+            /** Watch Providers */
+            watch_providers?: components["schemas"]["CatalogWatchProvider"][];
+            /** Watch Region */
+            watch_region?: string | null;
+            /** Writers */
+            writers?: string[];
+            /** Year */
+            year?: number | null;
+        };
+        /** CatalogTrailer */
+        CatalogTrailer: {
+            /** Name */
+            name: string;
+            /**
+             * Official
+             * @default false
+             */
+            official: boolean;
+            /** Published At */
+            published_at?: string | null;
+            /** Season Number */
+            season_number?: number | null;
+            /**
+             * Video Type
+             * @enum {string}
+             */
+            video_type: "Trailer" | "Teaser" | "Clip" | "Featurette" | "Behind the Scenes";
+            /** Youtube Key */
+            youtube_key: string;
+        };
+        /** CatalogVideosResponse */
+        CatalogVideosResponse: {
+            /**
+             * Media Type
+             * @enum {string}
+             */
+            media_type: "movie" | "tv";
+            /** Provider Id */
+            provider_id: number;
+            /** Videos */
+            videos?: components["schemas"]["CatalogTrailer"][];
+        };
+        /** CatalogWatchProvider */
+        CatalogWatchProvider: {
+            /** Logo Url */
+            logo_url?: string | null;
+            /**
+             * Monetization Type
+             * @enum {string}
+             */
+            monetization_type: "flatrate" | "free" | "ads" | "rent" | "buy";
+            /** Name */
+            name: string;
+            /** Provider Id */
+            provider_id: number;
+        };
+        /** ExternalAvailabilityResponse */
+        ExternalAvailabilityResponse: {
+            /**
+             * Media Type
+             * @enum {string}
+             */
+            media_type: "movie" | "tv";
+            /** Region */
+            region: string;
+            /** Sources */
+            sources?: components["schemas"]["ExternalAvailabilitySource"][];
+            /** Tmdb Id */
+            tmdb_id: number;
+        };
+        /** ExternalAvailabilitySource */
+        ExternalAvailabilitySource: {
+            /** Format */
+            format?: string | null;
+            /** Name */
+            name: string;
+            /** Price */
+            price?: number | null;
+            /** Region */
+            region?: string | null;
+            /** Source Id */
+            source_id?: number | null;
+            /** Source Type */
+            source_type?: string | null;
+            /** Web Url */
+            web_url?: string | null;
+        };
+        /** ExternalTrailer */
+        ExternalTrailer: {
+            /** Categories */
+            categories?: string[];
+            /** Language */
+            language?: string | null;
+            /** Media Type */
+            media_type?: ("movie" | "tv") | null;
+            /** Provider Id */
+            provider_id: string;
+            /** Published At */
+            published_at?: string | null;
+            /** Resource Title */
+            resource_title?: string | null;
+            /** Thumbnail Url */
+            thumbnail_url?: string | null;
+            /** Title */
+            title: string;
+            /** Tmdb Id */
+            tmdb_id?: number | null;
+            /** Youtube Video Id */
+            youtube_video_id: string;
+        };
+        /** ExternalTrailerLibraryResponse */
+        ExternalTrailerLibraryResponse: {
+            /** Page */
+            page: number;
+            /** Total Pages */
+            total_pages: number;
+            /** Total Results */
+            total_results: number;
+            /** Trailers */
+            trailers?: components["schemas"]["ExternalTrailer"][];
+        };
+        /** HTTPValidationError */
+        HTTPValidationError: {
+            /** Detail */
+            detail?: components["schemas"]["ValidationError"][];
+        };
         /** HealthResponse */
         HealthResponse: {
             /** Service */
@@ -91,6 +866,63 @@ export interface components {
             status: "ok";
         };
         /**
+         * HomeExternalRating
+         * @description One secondary rating shown only when an upstream actually supplies it.
+         */
+        HomeExternalRating: {
+            /** Display Value */
+            display_value: string;
+            /**
+             * Source
+             * @enum {string}
+             */
+            source: "imdb" | "rotten_tomatoes" | "metacritic";
+        };
+        /**
+         * HomeGenreEntry
+         * @description Merged dynamic TMDb genre identity for homepage discovery.
+         */
+        HomeGenreEntry: {
+            /** Future Path */
+            future_path: string;
+            /** Movie Provider Id */
+            movie_provider_id?: number | null;
+            /** Name */
+            name: string;
+            /** Slug */
+            slug: string;
+            /** Tv Provider Id */
+            tv_provider_id?: number | null;
+        };
+        /**
+         * HomeGenresResponse
+         * @description Dynamic movie and television genres used by homepage discovery and search.
+         */
+        HomeGenresResponse: {
+            /** Genres */
+            genres?: components["schemas"]["HomeGenreEntry"][];
+        };
+        /**
+         * HomeHeroExperience
+         * @description Lazy, high-value enrichment for the single homepage hero.
+         */
+        HomeHeroExperience: {
+            /**
+             * Media Type
+             * @enum {string}
+             */
+            media_type: "movie" | "tv";
+            /** Provider Id */
+            provider_id: number;
+            /** Quote */
+            quote?: string | null;
+            /** Ratings */
+            ratings?: components["schemas"]["HomeExternalRating"][];
+            trailer?: components["schemas"]["HomeTrailer"] | null;
+            /** Writers */
+            writers?: string[];
+        };
+        /**
          * HomeItem
          * @description Provider-neutral item consumed by CineWatch homepage clients.
          */
@@ -99,6 +931,10 @@ export interface components {
             backdrop_url?: string | null;
             /** Date */
             date?: string | null;
+            /** Future Path */
+            future_path?: string | null;
+            /** Genre Ids */
+            genre_ids?: number[];
             /** Known For Department */
             known_for_department?: string | null;
             /** Media Gaps */
@@ -164,6 +1000,18 @@ export interface components {
             suggested_filename: string;
         };
         /**
+         * HomeRailResponse
+         * @description One bounded lazy homepage discovery rail.
+         */
+        HomeRailResponse: {
+            /** Items */
+            items?: components["schemas"]["HomeItem"][];
+            /** Slug */
+            slug: string;
+            /** Title */
+            title: string;
+        };
+        /**
          * HomeRating
          * @description Normalized rating metadata retained from the primary provider.
          */
@@ -206,6 +1054,37 @@ export interface components {
             sections: components["schemas"]["HomeSections"];
         };
         /**
+         * HomeSearchResponse
+         * @description Bounded homepage search suggestions from CineWatch's provider boundary.
+         */
+        HomeSearchResponse: {
+            /** Query */
+            query: string;
+            /** Suggestions */
+            suggestions?: components["schemas"]["HomeSearchSuggestion"][];
+        };
+        /**
+         * HomeSearchSuggestion
+         * @description Lightweight suggestion carrying identity for a future route without navigating now.
+         */
+        HomeSearchSuggestion: {
+            /** Future Path */
+            future_path: string;
+            /** Image Url */
+            image_url?: string | null;
+            /** Label */
+            label: string;
+            /**
+             * Media Type
+             * @enum {string}
+             */
+            media_type: "movie" | "tv" | "person";
+            /** Provider Id */
+            provider_id: number;
+            /** Secondary Text */
+            secondary_text?: string | null;
+        };
+        /**
          * HomeSections
          * @description Bounded homepage rails owned by the CineWatch API.
          */
@@ -218,6 +1097,211 @@ export interface components {
             trending?: components["schemas"]["HomeItem"][];
             /** Trending People */
             trending_people?: components["schemas"]["HomeItem"][];
+        };
+        /**
+         * HomeTrailer
+         * @description One deterministically selected YouTube trailer or teaser.
+         */
+        HomeTrailer: {
+            /** Name */
+            name: string;
+            /**
+             * Official
+             * @default false
+             */
+            official: boolean;
+            /** Published At */
+            published_at?: string | null;
+            /** Season Number */
+            season_number?: number | null;
+            /**
+             * Video Type
+             * @enum {string}
+             */
+            video_type: "Trailer" | "Teaser";
+            /** Youtube Key */
+            youtube_key: string;
+        };
+        /**
+         * HomeTrailerCard
+         * @description A homepage trailer card that is guaranteed to have a playable trailer.
+         */
+        HomeTrailerCard: {
+            item: components["schemas"]["HomeItem"];
+            trailer: components["schemas"]["HomeTrailer"];
+        };
+        /**
+         * HomeTrailerRailResponse
+         * @description Bounded trailer rail loaded only when its homepage region becomes relevant.
+         */
+        HomeTrailerRailResponse: {
+            /** Items */
+            items?: components["schemas"]["HomeTrailerCard"][];
+            /**
+             * Slug
+             * @default teasers-trailers
+             * @constant
+             */
+            slug: "teasers-trailers";
+            /**
+             * Title
+             * @default Teasers & Trailers
+             * @constant
+             */
+            title: "Teasers & Trailers";
+        };
+        /** LyricsLookupResponse */
+        LyricsLookupResponse: {
+            /** Album */
+            album?: string | null;
+            /**
+             * Ambiguous
+             * @default false
+             */
+            ambiguous: boolean;
+            /** Artist */
+            artist: string;
+            /**
+             * Candidate Count
+             * @default 0
+             */
+            candidate_count: number;
+            /** Candidates */
+            candidates?: components["schemas"]["LyricsMatch"][];
+            match?: components["schemas"]["LyricsMatch"] | null;
+            /** Resolved */
+            resolved: boolean;
+            /** Term */
+            term: string;
+        };
+        /** LyricsMatch */
+        LyricsMatch: {
+            /** Album */
+            album?: string | null;
+            /** Album Url */
+            album_url?: string | null;
+            /** Artist */
+            artist: string;
+            /** Artist Url */
+            artist_url?: string | null;
+            /** Song */
+            song: string;
+            /** Song Url */
+            song_url?: string | null;
+        };
+        /** NewsArticle */
+        NewsArticle: {
+            /** Article Url */
+            article_url: string;
+            /** Author */
+            author?: string | null;
+            /** Description */
+            description?: string | null;
+            /** Image Url */
+            image_url?: string | null;
+            /** Published At */
+            published_at?: string | null;
+            source: components["schemas"]["NewsSource"];
+            /** Title */
+            title: string;
+        };
+        /** NewsResponse */
+        NewsResponse: {
+            /** Articles */
+            articles?: components["schemas"]["NewsArticle"][];
+            /** Page */
+            page: number;
+            /** Page Size */
+            page_size: number;
+            /** Query */
+            query: string;
+            /** Total Results */
+            total_results: number;
+        };
+        /** NewsSource */
+        NewsSource: {
+            /** Name */
+            name: string;
+        };
+        /** ScriptLookupResponse */
+        ScriptLookupResponse: {
+            /**
+             * Ambiguous
+             * @default false
+             */
+            ambiguous: boolean;
+            /**
+             * Candidate Count
+             * @default 0
+             */
+            candidate_count: number;
+            match?: components["schemas"]["ScriptMatch"] | null;
+            /** Requested Title */
+            requested_title: string;
+            /** Resolved */
+            resolved: boolean;
+        };
+        /** ScriptMatch */
+        ScriptMatch: {
+            /** Download Url */
+            download_url?: string | null;
+            /** Excerpt */
+            excerpt?: string | null;
+            /** Genres */
+            genres?: string[];
+            /**
+             * Has Script Text
+             * @default false
+             */
+            has_script_text: boolean;
+            /** Scene Count */
+            scene_count?: number | null;
+            /** Script Format */
+            script_format?: string | null;
+            /** Script Url */
+            script_url?: string | null;
+            /** Source */
+            source?: string | null;
+            /** Title */
+            title: string;
+            /** Word Count */
+            word_count?: number | null;
+            /** Writers */
+            writers?: string[];
+            /** Year */
+            year?: number | null;
+        };
+        /** SearchResponse */
+        SearchResponse: {
+            /** Query */
+            query: string;
+            /** Suggestions */
+            suggestions?: components["schemas"]["SearchSuggestion"][];
+        };
+        /** SearchSuggestion */
+        SearchSuggestion: {
+            /** Canonical Id */
+            canonical_id: string;
+            /** Destination */
+            destination: string;
+            /**
+             * Entity Type
+             * @enum {string}
+             */
+            entity_type: "MOVIE" | "TV_SHOW" | "PERSON" | "GENRE" | "NETWORK_PROVIDER";
+            /** Image Url */
+            image_url?: string | null;
+            /** Label */
+            label: string;
+            /** Provider Id */
+            provider_id?: number | null;
+            /** Secondary Text */
+            secondary_text?: string | null;
+            /**
+             * Source
+             * @enum {string}
+             */
+            source: "tmdb" | "cinewatch";
         };
         /** StatusResponse */
         StatusResponse: {
@@ -243,6 +1327,63 @@ export interface components {
              */
             status: "ready";
         };
+        /** ValidationError */
+        ValidationError: {
+            /** Context */
+            ctx?: Record<string, never>;
+            /** Input */
+            input?: unknown;
+            /** Location */
+            loc: (string | number)[];
+            /** Message */
+            msg: string;
+            /** Error Type */
+            type: string;
+        };
+        /** VoiceSampleMetadata */
+        VoiceSampleMetadata: {
+            /**
+             * Consent Version
+             * @constant
+             */
+            consent_version: "CWTV-NEXVOX-CONSENT-R3-001";
+            /** Duration Seconds */
+            duration_seconds: number;
+            /** Language */
+            language: string;
+            /** Prompt */
+            prompt: string;
+            /** Recorded At */
+            recorded_at: string;
+            /** Sample Rate */
+            sample_rate: number;
+            /** Session Id */
+            session_id: string;
+            /**
+             * Tester Id
+             * @enum {string}
+             */
+            tester_id: "tester-01" | "tester-02" | "tester-03" | "tester-04";
+        };
+        /** VoiceSampleStageRequest */
+        VoiceSampleStageRequest: {
+            metadata: components["schemas"]["VoiceSampleMetadata"];
+            /** Wav Base64 */
+            wav_base64: string;
+        };
+        /** VoiceSampleStageResponse */
+        VoiceSampleStageResponse: {
+            /**
+             * Retention Status
+             * @default LOCAL_PRIVATE_STAGING
+             * @constant
+             */
+            retention_status: "LOCAL_PRIVATE_STAGING";
+            /** Sample Id */
+            sample_id: string;
+            /** Stored */
+            stored: boolean;
+        };
     };
     responses: never;
     parameters: never;
@@ -252,6 +1393,371 @@ export interface components {
 }
 export type $defs = Record<string, never>;
 export interface operations {
+    v1_catalog_browse: {
+        parameters: {
+            query?: {
+                page?: number;
+                media_type?: "all" | "movie" | "tv";
+                year?: number | null;
+                language?: string | null;
+                sort?: string;
+            };
+            header?: never;
+            path: {
+                kind: "genre" | "collection" | "country";
+                slug: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CatalogBrowseResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_catalog_person: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                provider_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CatalogPersonResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_catalog_provider: {
+        parameters: {
+            query?: {
+                region?: string;
+            };
+            header?: never;
+            path: {
+                provider_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CatalogProviderResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_catalog_tv_season: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                provider_id: number;
+                season_number: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CatalogSeasonResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_catalog_title: {
+        parameters: {
+            query?: {
+                region?: string | null;
+            };
+            header?: never;
+            path: {
+                media_type: "movie" | "tv";
+                provider_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CatalogTitleResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_catalog_title_reviews: {
+        parameters: {
+            query?: {
+                page?: number;
+            };
+            header?: never;
+            path: {
+                media_type: "movie" | "tv";
+                provider_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CatalogReviewsResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_catalog_title_videos: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                media_type: "movie" | "tv";
+                provider_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CatalogVideosResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_external_lyrics: {
+        parameters: {
+            query: {
+                term: string;
+                artist: string;
+                album?: string | null;
+                reference_url?: string | null;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["LyricsLookupResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_external_scripts: {
+        parameters: {
+            query: {
+                title: string;
+                year?: number | null;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ScriptLookupResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_external_trailers: {
+        parameters: {
+            query?: {
+                page?: number;
+                mode?: "latest" | "trending";
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExternalTrailerLibraryResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_external_where_to_watch: {
+        parameters: {
+            query: {
+                media_type: "movie" | "tv";
+                tmdb_id: number;
+                region?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExternalAvailabilityResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     v1_home: {
         parameters: {
             query?: never;
@@ -272,6 +1778,204 @@ export interface operations {
             };
         };
     };
+    v1_home_genres: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HomeGenresResponse"];
+                };
+            };
+        };
+    };
+    v1_home_hero_experience: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                media_type: "movie" | "tv";
+                provider_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HomeHeroExperience"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_home_rail: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                slug: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HomeRailResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_home_search: {
+        parameters: {
+            query: {
+                q: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HomeSearchResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_home_trailers: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HomeTrailerRailResponse"];
+                };
+            };
+        };
+    };
+    v1_news: {
+        parameters: {
+            query?: {
+                q?: string;
+                page?: number;
+                page_size?: number;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["NewsResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_search: {
+        parameters: {
+            query: {
+                q: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SearchResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     v1_system_status: {
         parameters: {
             query?: never;
@@ -288,6 +1992,39 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["StatusResponse"];
+                };
+            };
+        };
+    };
+    v1_voice_stage_sample: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["VoiceSampleStageRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["VoiceSampleStageResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };

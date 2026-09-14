@@ -11,8 +11,8 @@ def test_person_profile_requires_human_research() -> None:
     )
 
     assert gap.remediation == "AWAITING_HUMAN_RESEARCH"
-    assert gap.suggested_filename == "tmdb-person-42-example-person.webp"
-    assert gap.public_path == "/provider-fallbacks/people/tmdb-person-42-example-person.webp"
+    assert gap.suggested_filename == "Example_Person_profile.webp"
+    assert gap.public_path == "/provider-fallbacks/people/Example_Person_profile.webp"
 
 
 def test_logos_and_backdrops_allow_generation() -> None:

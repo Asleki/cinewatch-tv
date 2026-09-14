@@ -107,9 +107,12 @@ def main() -> int:
     icon_dir = ROOT / "apps/web/public/icons"
     seo_dir = ROOT / "apps/web/public/seo"
 
-    actual_brand = {p.name for p in brand_dir.iterdir()}
-    if actual_brand != REQUIRED_BRAND:
-        fail(f"unexpected brand asset set: {sorted(actual_brand)}")
+    actual_brand_files = {p.name for p in brand_dir.iterdir() if p.is_file()}
+    actual_brand_dirs = {p.name for p in brand_dir.iterdir() if p.is_dir()}
+    if actual_brand_files != REQUIRED_BRAND:
+        fail(f"unexpected brand asset file set: {sorted(actual_brand_files)}")
+    if not actual_brand_dirs.issubset({"ratings"}):
+        fail(f"unexpected brand asset directories: {sorted(actual_brand_dirs)}")
 
     actual_icons = {p.name for p in icon_dir.iterdir()}
     if actual_icons != set(REQUIRED_ICONS):
@@ -145,7 +148,7 @@ def main() -> int:
     expected_files = []
     for directory in (brand_dir, icon_dir, seo_dir):
         for path in directory.iterdir():
-            if path == MANIFEST:
+            if path == MANIFEST or not path.is_file():
                 continue
             expected_files.append(path)
 

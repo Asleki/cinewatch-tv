@@ -237,8 +237,27 @@ class HomepageAggregator:
                 if media_type == "person"
                 else None
             ),
+            genre_ids=self._genre_ids(raw.get("genre_ids")),
+            future_path=self._future_path(media_type, provider_id),
             media_gaps=media_gaps,
         )
+
+
+    @staticmethod
+    def _genre_ids(value: object) -> list[int]:
+        if not isinstance(value, list):
+            return []
+        return [
+            item
+            for item in value
+            if isinstance(item, int) and not isinstance(item, bool) and item > 0
+        ]
+
+    @staticmethod
+    def _future_path(media_type: str, provider_id: int) -> str:
+        if media_type == "person":
+            return f"/person/{provider_id}"
+        return f"/title/{media_type}/{provider_id}"
 
     @staticmethod
     def _rating(raw: dict[str, object]) -> HomeRating | None:

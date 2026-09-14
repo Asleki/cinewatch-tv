@@ -99,7 +99,7 @@ def main() -> int:
     )
     if person.remediation != "AWAITING_HUMAN_RESEARCH":
         fail("real-person fallback policy must require human research")
-    if person.suggested_filename != "tmdb-person-123456-jane-example.webp":
+    if person.suggested_filename != "Jane_Example_profile.webp":
         fail("person fallback naming authority drifted")
 
     network = MediaGap(

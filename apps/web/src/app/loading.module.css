@@ -1,0 +1,1 @@
+.loading{min-height:44vh;display:grid;place-items:center;padding:48px 16px}.spinner{width:42px;height:42px;border:4px solid color-mix(in srgb,var(--cw-border) 75%,transparent);border-top-color:var(--cw-aqua);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}

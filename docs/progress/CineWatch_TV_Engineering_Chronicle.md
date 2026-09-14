@@ -12,7 +12,7 @@
 - **Recorded failed events:** 14
 - **Recorded corrections:** 29
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000156` / `86724f6aba33e43b8806046839e133d636e15b37d9c28f8ca8d3eca13039db1f`
+- **Ledger head:** `CWTV-EVT-000167` / `a7b4c7f18504ef35306811e3123dbfa23ea0de25bb24fa953f492c47e05fb421`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -34,7 +34,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.2.1` | QUALIFIED | 100% | 1.0/5 | 0 | 0 | not preserved | not preserved |
 | `CWTV.V1.3.2.3` | QUALIFIED | 100% | 2.8/5 | 0 | 4 | not preserved | not preserved |
 | `CWTV.V1.3.3.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
-| `CWTV.V1.3.3.2` | IN_PROGRESS | 5% | 1.0/5 | 0 | 0 | not preserved | not preserved |
+| `CWTV.V1.3.3.2` | IN_PROGRESS | 76% | 1.5/5 | 0 | 0 | not preserved | 1m |
 | `CWTV.V1.3.3.2.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 
 ## Failure and correction history
@@ -115,6 +115,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `CWTV_V1.3.2.3_Production_Brand_Asset_Browser_Qualification_001.zip` — SHA-256 `20f658af00d7daf4676dce24b7351035cfd2659383bf34a534d92e27712b01d6` — ARTIFACT_APPLIED (2026-09-10T22:15:45Z)
 - `CWTV_V1.3.2.3_R1_Browser_Qualification_Layout_and_Asset_Framing_Correction.zip` — SHA-256 `987a8db3a96f0e977bddc2e24bb773ef0a3c5a1cee829120154c28dd1b87ce19` — DELIVERY_CORRECTION_APPLIED (2026-09-10T22:52:00Z)
 - `CWTV_V1.3.2.3_R2_Production_Brand_Asset_Browser_Approval_Lock.zip` — SHA-256 `99704dbe775adce7f970b2230df4ad56442141112a5e99a16b3ae3be90688638` — ARTIFACT_APPLIED (2026-09-10T23:28:24Z)
+- `CineWatch-tv-test-02_CURRENT_SOURCE_OF_TRUTH.tar.gz` — SHA-256 `e4738ed811bbc3fbd6530d52d8cea3ba8abb2e48123106dcfb1fc518ef4775a0` — DELIVERY_APPLIED (2026-09-14T06:34:02Z)
 
 ## Event timeline
 
@@ -274,6 +275,17 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-11T15:50:57Z** · `CWTV.V1.3.3.2` · `MILESTONE_STARTED` · **INFO** — Started the CineWatch TV TMDb real-data homepage foundation.
 - **2026-09-11T19:28:56Z** · `CWTV.V1.3.3.2.1` · `CORRECTION_APPLIED` · **PASS** — Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion Evidence: docs/architecture/evidence/CineWatch_TV_V1_3_3_2_1_R1_OpenAPI_Foundation_Test_Neutralization_Correction_001.md; services/api/tests/test_openapi.py
 - **2026-09-11T19:31:53Z** · `CWTV.V1.3.3.2.1` · `MILESTONE_QUALIFIED` · **QUALIFIED** — Qualified Homepage Data Contract and TMDb Aggregation Authority after live provider proof, contract propagation, R1 OpenAPI test neutralization, API regression, repository regression, and governance checks Evidence: docs/architecture/CineWatch_TV_V1_TMDb_Real_Data_Homepage_Foundation_001.md; docs/architecture/decisions/CWTV_ADR_0009_Homepage_Data_Contract_and_TMDb_Aggregation_Authority.md; docs/architecture/evidence/CineWatch_TV_V1_3_3_2_1_R1_OpenAPI_Foundation_Test_Neutralization_Correction_001.md
+- **2026-09-14T06:01:47Z** · `CWTV.V1.3.3.2` · `MILESTONE_RESUMED` · **RESUMED** — Resumed CWTV.V1.3.3.2 as the canonical reconciliation of the frozen Test-02 product refinement into CineWatch Main.
+- **2026-09-14T06:34:02Z** · `CWTV.V1.3.3.2` · `DELIVERY_APPLIED` · **PASS** — Applied the frozen Test-02 product refinement to the canonical reconciliation worktree with exact source-byte parity.
+- **2026-09-14T06:35:56Z** · `CWTV.V1.3.3.2` · `STATIC_QUALIFICATION_PASSED` · **PASS** — Qualified the faithfully adopted Test-02 reconciliation baseline against its refinement, catalog, homepage, provider-runtime and whitespace static gates. Evidence: scripts/check_refinement_regression.py; scripts/check_catalog_experience.py; scripts/check_homepage_experience.py; scripts/check_provider_runtime.py
+- **2026-09-14T06:43:41Z** · `CWTV.V1.3.3.2` · `REPOSITORY_REGRESSION_PASSED` · **PASS** — Passed the canonical repository regression after faithful Test-02 adoption: 19 tests passed with a clean whitespace gate. Duration: 1m. Evidence: tests/repository; git diff --check
+- **2026-09-14T06:43:49Z** · `CWTV.V1.3.3.2` · `BLOCKER_IDENTIFIED` · **BLOCKED** — Local Termux backend regression could not begin because the reconciliation virtual environment does not contain the governed FastAPI runtime dependency stack; Linux qualification remains required.
+- **2026-09-14T06:49:36Z** · `CWTV.V1.3.3.2` · `BUILD_PASSED` · **PASS** — Passed CineWatch web lint, TypeScript qualification and optimized Next.js production build after faithful Test-02 adoption. Evidence: npm run lint:web; npm run typecheck:web; npm run build:web
+- **2026-09-14T07:10:12Z** · `CWTV.V1.3.3.2` · `SECURITY_QUALITY_PASSED` · **PASS** — Qualified the faithful Test-02 reconciliation against CineWatch CI/security policy, a Git-less full-tree secret scan, and explicit new-provider secret-assignment checks. Evidence: scripts/check_ci_security_quality.py; .gitignore
+- **2026-09-14T07:20:02Z** · `CWTV.V1.3.3.2` · `SECURITY_QUALITY_PASSED` · **PASS** — Qualified the faithful Test-02 reconciliation against CineWatch CI/security policy, a Git-less full-tree secret scan, and explicit new-provider secret-assignment checks. Evidence: scripts/check_ci_security_quality.py; .gitignore
+- **2026-09-14T10:38:23Z** · `CWTV.V1.3.3.2` · `PROVIDER_RUNTIME_PROBE_PASSED` · **PASS** — Passed consolidated Test-02 external-provider runtime qualification within the canonical CineWatch reconciliation. Evidence: KinoCheck live provider probe; NewsAPI live provider probe; STANDS4 Lyrics live provider probe; Watchmode live provider probe; Apify screenplay actor live provider probe
+- **2026-09-14T15:09:19Z** · `CWTV.V1.3.3.2` · `RUNTIME_QUALIFICATION_PASSED` · **PASS** — Passed consolidated Test-02 browser runtime qualification against the reconciled CineWatch application. Evidence: Homepage loaded with live catalogue and refined hero experience; Search suggestions resolved live catalogue identities; Discover filtering rendered qualified results; Title detail, cast and recommendations rendered successfully; Where to Watch preserved external-availability versus CineWatch playback separation; News rendered live entertainment results; Stream Now and unfinished product surfaces remained explicitly under development
+- **2026-09-14T15:19:47Z** · `CWTV.V1.3.3.2` · `HUMAN_APPROVAL_RECORDED` · **PASS** — Human browser qualification accepted; no further Test-02 browser testing required before the source commit. Evidence: Human approval recorded after direct mobile browser inspection of the reconciled application.
 
 ## Integrity and timing rules
 

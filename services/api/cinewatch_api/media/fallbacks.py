@@ -7,8 +7,8 @@ import unicodedata
 from dataclasses import dataclass
 from typing import Literal
 
-EntityType = Literal["person", "network", "movie", "tv"]
-AssetKind = Literal["profile", "logo", "poster", "backdrop"]
+EntityType = Literal["person", "network", "movie", "tv", "season", "episode"]
+AssetKind = Literal["profile", "logo", "poster", "backdrop", "still"]
 Remediation = Literal["AWAITING_HUMAN_RESEARCH", "GENERATION_ALLOWED"]
 
 _DIRECTORY_BY_ASSET: dict[AssetKind, str] = {
@@ -16,6 +16,7 @@ _DIRECTORY_BY_ASSET: dict[AssetKind, str] = {
     "logo": "networks",
     "poster": "posters",
     "backdrop": "backdrops",
+    "still": "episode-stills",
 }
 
 _ALLOWED: set[tuple[EntityType, AssetKind]] = {
@@ -25,6 +26,8 @@ _ALLOWED: set[tuple[EntityType, AssetKind]] = {
     ("movie", "backdrop"),
     ("tv", "poster"),
     ("tv", "backdrop"),
+    ("season", "poster"),
+    ("episode", "still"),
 }
 
 
@@ -68,10 +71,10 @@ class MediaGap:
 
     @property
     def suggested_filename(self) -> str:
-        return (
-            f"{self.provider}-{self.entity_type}-{self.provider_id}-"
-            f"{slugify(self.entity_name)}.webp"
-        )
+        normalized = unicodedata.normalize("NFKD", self.entity_name).encode("ascii", "ignore").decode("ascii")
+        stem = re.sub(r"[^A-Za-z0-9]+", "_", normalized).strip("_") or f"entity_{self.provider_id}"
+        suffix = {"profile": "profile", "logo": "logo", "poster": "poster", "backdrop": "backdrop", "still": "still"}[self.asset_kind]
+        return f"{stem}_{suffix}.webp"
 
     @property
     def public_path(self) -> str:
