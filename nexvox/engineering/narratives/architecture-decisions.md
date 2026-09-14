@@ -1,6 +1,6 @@
 # CineWatch Architecture and Decisions
 
-**Source commit:** `06d6e0ad6753eb676104fc5c1de900d261209f52`
+**Source commit:** `2549f45bdd89436061bbeb77ae523ba24622a755`
 
 This projection summarizes ADRs and architecture evidence; source documents remain authoritative.
 
@@ -57,3 +57,9 @@ FastAPI remains the exclusive provider-policy boundary. TMDb is the primary ente
 Source: `docs/architecture/decisions/CWTV_ADR_0009_Homepage_Data_Contract_and_TMDb_Aggregation_Authority.md`
 
 CineWatch adopts `GET /api/v1/home` as the first V1 product-data endpoint. TMDb is the primary upstream. The CineWatch API owns aggregation, normalization, rating representation, image URL construction, missing-media detection, and the public response contract. The frontend will consume the generated CineWatch contract and will not call TMDb directly. OMDb is not an unconditional dependency of this endpoint. The V1.2.6 contract checker is updated once at its actual obsolete assumption: system routes become required subset invariants rather than an exact enumeration of every route in the product. Homepage-specific expectations move into `scripts/check_homepage_data_foundation.py`.
+
+## CWTV-ADR-0010 - CWTV ADR 0010 — Homepage Interaction and Lazy Discovery Authority
+
+Source: `docs/architecture/decisions/CWTV_ADR_0010_Homepage_Interaction_and_Lazy_Discovery_Authority.md`
+
+CineWatch adopts a layered homepage interaction model: 1. `GET /api/v1/home` remains the bounded first-viewport authority. 2. High-cost or below-the-fold surfaces load lazily from dedicated CineWatch homepage endpoints. 3. Only the hero receives writers, optional secondary ratings, and trailer enrichment. 4. Search returns lightweight identity suggestions rather than full details payloads. 5. Homepage cards preserve future route identity while remaining inert until destination pages exist. 6. Dynamic genres are merged from movie and television genre authorities. 7. CineWatch editorial rails are explicit CineWatch taxonomy and may use deterministic provider-query heuristics. 8. Stream Now is reserved exclusively for content CineWatch is authorized to play inside CineWatch. 9. The trailer button is absent when no qualifying trailer exists. 10. No quote is fabricated and no CineWatch rating is displayed before CineWatch owns the corresponding data.
