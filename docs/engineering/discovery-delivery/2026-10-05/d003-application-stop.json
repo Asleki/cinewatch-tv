@@ -1,0 +1,45 @@
+{
+  "status": "STOPPED_MANDATORY_TREE_MISMATCH",
+  "starting_main": "56e5b77e4a9010c911bbacbd93d782ae9fee0588",
+  "final_main_verified": "56e5b77e4a9010c911bbacbd93d782ae9fee0588",
+  "archive_sha256": "d212af7cc6bafb3051abc73121b1660de4577f686508a9b6442caadf3eef1c10",
+  "fresh_checksum_companion": "PASS",
+  "crc_and_archive_safety": "PASS",
+  "all_payload_and_support_hashes": "PASS",
+  "payload_count": 53,
+  "original_helper_verify_only": "PASS",
+  "original_helper_application": "PASS",
+  "all53_applied_payload_content_hashes": "PASS",
+  "qualified_D003": "6a4c4280b2c190590990e5d58372bc9624f87887",
+  "qualified_P_D003": "22c19675d32e93f1d1d37b161a044e88f8310a2c",
+  "qualified_existing_ci": 37343036357,
+  "applied_tree": "24b56a85c7a84751b558441c39b8b5c3bb97a445",
+  "qualified_D003_tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5",
+  "tree_equivalent": false,
+  "mode_mismatches": [
+    {
+      "path": "scripts/check_catalog_experience.py",
+      "expected_git_mode": "100755",
+      "actual_git_mode": "100644",
+      "content_identical": true
+    },
+    {
+      "path": "scripts/check_refinement_regression.py",
+      "expected_git_mode": "100755",
+      "actual_git_mode": "100644",
+      "content_identical": true
+    }
+  ],
+  "root_cause": "Unchanged apply_003.py calls os.chmod(tempfile,0o644) for every target, dropping existing executable modes; previous package tests validated content hashes but not full Git tree equivalence",
+  "replacement_D003_created": false,
+  "Main_promotion": false,
+  "Chronicle_closure": false,
+  "E003": null,
+  "P_E003": null,
+  "new_Main_CI": null,
+  "Praxis_ingestion": false,
+  "NexVox_AI_modified": false,
+  "production_deployed": false,
+  "requalification": "Local process inadvertently started after assertion failure because shell sequence lacked fail-fast; stopped and not claimed complete",
+  "recommendation": "Correct application mechanism in a separately authorized immutable successor; preserve qualified D003 identity; include Git modes and exact-tree regression before promotion"
+}

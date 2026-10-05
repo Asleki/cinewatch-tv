@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "recorded_at": "2026-10-05T18:22:09.031625+00:00",
+  "milestone": "CWTV.V1.3.3.2.3",
+  "lineage": {
+    "001_sha256": "5eebce39349b6328e9b6e3e087c8fce5a72a21569603af2dda7e5c017f02fc64",
+    "002_sha256": "cc4b039543e05aa49545a89af0cd7806d5f9f4980440a1039706e9df3c1895fb",
+    "003_sha256": "d212af7cc6bafb3051abc73121b1660de4577f686508a9b6442caadf3eef1c10",
+    "predecessors_immutable": true,
+    "003_failure": "application helper forced0644 for two existing executable scripts; payload content unchanged",
+    "003_failed_application_tree": "24b56a85c7a84751b558441c39b8b5c3bb97a445",
+    "004_correct_application_tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5",
+    "source_identity_reused": "6a4c4280b2c190590990e5d58372bc9624f87887",
+    "projection_identity_preserved": "22c19675d32e93f1d1d37b161a044e88f8310a2c",
+    "all53_source_payload_bytes_and_modes_match_qualified_D003": true,
+    "004_kind": "delivery-mechanism-only successor; no replacement repository source candidate",
+    "004_sha256": "c1bf11f13e831b3c76b9c16ce9630180449cfaf39d556c1b3fabab2a5445a7a4",
+    "002_required_base": "304bc33e30130229f4be401528ddfda744815b57",
+    "003_004_required_base": "56e5b77e4a9010c911bbacbd93d782ae9fee0588"
+  },
+  "starting_main": "56e5b77e4a9010c911bbacbd93d782ae9fee0588",
+  "D003_source": "6a4c4280b2c190590990e5d58372bc9624f87887",
+  "source_tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5",
+  "qualified_projection": "22c19675d32e93f1d1d37b161a044e88f8310a2c",
+  "existing_candidate_ci": 37343036357,
+  "first_main_ci": 37354636612,
+  "source_identity_recreated": false,
+  "source_application_path_count": 53,
+  "modes": {
+    "100644": 51,
+    "100755": 2
+  },
+  "executable_paths": [
+    "scripts/check_catalog_experience.py",
+    "scripts/check_refinement_regression.py"
+  ],
+  "fresh_exact_tree_reproduction": "PASS",
+  "delivery_failure_was_source_payload_mutation": false,
+  "qualification": {
+    "api": 99,
+    "repository": 21,
+    "focused_trailer_directory": 14,
+    "contract_subset": 3,
+    "migration_subset": 6,
+    "negative_package_preflight": 17,
+    "positive_complete_tree_application_regression": 1
+  },
+  "production_npm_vulnerabilities": 0,
+  "full_development_high_advisories": 8,
+  "python_audit": "No known vulnerabilities",
+  "closure_projection_pending": true,
+  "production_deployed": false,
+  "aws_ssm_used": false,
+  "nexvox_ai_modified": false,
+  "training_eligibility": "TRAINING_REVIEW_REQUIRED",
+  "provenance_reference": "engineering-provenance.json",
+  "limitations": [
+    "Filesystem must preserve executable permissions and Git core.filemode=true",
+    "Per-file application is atomic; the full 53-file application is not a single filesystem transaction",
+    "Unknown historical event timestamps remain unknown",
+    "Final publication CI receipt is external to avoid recursive Chronicle/projection commits"
+  ]
+}

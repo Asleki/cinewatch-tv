@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import runpy
 import subprocess
 import unittest
 from pathlib import Path
@@ -17,6 +18,18 @@ class NexVoxEngineeringCorpusQualificationTest(unittest.TestCase):
             text=True,
         )
         self.assertEqual(result.returncode, 0, msg=result.stdout + result.stderr)
+
+    def test_interpreted_delivery_evidence_requires_review(self) -> None:
+        root = Path(__file__).resolve().parents[2]
+        classify = runpy.run_path(str(root / "scripts/build_nexvox_engineering_corpus.py"))["classify"]
+        for path in (
+            "docs/engineering/discovery-delivery/2026-10-05/engineering-provenance.md",
+            "docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json",
+            "docs/engineering/ssm-autonomy/2026-10-05/proof.json",
+            "docs/engineering/dependency-security/2026-10-05/qualification-report.md",
+        ):
+            with self.subTest(path=path):
+                self.assertEqual(classify(path)[0], "TRAINING_REVIEW_REQUIRED")
 
     def test_projection_commit_rejects_non_generated_paths(self) -> None:
         root = Path(__file__).resolve().parents[2]

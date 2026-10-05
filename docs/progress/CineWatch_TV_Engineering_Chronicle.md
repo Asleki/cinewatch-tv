@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `CWTV.V1.3.3.2.3`
+- **Current milestone:** `none`
 - **Tracked milestones:** 18
-- **Qualified milestones:** 17
-- **Tracked milestone completion:** 94.4%
-- **Recorded failed events:** 18
-- **Recorded corrections:** 32
-- **Commit events:** 10
-- **Ledger head:** `CWTV-EVT-000183` / `89ee6b4afef6de47ada3fdc416b909ac0268a70c0440b400d476e5be43938dcf`
+- **Qualified milestones:** 18
+- **Tracked milestone completion:** 100.0%
+- **Recorded failed events:** 25
+- **Recorded corrections:** 39
+- **Commit events:** 11
+- **Ledger head:** `CWTV-EVT-000203` / `333dd2c1c1dad6cc1ace72db5ab5172eb79533510a4de89623b999ea6dbd0f83`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -36,7 +36,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 | `CWTV.V1.3.3.2` | QUALIFIED | 100% | 3.2/5 | 1 | 2 | 73h 50m 20s | 1m |
 | `CWTV.V1.3.3.2.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
-| `CWTV.V1.3.3.2.3` | IN_PROGRESS | 60% | 1.5/5 | 0 | 0 | not preserved | not preserved |
+| `CWTV.V1.3.3.2.3` | QUALIFIED | 100% | 5.0/5 | 7 | 7 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.4` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 12m 14s | 1s |
 
 ## Failure and correction history
@@ -61,6 +61,13 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.4` | 2026-10-05T11:11:53Z | dependency_security | Predecessor CI37301292042 failed production npm audit on critical Next.js GHSA-vcvr-r3jv-pc5j; failure retained after correction. | — |
 | `CWTV.V1.3.3.2.4` | 2026-10-05T14:54:56.174596+00:00 | dependency_security | Strict Python audit bootstrap failed before auditing: default cache directory was read-only; original failure is preserved. | — |
 | `CWTV.V1.3.3.2.4` | 2026-10-05T15:02:39Z | dependency_security | PR14 CI37329456030 checked out a synthetic merge SHA and failed NexVox HEAD binding; it is not a failure of the patched dependency. | — |
+| `CWTV.V1.3.3.2.3` | time not preserved | discovery_delivery_governance | 001 P1: library card discarded selected video identity/language/type, so valid Spanish-only or outside-first-20 Clip selections could be unavailable at destination. | CWTV-002-P1 |
+| `CWTV.V1.3.3.2.3` | time not preserved | discovery_delivery_governance | 001 P2: upstream total_pages could advertise page 501 although CineWatch allows only pages through 500. | CWTV-002-P2 |
+| `CWTV.V1.3.3.2.3` | time not preserved | discovery_delivery_governance | D003 payload hashes passed, but helper forced 0644 and removed two tracked executable modes. Complete Git tree was 24b56a85… rather than 274e466b…; mandatory promotion gate stopped. | CWTV-D004-GIT-MODES |
+| `CWTV.V1.3.3.2.3` | time not preserved | discovery_delivery_governance | After the D003 tree assertion failed, a local qualification command inadvertently started because the shell sequence lacked fail-fast; it was stopped, no complete result claimed, and Main did not advance. | CWTV-D004-STOP-BOUNDARY |
+| `CWTV.V1.3.3.2.3` | 2026-10-05T18:22:09.031625+00:00 | discovery_delivery_governance | Closure recording wrapper appended nine valid events then stopped because its add helper omitted the returned event. Existing appended events were preserved; no closure commit or publication occurred. | CWTV-E004-RECORDING-WRAPPER |
+| `CWTV.V1.3.3.2.3` | time not preserved | discovery_delivery_governance | D004 fresh Drive readback verifier initially omitted payload/ from archive paths and raised a missing-entry error; this was an external verifier defect, not corrupted package content. | CWTV-D004-READBACK-PREFIX |
+| `CWTV.V1.3.3.2.3` | 2026-10-05T18:22:09.031625+00:00 | discovery_delivery_governance | New interpreted delivery evidence initially inherited default TRAINING_ELIGIBLE; focused regression demonstrated the missing review gate for the new evidence namespace. | CWTV-E004-REVIEW-GATE |
 
 ## Commit lineage
 
@@ -74,6 +81,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `e15752642ed22d30b99caadf546214eea15b730f` — feat: establish CineWatch V1 OpenAPI typed contract foundation (2026-09-09T06:58:32+02:00)
 - `50a453e1efccba0d963d2990b7c6a528fc35ffcf` — feat: establish CineWatch Termux Linux engineering workflow (2026-09-09T21:34:35+02:00)
 - `195005ee12c14be6401280319853aa2fa2ba33ff` — Committed minimal Next.js16.3.6 correction, eleven required lock entries and existing exact frontend policy; unrelated versions unchanged. (2026-10-05T14:56:38Z)
+- `6a4c4280b2c190590990e5d58372bc9624f87887` — Existing qualified D003 source contains exactly the intended discovery delta and qualified tree; its identity is preserved through D004. (2026-10-05T16:41:22Z)
 
 ## Artifacts
 
@@ -123,6 +131,11 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `CWTV_V1.3.2.3_R1_Browser_Qualification_Layout_and_Asset_Framing_Correction.zip` — SHA-256 `987a8db3a96f0e977bddc2e24bb773ef0a3c5a1cee829120154c28dd1b87ce19` — DELIVERY_CORRECTION_APPLIED (2026-09-10T22:52:00Z)
 - `CWTV_V1.3.2.3_R2_Production_Brand_Asset_Browser_Approval_Lock.zip` — SHA-256 `99704dbe775adce7f970b2230df4ad56442141112a5e99a16b3ae3be90688638` — ARTIFACT_APPLIED (2026-09-10T23:28:24Z)
 - `CineWatch-tv-test-02_CURRENT_SOURCE_OF_TRUTH.tar.gz` — SHA-256 `e4738ed811bbc3fbd6530d52d8cea3ba8abb2e48123106dcfb1fc518ef4775a0` — DELIVERY_APPLIED (2026-09-14T06:34:02Z)
+- `001.zip` — SHA-256 `5eebce39349b6328e9b6e3e087c8fce5a72a21569603af2dda7e5c017f02fc64` — ARTIFACT_GENERATED (time not preserved)
+- `002.zip` — SHA-256 `cc4b039543e05aa49545a89af0cd7806d5f9f4980440a1039706e9df3c1895fb` — CORRECTION_APPLIED (time not preserved)
+- `003.zip` — SHA-256 `d212af7cc6bafb3051abc73121b1660de4577f686508a9b6442caadf3eef1c10` — COMMIT_CREATED (2026-10-05T16:41:22Z)
+- `004.zip` — SHA-256 `c1bf11f13e831b3c76b9c16ce9630180449cfaf39d556c1b3fabab2a5445a7a4` — CORRECTION_APPLIED (time not preserved)
+- `004.zip` — SHA-256 `c1bf11f13e831b3c76b9c16ce9630180449cfaf39d556c1b3fabab2a5445a7a4` — MILESTONE_QUALIFIED (2026-10-05T18:17:37Z)
 
 ## Event timeline
 
@@ -309,6 +322,26 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-10-05T14:56:38Z** · `CWTV.V1.3.3.2.4` · `COMMIT_CREATED` · **PASS** — Committed minimal Next.js16.3.6 correction, eleven required lock entries and existing exact frontend policy; unrelated versions unchanged. Evidence: docs/engineering/dependency-security/2026-10-05/security-correction-evidence.json
 - **2026-10-05T15:01:53Z** · `CWTV.V1.3.3.2.4` · `TEST_PASSED` · **PASS** — Independent exact-HEAD candidate CI37329234294 passed both required jobs before non-force Main promotion; it preceded the later PR synthetic-checkout failure. Evidence: docs/engineering/dependency-security/2026-10-05/candidate-ci-result.json
 - **2026-10-05T15:04:48Z** · `CWTV.V1.3.3.2.4` · `MILESTONE_QUALIFIED` · **QUALIFIED** — Main CI37329625428 passed Linux quality and dependency/secret gates; production npm audit has zero vulnerabilities. Scope is dependency correction only, with no002application or deployment. Evidence: docs/engineering/dependency-security/2026-10-05/main-security-ci-result.json; docs/engineering/dependency-security/2026-10-05/npm-audit-production-after.json
+- **time not preserved** · `CWTV.V1.3.3.2.3` · `ARTIFACT_GENERATED` · **INFO** — 001 discovery/presentation predecessor was delivered with initial automated qualification; later objective review found P1 selected-video navigation and P2 page-501 defects. Its original evidence is immutable. Evidence: docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **time not preserved** · `CWTV.V1.3.3.2.3` · `OBJECTIVE_FAILED` · **FAILED** — 001 P1: library card discarded selected video identity/language/type, so valid Spanish-only or outside-first-20 Clip selections could be unavailable at destination. Evidence: docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **time not preserved** · `CWTV.V1.3.3.2.3` · `OBJECTIVE_FAILED` · **FAILED** — 001 P2: upstream total_pages could advertise page 501 although CineWatch allows only pages through 500. Evidence: docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **time not preserved** · `CWTV.V1.3.3.2.3` · `CORRECTION_APPLIED` · **PASS** — Immutable 002 preserved title-linked video_key/video_language/video_type and backend membership verification/pinning; language/type/YouTube rejection regressions were added. Evidence: docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **time not preserved** · `CWTV.V1.3.3.2.3` · `CORRECTION_APPLIED` · **PASS** — 002 shared MAX_TRAILER_PAGE=500 bounds admit 499→500, make 500 terminal and reject 501 before upstream access. Evidence: docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **time not preserved** · `CWTV.V1.3.3.2.3` · `SOURCE_RECONCILED` · **PASS** — 003 reconciled the immutable 53-file 002 discovery delta from historical base 304bc33e onto secure Main 56e5b77e, preserving Next.js 16.3.6, its lockfile and security/SSM evidence. Evidence: docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **2026-10-05T16:41:22Z** · `CWTV.V1.3.3.2.3` · `COMMIT_CREATED` · **PASS** — Existing qualified D003 source contains exactly the intended discovery delta and qualified tree; its identity is preserved through D004. Evidence: docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **time not preserved** · `CWTV.V1.3.3.2.3` · `APPLICATION_FAILED` · **FAILED** — D003 payload hashes passed, but helper forced 0644 and removed two tracked executable modes. Complete Git tree was 24b56a85… rather than 274e466b…; mandatory promotion gate stopped. Evidence: docs/engineering/discovery-delivery/2026-10-05/d003-application-stop.json; https://drive.google.com/drive/folders/1A9vHImDUD2ev397Tw8BaIw1xPBhRZv2R
+- **time not preserved** · `CWTV.V1.3.3.2.3` · `EXECUTION_FAILED` · **FAILED** — After the D003 tree assertion failed, a local qualification command inadvertently started because the shell sequence lacked fail-fast; it was stopped, no complete result claimed, and Main did not advance. Evidence: docs/engineering/discovery-delivery/2026-10-05/d003-application-stop.json
+- **2026-10-05T18:22:09.031625+00:00** · `CWTV.V1.3.3.2.3` · `EXECUTION_FAILED` · **FAILED** — Closure recording wrapper appended nine valid events then stopped because its add helper omitted the returned event. Existing appended events were preserved; no closure commit or publication occurred. Evidence: docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **2026-10-05T18:22:09.031625+00:00** · `CWTV.V1.3.3.2.3` · `CORRECTION_APPLIED` · **PASS** — External recording wrapper now returns the appended event and resumes only after the existing nine events. Append-only predecessor bytes and prior failure events remain intact. Evidence: docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **time not preserved** · `CWTV.V1.3.3.2.3` · `CORRECTION_APPLIED` · **PASS** — D004 uses validated explicit Git modes/blobs and complete-tree preflight plus applied-tree regression. All 53 payload bytes remain D003-identical; both executable scripts retain 100755. Evidence: docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **time not preserved** · `CWTV.V1.3.3.2.3` · `CORRECTION_APPLIED` · **PASS** — D004 qualification checked each command outcome and exact applied tree before continuing; the D003 stopped attempt was preserved and no replacement source candidate was created. Evidence: docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **time not preserved** · `CWTV.V1.3.3.2.3` · `VERIFIER_FAILED` · **FAILED** — D004 fresh Drive readback verifier initially omitted payload/ from archive paths and raised a missing-entry error; this was an external verifier defect, not corrupted package content. Evidence: docs/engineering/discovery-delivery/2026-10-05/d004-drive-verification.json
+- **2026-10-05T18:01:04.891993+00:00** · `CWTV.V1.3.3.2.3` · `CORRECTION_APPLIED` · **PASS** — Readback verifier used the actual payload/ archive layout and verified checksum, CRC, safe paths, manifest and all payload modes/blobs without changing D004. Evidence: docs/engineering/discovery-delivery/2026-10-05/d004-drive-verification.json
+- **2026-10-05T17:44:52.767949+00:00** · `CWTV.V1.3.3.2.3` · `TEST_PASSED` · **PASS** — Fresh D004 qualification passed 99 API tests, 21 repository tests, 17 negative package cases and actual complete-tree application regressions; production npm audit zero, strict Python audit no known vulnerabilities. Eight development advisories remain informational. Evidence: docs/engineering/discovery-delivery/2026-10-05/d004-qualification-receipt.json
+- **2026-10-05T18:22:09.031625+00:00** · `CWTV.V1.3.3.2.3` · `WORKFLOW_PROVENANCE_RECORDED` · **INFO** — Owner-defined engineering workflow is ChatGPT Chat planning/review/authorization → Codex execution/qualification → GitHub canonical source → Google Drive durable evidence; AWS/SSM is separately authorized production transport. Normalized facts only, no private transcript ingestion. Evidence: docs/engineering/discovery-delivery/2026-10-05/engineering-provenance.json; docs/engineering/discovery-delivery/2026-10-05/engineering-provenance.md
+- **2026-10-05T18:22:09.031625+00:00** · `CWTV.V1.3.3.2.3` · `CLASSIFICATION_FAILED` · **FAILED** — New interpreted delivery evidence initially inherited default TRAINING_ELIGIBLE; focused regression demonstrated the missing review gate for the new evidence namespace. Evidence: docs/engineering/discovery-delivery/2026-10-05/classification-red.log
+- **2026-10-05T18:22:09.031625+00:00** · `CWTV.V1.3.3.2.3` · `CORRECTION_APPLIED` · **PASS** — Minimal discovery-delivery path classification now requires human training review, alongside unchanged SSM/security review gates; focused regression passed. No application source or dependency changed. Evidence: docs/engineering/discovery-delivery/2026-10-05/classification-green.log
+- **2026-10-05T18:17:37Z** · `CWTV.V1.3.3.2.3` · `MILESTONE_QUALIFIED` · **QUALIFIED** — The preserved D003/source-projection chain is on Main and ordinary Main CI37354636612 passed both required jobs. D004 repository-source promotion is qualified; governance closure projection and Praxis successor follow. Production deployment has not occurred. Evidence: docs/engineering/discovery-delivery/2026-10-05/first-main-ci.json; docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
 
 ## Integrity and timing rules
 

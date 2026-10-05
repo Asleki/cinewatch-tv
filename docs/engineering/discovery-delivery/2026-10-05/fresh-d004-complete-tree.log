@@ -1,0 +1,382 @@
+PASS: clean exact base, hashes, explicit Git modes and complete predicted tree 274e466bd2fd48ba9bc10cd52d66201f66af78c5
+PASS:53 validated source blobs/modes applied; complete tree 274e466bd2fd48ba9bc10cd52d66201f66af78c5; no source commit created
+{"actual_tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5", "expected_tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5", "complete_tree_difference": ""}
+{
+  "status": "PASS",
+  "paths": 53,
+  "mode_checks": [
+    {
+      "path": "apps/web/src/app/company/[providerId]/page.tsx",
+      "git_mode": "100644",
+      "blob": "697d10f0d4af3eb93f61c6bf89094ed8ff9ad42a",
+      "sha256": "e6244a96cd10287df1579d0735383f953dd08714055bb9076e040af654f67ef9",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/app/countries-cultures/page.module.css",
+      "git_mode": "100644",
+      "blob": "7bc4fb381e7b4223df8892c4c4536c860c580a58",
+      "sha256": "59995571b75d1ceb07cfff7a30436b9f8c850a439418b09959d5a8385732ec59",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/app/countries-cultures/page.tsx",
+      "git_mode": "100644",
+      "blob": "ea382060d0cb4b67ee539134d8c91238ddfb0e61",
+      "sha256": "c9b9a91a802c5314030031ecaae46b6d5bfe067ec9154f4b23d8459ec0818c93",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/app/country/[code]/page.tsx",
+      "git_mode": "100644",
+      "blob": "020ed7c72a1c413df92c0105f9e17e59f13d528f",
+      "sha256": "5622ad32d188a4cc4d2b44065fb8756659c630a48db4c802d36a3128b8699653",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/app/genres/page.tsx",
+      "git_mode": "100644",
+      "blob": "9dc76d8901af7c84d0d18ff3e54d8aa95efe3eaa",
+      "sha256": "15baa07245a6c58ca0e054d7c148730cb2d0e7ae34ccc77d6a356c7255549892",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/app/network/[providerId]/page.tsx",
+      "git_mode": "100644",
+      "blob": "0669a9268afad9d542a78c7c4361fc210a2f51bf",
+      "sha256": "12c35b1e5ab891747badbd3880e78c82df60ea601c657e5610bae66228c6cd1f",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/app/networks/page.tsx",
+      "git_mode": "100644",
+      "blob": "5b8389aeefb6fdd6ed3e4995a50568578a624ee3",
+      "sha256": "b710b5a422ec13d46b708f407a4efb77338bc8cc22b3dad597bc8f874dacfb1a",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/app/news/page.tsx",
+      "git_mode": "100644",
+      "blob": "2e0e87d7e3b86faa73365225fc2208c448f24cb2",
+      "sha256": "dce4821e112806d91283e85f5a03d41fcbdf7405bd7467e250d92375695cd976",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/app/people/page.tsx",
+      "git_mode": "100644",
+      "blob": "77815cca0154121e4972572975c9f4cf25f3e345",
+      "sha256": "44aa0c6f6dcb372f8861d454ffc50ffe1db40fcaef9f3380813229c346f3f20a",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/app/title/[mediaType]/[providerId]/trailers/page.tsx",
+      "git_mode": "100644",
+      "blob": "fba0e9a5112b93b32f2cc3e75ff3228b5e5d39ec",
+      "sha256": "44aa74719b1ff1a202f1955091ce3d5b815496bf60a5418d45d2eb55041b3507",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/app/trailers/page.tsx",
+      "git_mode": "100644",
+      "blob": "bddd0ab7377f719f597d6a24390e04749e8f946b",
+      "sha256": "ced2947d43ea59fb41661a93164a54f9d467331a8ca0de4f3829ccda1b807377",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/CatalogBrowse.tsx",
+      "git_mode": "100644",
+      "blob": "49e9e68d6591719ec2f9b8e0111f20ee32f4a138",
+      "sha256": "18968278993c43cebdd3bfffa7d902f99bb6403c9335197e2404fd93a4eb4cb3",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/GenreCard.module.css",
+      "git_mode": "100644",
+      "blob": "11cdb41ffb6bb8af85f8decf801fee45ee9df1cb",
+      "sha256": "4958c4ea4ba1a56c496bdbf9fb7050caeb05f66e281151aeeab31618869c783e",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/GenreCard.tsx",
+      "git_mode": "100644",
+      "blob": "2f128e084289e14f0b23742abe25390c6f537765",
+      "sha256": "ea1faf3286d3ccef2ebb652310fb571599fb54bc30cbdf3025d934a3a6aa3254",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/GenreGallery.module.css",
+      "git_mode": "100644",
+      "blob": "8f1e53c7389c15a69ff86c34f929caa06111a5eb",
+      "sha256": "b28bbc5ee695de53f1403831e35ebffb472cea57a8e2a755407afdb6b7c1fc11",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/GenreGallery.tsx",
+      "git_mode": "100644",
+      "blob": "3013f8ed547fc09e7e62359a09b0a03b04327dd2",
+      "sha256": "51839b3d7d52e70d021b9315ce8d1d898065600093629c65de45d20e3544d9fd",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/MediaIdentity.module.css",
+      "git_mode": "100644",
+      "blob": "1f04711ae2f7bd1018feb8b64b04ae563acaf384",
+      "sha256": "3900f58412693cf480c0449a8409bbd28551e7084f26422d0499cfe7278f3cd8",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/MediaIdentity.tsx",
+      "git_mode": "100644",
+      "blob": "915da5c7da7b9895118ed09ea13cf39f4972781e",
+      "sha256": "063aacfba9d2a4d9c6c4f18edd3b6e56c89e0e0ff02ad0baef592181ced9bc3e",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/OrganizationDirectory.module.css",
+      "git_mode": "100644",
+      "blob": "687689ee3b47a09496850af3714e2002760f0dd6",
+      "sha256": "028150ecc29f1cef42f2579ce7e85ed5de83cf02ce853acf9729c36fc4e8df1c",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/OrganizationDirectory.tsx",
+      "git_mode": "100644",
+      "blob": "28a99c1f7dc304f858b419e420db3b88902f57dc",
+      "sha256": "286d2237e188b25e19edcaf0defa736290981255611115717617ea641b8cde44",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/OrganizationRoute.tsx",
+      "git_mode": "100644",
+      "blob": "ad7ae81fe79902825babd94ffc46187dcad8029c",
+      "sha256": "3a51ecce27ca9c8e9427b302c5fa1bd721cdd57de18ac58bffb96f3b0efdb164",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/PeopleDirectory.module.css",
+      "git_mode": "100644",
+      "blob": "52b422522265228b5e44c04cf76ff82740b6592c",
+      "sha256": "98bccf19ee6a223e4c970e155b52575cb039eae996bbb04f2ca4e8842412fd64",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/PeopleDirectory.tsx",
+      "git_mode": "100644",
+      "blob": "d8017b831ed66cbe0df8b3a8cfb2eecc1f04b103",
+      "sha256": "212b055a34120e0c8b017a2d7c75d278b946a5a4f29350889324e6089b8359f9",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/TitleDetails.module.css",
+      "git_mode": "100644",
+      "blob": "a99700d187b66541f42bb941fc6d26ce113ab21e",
+      "sha256": "6ad030905317adc8ebf99b268f50a1f56db92cebe069dc7e2374462f0efaffb3",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/TitleDetails.tsx",
+      "git_mode": "100644",
+      "blob": "61ac29500c5ffa7da0f3aa0ad388af4f3c0689db",
+      "sha256": "b7eb721512f5b1096a49216fc1018563affc6e556311dc2748304fbe84e5e1c6",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/catalog/TitleVideos.tsx",
+      "git_mode": "100644",
+      "blob": "b80b4c638fe798b041a34309fb8e431e77a9a83c",
+      "sha256": "7e68ed9504b244ac6284e0d568c593d5fa8a5686c8960eadd2168e2656f364dd",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/home/HomepageExperience.module.css",
+      "git_mode": "100644",
+      "blob": "7c8e738bc3aa2a118012c10175c021d3676afac7",
+      "sha256": "6bde46f7e394721c463d936b70be1cd03d382fdc3970dddb9c83a1774b49c75a",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/home/HomepageExperience.tsx",
+      "git_mode": "100644",
+      "blob": "6375af07cd184e131d77fd9d1d4a8fc7dfd86427",
+      "sha256": "2aa8a69be864b7c6b035cdb9fded0ac5acc9b543a48ef0b3ccbe739802a2e6e8",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/components/site/SiteFrame.tsx",
+      "git_mode": "100644",
+      "blob": "a9e82ecdefe067237c09075f35b8d2785c8675be",
+      "sha256": "27242c3133b899a104c293fbfe01a67e4f7749f06acf4cb006c0ad78e06b65fa",
+      "status": "PASS"
+    },
+    {
+      "path": "apps/web/src/lib/api/catalog-client.ts",
+      "git_mode": "100644",
+      "blob": "c4df1747ae88e6e78097a702589e1c125f33e529",
+      "sha256": "71c68f4628fa84efce8639fa8667a09351947e9bb4672d7c8fc4e127eb02fcb2",
+      "status": "PASS"
+    },
+    {
+      "path": "packages/contracts/openapi/cinewatch-v1.openapi.json",
+      "git_mode": "100644",
+      "blob": "46aff4d81585bb2c161dfd07fefb6ebd0b8e93ae",
+      "sha256": "8c38fee0aef037f7fd9d3302f82f6ce18c0a6edafbfbfb4d7de42ab5ef66c246",
+      "status": "PASS"
+    },
+    {
+      "path": "packages/contracts/src/generated/openapi.d.ts",
+      "git_mode": "100644",
+      "blob": "62f87da46f1967fafd8c91358f268292bb004b3c",
+      "sha256": "6ad4cdb074e44362f1adc61fb5298e337e41f95cd16406e2dc8d8958649a13fd",
+      "status": "PASS"
+    },
+    {
+      "path": "scripts/check_catalog_experience.py",
+      "git_mode": "100755",
+      "blob": "dbbde7c1dd86ffa05a7265d61b7b284f9b6ab404",
+      "sha256": "543cb85bf6081d7ce67ed77705d0ed1bbdebddffca12c94f0e26dbefe65414a4",
+      "status": "PASS"
+    },
+    {
+      "path": "scripts/check_refinement_regression.py",
+      "git_mode": "100755",
+      "blob": "36140c168454acb47ee92333c13bfe92bc3244a7",
+      "sha256": "d1fe97154aa64f0539aca55bff0383e19c49ee222ceb7ac2d07ec07b256fe7f2",
+      "status": "PASS"
+    },
+    {
+      "path": "scripts/check_trailer_navigation_runtime.py",
+      "git_mode": "100644",
+      "blob": "12f3d401632834cf8b8d2323066f296694ae7b9e",
+      "sha256": "1b3ff9468aa7c8b8f29cbfa9bba3f69e81140e0c5aa01e5aafcfef216ee27e36",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/api/v1/catalog.py",
+      "git_mode": "100644",
+      "blob": "75ffe0bacd9ad0175cad1c45fd304653c89d96eb",
+      "sha256": "42aa62b11baa3faf8b87bcfb092db117100d9f271bf1e06a72056ec1f66d0757",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/api/v1/directories.py",
+      "git_mode": "100644",
+      "blob": "a7bdce3cf29669f36e6ea2e0769b61f073efc843",
+      "sha256": "befa345cbfc15d3c99165b341a0bd227b7b74b3d944beea458677363a1922829",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/api/v1/router.py",
+      "git_mode": "100644",
+      "blob": "8fdd28202d4b4313b67e3dd6b9b371b07e288d14",
+      "sha256": "8a894c607623664e4a1f17a351bae6417f222c16f0c1a842bace45ac8adce810",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/api/v1/trailer_library.py",
+      "git_mode": "100644",
+      "blob": "ada56376a83258e436748b6d3df90ccdac1e70dd",
+      "sha256": "312d40d927c46978f241f7c190f0a07286734315ab51a9531e4da0738b42a87b",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/catalog/directories.py",
+      "git_mode": "100644",
+      "blob": "20001267a636868645852e840b859a8494c6f9ff",
+      "sha256": "fcf9a14dbbc96efa565e0dd14fc4a0188eae22efe0db3bccad588acac3a582da",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/catalog/service.py",
+      "git_mode": "100644",
+      "blob": "6bc0f9a39c5282834e43da88b196f10984d79380",
+      "sha256": "a7b4e631c7ce8f328d51339bad355ca9ba174628748deed7691273059b9cd81b",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/catalog/trailer_library.py",
+      "git_mode": "100644",
+      "blob": "5e427a08da2bab8ecf95ab8a16d9aa4b071cd16b",
+      "sha256": "f62bcd0e517c3763d9fd09187fa308e9dda4f6739850381cd8a01fe928c0d14b",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/contracts/catalog.py",
+      "git_mode": "100644",
+      "blob": "75a341e05daecc157427a4ed18c52c442ba63c50",
+      "sha256": "a48a1260a308b5fd43bd21384960cebb2603da4913341496865f11192f691811",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/contracts/directories.py",
+      "git_mode": "100644",
+      "blob": "906805ced7b22aa1de3a62f6a688fe9c53aa00ad",
+      "sha256": "e44fd01c7e218f8085a748b0d312cbf3a5dda4c66449fbe8ccfa9874c423406b",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/contracts/home_experience.py",
+      "git_mode": "100644",
+      "blob": "b80b94a54f5791fe83c2ad4c0928a9f89e806eba",
+      "sha256": "3e54d99969a403e4420ccf8bd6dd0d8612a9e94ad214b8e786d408e3b1e97107",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/contracts/trailer_library.py",
+      "git_mode": "100644",
+      "blob": "e2830a8735f80e72518d0ec5ecfebf784e59f090",
+      "sha256": "9bba1d7c1bfb3cc69304c252735fbc44ff46f9935589eeb328d2405cc2932b0f",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/home/experience.py",
+      "git_mode": "100644",
+      "blob": "1c74149ce9420abf7d9c2195eef3a22e7c1d5d2d",
+      "sha256": "e8d07c26c67c0e1ed2c5b86cf84eb7c05563511ff46bd516a690884261e16bb8",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/media/authority.py",
+      "git_mode": "100644",
+      "blob": "4baea756d799b1421bdbf0317dadfab783fe0fb8",
+      "sha256": "87e8d5b86bc6f88b52f42fce072fa619a0ae653144bf343e55709cc4c9ec4be1",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/cinewatch_api/media/fallbacks.py",
+      "git_mode": "100644",
+      "blob": "990187c8a2279a1ef8a08a364e12c166fc756e7b",
+      "sha256": "1365b3c294b36f0591d1b4a730241cf0f07a183b9f901739a87bf128afc00960",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/tests/test_catalog_service.py",
+      "git_mode": "100644",
+      "blob": "49dbd41769d978c1c1b4da92c7b05b4fd2b30df1",
+      "sha256": "d21f963bf62ed2e43277e176f580e30aa41f7049a3567c4f4de0fe2b87436d94",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/tests/test_discovery_directories.py",
+      "git_mode": "100644",
+      "blob": "7abc432757760d55c595b25a181371640e3f88e6",
+      "sha256": "9bcb5e6a5d58eb7fb9fac9144515cbb27c480a9eee33f8c0be787afa0d419b62",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/tests/test_home_experience.py",
+      "git_mode": "100644",
+      "blob": "953e4ef462f7a8ec7b7ee5e19e76d08c43f61e51",
+      "sha256": "1714634fef80e277ad6f8cb60676b74563ea6543a866bc8e161d2fe40a008fd1",
+      "status": "PASS"
+    },
+    {
+      "path": "services/api/tests/test_trailer_navigation.py",
+      "git_mode": "100644",
+      "blob": "1dd00cda79a12a2d4065ec067e76f6f5a96b4db7",
+      "sha256": "3de6c423fdec7b907f6144c6d17f169baff8fe96d06b3046ad3fd78566065441",
+      "status": "PASS"
+    }
+  ],
+  "tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5",
+  "no_extra_paths_deletions_symlinks_types_or_evidence": true
+}

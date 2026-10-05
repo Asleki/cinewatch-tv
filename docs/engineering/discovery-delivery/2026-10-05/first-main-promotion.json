@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-10-05T18:15:53.407006+00:00",
+  "repository": "Asleki/cinewatch-tv",
+  "expected_previous_head": "56e5b77e4a9010c911bbacbd93d782ae9fee0588",
+  "promoted_head": "22c19675d32e93f1d1d37b161a044e88f8310a2c",
+  "force": false,
+  "source_id_preserved": "6a4c4280b2c190590990e5d58372bc9624f87887",
+  "projection_id_preserved": "22c19675d32e93f1d1d37b161a044e88f8310a2c",
+  "ancestry": "direct chain verified",
+  "guard": "immediately refreshed expected head before non-force REST ref update",
+  "response": {
+    "ref": "refs/heads/main",
+    "node_id": "REF_kwDOUQ3MRa9yZWZzL2hlYWRzL21haW4",
+    "url": "https://api.github.com/repos/Asleki/cinewatch-tv/git/refs/heads/main",
+    "object": {
+      "sha": "22c19675d32e93f1d1d37b161a044e88f8310a2c",
+      "type": "commit",
+      "url": "https://api.github.com/repos/Asleki/cinewatch-tv/git/commits/22c19675d32e93f1d1d37b161a044e88f8310a2c"
+    }
+  }
+}

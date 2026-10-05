@@ -80,7 +80,7 @@ def sha256_text(text: str) -> str:
 
 
 def classify(path: str) -> tuple[str, str]:
-    if path.startswith(("docs/engineering/ssm-autonomy/", "docs/engineering/dependency-security/")):
+    if path.startswith(("docs/engineering/ssm-autonomy/", "docs/engineering/dependency-security/", "docs/engineering/discovery-delivery/")):
         return "TRAINING_REVIEW_REQUIRED", "mixed human-provided evidence and Codex interpretation require human validation"
     if path in REVIEW_REQUIRED_EXACT:
         return "TRAINING_REVIEW_REQUIRED", "contains external/provider research or rights evidence requiring record-level review"

@@ -1,0 +1,18 @@
+{
+  "verified_at": "2026-10-05T18:01:04.891993+00:00",
+  "status": "PASS",
+  "drive_zip_id": "1PjJ0NEXoRmVRHUc54e7bVxdI23u5qlXm",
+  "drive_checksum_id": "1HTusmeWObiEKFfBK2qZzt3cIQpUPCJDE",
+  "sha256": "c1bf11f13e831b3c76b9c16ce9630180449cfaf39d556c1b3fabab2a5445a7a4",
+  "size_bytes": 158211,
+  "checksum_companion": "PASS",
+  "crc": "PASS",
+  "archive_structure": "PASS",
+  "manifest_hashes_sizes": "PASS",
+  "payload_count": 53,
+  "supporting_count": 39,
+  "payload_byte_identity_to_D003": "PASS",
+  "per_path_git_modes_blobs": "PASS",
+  "main_sha": "56e5b77e4a9010c911bbacbd93d782ae9fee0588",
+  "readback_script_correction": "Initial verifier omitted payload/ archive prefix; corrected verifier passed without changing delivery."
+}

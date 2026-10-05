@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "recorded_at": "2026-10-05T18:22:09.031625+00:00",
+  "source_identity": "owner authorization in current ChatGPT/Codex handoff; normalized, non-verbatim",
+  "original_authorization_timestamp": null,
+  "timestamp_precision": "unknown for original messages; exact for this recording",
+  "workflow": "ChatGPT Chat → Codex → GitHub/CineWatch → Google Drive evidence",
+  "systems": [
+    {
+      "system": "ChatGPT Chat",
+      "role": "planning, architecture, authorization, review, acceptance/rejection decisions",
+      "authority_scope": "Owner-provided planning/review boundary; not Git source authority"
+    },
+    {
+      "system": "Codex",
+      "role": "inspection, implementation, qualification, packaging and authorized execution",
+      "authority_scope": "Execution receipts and observed tool results; no implied deployment permission"
+    },
+    {
+      "system": "GitHub",
+      "repository": "Asleki/cinewatch-tv",
+      "role": "canonical source/repository authority",
+      "authority_scope": "Exact commits, parentage, Git trees/blobs/modes and CI identities"
+    },
+    {
+      "system": "Google Drive",
+      "role": "durable artifact, checksum, report, receipt and recovery evidence authority",
+      "authority_scope": "Immutable published evidence and materialized binary checksum verification"
+    },
+    {
+      "system": "AWS/SSM",
+      "role": "separately governed production-command transport",
+      "authority_scope": "Only separately authorized host/deployment operations; not used in this promotion milestone"
+    }
+  ],
+  "transcript_ingestion": false,
+  "transformation": "source-grounded engineering fact normalization; no synthetic dialogue",
+  "training_eligibility": "TRAINING_REVIEW_REQUIRED",
+  "human_validation": "Owner explicitly specified system roles and authorization boundaries; interpreted execution synthesis still requires review",
+  "authorization_boundary": {
+    "permitted": [
+      "CineWatch source/projection Main promotion",
+      "Chronicle/provenance closure",
+      "filtered Praxis successor and attestation",
+      "Drive evidence"
+    ],
+    "prohibited": [
+      "production deployment",
+      "AWS/SSM operations",
+      "production service/configuration/database mutations",
+      "NexVox AI repository writes",
+      "live/device acceptance"
+    ]
+  },
+  "evidence_folder": "https://drive.google.com/drive/folders/1POComQWV1fFHkpTkqEmW3HtbLsh9Z1Xj",
+  "delivery_folder": "https://drive.google.com/drive/folders/1v0nsWKe8SkdUd6KSKfzzwN2ZomfNFRL1"
+}

@@ -1,0 +1,31 @@
+{
+  "events": [
+    "CWTV-EVT-000184",
+    "CWTV-EVT-000185",
+    "CWTV-EVT-000186",
+    "CWTV-EVT-000187",
+    "CWTV-EVT-000188",
+    "CWTV-EVT-000189",
+    "CWTV-EVT-000190",
+    "CWTV-EVT-000191",
+    "CWTV-EVT-000192",
+    "CWTV-EVT-000193",
+    "CWTV-EVT-000194",
+    "CWTV-EVT-000195",
+    "CWTV-EVT-000196",
+    "CWTV-EVT-000197",
+    "CWTV-EVT-000198",
+    "CWTV-EVT-000199",
+    "CWTV-EVT-000200",
+    "CWTV-EVT-000201",
+    "CWTV-EVT-000202",
+    "CWTV-EVT-000203"
+  ],
+  "range": [
+    "CWTV-EVT-000184",
+    "CWTV-EVT-000203"
+  ],
+  "predecessor_event_count": 183,
+  "predecessor_bytes_preserved": true,
+  "predecessor_sha256": "6c7b742f884633712141cff098e8b834ccd78e7f32d46ac82b4cd49bc3c97fec"
+}

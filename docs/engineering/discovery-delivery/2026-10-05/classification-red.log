@@ -1,0 +1,27 @@
+FF..
+======================================================================
+FAIL: test_interpreted_delivery_evidence_requires_review (test_nexvox_engineering_corpus.NexVoxEngineeringCorpusQualificationTest.test_interpreted_delivery_evidence_requires_review) (path='docs/engineering/discovery-delivery/2026-10-05/engineering-provenance.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/cinewatch-004-closure-20261005/tests/repository/test_nexvox_engineering_corpus.py", line 32, in test_interpreted_delivery_evidence_requires_review
+    self.assertEqual(classify(path)[0], "TRAINING_REVIEW_REQUIRED")
+AssertionError: 'TRAINING_ELIGIBLE' != 'TRAINING_REVIEW_REQUIRED'
+- TRAINING_ELIGIBLE
++ TRAINING_REVIEW_REQUIRED
+
+
+======================================================================
+FAIL: test_interpreted_delivery_evidence_requires_review (test_nexvox_engineering_corpus.NexVoxEngineeringCorpusQualificationTest.test_interpreted_delivery_evidence_requires_review) (path='docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/cinewatch-004-closure-20261005/tests/repository/test_nexvox_engineering_corpus.py", line 32, in test_interpreted_delivery_evidence_requires_review
+    self.assertEqual(classify(path)[0], "TRAINING_REVIEW_REQUIRED")
+AssertionError: 'TRAINING_ELIGIBLE' != 'TRAINING_REVIEW_REQUIRED'
+- TRAINING_ELIGIBLE
++ TRAINING_REVIEW_REQUIRED
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 14.615s
+
+FAILED (failures=2)

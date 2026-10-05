@@ -1,0 +1,321 @@
+{
+  "delivery": "004",
+  "source_commit": "6a4c4280b2c190590990e5d58372bc9624f87887",
+  "base_commit": "56e5b77e4a9010c911bbacbd93d782ae9fee0588",
+  "expected_tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5",
+  "actual_tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5",
+  "exact_tree_equality": "PASS",
+  "file_mode_regression": "PASS",
+  "53_perpath_content_blob_mode_checks": "PASS",
+  "source_candidate_or_projection_replaced": false,
+  "fresh_tests": {
+    "api": 99,
+    "repository": 21,
+    "focused_trailer_directory": 14,
+    "contract_subset": 3,
+    "migration_subset": 6,
+    "negative_package_preflight": 17,
+    "positive_complete_tree_application_regression": 1
+  },
+  "subsets_overlap_api": true,
+  "required_gates": 19,
+  "required_gates_passed": 19,
+  "informational_full_npm_advisory_gate_exit_code": 1,
+  "production_npm_vulnerabilities": 0,
+  "full_npm_development_high_findings": 8,
+  "python_audit": "No known vulnerabilities",
+  "qualification_commands": [
+    {
+      "gate": "runtime",
+      "command": [
+        "bash",
+        "scripts/check_runtime.sh"
+      ],
+      "started_at": "2026-10-05T17:44:52.767949+00:00",
+      "seconds": 0.334,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "api-tests",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "services/api/tests",
+        "-q"
+      ],
+      "started_at": "2026-10-05T17:44:53.102416+00:00",
+      "seconds": 3.77,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "repository-tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/repository",
+        "-p",
+        "test_*.py"
+      ],
+      "started_at": "2026-10-05T17:44:56.873177+00:00",
+      "seconds": 14.525,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "openapi",
+      "command": [
+        "python",
+        "scripts/export_openapi_contract.py",
+        "--check"
+      ],
+      "started_at": "2026-10-05T17:45:11.399777+00:00",
+      "seconds": 1.35,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "frontend-runtime",
+      "command": [
+        "bash",
+        "scripts/check_frontend_runtime.sh"
+      ],
+      "started_at": "2026-10-05T17:45:12.749861+00:00",
+      "seconds": 53.755,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "backend-runtime",
+      "command": [
+        "bash",
+        "scripts/check_backend_runtime.sh"
+      ],
+      "started_at": "2026-10-05T17:46:06.506345+00:00",
+      "seconds": 5.779,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "contract-runtime",
+      "command": [
+        "bash",
+        "scripts/check_contract_runtime.sh"
+      ],
+      "started_at": "2026-10-05T17:46:12.285598+00:00",
+      "seconds": 11.5,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "database-migrations",
+      "command": [
+        "bash",
+        "scripts/check_database_migrations.sh"
+      ],
+      "started_at": "2026-10-05T17:46:23.787776+00:00",
+      "seconds": 3.512,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "discovery-policies",
+      "command": [
+        "python",
+        "scripts/check_catalog_experience.py"
+      ],
+      "started_at": "2026-10-05T17:46:27.300538+00:00",
+      "seconds": 0.043,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "refinement-policies",
+      "command": [
+        "python",
+        "scripts/check_refinement_regression.py"
+      ],
+      "started_at": "2026-10-05T17:46:27.344434+00:00",
+      "seconds": 0.046,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "provider-media",
+      "command": [
+        "python",
+        "scripts/reconcile_provider_fallbacks.py",
+        "--check"
+      ],
+      "started_at": "2026-10-05T17:46:27.390973+00:00",
+      "seconds": 0.069,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "ci-policy",
+      "command": [
+        "python",
+        "scripts/check_ci_security_quality.py",
+        "--scan-repository"
+      ],
+      "started_at": "2026-10-05T17:46:27.460352+00:00",
+      "seconds": 0.713,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "trailer-web-regression",
+      "command": [
+        "python",
+        "scripts/check_trailer_navigation_runtime.py"
+      ],
+      "started_at": "2026-10-05T17:46:28.173868+00:00",
+      "seconds": 2.582,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "diff-integrity",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-05T17:46:30.756961+00:00",
+      "seconds": 0.005,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "current-foundation-policies",
+      "command": [
+        "bash",
+        "-c",
+        "set -e; for s in check_repository_tree check_backend_skeleton check_frontend_skeleton check_database_foundation check_contract_foundation check_provider_runtime check_termux_linux_workflow check_engineering_chronicle check_nexvox_engineering_corpus; do python scripts/$s.py; done"
+      ],
+      "started_at": "2026-10-05T17:46:30.762713+00:00",
+      "seconds": 15.827,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "python-dependency-consistency",
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "started_at": "2026-10-05T17:46:46.590053+00:00",
+      "seconds": 0.358,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "python-vulnerability-audit",
+      "command": [
+        "python",
+        "-m",
+        "pip_audit",
+        "--strict",
+        "--cache-dir",
+        "/workspace/cinewatch-004-evidence/2026-10-05/requalification/pip-audit-cache",
+        "services/api"
+      ],
+      "started_at": "2026-10-05T17:46:46.949503+00:00",
+      "seconds": 30.276,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "npm-production-audit",
+      "command": [
+        "npm",
+        "audit",
+        "--omit=dev",
+        "--audit-level=high",
+        "--json"
+      ],
+      "started_at": "2026-10-05T17:47:17.226146+00:00",
+      "seconds": 0.916,
+      "exit_code": 0,
+      "required": true
+    },
+    {
+      "gate": "npm-full-advisory",
+      "command": [
+        "npm",
+        "audit",
+        "--audit-level=high",
+        "--json"
+      ],
+      "started_at": "2026-10-05T17:47:18.142756+00:00",
+      "seconds": 2.407,
+      "exit_code": 1,
+      "required": false
+    },
+    {
+      "gate": "trailer-unit-detail",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "services/api/tests/test_trailer_navigation.py",
+        "services/api/tests/test_discovery_directories.py",
+        "-v"
+      ],
+      "started_at": "2026-10-05T17:47:20.550131+00:00",
+      "seconds": 1.697,
+      "exit_code": 0,
+      "required": true
+    }
+  ],
+  "existing_CI_applicability": {
+    "run": 37343036357,
+    "head": "22c19675d32e93f1d1d37b161a044e88f8310a2c",
+    "jobs": {
+      "Dependency and secret gate": "success",
+      "Linux quality gate": "success"
+    },
+    "source": "6a4c4280b2c190590990e5d58372bc9624f87887",
+    "source_tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5",
+    "applied_tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5",
+    "applicable": true,
+    "basis": "Exact source tree and all53Gitblob/modes equal original qualified source; delivery helper/evidence are outside source tree",
+    "no_new_workflow_dispatched": true
+  },
+  "boundaries": {
+    "Main_updated": false,
+    "new_commit": false,
+    "AWS_used": false,
+    "production_deployed": false,
+    "Praxis_ingested": false,
+    "NexVox_AI_modified": false
+  },
+  "limitations": [
+    "Linux executable-mode filesystem and core.filemode=true required",
+    "No live provider/database/device/deployment acceptance performed",
+    "Eight existing development advisories retained; informational under current policy"
+  ],
+  "blocking_issues": [],
+  "sealed_archive": {
+    "sha256": "c1bf11f13e831b3c76b9c16ce9630180449cfaf39d556c1b3fabab2a5445a7a4",
+    "bytes": 158211,
+    "archive_entries": 93,
+    "payload_files": 53,
+    "supporting_files": 39,
+    "crc": "PASS",
+    "manifest": "PASS",
+    "safe_structure": "PASS",
+    "explicit_git_modes": 53
+  },
+  "sealed_package_actual_tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5",
+  "Main_verified_at_stop": "56e5b77e4a9010c911bbacbd93d782ae9fee0588",
+  "drive_folder": "https://drive.google.com/drive/folders/1v0nsWKe8SkdUd6KSKfzzwN2ZomfNFRL1"
+}

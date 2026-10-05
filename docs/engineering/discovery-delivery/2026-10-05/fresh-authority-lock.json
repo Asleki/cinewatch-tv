@@ -1,0 +1,9 @@
+{
+  "verified_at": "2026-10-05T18:15:13.313567+00:00",
+  "starting_main": "56e5b77e4a9010c911bbacbd93d782ae9fee0588",
+  "archive_sha256": "c1bf11f13e831b3c76b9c16ce9630180449cfaf39d556c1b3fabab2a5445a7a4",
+  "D003": "6a4c4280b2c190590990e5d58372bc9624f87887",
+  "expected_tree": "274e466bd2fd48ba9bc10cd52d66201f66af78c5",
+  "payload_count": 53,
+  "boundary": "Repository/governance/Praxis only; production operations prohibited"
+}
