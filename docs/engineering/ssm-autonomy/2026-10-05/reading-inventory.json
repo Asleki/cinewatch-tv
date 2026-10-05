@@ -1,0 +1,412 @@
+{
+  "schema_version": "1.0.0",
+  "recorded_at_utc": "2026-10-05T10:49:17.712210Z",
+  "record_type": "source_read_inventory",
+  "training_eligibility": "TRAINING_REVIEW_REQUIRED",
+  "documents": [
+    {
+      "id": "1_MPFcBpZ53K5LCviVH-t2pXT2E-KYFeC_4za_frr-3g",
+      "title": "START HERE \u2014 Codex SSM Autonomy + NexVox Praxis Handoff \u2014 2026-10-05",
+      "url": "https://docs.google.com/document/d/1_MPFcBpZ53K5LCviVH-t2pXT2E-KYFeC_4za_frr-3g/edit",
+      "read_status": "READABLE_CONTENT_RETRIEVED",
+      "modified_at": "2026-10-05T10:25:36.986Z",
+      "readable_content_sha256": "673c123c9ccf6ecf01e79122b8c61a84af4d18b6cc8d652f9935fbd48e35b0da"
+    },
+    {
+      "id": "1kjL-pwxFsx8jNSiMBPdtFpwFbFZHc_JVKRA1wPfLJj0",
+      "title": "Codex Master Prompt \u2014 Read First, Then Qualify",
+      "url": "https://docs.google.com/document/d/1kjL-pwxFsx8jNSiMBPdtFpwFbFZHc_JVKRA1wPfLJj0/edit",
+      "read_status": "READABLE_CONTENT_RETRIEVED",
+      "modified_at": "2026-10-05T10:29:28.397Z",
+      "readable_content_sha256": "122688c60d1ad51e85abedc6d8d18b194636e3a50eaff6fbcc5d4eaa7cec4f0d"
+    },
+    {
+      "id": "1q92-Of79rML3Rpnn9eu8HGtSM_JxAindEk-au5dm5TA",
+      "title": "CineWatch Codex SSM Autonomy Qualification \u2014 READ ONLY",
+      "url": "https://docs.google.com/document/d/1q92-Of79rML3Rpnn9eu8HGtSM_JxAindEk-au5dm5TA/edit",
+      "read_status": "READABLE_CONTENT_RETRIEVED",
+      "modified_at": "2026-10-05T10:25:57.592Z",
+      "readable_content_sha256": "d563541842bfb04bf2c9e1f27036e0360fa28eb16cf23d417179dd2cfce0ba6c"
+    },
+    {
+      "id": "1wlSYvfKrcRua00LFhJ8gm8FjFqXKi3QYw1NQICzC4kM",
+      "title": "NexVox Praxis Corpus Routing Contract \u2014 CineWatch TV",
+      "url": "https://docs.google.com/document/d/1wlSYvfKrcRua00LFhJ8gm8FjFqXKi3QYw1NQICzC4kM/edit",
+      "read_status": "READABLE_CONTENT_RETRIEVED",
+      "modified_at": "2026-10-05T10:26:33.439Z",
+      "readable_content_sha256": "99e5723799a16d45bf70ad67456e6388c325c3a7bfb16ad9eeb77bd4ef9960d5"
+    },
+    {
+      "id": "1F4Jc4njVtoY6owluT9OZAkAae3eGeeogPktBXlBQX3o",
+      "title": "CineWatch TV \u2014 Termux & AWS Final Verdict \u2014 2026-10-05",
+      "url": "https://docs.google.com/document/d/1F4Jc4njVtoY6owluT9OZAkAae3eGeeogPktBXlBQX3o/edit",
+      "read_status": "READABLE_CONTENT_RETRIEVED",
+      "modified_at": "2026-10-05T10:15:06.035Z",
+      "readable_content_sha256": "a10fbb95692b4f954062597a937fc602337afe8b371d3d0482a9112befcc48f1"
+    },
+    {
+      "id": "14sADGHxPeIzUsFMLyvZvdcO14n1xeY6ufIVNRLjI4CA",
+      "title": "CineWatch TV \u2014 Termux & AWS Investigation Log \u2014 2026-10-05",
+      "url": "https://drive.google.com/file/d/14sADGHxPeIzUsFMLyvZvdcO14n1xeY6ufIVNRLjI4CA/view",
+      "read_status": "READABLE_CONTENT_RETRIEVED",
+      "modified_at": "2026-10-05T10:28:53.418Z",
+      "readable_content_sha256": "e3de575b19d911f234aed56c33cb33a1afac401bbb59f59b2123484a9ff3ea23"
+    },
+    {
+      "id": "1SW35JzCKS7QOu317kOJ7PEWf68fxYsizkMgWfRjHA7Q",
+      "title": "CineWatch TV \u2014 Termux & AWS Findings Register \u2014 2026-10-05",
+      "url": "https://drive.google.com/file/d/1SW35JzCKS7QOu317kOJ7PEWf68fxYsizkMgWfRjHA7Q/view",
+      "read_status": "READABLE_CONTENT_RETRIEVED",
+      "modified_at": "2026-10-05T10:14:55.544Z",
+      "readable_content_sha256": "84f0c153744221c64583adf52a50e622038529e9e0f566996b432af2134684db"
+    },
+    {
+      "id": "1RHb_-LwWUGWq_xs9hz-AxmLBhgCLVAM-",
+      "title": "CineWatch_TV_Final_Engineering_and_Deployment_Report_2026-10-05.md",
+      "url": "https://drive.google.com/file/d/1RHb_-LwWUGWq_xs9hz-AxmLBhgCLVAM-/view",
+      "read_status": "READABLE_CONTENT_RETRIEVED",
+      "modified_at": "2026-10-05T08:00:41.572Z",
+      "readable_content_sha256": "d06a4e7b7a175599a6c9f519595e2833b2c9121aca1dd68071b565f704f2c2f1"
+    },
+    {
+      "id": "1rC13C6Mwxwoc2bgXHBSoMzAniIStfxVz",
+      "title": "CineWatch_TV_Earlier_Read_Only_Audit_2026-10-05_Superseded_By_Final_Report.md",
+      "url": "https://drive.google.com/file/d/1rC13C6Mwxwoc2bgXHBSoMzAniIStfxVz/view",
+      "read_status": "READABLE_CONTENT_RETRIEVED",
+      "modified_at": "2026-10-05T08:00:57.982Z",
+      "readable_content_sha256": "507595aac5bb4e3b73628f8e9c506c43486fca6166b7a6bf109c71e77cd030a5"
+    },
+    {
+      "id": "14bFqYqznVyhNNuIklZOO4EgUBMtiyi25",
+      "title": "CineWatch_TV_Final_Engineering_and_Deployment_Report_2026-10-05.pdf",
+      "url": "https://drive.google.com/file/d/14bFqYqznVyhNNuIklZOO4EgUBMtiyi25/view",
+      "read_status": "READABLE_CONTENT_RETRIEVED",
+      "modified_at": "2026-10-05T08:00:27.152Z",
+      "readable_content_sha256": "d1af9275a21e1225df4b81bc8f04cd2f64072b51bd02534fffc9b9d9d88afc88"
+    },
+    {
+      "id": "1_C0LwpnSNGDNE03fnW9cRkAdFADI-ufj",
+      "title": "CWTV_V1.3.3.2.3_Discovery_Pages_Presentation_002.zip.sha256",
+      "url": "https://drive.google.com/file/d/1_C0LwpnSNGDNE03fnW9cRkAdFADI-ufj/view",
+      "read_status": "READABLE_CONTENT_RETRIEVED",
+      "modified_at": "2026-10-05T05:09:01.041Z",
+      "readable_content_sha256": "53f59dd331ef34cd5fa35512362199e097bfc7ee517fd0958dca1176366f4819"
+    }
+  ],
+  "folders": [
+    {
+      "id": "1pz2pFD3hhHAq5bsbBdBXmidwc7hQ1MBX",
+      "children": [
+        {
+          "id": "1ebmv9CoL7lilba8ClXh5gSSxTUVQTPDl",
+          "title": "CineWatch TV \u2014 Termux & AWS Investigation \u2014 2026-10-05",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1-2B-RqHyocyFGa1l8KPjtGtx5DXuwqE9",
+          "title": "02 - Audit Evidence",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "15UkHcHYMHR7oPtDzNCdaNqBF4N0-Xj7M",
+          "title": "01 - Final Reports",
+          "type": "application/vnd.google-apps.folder"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "15UkHcHYMHR7oPtDzNCdaNqBF4N0-Xj7M",
+      "children": [
+        {
+          "id": "1RHb_-LwWUGWq_xs9hz-AxmLBhgCLVAM-",
+          "title": "CineWatch_TV_Final_Engineering_and_Deployment_Report_2026-10-05.md",
+          "type": "text/markdown"
+        },
+        {
+          "id": "14bFqYqznVyhNNuIklZOO4EgUBMtiyi25",
+          "title": "CineWatch_TV_Final_Engineering_and_Deployment_Report_2026-10-05.pdf",
+          "type": "application/pdf"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1-2B-RqHyocyFGa1l8KPjtGtx5DXuwqE9",
+      "children": [
+        {
+          "id": "1rC13C6Mwxwoc2bgXHBSoMzAniIStfxVz",
+          "title": "CineWatch_TV_Earlier_Read_Only_Audit_2026-10-05_Superseded_By_Final_Report.md",
+          "type": "text/markdown"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1ebmv9CoL7lilba8ClXh5gSSxTUVQTPDl",
+      "children": [
+        {
+          "id": "1BJiYbYNBmRvz1He51mY__fOatIRHLD_B",
+          "title": "04 \u2014 Codex Autonomy & NexVox Praxis Handoff \u2014 2026-10-05",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "15pKSwczwKF5UGUy7TJs0-yyGgEx0sB8V",
+          "title": "03 \u2014 Verdict",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1rVtd9FlAqTtjps6NM3rqokCdZlA9gSrD",
+          "title": "02 \u2014 Findings",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1tKsB2v5Vc2D6juBC9Rs-ucJACt2bwh90",
+          "title": "01 \u2014 Investigation",
+          "type": "application/vnd.google-apps.folder"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1tKsB2v5Vc2D6juBC9Rs-ucJACt2bwh90",
+      "children": [
+        {
+          "id": "14sADGHxPeIzUsFMLyvZvdcO14n1xeY6ufIVNRLjI4CA",
+          "title": "CineWatch TV \u2014 Termux & AWS Investigation Log \u2014 2026-10-05",
+          "type": "application/vnd.google-apps.document"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1rVtd9FlAqTtjps6NM3rqokCdZlA9gSrD",
+      "children": [
+        {
+          "id": "1SW35JzCKS7QOu317kOJ7PEWf68fxYsizkMgWfRjHA7Q",
+          "title": "CineWatch TV \u2014 Termux & AWS Findings Register \u2014 2026-10-05",
+          "type": "application/vnd.google-apps.document"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "15pKSwczwKF5UGUy7TJs0-yyGgEx0sB8V",
+      "children": [
+        {
+          "id": "1F4Jc4njVtoY6owluT9OZAkAae3eGeeogPktBXlBQX3o",
+          "title": "CineWatch TV \u2014 Termux & AWS Final Verdict \u2014 2026-10-05",
+          "type": "application/vnd.google-apps.document"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1HRLegPAV--44c2OEa_5UPEMVias4fEMm",
+      "children": [
+        {
+          "id": "1_C0LwpnSNGDNE03fnW9cRkAdFADI-ufj",
+          "title": "CWTV_V1.3.3.2.3_Discovery_Pages_Presentation_002.zip.sha256",
+          "type": "text/plain"
+        },
+        {
+          "id": "1sk36HbJVZ84vA9LulXnZZT-PLoX9gOyR",
+          "title": "CWTV_V1.3.3.2.3_Discovery_Pages_Presentation_002.zip",
+          "type": "application/zip"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1JDNKZ2dQKETdL7neoNG_gzEtA82AtPDB",
+      "children": [
+        {
+          "id": "1_MPFcBpZ53K5LCviVH-t2pXT2E-KYFeC_4za_frr-3g",
+          "title": "START HERE \u2014 Codex SSM Autonomy + NexVox Praxis Handoff \u2014 2026-10-05",
+          "type": "application/vnd.google-apps.document"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1VHwIt3U1oMg1Riq5u29kMGDzG11Z4QFL",
+      "children": [
+        {
+          "id": "1kjL-pwxFsx8jNSiMBPdtFpwFbFZHc_JVKRA1wPfLJj0",
+          "title": "Codex Master Prompt \u2014 Read First, Then Qualify",
+          "type": "application/vnd.google-apps.document"
+        },
+        {
+          "id": "1q92-Of79rML3Rpnn9eu8HGtSM_JxAindEk-au5dm5TA",
+          "title": "CineWatch Codex SSM Autonomy Qualification \u2014 READ ONLY",
+          "type": "application/vnd.google-apps.document"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "16V6c0dHsdXii-IiuuzBlL4fCjgC5k_bm",
+      "children": [
+        {
+          "id": "1wlSYvfKrcRua00LFhJ8gm8FjFqXKi3QYw1NQICzC4kM",
+          "title": "NexVox Praxis Corpus Routing Contract \u2014 CineWatch TV",
+          "type": "application/vnd.google-apps.document"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1H9fCJ8496yCKdVFEJi7cOt160w11Z58V",
+      "children": [
+        {
+          "id": "1Bf_KtXvgV8IdSU0M_IgAVhLgcThpxNHl",
+          "title": "DOCUMENTS",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1OSvrfQQHaX30NaiJD59xCyTwFOPrM1Zm",
+          "title": "README",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1rCpD1IkolGnJcjKvSbq09vfCozu8zDA4",
+          "title": "_TEMP",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1Eh_NX7mJkNBq1GLCcWpkqzWSpjGeRPrp",
+          "title": "README Assets",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "16n0oHm-W0B8XlZi0YNSXF1GV24Ws-LD4",
+          "title": "Praxis Corpus Schema",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1Enqz8YxsYI_8uOglzO-q7LG-fSqr7LYt",
+          "title": "Execution Reports",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "10ts4EY2ogxnO6VaLPikGyO4LGqwP-bH5",
+          "title": "Authoritative Prompts",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1QWdtzv0pOyJe-Zxr0hV9KGp27LxU19Lu",
+          "title": "Praxis Ingestion Evidence",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "12kikSeGJL8pi8xC7Xc-hDp3rmwaO6E6w",
+          "title": "Session Evidence",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1lQ3_rofQc_X7k3lU0HXIvnViHfATgUbU",
+          "title": "Source Links",
+          "type": "application/vnd.google-apps.folder"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1smXmhB62gbzfi-3f8tXwioCDMH-DiFIc",
+      "children": [],
+      "listed": true
+    },
+    {
+      "id": "1Bf_KtXvgV8IdSU0M_IgAVhLgcThpxNHl",
+      "children": [
+        {
+          "id": "1NTRuQtV8r_Fm5Wm4W_GaoGEo5xCj47mJ",
+          "title": "CODEx_READ_ME_DOC",
+          "type": "application/vnd.google-apps.folder"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1OSvrfQQHaX30NaiJD59xCyTwFOPrM1Zm",
+      "children": [
+        {
+          "id": "1dwhyHMy96TeLE0cPVbElytZ0QBeJG8aL",
+          "title": "START HERE",
+          "type": "application/vnd.google-apps.folder"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1rCpD1IkolGnJcjKvSbq09vfCozu8zDA4",
+      "children": [],
+      "listed": true
+    },
+    {
+      "id": "1Eh_NX7mJkNBq1GLCcWpkqzWSpjGeRPrp",
+      "children": [],
+      "listed": true
+    },
+    {
+      "id": "16n0oHm-W0B8XlZi0YNSXF1GV24Ws-LD4",
+      "children": [],
+      "listed": true
+    },
+    {
+      "id": "1Enqz8YxsYI_8uOglzO-q7LG-fSqr7LYt",
+      "children": [],
+      "listed": true
+    },
+    {
+      "id": "10ts4EY2ogxnO6VaLPikGyO4LGqwP-bH5",
+      "children": [
+        {
+          "id": "1341X5CLEIir7M_gmtMEdQzeNMG_0yi34",
+          "title": "Current Prompt",
+          "type": "application/vnd.google-apps.folder"
+        }
+      ],
+      "listed": true
+    },
+    {
+      "id": "1QWdtzv0pOyJe-Zxr0hV9KGp27LxU19Lu",
+      "children": [],
+      "listed": true
+    },
+    {
+      "id": "12kikSeGJL8pi8xC7Xc-hDp3rmwaO6E6w",
+      "children": [],
+      "listed": true
+    },
+    {
+      "id": "1lQ3_rofQc_X7k3lU0HXIvnViHfATgUbU",
+      "children": [],
+      "listed": true
+    },
+    {
+      "id": "1dwhyHMy96TeLE0cPVbElytZ0QBeJG8aL",
+      "children": [],
+      "listed": true
+    },
+    {
+      "id": "1341X5CLEIir7M_gmtMEdQzeNMG_0yi34",
+      "children": [],
+      "listed": true
+    },
+    {
+      "id": "1NTRuQtV8r_Fm5Wm4W_GaoGEo5xCj47mJ",
+      "children": [],
+      "listed": true
+    }
+  ],
+  "recovery": {
+    "archive_id": "1sk36HbJVZ84vA9LulXnZZT-PLoX9gOyR",
+    "binary_materialization": "HTTP403",
+    "local_immutable_bytes_verified": true,
+    "payload_count": 53,
+    "supporting_hash_entries": 23,
+    "sha256": "cc4b039543e05aa49545a89af0cd7806d5f9f4980440a1039706e9df3c1895fb",
+    "source_applied": false
+  }
+}

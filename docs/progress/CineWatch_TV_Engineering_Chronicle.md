@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `none`
-- **Tracked milestones:** 16
+- **Current milestone:** `CWTV.V1.3.3.2.3`
+- **Tracked milestones:** 17
 - **Qualified milestones:** 16
-- **Tracked milestone completion:** 100.0%
+- **Tracked milestone completion:** 94.1%
 - **Recorded failed events:** 15
 - **Recorded corrections:** 31
 - **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000172` / `c03377b1677b5a35b6aa9a1cf17141b3f60010d0dc48d98957ac13c1fbeece89`
+- **Ledger head:** `CWTV-EVT-000174` / `a7a9ad10408b317b974ff37900046c2c4183be1fc93c11dd3a6eb13acdeef466`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -36,6 +36,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 | `CWTV.V1.3.3.2` | QUALIFIED | 100% | 3.2/5 | 1 | 2 | 73h 50m 20s | 1m |
 | `CWTV.V1.3.3.2.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
+| `CWTV.V1.3.3.2.3` | IN_PROGRESS | 60% | 1.5/5 | 0 | 0 | not preserved | not preserved |
 
 ## Failure and correction history
 
@@ -292,6 +293,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-14T16:38:53Z** · `CWTV.V1.3.3.2` · `CI_CORRECTION_QUALIFIED` · **PASS** — Qualified R2 correction for deterministic Next.js production-generated type authority. Evidence: Linux production build completed successfully under Next.js 16.3.4.; Production build deterministically regenerated apps/web/next-env.d.ts from .next/dev/types imports to .next/types imports.; git diff --check passed after production regeneration.
 - **2026-09-14T17:41:06Z** · `CWTV.V1.3.3.2` · `CI_QUALIFICATION_PASSED` · **PASS** — Remote CineWatch CI qualified the exact reconciled Test-02 branch authority. Evidence: GitHub Actions run 34873733655 concluded success.; Linux quality gate passed.; Dependency and secret gate passed.; Workflow head SHA exactly matched remote branch HEAD 3511c1080fe59925846c70ae54a3c2a3100472a7.
 - **2026-09-14T17:41:17Z** · `CWTV.V1.3.3.2` · `MILESTONE_QUALIFIED` · **QUALIFIED** — Qualified the canonical Test-02 product evolution into CineWatch after source reconciliation, security and rights-boundary preservation, provider qualification, browser approval, migration corrections, deterministic Next.js authority correction, NexVox governance, and exact remote CI acceptance. Evidence: Frozen Test-02 source authority reconciled into canonical CineWatch.; Human browser qualification passed.; GitHub Actions run 34873733655 concluded success for exact remote HEAD.; Linux quality gate passed.; Dependency and secret gate passed.
+- **2026-10-05T10:49:51Z** · `CWTV.V1.3.3.2.3` · `QUALIFICATION_BLOCKED` · **BLOCKED** — Codex SSM probe blocked before AWS API execution by connector authentication retry loop; owner-console proof remains separately attributed and 002 deployment is not authorized Evidence: docs/engineering/ssm-autonomy/2026-10-05/evidence.json
+- **2026-10-05T11:00:54.617377+00:00** · `CWTV.V1.3.3.2.3` · `TEST_PASSED` · **PASS** — Independent Codex read-only SSM command succeeded: expected host, clean detached source SHA, BUILD_ID and three active services; earlier connector/session blocker superseded, no 002 deployment Evidence: SSM Command cf8d1e3c-46dc-497d-ad06-cd9fc39f9a32; docs/engineering/ssm-autonomy/2026-10-05/codex-ssm-proof.json
 
 ## Integrity and timing rules
 

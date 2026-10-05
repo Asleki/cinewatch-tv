@@ -5481,6 +5481,56 @@
       "summary": "Qualified the canonical Test-02 product evolution into CineWatch after source reconciliation, security and rights-boundary preservation, provider qualification, browser approval, migration corrections, deterministic Next.js authority correction, NexVox governance, and exact remote CI acceptance.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "aws_ssm",
+      "correction": null,
+      "details": {
+        "command_issued": "false",
+        "release_002_deployed": "false"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000173",
+      "event_sha256": "e3aa4d69a54f51e7adae13061235a0d1c8bbc54849b82cb8d29aa24fc568b1bf",
+      "event_type": "QUALIFICATION_BLOCKED",
+      "evidence": [
+        "docs/engineering/ssm-autonomy/2026-10-05/evidence.json"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T10:49:51Z",
+      "previous_event_sha256": "c03377b1677b5a35b6aa9a1cf17141b3f60010d0dc48d98957ac13c1fbeece89",
+      "result": "BLOCKED",
+      "schema_version": "1.0",
+      "sequence": 173,
+      "summary": "Codex SSM probe blocked before AWS API execution by connector authentication retry loop; owner-console proof remains separately attributed and 002 deployment is not authorized",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex current observation"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "aws_ssm",
+      "correction": "CWTV-EVT-000173",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000174",
+      "event_sha256": "a7a9ad10408b317b974ff37900046c2c4183be1fc93c11dd3a6eb13acdeef466",
+      "event_type": "TEST_PASSED",
+      "evidence": [
+        "SSM Command cf8d1e3c-46dc-497d-ad06-cd9fc39f9a32",
+        "docs/engineering/ssm-autonomy/2026-10-05/codex-ssm-proof.json"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T11:00:54.617377+00:00",
+      "previous_event_sha256": "e3aa4d69a54f51e7adae13061235a0d1c8bbc54849b82cb8d29aa24fc568b1bf",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 174,
+      "summary": "Independent Codex read-only SSM command succeeded: expected host, clean detached source SHA, BUILD_ID and three active services; earlier connector/session blocker superseded, no 002 deployment",
+      "timestamp_precision": "exact",
+      "timestamp_source": "AWS invocation result retrieval"
     }
   ],
   "failures": [
@@ -5848,9 +5898,9 @@
     }
   ],
   "ledger": {
-    "event_count": 172,
-    "head_event_id": "CWTV-EVT-000172",
-    "head_sha256": "c03377b1677b5a35b6aa9a1cf17141b3f60010d0dc48d98957ac13c1fbeece89"
+    "event_count": 174,
+    "head_event_id": "CWTV-EVT-000174",
+    "head_sha256": "a7a9ad10408b317b974ff37900046c2c4183be1fc93c11dd3a6eb13acdeef466"
   },
   "milestones": [
     {
@@ -6231,19 +6281,40 @@
       "recorded_command_runtime_seconds": 0.0,
       "session_data_present": false,
       "status": "QUALIFIED"
+    },
+    {
+      "active_session_label": "not preserved",
+      "active_session_seconds": null,
+      "blocker_count": 1,
+      "break_count": 0,
+      "correction_count": 0,
+      "corrections": [],
+      "elapsed_label": "not preserved",
+      "elapsed_seconds": null,
+      "failure_count": 0,
+      "milestone": "CWTV.V1.3.3.2.3",
+      "observed_difficulty": 1.5,
+      "paused_label": "not preserved",
+      "paused_seconds": null,
+      "planned_complexity": null,
+      "progress_percent": 60,
+      "recorded_command_runtime_label": "not preserved",
+      "recorded_command_runtime_seconds": 0.0,
+      "session_data_present": false,
+      "status": "IN_PROGRESS"
     }
   ],
-  "projection_as_of": "2026-09-14T17:41:17+00:00",
+  "projection_as_of": "2026-10-05T11:00:54.617377+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 46,
     "commits": 9,
     "corrections": 31,
-    "current_milestone": null,
+    "current_milestone": "CWTV.V1.3.3.2.3",
     "failed_events": 15,
-    "passed_events": 127,
+    "passed_events": 128,
     "qualified_milestones": 16,
-    "tracked_completion_percent": 100.0,
-    "tracked_milestones": 16
+    "tracked_completion_percent": 94.1,
+    "tracked_milestones": 17
   }
 }

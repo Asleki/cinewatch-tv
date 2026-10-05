@@ -1,0 +1,132 @@
+{
+  "identity": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "observed_at_utc": "2026-10-05T10:59:43.428472+00:00",
+      "identity": {
+        "account": "043826525255",
+        "arn": "arn:aws:iam::043826525255:user/alex-admin"
+      },
+      "requested_region": "eu-north-1",
+      "regions": [
+        {
+          "name": "eu-north-1",
+          "endpoint": "ec2.eu-north-1.amazonaws.com",
+          "opt_in_status": "opt-in-not-required"
+        }
+      ]
+    },
+    "api_calls": [
+      {
+        "service": "sts",
+        "operation": "GetCallerIdentity",
+        "status": "success"
+      },
+      {
+        "service": "ec2",
+        "operation": "DescribeRegions",
+        "status": "success",
+        "n_items": {
+          "Regions": 1
+        }
+      }
+    ]
+  },
+  "submission": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "observed_at_utc": "2026-10-05T11:00:24.783294+00:00",
+      "region": "eu-north-1",
+      "managed_node": [
+        {
+          "InstanceId": "i-00547a7236a653a6b",
+          "PingStatus": "Online",
+          "AgentVersion": "3.3.4793.0",
+          "PlatformName": "Ubuntu"
+        }
+      ],
+      "command": {
+        "CommandId": "cf8d1e3c-46dc-497d-ad06-cd9fc39f9a32",
+        "InstanceIds": [
+          "i-00547a7236a653a6b"
+        ],
+        "DocumentName": "AWS-RunShellScript",
+        "Status": "Pending",
+        "RequestedDateTime": "2026-10-05T11:00:24.651000+00:00"
+      },
+      "exact_read_only_body": "set -eu\n\nprintf '\\n=== HOST ===\\n'\nhostname\nwhoami\n\nprintf '\\n=== REPOSITORY OWNER ===\\n'\nstat -c '%U:%G %n' /srv/cinewatch\n\nprintf '\\n=== SOURCE AS DEPLOYMENT USER ===\\n'\nsudo -u ubuntu -H git -C /srv/cinewatch rev-parse HEAD\n\nprintf '\\n=== GIT STATE AS DEPLOYMENT USER ===\\n'\nsudo -u ubuntu -H git -C /srv/cinewatch status --short --branch\n\nprintf '\\n=== BUILD ===\\n'\ncat /srv/cinewatch/apps/web/.next/BUILD_ID\n\nprintf '\\n=== SERVICES ===\\n'\nsystemctl is-active cinewatch-web\nsystemctl is-active cinewatch-api\nsystemctl is-active nginx\n"
+    },
+    "api_calls": [
+      {
+        "service": "ssm",
+        "operation": "DescribeInstanceInformation",
+        "status": "success",
+        "n_items": {
+          "InstanceInformationList": 1
+        }
+      },
+      {
+        "service": "ssm",
+        "operation": "SendCommand",
+        "status": "success"
+      }
+    ]
+  },
+  "result": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "retrieved_at_utc": "2026-10-05T11:00:54.617377+00:00",
+      "invocation": {
+        "CommandId": "cf8d1e3c-46dc-497d-ad06-cd9fc39f9a32",
+        "InstanceId": "i-00547a7236a653a6b",
+        "DocumentName": "AWS-RunShellScript",
+        "Status": "Success",
+        "StatusDetails": "Success",
+        "ResponseCode": 0,
+        "ExecutionStartDateTime": "2026-10-05T11:00:24.875Z",
+        "ExecutionEndDateTime": "2026-10-05T11:00:24.875Z",
+        "StandardOutputContent": "\n=== HOST ===\nip-172-31-19-213\nroot\n\n=== REPOSITORY OWNER ===\nubuntu:ubuntu /srv/cinewatch\n\n=== SOURCE AS DEPLOYMENT USER ===\n304bc33e30130229f4be401528ddfda744815b57\n\n=== GIT STATE AS DEPLOYMENT USER ===\n## HEAD (no branch)\n\n=== BUILD ===\nPbPahqCFKtoWdGjsja0IP\n=== SERVICES ===\nactive\nactive\nactive\n",
+        "StandardErrorContent": ""
+      },
+      "overall": [
+        {
+          "CommandId": "cf8d1e3c-46dc-497d-ad06-cd9fc39f9a32",
+          "Status": "Success",
+          "StatusDetails": "Success",
+          "InstanceIds": [
+            "i-00547a7236a653a6b"
+          ],
+          "TargetCount": 1,
+          "CompletedCount": 1,
+          "ErrorCount": 0,
+          "DeliveryTimedOutCount": 0
+        }
+      ]
+    },
+    "api_calls": [
+      {
+        "service": "ssm",
+        "operation": "GetCommandInvocation",
+        "status": "success"
+      },
+      {
+        "service": "ssm",
+        "operation": "ListCommands",
+        "status": "success",
+        "n_items": {
+          "Commands": 1
+        }
+      }
+    ]
+  },
+  "schema_version": "1.0.0",
+  "record_type": "AWS_API_AND_HOST_EVIDENCE",
+  "source_application": "cinewatch-tv",
+  "source_repository": "Asleki/cinewatch-tv",
+  "training_eligibility": "TRAINING_REVIEW_REQUIRED",
+  "recorded_at_utc": "2026-10-05T11:00:54.617377Z",
+  "raw_evidence_status": "Actual API calls and invocation output; no reconstructed stdout"
+}

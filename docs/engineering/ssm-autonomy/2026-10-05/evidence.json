@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "engineering_evidence",
+  "recorded_at_utc": "2026-10-05T10:49:17.712210Z",
+  "recorded_at_cat": "2026-10-05T12:49:17.712232+02:00",
+  "source_application": "cinewatch-tv",
+  "source_repository": "Asleki/cinewatch-tv",
+  "source_commit_before_evidence": "304bc33e30130229f4be401528ddfda744815b57",
+  "source_effective_at": null,
+  "timestamp_precision": "exact_recording_time_unknown_individual_attempt_times",
+  "training_eligibility": "TRAINING_REVIEW_REQUIRED",
+  "redaction_status": "NO_SECRET_VALUES_CAPTURED",
+  "independent_codex_ssm_proof": {
+    "verdict": "BLOCKED",
+    "reason": "CONNECTOR_AUTHENTICATION_LOOP",
+    "api_calls_executed": false,
+    "send_command_executed": false,
+    "command_id": null,
+    "caller_identity": null,
+    "response_code": null,
+    "stdout": null,
+    "stderr": null,
+    "attempts": [
+      {
+        "attempt": 1,
+        "observed_result": "Authentication for AWS Data Analytics was requested and accepted. Retry this tool call now.",
+        "api_calls_returned": false
+      },
+      {
+        "attempt": 2,
+        "observed_result": "Authentication for AWS Data Analytics was requested and accepted. Retry this tool call now.",
+        "api_calls_returned": false
+      }
+    ],
+    "owner_reconnection_reported": true,
+    "permission_denial_observed": false,
+    "observation_scope": "INITIAL_PRE_EXECUTION_CONNECTOR_ATTEMPTS"
+  },
+  "human_provided_current_host_evidence": {
+    "provenance_class": "OWNER_MAINTAINED_DRIVE_INVESTIGATION",
+    "independently_verified_this_session": false,
+    "region": "eu-north-1",
+    "instance_id": "i-00547a7236a653a6b",
+    "hostname": "ip-172-31-19-213",
+    "public_ip": "13.61.187.17",
+    "instance_role": "cinewatch-ssm-instance-role",
+    "ssm_agent": "3.3.4793.0",
+    "managed_node_status": "Online",
+    "deployed_sha": "304bc33e30130229f4be401528ddfda744815b57",
+    "build_id": "PbPahqCFKtoWdGjsja0IP",
+    "console_command_id": "4aed2bdc-e5cf-4c96-b690-a5fec1fc28c7",
+    "console_status": "Success",
+    "target_count": 1,
+    "completed_count": 1,
+    "error_count": 0,
+    "delivery_timed_out_count": 0
+  },
+  "historical_failure_correction_lineage": [
+    {
+      "provenance_class": "HUMAN_PROVIDED_FINDINGS",
+      "source_document_id": "1SW35JzCKS7QOu317kOJ7PEWf68fxYsizkMgWfRjHA7Q",
+      "source_section": "first F-024",
+      "observation": "Git dubious ownership under root; overall success did not prove Git succeeded",
+      "historical_timestamp": null
+    },
+    {
+      "provenance_class": "HUMAN_PROVIDED_FINDINGS",
+      "source_document_id": "1SW35JzCKS7QOu317kOJ7PEWf68fxYsizkMgWfRjHA7Q",
+      "source_section": "second F-024",
+      "command_id": "63144374-4dea-4b4a-9525-f1a5175a4204",
+      "status": "Failed",
+      "suspected_cause": "unsupported pipefail under default shell",
+      "cause_verified": false,
+      "historical_timestamp": null
+    },
+    {
+      "provenance_class": "HUMAN_PROVIDED_FINDINGS",
+      "source_document_id": "1SW35JzCKS7QOu317kOJ7PEWf68fxYsizkMgWfRjHA7Q",
+      "source_section": "F-025",
+      "command_id": "4aed2bdc-e5cf-4c96-b690-a5fec1fc28c7",
+      "status": "Success",
+      "correction": "POSIX set -eu and Git as ubuntu",
+      "historical_timestamp": null
+    }
+  ],
+  "raw_evidence_vs_understanding": "connector messages and attributed console facts here; Codex interpretation in codex-understanding.md",
+  "release_002_applied": false,
+  "release_002_deployed": false,
+  "server_mutations_performed": false,
+  "operational_corrections": [
+    {
+      "observation": "Chronicle rejected nonconforming milestone CWTV-SSM-AUTONOMY-20261005 before any append",
+      "result": "FAILED_VALIDATION",
+      "correction": "Recorded the SSM release-readiness blocker against the actual CWTV.V1.3.3.2.3 milestone without starting or qualifying that release",
+      "appended_event": "CWTV-EVT-000173",
+      "historical_timestamp": null
+    }
+  ],
+  "current_verdict": "PASS",
+  "superseding_proof_path": "docs/engineering/ssm-autonomy/2026-10-05/codex-ssm-proof.json"
+}
