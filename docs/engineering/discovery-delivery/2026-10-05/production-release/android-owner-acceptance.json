@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-10-05T19:15:04.850517+00:00",
+  "source_identity": "Owner real Android acceptance in the authorized release conversation",
+  "result": "CONFIRMED",
+  "checked": [
+    "homepage presentation",
+    "Genres",
+    "search",
+    "Trailers"
+  ],
+  "genre_load_more": {
+    "result": "PASS",
+    "card_counts": [
+      12,
+      24,
+      27
+    ],
+    "terminal_button_removed": true,
+    "recorded_at": "2026-10-05T19:26:28.224526+00:00"
+  },
+  "original_observation_time": null,
+  "timestamp_semantics": "Exact normalization/recording time; owner did not separately provide device observation timestamp",
+  "complete_transcript_ingestion": false,
+  "training_eligibility": "TRAINING_REVIEW_REQUIRED"
+}

@@ -1,0 +1,190 @@
+{
+  "recorded_at": "2026-10-05T19:27:51.142202+00:00",
+  "checks": [
+    {
+      "check": "Browser / HTTP",
+      "result": "PASS",
+      "http": 200
+    },
+    {
+      "check": "Populated desktop homepage",
+      "result": "PASS",
+      "title": "Spider-Man: Brand New Day"
+    },
+    {
+      "check": "Hero actions have no underlines",
+      "result": "PASS",
+      "actions": [
+        {
+          "text": "\u25b6 Watch Trailer",
+          "href": "/title/movie/969681/trailers",
+          "underline": "none",
+          "background": "rgb(23, 220, 225)"
+        },
+        {
+          "text": "More Info",
+          "href": "/title/movie/969681",
+          "underline": "none",
+          "background": "rgb(6, 21, 34)"
+        },
+        {
+          "text": "\uff0b My List",
+          "href": "/under-development/my-list",
+          "underline": "none",
+          "background": "rgb(6, 21, 34)"
+        }
+      ]
+    },
+    {
+      "check": "Rating mark contained in circular frame",
+      "result": "PASS",
+      "marks": [
+        {
+          "width": 30,
+          "height": 24,
+          "fit": "contain",
+          "frame": "50%"
+        }
+      ]
+    },
+    {
+      "check": "Browser search suggestions populated",
+      "result": "PASS"
+    },
+    {
+      "check": "Browser search title navigation",
+      "result": "PASS",
+      "url": "https://www.cinewatchtv.com/title/tv/73223"
+    },
+    {
+      "check": "Browser /genres HTTP",
+      "result": "PASS",
+      "http": 200
+    },
+    {
+      "check": "Genres initial grid",
+      "result": "PASS",
+      "count": 12
+    },
+    {
+      "check": "Genres second grid",
+      "result": "PASS",
+      "count": 24
+    },
+    {
+      "check": "Genres complete grid and hidden Load more",
+      "result": "PASS",
+      "count": 27
+    },
+    {
+      "check": "Genre card navigates to populated browse",
+      "result": "PASS",
+      "url": "https://www.cinewatchtv.com/genre/action"
+    },
+    {
+      "check": "Browser /people HTTP",
+      "result": "PASS",
+      "http": 200
+    },
+    {
+      "check": "People Load more uses live feed",
+      "result": "PASS",
+      "before": 20,
+      "after": 40
+    },
+    {
+      "check": "Person card navigation",
+      "result": "PASS",
+      "url": "https://www.cinewatchtv.com/person/1247604"
+    },
+    {
+      "check": "Browser /networks HTTP",
+      "result": "PASS",
+      "http": 200
+    },
+    {
+      "check": "Browser distinct organization routes",
+      "result": "PASS"
+    },
+    {
+      "check": "Browser /countries-cultures HTTP",
+      "result": "PASS",
+      "http": 200
+    },
+    {
+      "check": "Nine country-origin entry routes",
+      "result": "PASS"
+    },
+    {
+      "check": "Browser /trailers HTTP",
+      "result": "PASS",
+      "http": 200
+    },
+    {
+      "check": "Library card preserves iframe identity",
+      "result": "PASS",
+      "key": "8TZMtslA3UY",
+      "url": "https://www.cinewatchtv.com/title/movie/969681/trailers?video_key=8TZMtslA3UY&video_type=Trailer&video_language=en"
+    },
+    {
+      "check": "Browser /trailers?page=500 HTTP",
+      "result": "PASS",
+      "http": 200
+    },
+    {
+      "check": "Browser terminal trailer page has no 501",
+      "result": "PASS"
+    },
+    {
+      "check": "Android viewport home responsive",
+      "result": "PASS",
+      "http": 200,
+      "width": 393,
+      "documentWidth": 393
+    },
+    {
+      "check": "Android viewport genres responsive",
+      "result": "PASS",
+      "http": 200,
+      "width": 393,
+      "documentWidth": 393
+    },
+    {
+      "check": "Android viewport people responsive",
+      "result": "PASS",
+      "http": 200,
+      "width": 393,
+      "documentWidth": 393
+    },
+    {
+      "check": "Android viewport networks responsive",
+      "result": "PASS",
+      "http": 200,
+      "width": 393,
+      "documentWidth": 393
+    },
+    {
+      "check": "Android viewport countries responsive",
+      "result": "PASS",
+      "http": 200,
+      "width": 393,
+      "documentWidth": 393
+    },
+    {
+      "check": "Android viewport trailers responsive",
+      "result": "PASS",
+      "http": 200,
+      "width": 393,
+      "documentWidth": 393
+    },
+    {
+      "check": "Browser uncaught application errors",
+      "result": "PASS",
+      "errors": []
+    }
+  ],
+  "page_errors": [],
+  "transport": "Browser requests relayed unchanged through TLS-verified httpx to actual live hosts; no fixtures, route stubs or synthetic payloads",
+  "actual_live_responses": 892,
+  "training_eligibility": "TRAINING_REVIEW_REQUIRED"
+}

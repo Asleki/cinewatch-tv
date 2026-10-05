@@ -1,0 +1,842 @@
+{
+  "recorded_at": "2026-10-05T19:15:07.068782+00:00",
+  "checks": [
+    {
+      "check": "accepted-homepage HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "Public HTML carries activated BUILD_ID",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-health HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "health application result",
+      "result": "PASS",
+      "body": {
+        "status": "ok",
+        "service": "cinewatch-api"
+      }
+    },
+    {
+      "check": "accepted-status HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "status application result",
+      "result": "PASS",
+      "body": {
+        "status": "ready",
+        "service": "cinewatch-api",
+        "application": "CineWatch TV",
+        "environment": "local",
+        "api_version": "v1"
+      }
+    },
+    {
+      "check": "https apex canonical redirect",
+      "result": "PASS",
+      "http": 301,
+      "location": "https://www.cinewatchtv.com/"
+    },
+    {
+      "check": "http apex canonical redirect",
+      "result": "PASS",
+      "http": 301,
+      "location": "https://www.cinewatchtv.com/"
+    },
+    {
+      "check": "accepted-search HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "Real provider-backed title search",
+      "result": "PASS",
+      "suggestions": 4
+    },
+    {
+      "check": "accepted-title HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "accepted-genres HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "27 representative-poster genres",
+      "result": "PASS",
+      "genres": 27,
+      "real_posters": 27
+    },
+    {
+      "check": "accepted-genres-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "accepted-genre-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "accepted-genre-api HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "Genre browse real results",
+      "result": "PASS",
+      "items": 20
+    },
+    {
+      "check": "accepted-people HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "20 real person identities",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-people-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "accepted-person-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "accepted-people-page2 HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "People pagination",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-organizations HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "Separate network and company identities",
+      "result": "PASS",
+      "items": 24
+    },
+    {
+      "check": "accepted-networks-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "accepted-network-detail HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "network correct source identity",
+      "result": "PASS"
+    },
+    {
+      "check": "No fabricated network movie count",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-network-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "accepted-company-detail HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "company correct source identity",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-company-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "accepted-countries-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "accepted-country-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "accepted-country-api HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "Country-origin browse real results",
+      "result": "PASS",
+      "items": 20
+    },
+    {
+      "check": "accepted-news-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "accepted-library HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "Bounded usable title-linked library",
+      "result": "PASS",
+      "cards": 24
+    },
+    {
+      "check": "accepted-library-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "movie library identity encoded",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-movie-selected HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "movie selected record first",
+      "result": "PASS",
+      "key": "8TZMtslA3UY"
+    },
+    {
+      "check": "accepted-movie-selection-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "movie selected iframe reachable",
+      "result": "PASS"
+    },
+    {
+      "check": "tv library identity encoded",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-tv-selected HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "tv selected record first",
+      "result": "PASS",
+      "key": "TDHiTXSRcP4"
+    },
+    {
+      "check": "accepted-tv-selection-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "tv selected iframe reachable",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-wrong-key HTTP",
+      "result": "PASS",
+      "http": 404,
+      "expected": 404
+    },
+    {
+      "check": "wrong-key controlled rejection",
+      "result": "PASS",
+      "body": {
+        "error": {
+          "code": "CATALOG_VIDEO_NOT_FOUND",
+          "message": "This selected title video is no longer available.",
+          "request_id": "b334d918-cd3a-425d-a32c-820665f914a9"
+        }
+      }
+    },
+    {
+      "check": "accepted-wrong-language HTTP",
+      "result": "PASS",
+      "http": 404,
+      "expected": 404
+    },
+    {
+      "check": "wrong-language controlled rejection",
+      "result": "PASS",
+      "body": {
+        "error": {
+          "code": "CATALOG_VIDEO_NOT_FOUND",
+          "message": "This selected title video is no longer available.",
+          "request_id": "ddfc492c-6f62-423f-a929-575562d232b9"
+        }
+      }
+    },
+    {
+      "check": "accepted-wrong-type HTTP",
+      "result": "PASS",
+      "http": 404,
+      "expected": 404
+    },
+    {
+      "check": "wrong-type controlled rejection",
+      "result": "PASS",
+      "body": {
+        "error": {
+          "code": "CATALOG_VIDEO_NOT_FOUND",
+          "message": "This selected title video is no longer available.",
+          "request_id": "1a544a1b-4f95-44a8-a23d-52c39b5ac705"
+        }
+      }
+    },
+    {
+      "check": "accepted-library-spanish HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "spanish filter accurate",
+      "result": "PASS",
+      "cards": 12
+    },
+    {
+      "check": "accepted-spanish-selected HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "spanish exact selected video retained",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-spanish-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "spanish iframe identity",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-library-clips HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "clips filter accurate",
+      "result": "PASS",
+      "cards": 17
+    },
+    {
+      "check": "accepted-clips-selected HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "clips exact selected video retained",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-clips-page HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "clips iframe identity",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-library-499 HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "Page 499 navigation bound",
+      "result": "PASS",
+      "has_more": true
+    },
+    {
+      "check": "accepted-library-page-499 HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "Page 499 rendered bound",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-library-500 HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "Page 500 navigation bound",
+      "result": "PASS",
+      "has_more": false
+    },
+    {
+      "check": "accepted-library-page-500 HTTP",
+      "result": "PASS",
+      "http": 200,
+      "expected": 200
+    },
+    {
+      "check": "Page 500 rendered bound",
+      "result": "PASS"
+    },
+    {
+      "check": "accepted-library-page501 HTTP",
+      "result": "PASS",
+      "http": 422,
+      "expected": 422
+    }
+  ],
+  "responses": [
+    {
+      "name": "accepted-homepage",
+      "path": "/",
+      "http": 200,
+      "seconds": 1.111,
+      "bytes": 91851,
+      "sha256": "58ce46fc9ae3ef3df31ed42eb3656aa0a80283a9bdee74f632bfc98691e5732e",
+      "request_id": null
+    },
+    {
+      "name": "accepted-health",
+      "path": "/health",
+      "http": 200,
+      "seconds": 0.243,
+      "bytes": 41,
+      "sha256": "2241eff2c10644b9aadb7315658be573eb057cd4752d232e56f6fca5e22e9b7c",
+      "request_id": "bb37c3cd-5704-4b93-bece-7ea610f0c9b9"
+    },
+    {
+      "name": "accepted-status",
+      "path": "/status",
+      "http": 200,
+      "seconds": 0.268,
+      "bytes": 114,
+      "sha256": "532e21f763ba45a77a37d6f28c3f1e31c7cfff2ed97d784fd523c29d009d2509",
+      "request_id": "5b67259d-df1e-4990-82d6-ffb376350876"
+    },
+    {
+      "name": "accepted-search",
+      "path": "/api/cinewatch/search?q=Black%20Clover",
+      "http": 200,
+      "seconds": 0.49,
+      "bytes": 1092,
+      "sha256": "cc400438ed00bb76fc9c7c44bd4bb9db63fb52dc976bba5c7dc89353f9037664",
+      "request_id": "3b66c972-2d98-4696-ab9a-221649916363"
+    },
+    {
+      "name": "accepted-title",
+      "path": "/title/tv/73223",
+      "http": 200,
+      "seconds": 1.035,
+      "bytes": 46139,
+      "sha256": "6ad90063c2b9612f79f2df2bb2a1da3fda7c953e2132b16f1c60067daee8bf6a",
+      "request_id": null
+    },
+    {
+      "name": "accepted-genres",
+      "path": "/api/cinewatch/home/genres",
+      "http": 200,
+      "seconds": 0.286,
+      "bytes": 5245,
+      "sha256": "a9b4c4bbb5434260893cbf86076d15b38faeca44920c9f88466c1a2a96c2ffd8",
+      "request_id": "bd5ea591-b3cb-46d4-bc91-1f661717a5ca"
+    },
+    {
+      "name": "accepted-genres-page",
+      "path": "/genres",
+      "http": 200,
+      "seconds": 0.236,
+      "bytes": 26290,
+      "sha256": "95d80198b6ee2f763149ea344dd02c6478b6b5f61a4f4c0daf98987b6f203ca7",
+      "request_id": null
+    },
+    {
+      "name": "accepted-genre-page",
+      "path": "/genre/action",
+      "http": 200,
+      "seconds": 0.443,
+      "bytes": 58136,
+      "sha256": "1cc6d0a12db3ec28a1f678b6cef2eb10650e5301be1e3bce75b98a2064315047",
+      "request_id": null
+    },
+    {
+      "name": "accepted-genre-api",
+      "path": "/api/cinewatch/catalog/browse/genre/action",
+      "http": 200,
+      "seconds": 0.403,
+      "bytes": 6135,
+      "sha256": "60583b01a58c56d57ba01c4bf9762804e701914b7a2f27f560f346554061a143",
+      "request_id": "5e094681-ac1b-4dc2-922c-9f77f0236ff2"
+    },
+    {
+      "name": "accepted-people",
+      "path": "/api/cinewatch/directory/people",
+      "http": 200,
+      "seconds": 0.32,
+      "bytes": 3839,
+      "sha256": "91b43dc822f467632ddac20d42cd0379d60ff876b0db2abc1fc0c24116801914",
+      "request_id": "a2f9fabf-0f20-4973-a3b9-519979859d22"
+    },
+    {
+      "name": "accepted-people-page",
+      "path": "/people",
+      "http": 200,
+      "seconds": 0.341,
+      "bytes": 25882,
+      "sha256": "3c1198207ca058650d7266d6c5d5cb37207652d1ad670482cf5bd0d775577d21",
+      "request_id": null
+    },
+    {
+      "name": "accepted-person-page",
+      "path": "/person/1247604",
+      "http": 200,
+      "seconds": 0.628,
+      "bytes": 26041,
+      "sha256": "27131062644286655b6a245bcda8127b5bc9edf1efa946df975051622122e3b7",
+      "request_id": null
+    },
+    {
+      "name": "accepted-people-page2",
+      "path": "/api/cinewatch/directory/people?page=2",
+      "http": 200,
+      "seconds": 0.573,
+      "bytes": 3723,
+      "sha256": "db6bd9aa0dc1bfbf30deedd32fb1c4d725ebc485394c2ebb4d87ab899b1365c6",
+      "request_id": "6aeb0313-8344-40d2-87a3-d44441bb4e80"
+    },
+    {
+      "name": "accepted-organizations",
+      "path": "/api/cinewatch/directory/organizations",
+      "http": 200,
+      "seconds": 3.792,
+      "bytes": 6320,
+      "sha256": "305f61a46ca0c18c56fa1f1748903817aea7b61d8c683af58dac3c0feebe1c2e",
+      "request_id": "98744a47-05b4-4d8d-b2b3-f92429063b98"
+    },
+    {
+      "name": "accepted-networks-page",
+      "path": "/networks",
+      "http": 200,
+      "seconds": 0.234,
+      "bytes": 38300,
+      "sha256": "2e4805aa9b97a3b0894d11d60fbd3d276e4a382bef9116e6749ddf6242471198",
+      "request_id": null
+    },
+    {
+      "name": "accepted-network-detail",
+      "path": "/api/cinewatch/directory/network/48",
+      "http": 200,
+      "seconds": 0.518,
+      "bytes": 535,
+      "sha256": "8bbe1661bb6dbcbda2b176c46a550cb7c376d3cd0372718257491a6f93c27402",
+      "request_id": "eb840493-f3db-4018-bbfa-b4a6319b8d4d"
+    },
+    {
+      "name": "accepted-network-page",
+      "path": "/network/48",
+      "http": 200,
+      "seconds": 0.499,
+      "bytes": 19122,
+      "sha256": "c6322b63484c31bfeab1232a29619703cd01a879d6c583a0f043d5e6b1c275d2",
+      "request_id": null
+    },
+    {
+      "name": "accepted-company-detail",
+      "path": "/api/cinewatch/directory/company/79261",
+      "http": 200,
+      "seconds": 0.603,
+      "bytes": 506,
+      "sha256": "d624ea4a22bf1ab21a28d5838df2de35184b7c852e337e97335aef1e17fc8271",
+      "request_id": "9bdf3570-1a83-47ea-a72b-87526468b308"
+    },
+    {
+      "name": "accepted-company-page",
+      "path": "/company/79261",
+      "http": 200,
+      "seconds": 0.449,
+      "bytes": 19100,
+      "sha256": "24b3427933f5f7c371e0605690c576b76a0ba67e20ccc2044b5bb8038f5482a0",
+      "request_id": null
+    },
+    {
+      "name": "accepted-countries-page",
+      "path": "/countries-cultures",
+      "http": 200,
+      "seconds": 1.047,
+      "bytes": 23186,
+      "sha256": "1edee6fad7cece83ce06a5ce15e69702eda90c7bbb66a752cafb73f4a69b62bb",
+      "request_id": null
+    },
+    {
+      "name": "accepted-country-page",
+      "path": "/country/ke",
+      "http": 200,
+      "seconds": 0.493,
+      "bytes": 60462,
+      "sha256": "7f94fdb3da97d5074c38b57afea6186366d6fbf80b26a090face75c57d2e50ad",
+      "request_id": null
+    },
+    {
+      "name": "accepted-country-api",
+      "path": "/api/cinewatch/catalog/browse/country/KE?media_type=movie",
+      "http": 200,
+      "seconds": 0.387,
+      "bytes": 5801,
+      "sha256": "39ffd19db50c27bbc5ddf961030bdde2bcdbb672e01cd46830b355e626c1ba46",
+      "request_id": "08ed554f-d469-44aa-8226-0ce1608f7a74"
+    },
+    {
+      "name": "accepted-news-page",
+      "path": "/news",
+      "http": 200,
+      "seconds": 0.46,
+      "bytes": 18394,
+      "sha256": "2dbc32a6b408b2b750a6a6a7dab8e15775411f9214a666787772d5b5a88fb7e0",
+      "request_id": null
+    },
+    {
+      "name": "accepted-library",
+      "path": "/api/cinewatch/catalog/trailers",
+      "http": 200,
+      "seconds": 1.678,
+      "bytes": 10464,
+      "sha256": "4e8e749a0cddd97dafd28c2166c19da614683de557e5604b8d46232540ced703",
+      "request_id": "e8c49337-ee90-4b76-bd70-3914368c1835"
+    },
+    {
+      "name": "accepted-library-page",
+      "path": "/trailers",
+      "http": 200,
+      "seconds": 1.478,
+      "bytes": 49893,
+      "sha256": "2ba4f886ed0106256225faea943f8571289f642323ae2b3e7ab32b7a34675af9",
+      "request_id": null
+    },
+    {
+      "name": "accepted-movie-selected",
+      "path": "/api/cinewatch/catalog/title/movie/969681/videos?video_key=8TZMtslA3UY&video_type=Trailer&video_language=en",
+      "http": 200,
+      "seconds": 0.402,
+      "bytes": 3468,
+      "sha256": "a268f9d0458b48cb9746ef079a2b6d043528afeb625d0b69f924b9d4063b007a",
+      "request_id": "94500764-f09e-4f96-ad01-6880bb5269cb"
+    },
+    {
+      "name": "accepted-movie-selection-page",
+      "path": "/title/movie/969681/trailers?video_key=8TZMtslA3UY&video_type=Trailer&video_language=en",
+      "http": 200,
+      "seconds": 0.859,
+      "bytes": 28250,
+      "sha256": "f56476ed6b25ee4dbbda3ff513d43def503e28cacae79dbfa3a0debe37dfea6c",
+      "request_id": null
+    },
+    {
+      "name": "accepted-tv-selected",
+      "path": "/api/cinewatch/catalog/title/tv/91759/videos?video_key=TDHiTXSRcP4&video_type=Trailer&video_language=en",
+      "http": 200,
+      "seconds": 0.631,
+      "bytes": 263,
+      "sha256": "903872d95fdb9eac75e23d9d3f9d4606c4c173be261c66e1c94b98f0aa7b66c8",
+      "request_id": "1eb214f9-9b57-4478-9646-c950c4b65258"
+    },
+    {
+      "name": "accepted-tv-selection-page",
+      "path": "/title/tv/91759/trailers?video_key=TDHiTXSRcP4&video_type=Trailer&video_language=en",
+      "http": 200,
+      "seconds": 0.752,
+      "bytes": 20342,
+      "sha256": "7da325b819c53858efaabb8ab8b32ff55b3671e0a9fd2fe373128a628d3a8732",
+      "request_id": null
+    },
+    {
+      "name": "accepted-wrong-key",
+      "path": "/api/cinewatch/catalog/title/movie/969681/videos?video_key=CWTVInvalidSelectionKey&video_language=en&video_type=Trailer",
+      "http": 404,
+      "seconds": 0.284,
+      "bytes": 158,
+      "sha256": "b3605f8a6c66d9f94de292dffad09a156c10b2ebb747a50512e3630edb02c3f6",
+      "request_id": "b334d918-cd3a-425d-a32c-820665f914a9"
+    },
+    {
+      "name": "accepted-wrong-language",
+      "path": "/api/cinewatch/catalog/title/movie/969681/videos?video_key=8TZMtslA3UY&video_language=zz&video_type=Trailer",
+      "http": 404,
+      "seconds": 0.401,
+      "bytes": 158,
+      "sha256": "983ab24f852e9bcb41c9e0a1fc6bab150e2193b481370d3fe0187200de037d14",
+      "request_id": "ddfc492c-6f62-423f-a929-575562d232b9"
+    },
+    {
+      "name": "accepted-wrong-type",
+      "path": "/api/cinewatch/catalog/title/movie/969681/videos?video_key=8TZMtslA3UY&video_language=en&video_type=Clip",
+      "http": 404,
+      "seconds": 0.341,
+      "bytes": 158,
+      "sha256": "ca896718f388672bb370be3b6642728fa5d8e00b080b8c3c88aad18cc916ffb3",
+      "request_id": "1a544a1b-4f95-44a8-a23d-52c39b5ac705"
+    },
+    {
+      "name": "accepted-library-spanish",
+      "path": "/api/cinewatch/catalog/trailers?video_language=es",
+      "http": 200,
+      "seconds": 2.869,
+      "bytes": 5316,
+      "sha256": "af9149b2e43f3058018bb530874c9d9d1858169459dfdab1f3e96141ddc69e18",
+      "request_id": "01e0947b-8ca1-4898-af88-62a2b22cccd2"
+    },
+    {
+      "name": "accepted-spanish-selected",
+      "path": "/api/cinewatch/catalog/title/movie/969681/videos?video_key=owfWVJoxXR4&video_type=Trailer&video_language=es",
+      "http": 200,
+      "seconds": 0.382,
+      "bytes": 612,
+      "sha256": "68443b22bdf707afc8027291b81cac238f841a04d4adbbc20e24d96c65c2802f",
+      "request_id": "a3c6964e-222d-4e07-b053-8fe123f064b1"
+    },
+    {
+      "name": "accepted-spanish-page",
+      "path": "/title/movie/969681/trailers?video_key=owfWVJoxXR4&video_type=Trailer&video_language=es",
+      "http": 200,
+      "seconds": 0.635,
+      "bytes": 21083,
+      "sha256": "ca3d6e780b3d267d448d0279f318bd3dca0ce8cd9c45a14029c93a11c66cf53c",
+      "request_id": null
+    },
+    {
+      "name": "accepted-library-clips",
+      "path": "/api/cinewatch/catalog/trailers?video_type=Clip",
+      "http": 200,
+      "seconds": 1.451,
+      "bytes": 7089,
+      "sha256": "e6dd8d75fff3a4e61c02b07cad5b07863f98cd2c9eebff5cda70607a7484eff4",
+      "request_id": "302e0476-1896-4dfa-ada1-738dec41cc8b"
+    },
+    {
+      "name": "accepted-clips-selected",
+      "path": "/api/cinewatch/catalog/title/movie/969681/videos?video_key=mq0-0VGz1zM&video_type=Clip&video_language=en",
+      "http": 200,
+      "seconds": 0.304,
+      "bytes": 3427,
+      "sha256": "efb0a329a6369e520258e5242e02dc195cae47df265e01392cd54a49ab894004",
+      "request_id": "1ac362e8-862b-4e8a-b829-ee6e0f634de1"
+    },
+    {
+      "name": "accepted-clips-page",
+      "path": "/title/movie/969681/trailers?video_key=mq0-0VGz1zM&video_type=Clip&video_language=en",
+      "http": 200,
+      "seconds": 0.625,
+      "bytes": 28138,
+      "sha256": "fac73cade74978626e92b9c50fe9844ea45887d7f4108479fb9a0fdb9b6757da",
+      "request_id": null
+    },
+    {
+      "name": "accepted-library-499",
+      "path": "/api/cinewatch/catalog/trailers?page=499",
+      "http": 200,
+      "seconds": 2.528,
+      "bytes": 9033,
+      "sha256": "b1fbf597eb5c772c0f01156eeec0cc0c0f57e4d478a3fe49215b467f0f6019b0",
+      "request_id": "35e3518e-7ceb-40c1-b1e0-855bb55c3e02"
+    },
+    {
+      "name": "accepted-library-page-499",
+      "path": "/trailers?page=499",
+      "http": 200,
+      "seconds": 1.96,
+      "bytes": 46793,
+      "sha256": "0c0986bd0c2f783f4d12c0b5de5038f33787800a6d95a47bcb27b5e3e5f4d339",
+      "request_id": null
+    },
+    {
+      "name": "accepted-library-500",
+      "path": "/api/cinewatch/catalog/trailers?page=500",
+      "http": 200,
+      "seconds": 4.297,
+      "bytes": 8782,
+      "sha256": "c7fe4d242eec509593a4852245da8d3cb38121d73d72b021a99cd72590de1e9e",
+      "request_id": "6d0ea9cf-f9ad-41c4-ae71-e843437a97bc"
+    },
+    {
+      "name": "accepted-library-page-500",
+      "path": "/trailers?page=500",
+      "http": 200,
+      "seconds": 1.732,
+      "bytes": 45859,
+      "sha256": "9d80ec58bbbb833f36f411a4f15a53b4a3e7c12b3b6346967d50aad671f5d334",
+      "request_id": null
+    },
+    {
+      "name": "accepted-library-page501",
+      "path": "/api/cinewatch/catalog/trailers?page=501",
+      "http": 422,
+      "seconds": 0.271,
+      "bytes": 137,
+      "sha256": "2e262cf4421193423705af75761e5dbf0c7a6faeb5eadf9bfab8b72d88b73b93",
+      "request_id": "f6f3a0ec-db95-49b4-b900-abd89391b168"
+    }
+  ],
+  "failures": []
+}

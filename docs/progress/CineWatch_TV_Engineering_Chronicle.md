@@ -9,10 +9,10 @@
 - **Tracked milestones:** 18
 - **Qualified milestones:** 18
 - **Tracked milestone completion:** 100.0%
-- **Recorded failed events:** 25
-- **Recorded corrections:** 39
+- **Recorded failed events:** 27
+- **Recorded corrections:** 41
 - **Commit events:** 11
-- **Ledger head:** `CWTV-EVT-000203` / `333dd2c1c1dad6cc1ace72db5ab5172eb79533510a4de89623b999ea6dbd0f83`
+- **Ledger head:** `CWTV-EVT-000213` / `eb3af897480217571ffbb6097fa42bdd9130370da0f1369705654a8e73a6d03b`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -36,7 +36,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 | `CWTV.V1.3.3.2` | QUALIFIED | 100% | 3.2/5 | 1 | 2 | 73h 50m 20s | 1m |
 | `CWTV.V1.3.3.2.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
-| `CWTV.V1.3.3.2.3` | QUALIFIED | 100% | 5.0/5 | 7 | 7 | not preserved | not preserved |
+| `CWTV.V1.3.3.2.3` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.4` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 12m 14s | 1s |
 
 ## Failure and correction history
@@ -68,6 +68,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.3` | 2026-10-05T18:22:09.031625+00:00 | discovery_delivery_governance | Closure recording wrapper appended nine valid events then stopped because its add helper omitted the returned event. Existing appended events were preserved; no closure commit or publication occurred. | CWTV-E004-RECORDING-WRAPPER |
 | `CWTV.V1.3.3.2.3` | time not preserved | discovery_delivery_governance | D004 fresh Drive readback verifier initially omitted payload/ from archive paths and raised a missing-entry error; this was an external verifier defect, not corrupted package content. | CWTV-D004-READBACK-PREFIX |
 | `CWTV.V1.3.3.2.3` | 2026-10-05T18:22:09.031625+00:00 | discovery_delivery_governance | New interpreted delivery evidence initially inherited default TRAINING_ELIGIBLE; focused regression demonstrated the missing review gate for the new evidence namespace. | CWTV-E004-REVIEW-GATE |
+| `CWTV.V1.3.3.2.3` | 2026-10-05T19:30:28.049252+00:00 | Production release and acceptance | Read-only SSM runtime inspection exited127 because the non-interactive ubuntu shell did not expose Node/npm through PATH; no production source/configuration was changed. | CWTV-SSM-NODE-SELECTOR |
+| `CWTV.V1.3.3.2.3` | 2026-10-05T19:30:28.077120+00:00 | Production release and acceptance | Native Chromium proxy trust failed; persistent multi-CA write was rejected by automatic review. Browser harness strict-selector/quoting/navigation/render timing failures were preserved; no production defect demonstrated. | CWTV-LIVE-BROWSER-TRANSPORT-HARNESS |
 
 ## Commit lineage
 
@@ -342,6 +344,16 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-10-05T18:22:09.031625+00:00** · `CWTV.V1.3.3.2.3` · `CLASSIFICATION_FAILED` · **FAILED** — New interpreted delivery evidence initially inherited default TRAINING_ELIGIBLE; focused regression demonstrated the missing review gate for the new evidence namespace. Evidence: docs/engineering/discovery-delivery/2026-10-05/classification-red.log
 - **2026-10-05T18:22:09.031625+00:00** · `CWTV.V1.3.3.2.3` · `CORRECTION_APPLIED` · **PASS** — Minimal discovery-delivery path classification now requires human training review, alongside unchanged SSM/security review gates; focused regression passed. No application source or dependency changed. Evidence: docs/engineering/discovery-delivery/2026-10-05/classification-green.log
 - **2026-10-05T18:17:37Z** · `CWTV.V1.3.3.2.3` · `MILESTONE_QUALIFIED` · **QUALIFIED** — The preserved D003/source-projection chain is on Main and ordinary Main CI37354636612 passed both required jobs. D004 repository-source promotion is qualified; governance closure projection and Praxis successor follow. Production deployment has not occurred. Evidence: docs/engineering/discovery-delivery/2026-10-05/first-main-ci.json; docs/engineering/discovery-delivery/2026-10-05/delivery-closure-evidence.json
+- **2026-10-05T19:06:04.379Z** · `CWTV.V1.3.3.2.3` · `PRODUCTION_PREFLIGHT` · **PASS** — Authorized CineWatch SSM preflight found Online node, clean ubuntu-owned exact historical checkout, old BUILD_ID, active services, adequate capacity and ready health/status. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/ssm-preflight.json
+- **2026-10-05T19:30:28.049252+00:00** · `CWTV.V1.3.3.2.3` · `EXECUTION_FAILED` · **FAILED** — Read-only SSM runtime inspection exited127 because the non-interactive ubuntu shell did not expose Node/npm through PATH; no production source/configuration was changed. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/deployment-receipt.json; https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT
+- **2026-10-05T19:30:28.054532+00:00** · `CWTV.V1.3.3.2.3` · `CORRECTION_APPLIED` · **PASS** — Selected the existing systemd Node24.18.0 runtime path explicitly; governed npm12.0.2 and existing Python3.14.6 consistency passed without a host installation or configuration change. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/deployment-receipt.json; https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT
+- **2026-10-05T19:10:37.517Z** · `CWTV.V1.3.3.2.3` · `PRODUCTION_BUILD` · **PASS** — Fetched and verified exact qualified origin/main; protected rollback artifacts; isolated ubuntu build passed Next16.3.6/TypeScript and zero-vulnerability production npm audit with canonical www selectors. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/ssm-build.json; docs/engineering/discovery-delivery/2026-10-05/production-release/ssm-build-audit-log.json
+- **2026-10-05T19:12:03.511Z** · `CWTV.V1.3.3.2.3` · `DEPLOYMENT_ACTIVATED` · **PASS** — Installed exact qualified source/build in the existing detached checkout and activated only CineWatch web/API. Configuration preserved, Nginx active without restart, healthy local runtime, no rollback. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/ssm-activation.json; docs/engineering/discovery-delivery/2026-10-05/production-release/ssm-post-deployment-proof.json
+- **2026-10-05T19:30:28.072061+00:00** · `CWTV.V1.3.3.2.3` · `LIVE_ACCEPTANCE` · **PASS** — Real production responses passed78 live HTTP/API checks, including Spanish/Clip selection identity, invalid404, real directory/title/country routes, page499→500, terminal500 and API501 rejection. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/live-api-acceptance.json
+- **2026-10-05T19:30:28.077120+00:00** · `CWTV.V1.3.3.2.3` · `QUALIFICATION_HARNESS_FAILED` · **FAILED** — Native Chromium proxy trust failed; persistent multi-CA write was rejected by automatic review. Browser harness strict-selector/quoting/navigation/render timing failures were preserved; no production defect demonstrated. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/deployment-receipt.json; https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT
+- **2026-10-05T19:30:28.083765+00:00** · `CWTV.V1.3.3.2.3` · `CORRECTION_APPLIED` · **PASS** — Used actual live responses with TLS-verified temporary transport and explicit render/count waits; isolated Genres proof and final29 browser checks passed. Owner Android independently confirmed Genres12/24/27. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/live-browser-acceptance.json; docs/engineering/discovery-delivery/2026-10-05/production-release/isolated-genre-browser-proof.json
+- **2026-10-05T19:30:28.089579+00:00** · `CWTV.V1.3.3.2.3` · `ANDROID_ACCEPTANCE` · **PASS** — Owner confirmed updated presentation/search/Genres/Trailers on Android, then specifically confirmed Genres12→24→27 and terminal Load more removal. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/android-owner-acceptance.json
+- **2026-10-05T19:30:28.094448+00:00** · `CWTV.V1.3.3.2.3` · `MILESTONE_CLOSED` · **QUALIFIED** — CWTV.V1.3.3.2.3 — DEPLOYED AND CLOSED. Exact qualified source is live, 78 real HTTP/API and29 browser checks passed, owner Android acceptance confirmed; no rollback or D005. Chronicle/NexVox/Praxis now record post-release history only. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/deployment-receipt.json; https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT
 
 ## Integrity and timing rules
 

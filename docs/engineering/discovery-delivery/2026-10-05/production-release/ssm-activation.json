@@ -1,0 +1,33 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "CommandId": "97665ab1-2e55-4208-8068-02c62075aa8d",
+    "InstanceId": "i-00547a7236a653a6b",
+    "Comment": "Authorized exact-SHA CineWatch activation with automatic rollback guard",
+    "DocumentName": "AWS-RunShellScript",
+    "DocumentVersion": "$DEFAULT",
+    "PluginName": "aws:runShellScript",
+    "ResponseCode": 0,
+    "ExecutionStartDateTime": "2026-10-05T19:11:57.511Z",
+    "ExecutionElapsedTime": "PT6.662S",
+    "ExecutionEndDateTime": "2026-10-05T19:12:03.511Z",
+    "Status": "Success",
+    "StatusDetails": "Success",
+    "StandardOutputContent": "DEPLOYED_SHA=f8e9c935602a62e6215baaf568ba4e08834168c9\nNEW_BUILD_ID=T4hu6dODXs7idpnBM0R2C\nPRODUCTION_CONFIGURATION_UNCHANGED\nactive\nactive\nactive\n{\"status\":\"ok\",\"service\":\"cinewatch-api\"}{\"status\":\"ready\",\"service\":\"cinewatch-api\",\"application\":\"CineWatch TV\",\"environment\":\"local\",\"api_version\":\"v1\"}\nLOCAL_WEB_HTTP=200\nACTIVATION_PASS_NO_ROLLBACK\n",
+    "StandardOutputUrl": "",
+    "StandardErrorContent": "Warning: The unit file, source configuration file or drop-ins of cinewatch-web.service changed on disk. Run 'systemctl daemon-reload' to reload units.\nWarning: The unit file, source configuration file or drop-ins of cinewatch-api.service changed on disk. Run 'systemctl daemon-reload' to reload units.\nPrevious HEAD position was 304bc33 chore(nexvox): sync engineering corpus for d96d787\nHEAD is now at f8e9c93 chore(nexvox): project D004 engineering closure and multi-system provenance\nWarning: The unit file, source configuration file or drop-ins of cinewatch-api.service changed on disk. Run 'systemctl daemon-reload' to reload units.\nWarning: The unit file, source configuration file or drop-ins of cinewatch-web.service changed on disk. Run 'systemctl daemon-reload' to reload units.\ncurl: (7) Failed to connect to 127.0.0.1 port 8000 after 0 ms: Couldn't connect to server\ncurl: (7) Failed to connect to 127.0.0.1 port 8000 after 0 ms: Couldn't connect to server\n",
+    "StandardErrorUrl": "",
+    "CloudWatchOutputConfig": {
+      "CloudWatchLogGroupName": "",
+      "CloudWatchOutputEnabled": false
+    }
+  },
+  "api_calls": [
+    {
+      "service": "ssm",
+      "operation": "GetCommandInvocation",
+      "status": "success"
+    }
+  ]
+}

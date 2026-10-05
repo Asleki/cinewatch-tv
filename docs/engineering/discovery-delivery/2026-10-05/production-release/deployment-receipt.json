@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "status": "DEPLOYED AND CLOSED",
+  "milestone": "CWTV.V1.3.3.2.3",
+  "recorded_at": "2026-10-05T19:28:55.165093+00:00",
+  "region": "eu-north-1",
+  "instance_id": "i-00547a7236a653a6b",
+  "checkout": "/srv/cinewatch",
+  "pre_deployment_sha": "304bc33e30130229f4be401528ddfda744815b57",
+  "deployed_sha": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+  "qualified_main_ci": 37356606019,
+  "old_build_id": "PbPahqCFKtoWdGjsja0IP",
+  "new_build_id": "T4hu6dODXs7idpnBM0R2C",
+  "build": "PASS",
+  "production_npm_vulnerabilities": 0,
+  "production_python": "3.14.6",
+  "node": "24.18.0",
+  "npm": "12.0.2",
+  "next": "16.3.6",
+  "configuration_preserved": true,
+  "backend_dependency_or_schema_change": false,
+  "services": {
+    "cinewatch-web": "active",
+    "cinewatch-api": "active",
+    "nginx": "active"
+  },
+  "local_web_http": 200,
+  "health": "ok",
+  "status_result": "ready",
+  "canonical_https_http": 200,
+  "apex_https_redirect": {
+    "http": 301,
+    "location": "https://www.cinewatchtv.com/"
+  },
+  "live_api_checks_passed": 78,
+  "live_browser_checks_passed": 29,
+  "android": "OWNER_CONFIRMED",
+  "android_genres_load_more": "12 -> 24 -> 27; button removed; owner confirmed",
+  "browser_transport": "Real live responses relayed through TLS-verified httpx; no synthetic payloads or fixtures; native Chromium proxy CA limitation preserved",
+  "rollback_sha": "304bc33e30130229f4be401528ddfda744815b57",
+  "rollback_build_id": "PbPahqCFKtoWdGjsja0IP",
+  "rollback_artifacts": "/home/ubuntu/cinewatch-release-evidence/20261005-f8e9c935",
+  "rollback_performed": false,
+  "application_source_modified_during_deployment": false,
+  "Nginx_restarted": false,
+  "EC2_restarted": false,
+  "IAM_SG_DNS_EIP_TLS_changed": false,
+  "database_migration_performed": false,
+  "NexVox_AI_written": false,
+  "ssm_commands": {
+    "preflight": "93f8af2b-fccb-404e-badf-32ca2c2b9084",
+    "runtime_selector_inspection": "9fb989dd-e4fe-41ed-881d-0fb161a9f637",
+    "build": "11473ab2-9905-4c35-84b0-ff08a2ecbb7c",
+    "activation": "97665ab1-2e55-4208-8068-02c62075aa8d",
+    "post_deployment_proof": "69b3efe2-1ce1-4b66-8ed0-a81e41765f01",
+    "build_receipt_collection": "b62a4199-229a-4ae2-8e64-0a19be2e8209"
+  },
+  "evidence_folder": "https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT",
+  "provenance": {
+    "planning_review_and_scope": "ChatGPT Chat and explicit owner authorization",
+    "execution_qualification": "Codex",
+    "source": "GitHub Asleki/cinewatch-tv",
+    "durable_evidence": "Google Drive",
+    "production_transport": "Separately authorized AWS SSM",
+    "acceptance": "Real live responses, browser interaction and owner Android confirmation"
+  },
+  "post_release_history_only": true,
+  "redeploy_bookkeeping_commits": false,
+  "training_eligibility": "TRAINING_REVIEW_REQUIRED",
+  "failures_and_corrections": [
+    {
+      "class": "SSM shell selector",
+      "failure": "Non-interactive shell had no node/npm in PATH; read-only inspection exited127",
+      "correction": "Selected existing systemd Node24.18.0 path explicitly; no host installation or configuration change"
+    },
+    {
+      "class": "Workspace browser TLS transport",
+      "failure": "Native Chromium did not trust the session proxy CA; multi-CA persistent trust write rejected by automatic review",
+      "correction": "No persistent trust change remains; real live responses transported with verify=True in httpx; no TLS disable or fixtures"
+    },
+    {
+      "class": "Browser harness",
+      "failure": "Nested-main selector ambiguity, JavaScript selector quoting, client navigation/screenshot timing and combined Genres-context timing",
+      "correction": "Preserved incomplete attempts; used explicit render/count waits and isolated live Genres page. Targeted browser and owner Android verified 12/24/27; final29checks PASS. No source change or D005"
+    },
+    {
+      "class": "Service activation notices",
+      "failure": "Existing systemd unit-change notices and startup readiness connection retries appeared in stderr",
+      "correction": "No unit mutation or daemon reload; final service/public-selector/health proof PASS"
+    }
+  ]
+}

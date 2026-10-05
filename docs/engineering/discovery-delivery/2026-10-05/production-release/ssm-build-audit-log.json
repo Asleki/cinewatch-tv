@@ -1,0 +1,33 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "CommandId": "b62a4199-229a-4ae2-8e64-0a19be2e8209",
+    "InstanceId": "i-00547a7236a653a6b",
+    "Comment": "CineWatch collect completed production build audit and rollback receipts",
+    "DocumentName": "AWS-RunShellScript",
+    "DocumentVersion": "$DEFAULT",
+    "PluginName": "aws:runShellScript",
+    "ResponseCode": 0,
+    "ExecutionStartDateTime": "2026-10-05T19:27:16.580Z",
+    "ExecutionElapsedTime": "PT0.038S",
+    "ExecutionEndDateTime": "2026-10-05T19:27:16.580Z",
+    "Status": "Success",
+    "StatusDetails": "Success",
+    "StandardOutputContent": "PRODUCTION_BUILD_LOG\nnpm notice run @cinewatch/web@0.0.0 build\nnpm notice run next build --webpack\n▲ Next.js 16.3.6 (webpack)\n✓ Running next.config.ts took 266ms\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 16.0s\n  Running TypeScript ...\n  Finished TypeScript in 6.5s ...\n  Collecting page data using 1 worker ...\n  Generating static pages using 1 worker (0/17) ...\n  Generating static pages using 1 worker (4/17) \r\n  Generating static pages using 1 worker (8/17) \r\n  Generating static pages using 1 worker (12/17) \r\n✓ Generating static pages using 1 worker (17/17) in 1607ms\n  Finalizing page optimization ...\n  Collecting build traces ...\n\nRoute (app)\n┌ ƒ /\n├ ○ /_not-found\n├ ○ /brand-qualification\n├ ○ /cinema-guide\n├ ƒ /company/[providerId]\n├ ○ /contact\n├ ƒ /countries-cultures\n├ ƒ /country/[code]\n├ ƒ /discover/[slug]\n├ ƒ /genre/[slug]\n├ ƒ /genres\n├ ƒ /lyrics\n├ ○ /manifest.webmanifest\n├ ƒ /network/[providerId]\n├ ƒ /networks\n├ ƒ /news\n├ ƒ /people\n├ ƒ /person/[providerId]\n├ ƒ /provider/[providerId]\n├ ○ /robots.txt\n├ ƒ /scripts\n├ ƒ /title/[mediaType]/[providerId]\n├ ƒ /title/[mediaType]/[providerId]/details\n├ ƒ /title/[mediaType]/[providerId]/reviews\n├ ƒ /title/[mediaType]/[providerId]/trailers\n├ ƒ /trailers\n├ ƒ /under-development/[feature]\n├ ○ /voice-lab\n└ ƒ /where-to-watch\n\n\n○  (Static)   prerendered as static content\nƒ  (Dynamic)  server-rendered on demand\n\nPRODUCTION_NPM_AUDIT\n{\n  \"auditReportVersion\": 2,\n  \"vulnerabilities\": {},\n  \"metadata\": {\n    \"vulnerabilities\": {\n      \"info\": 0,\n      \"low\": 0,\n      \"moderate\": 0,\n      \"high\": 0,\n      \"critical\": 0,\n      \"total\": 0\n    },\n    \"dependencies\": {\n      \"prod\": 20,\n      \"dev\": 388,\n      \"optional\": 66,\n      \"peer\": 1,\n      \"peerOptional\": 0,\n      \"total\": 446\n    }\n  }\n}\nROLLBACK_SHA=304bc33e30130229f4be401528ddfda744815b57\nOLD_BUILD_ID=PbPahqCFKtoWdGjsja0IP\n",
+    "StandardOutputUrl": "",
+    "StandardErrorContent": "",
+    "StandardErrorUrl": "",
+    "CloudWatchOutputConfig": {
+      "CloudWatchLogGroupName": "",
+      "CloudWatchOutputEnabled": false
+    }
+  },
+  "api_calls": [
+    {
+      "service": "ssm",
+      "operation": "GetCommandInvocation",
+      "status": "success"
+    }
+  ]
+}

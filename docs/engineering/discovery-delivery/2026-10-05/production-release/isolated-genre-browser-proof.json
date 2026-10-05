@@ -1,0 +1,34 @@
+{
+  "url": "https://www.cinewatchtv.com/genres",
+  "before": 12,
+  "react_props": [
+    {
+      "k": "__reactFiber$gghkzj7csnu",
+      "onClick": "undefined"
+    },
+    {
+      "k": "__reactProps$gghkzj7csnu",
+      "onClick": "function"
+    }
+  ],
+  "errors": [],
+  "after_click": 24,
+  "click_events": [
+    {
+      "text": "Load more genres",
+      "tag": "BUTTON"
+    }
+  ],
+  "after_react_props": [
+    {
+      "k": "__reactFiber$gghkzj7csnu",
+      "onClick": "undefined"
+    },
+    {
+      "k": "__reactProps$gghkzj7csnu",
+      "onClick": "function"
+    }
+  ],
+  "after_second_click": 27,
+  "button_remaining": 0
+}

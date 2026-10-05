@@ -1,0 +1,33 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "CommandId": "69b3efe2-1ce1-4b66-8ed0-a81e41765f01",
+    "InstanceId": "i-00547a7236a653a6b",
+    "Comment": "CineWatch mandatory post-deployment identity runtime and verified HTTPS proof",
+    "DocumentName": "AWS-RunShellScript",
+    "DocumentVersion": "$DEFAULT",
+    "PluginName": "aws:runShellScript",
+    "ResponseCode": 0,
+    "ExecutionStartDateTime": "2026-10-05T19:20:43.777Z",
+    "ExecutionElapsedTime": "PT0.922S",
+    "ExecutionEndDateTime": "2026-10-05T19:20:43.777Z",
+    "Status": "Success",
+    "StatusDetails": "Success",
+    "StandardOutputContent": "DEPLOYED_SHA=f8e9c935602a62e6215baaf568ba4e08834168c9\nCHECKOUT_CLEAN=YES\nBUILD_ID=T4hu6dODXs7idpnBM0R2C\nactive\nactive\nactive\n{\"status\":\"ok\",\"service\":\"cinewatch-api\"}{\"status\":\"ready\",\"service\":\"cinewatch-api\",\"application\":\"CineWatch TV\",\"environment\":\"local\",\"api_version\":\"v1\"}\nNEXT_HTTP=200\nCANONICAL_HTTPS=200 https://www.cinewatchtv.com/\nAPEX_REDIRECT=301 https://www.cinewatchtv.com/\n{\"web_process_public_selectors\": {\"NODE_ENV\": \"production\", \"NEXT_PUBLIC_CINEWATCH_API_BASE_URL\": \"https://www.cinewatchtv.com\", \"NEXT_PUBLIC_CINEWATCH_SITE_URL\": \"https://www.cinewatchtv.com\"}}\n",
+    "StandardOutputUrl": "",
+    "StandardErrorContent": "",
+    "StandardErrorUrl": "",
+    "CloudWatchOutputConfig": {
+      "CloudWatchLogGroupName": "",
+      "CloudWatchOutputEnabled": false
+    }
+  },
+  "api_calls": [
+    {
+      "service": "ssm",
+      "operation": "GetCommandInvocation",
+      "status": "success"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "events": [
+    "CWTV-EVT-000204",
+    "CWTV-EVT-000205",
+    "CWTV-EVT-000206",
+    "CWTV-EVT-000207",
+    "CWTV-EVT-000208",
+    "CWTV-EVT-000209",
+    "CWTV-EVT-000210",
+    "CWTV-EVT-000211",
+    "CWTV-EVT-000212",
+    "CWTV-EVT-000213"
+  ],
+  "range": [
+    "CWTV-EVT-000204",
+    "CWTV-EVT-000213"
+  ],
+  "predecessor_events": 203,
+  "predecessor_bytes_preserved": true,
+  "prefix_sha256": "4030b329b18a568d80e34b169a9dedc0bef644863685a0fedb7c92622271e55e",
+  "application_deployed_sha": "f8e9c935602a62e6215baaf568ba4e08834168c9"
+}

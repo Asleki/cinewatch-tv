@@ -1,0 +1,33 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "CommandId": "9fb989dd-e4fe-41ed-881d-0fb161a9f637",
+    "InstanceId": "i-00547a7236a653a6b",
+    "Comment": "CineWatch production build runtime selector inspection",
+    "DocumentName": "AWS-RunShellScript",
+    "DocumentVersion": "$DEFAULT",
+    "PluginName": "aws:runShellScript",
+    "ResponseCode": 127,
+    "ExecutionStartDateTime": "2026-10-05T19:07:20.029Z",
+    "ExecutionElapsedTime": "PT0.06S",
+    "ExecutionEndDateTime": "2026-10-05T19:07:20.029Z",
+    "Status": "Failed",
+    "StatusDetails": "Failed",
+    "StandardOutputContent": "ExecStart={ path=/home/ubuntu/.nvm/versions/node/v24.18.0/bin/npm ; argv[]=/home/ubuntu/.nvm/versions/node/v24.18.0/bin/npm run start -w @cinewatch/web -- --hostname 127.0.0.1 --port 3000 ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }\nWorkingDirectory=/srv/cinewatch\nUser=ubuntu\n\nExecStart={ path=/srv/cinewatch/.venv/bin/python ; argv[]=/srv/cinewatch/.venv/bin/python -m uvicorn cinewatch_api.main:app --app-dir /srv/cinewatch/services/api --host 127.0.0.1 --port 8000 ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }\nEnvironmentFiles=/etc/cinewatch/api.env (ignore_errors=no)\nWorkingDirectory=/srv/cinewatch\nUser=ubuntu\nORIGIN=https://github.com/Asleki/cinewatch-tv.git\nNODE_LOCATION=\nNPM_LOCATION=\n",
+    "StandardOutputUrl": "",
+    "StandardErrorContent": "bash: line 7: node: command not found\nfailed to run commands: exit status 127",
+    "StandardErrorUrl": "",
+    "CloudWatchOutputConfig": {
+      "CloudWatchLogGroupName": "",
+      "CloudWatchOutputEnabled": false
+    }
+  },
+  "api_calls": [
+    {
+      "service": "ssm",
+      "operation": "GetCommandInvocation",
+      "status": "success"
+    }
+  ]
+}

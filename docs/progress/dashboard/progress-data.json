@@ -6554,6 +6554,280 @@
       "summary": "The preserved D003/source-projection chain is on Main and ordinary Main CI37354636612 passed both required jobs. D004 repository-source promotion is qualified; governance closure projection and Praxis successor follow. Production deployment has not occurred.",
       "timestamp_precision": "exact",
       "timestamp_source": "GitHub Actions job completion"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": null,
+      "details": {
+        "command_id": "93f8af2b-fccb-404e-badf-32ca2c2b9084",
+        "old_build_id": "PbPahqCFKtoWdGjsja0IP",
+        "rollback_sha": "304bc33e30130229f4be401528ddfda744815b57"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000204",
+      "event_sha256": "9790a84fb6f7ea7a11b76b8c9cb963435cc18698570e6e15c9971555716f2b46",
+      "event_type": "PRODUCTION_PREFLIGHT",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/ssm-preflight.json"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:06:04.379Z",
+      "previous_event_sha256": "333dd2c1c1dad6cc1ace72db5ab5172eb79533510a4de89623b999ea6dbd0f83",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 204,
+      "summary": "Authorized CineWatch SSM preflight found Online node, clean ubuntu-owned exact historical checkout, old BUILD_ID, active services, adequate capacity and ready health/status.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "SSM execution timestamp"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": "CWTV-SSM-NODE-SELECTOR",
+      "details": {
+        "command_id": "9fb989dd-e4fe-41ed-881d-0fb161a9f637",
+        "production_defect": false
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000205",
+      "event_sha256": "9f987ca70033cac6a7ab723433826889e24ab6229e0992c46b7e7c7bb02ecd47",
+      "event_type": "EXECUTION_FAILED",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/deployment-receipt.json",
+        "https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:30:28.049252+00:00",
+      "previous_event_sha256": "9790a84fb6f7ea7a11b76b8c9cb963435cc18698570e6e15c9971555716f2b46",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 205,
+      "summary": "Read-only SSM runtime inspection exited127 because the non-interactive ubuntu shell did not expose Node/npm through PATH; no production source/configuration was changed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex post-release fact recording time; original owner-message time unavailable"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": "CWTV-SSM-NODE-SELECTOR",
+      "details": {
+        "new_source_candidate": false
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000206",
+      "event_sha256": "e25922d5aef4cdd15a5f15ae85f39092e029b9913f15a34c9ca043b0f82e3346",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/deployment-receipt.json",
+        "https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:30:28.054532+00:00",
+      "previous_event_sha256": "9f987ca70033cac6a7ab723433826889e24ab6229e0992c46b7e7c7bb02ecd47",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 206,
+      "summary": "Selected the existing systemd Node24.18.0 runtime path explicitly; governed npm12.0.2 and existing Python3.14.6 consistency passed without a host installation or configuration change.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex post-release fact recording time; original owner-message time unavailable"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": null,
+      "details": {
+        "command_id": "11473ab2-9905-4c35-84b0-ff08a2ecbb7c",
+        "new_build_id": "T4hu6dODXs7idpnBM0R2C"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000207",
+      "event_sha256": "40b9a94f202b2d233096ab55a4bb39d6ff5c00aa138146deaccf87e8365ca33b",
+      "event_type": "PRODUCTION_BUILD",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/ssm-build.json",
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/ssm-build-audit-log.json"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:10:37.517Z",
+      "previous_event_sha256": "e25922d5aef4cdd15a5f15ae85f39092e029b9913f15a34c9ca043b0f82e3346",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 207,
+      "summary": "Fetched and verified exact qualified origin/main; protected rollback artifacts; isolated ubuntu build passed Next16.3.6/TypeScript and zero-vulnerability production npm audit with canonical www selectors.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "SSM execution timestamp"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": null,
+      "details": {
+        "command_id": "97665ab1-2e55-4208-8068-02c62075aa8d",
+        "deployed_sha": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+        "new_build_id": "T4hu6dODXs7idpnBM0R2C",
+        "old_build_id": "PbPahqCFKtoWdGjsja0IP",
+        "rollback_performed": false
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000208",
+      "event_sha256": "579aab0f020d8d9ffb8004412a19ffa0b1cbe1be407f07b1141503018ee75554",
+      "event_type": "DEPLOYMENT_ACTIVATED",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/ssm-activation.json",
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/ssm-post-deployment-proof.json"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:12:03.511Z",
+      "previous_event_sha256": "40b9a94f202b2d233096ab55a4bb39d6ff5c00aa138146deaccf87e8365ca33b",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 208,
+      "summary": "Installed exact qualified source/build in the existing detached checkout and activated only CineWatch web/API. Configuration preserved, Nginx active without restart, healthy local runtime, no rollback.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "SSM execution timestamp"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": null,
+      "details": {
+        "checks": 78,
+        "mocked_responses": false
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000209",
+      "event_sha256": "34d9cd8f140d7fc683ec766dc935be17a03e5df8c4c3df1119813a0cf0c49f49",
+      "event_type": "LIVE_ACCEPTANCE",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/live-api-acceptance.json"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:30:28.072061+00:00",
+      "previous_event_sha256": "579aab0f020d8d9ffb8004412a19ffa0b1cbe1be407f07b1141503018ee75554",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 209,
+      "summary": "Real production responses passed78 live HTTP/API checks, including Spanish/Clip selection identity, invalid404, real directory/title/country routes, page499→500, terminal500 and API501 rejection.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex post-release fact recording time; original owner-message time unavailable"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": "CWTV-LIVE-BROWSER-TRANSPORT-HARNESS",
+      "details": {
+        "production_defect": false,
+        "source_correction": false
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000210",
+      "event_sha256": "a961330a3678910301035d7e46aafb1a17b82bd6e5582ebf7895594efebc477e",
+      "event_type": "QUALIFICATION_HARNESS_FAILED",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/deployment-receipt.json",
+        "https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:30:28.077120+00:00",
+      "previous_event_sha256": "34d9cd8f140d7fc683ec766dc935be17a03e5df8c4c3df1119813a0cf0c49f49",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 210,
+      "summary": "Native Chromium proxy trust failed; persistent multi-CA write was rejected by automatic review. Browser harness strict-selector/quoting/navigation/render timing failures were preserved; no production defect demonstrated.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex post-release fact recording time; original owner-message time unavailable"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": "CWTV-LIVE-BROWSER-TRANSPORT-HARNESS",
+      "details": {
+        "checks": 29,
+        "persisted_trust_changes": false,
+        "source_changed": false
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000211",
+      "event_sha256": "d01c0bdbe92fa953ddbbb8e3697a7652e5440ef9e5b81c55898e59f023a3b711",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/live-browser-acceptance.json",
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/isolated-genre-browser-proof.json"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:30:28.083765+00:00",
+      "previous_event_sha256": "a961330a3678910301035d7e46aafb1a17b82bd6e5582ebf7895594efebc477e",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 211,
+      "summary": "Used actual live responses with TLS-verified temporary transport and explicit render/count waits; isolated Genres proof and final29 browser checks passed. Owner Android independently confirmed Genres12/24/27.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex post-release fact recording time; original owner-message time unavailable"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": null,
+      "details": {
+        "owner_observation_timestamp": null,
+        "recording_time_semantics": true
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000212",
+      "event_sha256": "91dc76eccf46a621a03d57bac8936c8fde003720a4c32c3e4aadf9634f5c274e",
+      "event_type": "ANDROID_ACCEPTANCE",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/android-owner-acceptance.json"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:30:28.089579+00:00",
+      "previous_event_sha256": "d01c0bdbe92fa953ddbbb8e3697a7652e5440ef9e5b81c55898e59f023a3b711",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 212,
+      "summary": "Owner confirmed updated presentation/search/Genres/Trailers on Android, then specifically confirmed Genres12→24→27 and terminal Load more removal.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex post-release fact recording time; original owner-message time unavailable"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": null,
+      "details": {
+        "build_id": "T4hu6dODXs7idpnBM0R2C",
+        "deployed_sha": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+        "post_release_history_only": true,
+        "redeploy_bookkeeping_commits": false,
+        "verdict": "DEPLOYED AND CLOSED"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000213",
+      "event_sha256": "eb3af897480217571ffbb6097fa42bdd9130370da0f1369705654a8e73a6d03b",
+      "event_type": "MILESTONE_CLOSED",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/deployment-receipt.json",
+        "https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:30:28.094448+00:00",
+      "previous_event_sha256": "91dc76eccf46a621a03d57bac8936c8fde003720a4c32c3e4aadf9634f5c274e",
+      "result": "QUALIFIED",
+      "schema_version": "1.0",
+      "sequence": 213,
+      "summary": "CWTV.V1.3.3.2.3 — DEPLOYED AND CLOSED. Exact qualified source is live, 78 real HTTP/API and29 browser checks passed, owner Android acceptance confirmed; no rollback or D005. Chronicle/NexVox/Praxis now record post-release history only.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex post-release fact recording time; original owner-message time unavailable"
     }
   ],
   "failures": [
@@ -7181,12 +7455,66 @@
       "summary": "New interpreted delivery evidence initially inherited default TRAINING_ELIGIBLE; focused regression demonstrated the missing review gate for the new evidence namespace.",
       "timestamp_precision": "exact",
       "timestamp_source": "closure recording; test logs retained, exact command start not preserved"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": "CWTV-SSM-NODE-SELECTOR",
+      "details": {
+        "command_id": "9fb989dd-e4fe-41ed-881d-0fb161a9f637",
+        "production_defect": false
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000205",
+      "event_sha256": "9f987ca70033cac6a7ab723433826889e24ab6229e0992c46b7e7c7bb02ecd47",
+      "event_type": "EXECUTION_FAILED",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/deployment-receipt.json",
+        "https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:30:28.049252+00:00",
+      "previous_event_sha256": "9790a84fb6f7ea7a11b76b8c9cb963435cc18698570e6e15c9971555716f2b46",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 205,
+      "summary": "Read-only SSM runtime inspection exited127 because the non-interactive ubuntu shell did not expose Node/npm through PATH; no production source/configuration was changed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex post-release fact recording time; original owner-message time unavailable"
+    },
+    {
+      "artifact": null,
+      "commit": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+      "component": "Production release and acceptance",
+      "correction": "CWTV-LIVE-BROWSER-TRANSPORT-HARNESS",
+      "details": {
+        "production_defect": false,
+        "source_correction": false
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000210",
+      "event_sha256": "a961330a3678910301035d7e46aafb1a17b82bd6e5582ebf7895594efebc477e",
+      "event_type": "QUALIFICATION_HARNESS_FAILED",
+      "evidence": [
+        "docs/engineering/discovery-delivery/2026-10-05/production-release/deployment-receipt.json",
+        "https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT"
+      ],
+      "milestone": "CWTV.V1.3.3.2.3",
+      "occurred_at": "2026-10-05T19:30:28.077120+00:00",
+      "previous_event_sha256": "34d9cd8f140d7fc683ec766dc935be17a03e5df8c4c3df1119813a0cf0c49f49",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 210,
+      "summary": "Native Chromium proxy trust failed; persistent multi-CA write was rejected by automatic review. Browser harness strict-selector/quoting/navigation/render timing failures were preserved; no production defect demonstrated.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex post-release fact recording time; original owner-message time unavailable"
     }
   ],
   "ledger": {
-    "event_count": 203,
-    "head_event_id": "CWTV-EVT-000203",
-    "head_sha256": "333dd2c1c1dad6cc1ace72db5ab5172eb79533510a4de89623b999ea6dbd0f83"
+    "event_count": 213,
+    "head_event_id": "CWTV-EVT-000213",
+    "head_sha256": "eb3af897480217571ffbb6097fa42bdd9130370da0f1369705654a8e73a6d03b"
   },
   "milestones": [
     {
@@ -7573,7 +7901,7 @@
       "active_session_seconds": null,
       "blocker_count": 1,
       "break_count": 0,
-      "correction_count": 7,
+      "correction_count": 9,
       "corrections": [
         "CWTV-002-P1",
         "CWTV-002-P2",
@@ -7581,11 +7909,13 @@
         "CWTV-D004-READBACK-PREFIX",
         "CWTV-D004-STOP-BOUNDARY",
         "CWTV-E004-RECORDING-WRAPPER",
-        "CWTV-E004-REVIEW-GATE"
+        "CWTV-E004-REVIEW-GATE",
+        "CWTV-LIVE-BROWSER-TRANSPORT-HARNESS",
+        "CWTV-SSM-NODE-SELECTOR"
       ],
       "elapsed_label": "not preserved",
       "elapsed_seconds": null,
-      "failure_count": 7,
+      "failure_count": 9,
       "milestone": "CWTV.V1.3.3.2.3",
       "observed_difficulty": 5.0,
       "paused_label": "not preserved",
@@ -7621,15 +7951,15 @@
       "status": "QUALIFIED"
     }
   ],
-  "projection_as_of": "2026-10-05T18:22:09.031625+00:00",
+  "projection_as_of": "2026-10-05T19:30:28.094448+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 51,
     "commits": 11,
-    "corrections": 39,
+    "corrections": 41,
     "current_milestone": null,
-    "failed_events": 25,
-    "passed_events": 143,
+    "failed_events": 27,
+    "passed_events": 151,
     "qualified_milestones": 18,
     "tracked_completion_percent": 100.0,
     "tracked_milestones": 18
