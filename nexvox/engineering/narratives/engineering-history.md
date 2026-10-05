@@ -1,10 +1,10 @@
 # CineWatch Engineering History
 
-**Source commit:** `85b0a3926ce562b3a2c1f20f8fb9e46333755120`
+**Source commit:** `195005ee12c14be6401280319853aa2fa2ba33ff`
 
 This is a deterministic NexVox narrative projection. Git remains the canonical commit authority and `engineering-events.jsonl` remains the canonical engineering-activity ledger.
 
-The source history contains **51 reachable commits**, **363 current tracked files**, and **174 engineering events**.
+The source history contains **53 reachable commits**, **363 current tracked files**, and **174 engineering events**.
 
 ## Commit sequence
 
@@ -59,6 +59,8 @@ The source history contains **51 reachable commits**, **363 current tracked file
 - `d96d787` - docs(chronicle): close CWTV.V1.3.3.2 reconciliation
 - `304bc33` - chore(nexvox): sync engineering corpus for d96d787
 - `85b0a39` - docs: preserve CineWatch Codex SSM autonomy evidence and correction lineage
+- `854ba07` - chore(nexvox): sync engineering corpus for 85b0a39
+- `195005e` - fix(security): pin Next.js 16.3.6 for GHSA-vcvr-r3jv-pc5j
 
 ## Milestone state
 
