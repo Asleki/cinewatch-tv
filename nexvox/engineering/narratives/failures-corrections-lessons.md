@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `576acace6b2ce5d3275552f577ed00ed87ed3d55`
+**Source commit:** `6a4c4280b2c190590990e5d58372bc9624f87887`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
