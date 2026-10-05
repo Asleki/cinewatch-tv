@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `6a4c4280b2c190590990e5d58372bc9624f87887`
+**Source commit:** `682635524c4615e3b900212d649c83a11ec7f337`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
@@ -148,7 +148,63 @@ Failure: PR14 CI37329456030 checked out a synthetic merge SHA and failed NexVox 
 
 Correction: No paired correction recorded.
 
-## CWTV-FC-00019 - CWTV.V1.2.8
+## CWTV-FC-00019 - CWTV.V1.3.3.2.3
+
+State: `CORRECTED`
+
+Failure: 001 P1: library card discarded selected video identity/language/type, so valid Spanish-only or outside-first-20 Clip selections could be unavailable at destination.
+
+Correction: Immutable 002 preserved title-linked video_key/video_language/video_type and backend membership verification/pinning; language/type/YouTube rejection regressions were added.
+
+## CWTV-FC-00020 - CWTV.V1.3.3.2.3
+
+State: `CORRECTED`
+
+Failure: 001 P2: upstream total_pages could advertise page 501 although CineWatch allows only pages through 500.
+
+Correction: 002 shared MAX_TRAILER_PAGE=500 bounds admit 499→500, make 500 terminal and reject 501 before upstream access.
+
+## CWTV-FC-00021 - CWTV.V1.3.3.2.3
+
+State: `CORRECTED`
+
+Failure: D003 payload hashes passed, but helper forced 0644 and removed two tracked executable modes. Complete Git tree was 24b56a85… rather than 274e466b…; mandatory promotion gate stopped.
+
+Correction: D004 uses validated explicit Git modes/blobs and complete-tree preflight plus applied-tree regression. All 53 payload bytes remain D003-identical; both executable scripts retain 100755.
+
+## CWTV-FC-00022 - CWTV.V1.3.3.2.3
+
+State: `CORRECTED`
+
+Failure: After the D003 tree assertion failed, a local qualification command inadvertently started because the shell sequence lacked fail-fast; it was stopped, no complete result claimed, and Main did not advance.
+
+Correction: D004 qualification checked each command outcome and exact applied tree before continuing; the D003 stopped attempt was preserved and no replacement source candidate was created.
+
+## CWTV-FC-00023 - CWTV.V1.3.3.2.3
+
+State: `CORRECTED`
+
+Failure: Closure recording wrapper appended nine valid events then stopped because its add helper omitted the returned event. Existing appended events were preserved; no closure commit or publication occurred.
+
+Correction: External recording wrapper now returns the appended event and resumes only after the existing nine events. Append-only predecessor bytes and prior failure events remain intact.
+
+## CWTV-FC-00024 - CWTV.V1.3.3.2.3
+
+State: `CORRECTED`
+
+Failure: D004 fresh Drive readback verifier initially omitted payload/ from archive paths and raised a missing-entry error; this was an external verifier defect, not corrupted package content.
+
+Correction: Readback verifier used the actual payload/ archive layout and verified checksum, CRC, safe paths, manifest and all payload modes/blobs without changing D004.
+
+## CWTV-FC-00025 - CWTV.V1.3.3.2.3
+
+State: `CORRECTED`
+
+Failure: New interpreted delivery evidence initially inherited default TRAINING_ELIGIBLE; focused regression demonstrated the missing review gate for the new evidence namespace.
+
+Correction: Minimal discovery-delivery path classification now requires human training review, alongside unchanged SSM/security review gates; focused regression passed. No application source or dependency changed.
+
+## CWTV-FC-00026 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -156,7 +212,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.
 
-## CWTV-FC-00020 - CWTV.V1.2.8
+## CWTV-FC-00027 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -164,7 +220,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance.
 
-## CWTV-FC-00021 - CWTV.V1.3.1
+## CWTV-FC-00028 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -172,7 +228,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00022 - CWTV.V1.3.1
+## CWTV-FC-00029 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -180,7 +236,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00023 - CWTV.V1.3.1
+## CWTV-FC-00030 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -188,7 +244,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.
 
-## CWTV-FC-00024 - CWTV.V1.3.1
+## CWTV-FC-00031 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -196,7 +252,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Added regression protection for the source/projection boundary defect exposed by malformed commit 3f9f175. Future commits marked NexVox-Projection true must fail validation if they contain ordinary source, architecture, workflow, or Chronicle paths.
 
-## CWTV-FC-00025 - CWTV.V1.3.3.2.1
+## CWTV-FC-00032 - CWTV.V1.3.3.2.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -204,7 +260,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion
 
-## CWTV-FC-00026 - CWTV.V1.3.3.2
+## CWTV-FC-00033 - CWTV.V1.3.3.2
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
