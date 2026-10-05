@@ -71,11 +71,19 @@ async def catalog_title_videos(
     request: Request,
     media_type: Literal["movie", "tv"],
     provider_id: int = Path(gt=0),
+    video_key: str | None = Query(default=None, min_length=1, max_length=80),
+    video_language: str | None = Query(default=None, pattern=r"^[a-z]{2}$"),
+    video_type: Literal["Trailer", "Teaser", "Clip", "Featurette", "Behind the Scenes"] | None = Query(default=None),
 ) -> CatalogVideosResponse:
     try:
-        return await _service(request).videos(media_type, provider_id)
+        return await _service(request).videos(
+            media_type, provider_id, video_key=video_key,
+            video_language=video_language, video_type=video_type,
+        )
     except ProviderError as exc:
         raise _provider_failure(exc) from exc
+    except ValueError as exc:
+        raise ApiError(code="CATALOG_VIDEO_NOT_FOUND", message="This selected title video is no longer available.", status_code=404) from exc
 
 
 @router.get(
@@ -169,6 +177,7 @@ async def catalog_browse(
     media_type: Literal["all", "movie", "tv"] = Query(default="all"),
     year: int | None = Query(default=None, ge=1800, le=2200),
     language: str | None = Query(default=None, min_length=2, max_length=12),
+    genre: str | None = Query(default=None, min_length=2, max_length=120),
     sort: str = Query(default="popularity.desc", pattern=r"^(popularity|vote_average|primary_release_date|first_air_date)\.(asc|desc)$"),
 ) -> CatalogBrowseResponse:
     try:
@@ -179,6 +188,7 @@ async def catalog_browse(
             media_type=media_type,
             year=year,
             language=language,
+            genre=genre,
             sort=sort,
         )
         return apply_media_authority(request, "apply_browse", payload)

@@ -20,6 +20,7 @@ class CatalogNetwork(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     provider_id: int | None = Field(default=None, gt=0)
+    kind: Literal["network", "company"] = "network"
     name: str = Field(min_length=1, max_length=160)
     logo_url: str | None = None
 
@@ -225,6 +226,7 @@ class CatalogBrowseResponse(BaseModel):
     media_type: Literal["all", "movie", "tv"]
     year: int | None = Field(default=None, ge=1800, le=2200)
     language: str | None = Field(default=None, max_length=20)
+    genre: str | None = Field(default=None, max_length=120)
     sort: str = Field(min_length=1, max_length=80)
     items: list[CatalogMediaSummary] = Field(default_factory=list, max_length=24)
 

@@ -14,6 +14,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import { MediaTypeIcon, RatingSourceLogo } from "@/components/catalog/MediaIdentity";
+import GenreCard from "@/components/catalog/GenreCard";
 
 import styles from "./HomepageExperience.module.css";
 
@@ -144,7 +145,7 @@ function Hero({
   const visibleSynopsis = !expandedSynopsis && shouldCollapse ? `${synopsis.slice(0, 278).trimEnd()}…` : synopsis;
   const releaseYear = yearFromDate(hero.date);
   const titlePath = entityPath(hero);
-  const trailerPath = hero.media_type === "person" ? null : `/title/${hero.media_type}/${hero.provider_id}/trailers`;
+  const trailerPath = hero.media_type === "person" || !experience?.trailer ? null : `/title/${hero.media_type}/${hero.provider_id}/trailers`;
 
   return (
     <section className={styles.hero} style={background ? { backgroundImage: `url(${background})` } : undefined} aria-label={`Featured: ${hero.title}`}>
@@ -242,7 +243,7 @@ function LazyGenres() {
   }
   useIntersectionStart(ref, state !== "idle", load);
   if (state === "empty") return null;
-  return <section ref={ref} className={styles.section}>{state === "ready" ? <><SectionHeading title="Genres" destination="/genres" /><div className={styles.genreGrid}>{genres.map((genre) => <Link key={genre.slug} href={genre.future_path}><span>{genre.name}</span></Link>)}</div></> : null}{state === "idle" || state === "loading" ? <RailSkeleton /> : null}{state === "error" ? <RailFailure label="genres" onRetry={load} /> : null}</section>;
+  return <section ref={ref} className={styles.section}>{state === "ready" ? <><SectionHeading title="Genres" destination="/genres" /><div className={styles.genreGrid}>{genres.slice(0, 8).map((genre) => <GenreCard key={genre.slug} genre={genre} />)}</div></> : null}{state === "idle" || state === "loading" ? <RailSkeleton /> : null}{state === "error" ? <RailFailure label="genres" onRetry={load} /> : null}</section>;
 }
 
 function LazyTrailerRail() {

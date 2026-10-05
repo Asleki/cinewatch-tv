@@ -13,6 +13,7 @@ from cinewatch_api.contracts.catalog import (
 )
 from cinewatch_api.contracts.home import HomeItem, HomeResponse
 from cinewatch_api.contracts.search import SearchResponse
+from cinewatch_api.contracts.directories import PeopleDirectoryResponse, OrganizationDirectoryResponse, OrganizationDetailResponse
 from cinewatch_api.media.fallbacks import MediaGap
 from cinewatch_api.media.repository import MediaAuthorityRepository
 
@@ -72,10 +73,10 @@ class MediaAuthority:
             item.backdrop_url = self._resolve(MediaGap("tmdb", item.media_type, item.provider_id, item.title, "backdrop"), item.backdrop_url)
         for network in payload.networks:
             if network.provider_id:
-                network.logo_url = self._resolve(MediaGap("tmdb", "network", network.provider_id, network.name, "logo"), network.logo_url)
+                network.logo_url = self._resolve(MediaGap("tmdb", network.kind, network.provider_id, network.name, "logo"), network.logo_url)
         for provider in payload.watch_providers:
             provider.logo_url = self._resolve(
-                MediaGap("tmdb", "network", provider.provider_id, provider.name, "logo"),
+                MediaGap("tmdb", "watch_provider", provider.provider_id, provider.name, "logo"),
                 provider.logo_url,
             )
         self._session.commit()
@@ -105,7 +106,7 @@ class MediaAuthority:
         return payload
 
     def apply_provider(self, payload: CatalogProviderResponse) -> CatalogProviderResponse:
-        payload.logo_url = self._resolve(MediaGap("tmdb", "network", payload.provider_id, payload.name, "logo"), payload.logo_url)
+        payload.logo_url = self._resolve(MediaGap("tmdb", "watch_provider", payload.provider_id, payload.name, "logo"), payload.logo_url)
         for item in payload.items:
             item.poster_url = self._resolve(MediaGap("tmdb", item.media_type, item.provider_id, item.title, "poster"), item.poster_url)
             item.backdrop_url = self._resolve(MediaGap("tmdb", item.media_type, item.provider_id, item.title, "backdrop"), item.backdrop_url)
@@ -123,9 +124,29 @@ class MediaAuthority:
             elif item.entity_type == "TV_SHOW":
                 gap = MediaGap("tmdb", "tv", item.provider_id, item.label, "poster")
             elif item.entity_type == "NETWORK_PROVIDER":
-                gap = MediaGap("tmdb", "network", item.provider_id, item.label, "logo")
+                gap = MediaGap("tmdb", "watch_provider", item.provider_id, item.label, "logo")
             else:
                 continue
             item.image_url = self._resolve(gap, item.image_url)
+        self._session.commit()
+        return payload
+
+    def apply_people_directory(self, payload: PeopleDirectoryResponse) -> PeopleDirectoryResponse:
+        for item in payload.items:
+            item.profile_url = self._resolve(MediaGap("tmdb", "person", item.provider_id, item.name, "profile"), item.profile_url)
+        self._session.commit()
+        return payload
+
+    def apply_organization_directory(self, payload: OrganizationDirectoryResponse) -> OrganizationDirectoryResponse:
+        for item in payload.items:
+            item.logo_url = self._resolve(MediaGap("tmdb", item.kind, item.provider_id, item.name, "logo"), item.logo_url)
+        self._session.commit()
+        return payload
+
+    def apply_organization(self, payload: OrganizationDetailResponse) -> OrganizationDetailResponse:
+        item = payload.organization
+        item.logo_url = self._resolve(MediaGap("tmdb", item.kind, item.provider_id, item.name, "logo"), item.logo_url)
+        if payload.backdrop_media_type and payload.backdrop_title_id:
+            payload.backdrop_url = self._resolve(MediaGap("tmdb", payload.backdrop_media_type, payload.backdrop_title_id, payload.backdrop_title_name or item.name, "backdrop"), payload.backdrop_url)
         self._session.commit()
         return payload

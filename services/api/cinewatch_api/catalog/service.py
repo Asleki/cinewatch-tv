@@ -177,14 +177,20 @@ class CatalogService:
             revenue=self._nonnegative_int(details.get("revenue")),
         )
 
-    async def videos(self, media_type: str, provider_id: int) -> CatalogVideosResponse:
+    async def videos(
+        self, media_type: str, provider_id: int, *, video_key: str | None = None,
+        video_language: str | None = None, video_type: str | None = None,
+    ) -> CatalogVideosResponse:
         self._validate_media(media_type)
         if provider_id <= 0:
             raise ValueError("Catalog provider identity must be positive.")
 
+        video_params = {"language": "en-US"}
+        if video_language:
+            video_params["include_video_language"] = video_language
         payload = await self._tmdb.get_json(
             f"/{media_type}/{provider_id}/videos",
-            params={"language": "en-US"},
+            params=video_params,
         )
         raw_videos = self._video_results(payload)
         season_number: int | None = None
@@ -198,13 +204,27 @@ class CatalogService:
                 try:
                     season_payload = await self._tmdb.get_json(
                         f"/tv/{provider_id}/season/{season_number}/videos",
-                        params={"language": "en-US"},
+                        params=video_params,
                     )
                     raw_videos = self._video_results(season_payload) + raw_videos
                 except ProviderError:
                     pass
 
         videos = self._normalized_videos(raw_videos, season_number=season_number)
+        if video_key is not None:
+            # A URL is a selection request, never permission to embed an arbitrary key.
+            selected_records = [
+                {**record, "name": self._text(record.get("name")) or record.get("type")}
+                for record in raw_videos
+                if record.get("key") == video_key
+                and (video_language is None or record.get("iso_639_1") == video_language)
+                and (video_type is None or record.get("type") == video_type)
+            ]
+            selected = self._normalized_videos(selected_records, season_number=season_number)
+            if not selected:
+                raise ValueError("Selected title video is unavailable.")
+            # Pin the re-verified choice before truncation; ordinary navigation stays unchanged.
+            videos = [selected[0], *(item for item in videos if item.youtube_key != video_key)]
         return CatalogVideosResponse(
             provider_id=provider_id,
             media_type=media_type,  # type: ignore[arg-type]
@@ -386,6 +406,7 @@ class CatalogService:
         media_type: str = "all",
         year: int | None = None,
         language: str | None = None,
+        genre: str | None = None,
         sort: str = "popularity.desc",
     ) -> CatalogBrowseResponse:
         if kind not in {"genre", "collection", "country"}:
@@ -404,6 +425,7 @@ class CatalogService:
             media_type=media_type,
             year=year,
             language=language,
+            genre=genre,
             sort=sort,
         )
 
@@ -423,6 +445,7 @@ class CatalogService:
                 media_type=media_type,
                 year=year,
                 language=None,
+                genre=genre,
                 sort=sort,
             )
 
@@ -481,6 +504,7 @@ class CatalogService:
             media_type=media_type,  # type: ignore[arg-type]
             year=year,
             language=language,
+            genre=genre,
             sort=sort,
             items=merged[:BROWSE_LIMIT],
         )
@@ -494,6 +518,7 @@ class CatalogService:
         media_type: str,
         year: int | None,
         language: str | None,
+        genre: str | None,
         sort: str,
     ) -> tuple[list[tuple[str, dict[str, str | int | float | bool], str]], str]:
         if kind == "genre":
@@ -517,11 +542,21 @@ class CatalogService:
             code = slug.upper()
             if code not in COUNTRY_TITLES:
                 raise ValueError("Unknown CineWatch country collection.")
+            movie_genre_id = tv_genre_id = None
+            if genre:
+                movie_genres, tv_genres = await asyncio.gather(
+                    self._tmdb.get_json("/genre/movie/list", params={"language": "en-US"}),
+                    self._tmdb.get_json("/genre/tv/list", params={"language": "en-US"}),
+                )
+                movie_genre_id, _ = self._resolve_genre(movie_genres, genre)
+                tv_genre_id, _ = self._resolve_genre(tv_genres, genre)
+                if movie_genre_id is None and tv_genre_id is None:
+                    raise ValueError("Unknown country genre.")
             requests = []
-            if media_type in {"all", "movie"}:
-                requests.append(("/discover/movie", self._discover_params(page, sort, year, language, country=code), "movie"))
-            if media_type in {"all", "tv"}:
-                requests.append(("/discover/tv", self._discover_params(page, sort, year, language, country=code), "tv"))
+            if media_type in {"all", "movie"} and (not genre or movie_genre_id):
+                requests.append(("/discover/movie", self._discover_params(page, sort, year, language, country=code, genre_id=movie_genre_id), "movie"))
+            if media_type in {"all", "tv"} and (not genre or tv_genre_id):
+                requests.append(("/discover/tv", self._discover_params(page, sort, year, language, country=code, genre_id=tv_genre_id), "tv"))
             return requests, f"Stories from {COUNTRY_TITLES.get(code, code)}"
 
         return self._collection_requests(slug, page, media_type, year, language, sort), COLLECTION_TITLES.get(slug, slug.replace("-", " ").title())
@@ -845,8 +880,10 @@ class CatalogService:
 
     def _networks(self, details: dict[str, object], images) -> list[CatalogNetwork]:
         raw = details.get("networks")
+        kind = "network"
         if not isinstance(raw, list):
             raw = details.get("production_companies") if isinstance(details.get("production_companies"), list) else []
+            kind = "company"
         result: list[CatalogNetwork] = []
         for record in raw:
             if not isinstance(record, dict):
@@ -854,7 +891,7 @@ class CatalogService:
             name = self._text(record.get("name"))
             if not name:
                 continue
-            result.append(CatalogNetwork(provider_id=self._positive_int(record.get("id")), name=name, logo_url=self._image(images.secure_base_url, images.poster_size, record.get("logo_path"))))
+            result.append(CatalogNetwork(provider_id=self._positive_int(record.get("id")), kind=kind, name=name, logo_url=self._image(images.secure_base_url, images.poster_size, record.get("logo_path"))))
         return result[:12]
 
     def _watch_providers(self, payload: dict[str, object], images, preferred_region: str | None) -> tuple[str | None, list[CatalogWatchProvider], str | None]:

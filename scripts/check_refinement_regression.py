@@ -148,7 +148,7 @@ def main() -> int:
         ),
         "deterministic discovery",
     )
-    require(browse, ("Page {payload.page}",), "browse pagination")
+    require(browse, ("pageHref(basePath, payload, payload.page + 1)",), "browse pagination")
     print("PASS  type/year hard scope and deterministic language-priority discovery retained")
 
     require(

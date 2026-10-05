@@ -123,6 +123,74 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/catalog/trailers": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Trailer Library */
+        get: operations["v1_catalog_trailer_library"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/directory/organizations": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Organizations */
+        get: operations["v1_directory_organizations"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/directory/people": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** People */
+        get: operations["v1_directory_people"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/directory/{kind}/{provider_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Organization */
+        get: operations["v1_directory_organization"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/external/lyrics": {
         parameters: {
             query?: never;
@@ -404,6 +472,8 @@ export interface components {
     schemas: {
         /** CatalogBrowseResponse */
         CatalogBrowseResponse: {
+            /** Genre */
+            genre?: string | null;
             /** Items */
             items?: components["schemas"]["CatalogMediaSummary"][];
             /**
@@ -504,6 +574,12 @@ export interface components {
         };
         /** CatalogNetwork */
         CatalogNetwork: {
+            /**
+             * Kind
+             * @default network
+             * @enum {string}
+             */
+            kind: "network" | "company";
             /** Logo Url */
             logo_url?: string | null;
             /** Name */
@@ -889,6 +965,8 @@ export interface components {
             movie_provider_id?: number | null;
             /** Name */
             name: string;
+            /** Poster Url */
+            poster_url?: string | null;
             /** Slug */
             slug: string;
             /** Tv Provider Id */
@@ -1223,6 +1301,82 @@ export interface components {
             /** Name */
             name: string;
         };
+        /** OrganizationDetailResponse */
+        OrganizationDetailResponse: {
+            /** Backdrop Media Type */
+            backdrop_media_type?: ("movie" | "tv") | null;
+            /** Backdrop Title Id */
+            backdrop_title_id?: number | null;
+            /** Backdrop Title Name */
+            backdrop_title_name?: string | null;
+            /** Backdrop Url */
+            backdrop_url?: string | null;
+            /** Description */
+            description?: string | null;
+            /** Movie Count */
+            movie_count?: number | null;
+            organization: components["schemas"]["OrganizationItem"];
+            /** Series Count */
+            series_count?: number | null;
+        };
+        /** OrganizationDirectoryResponse */
+        OrganizationDirectoryResponse: {
+            /**
+             * Has More
+             * @default false
+             */
+            has_more: boolean;
+            /** Items */
+            items?: components["schemas"]["OrganizationItem"][];
+            /** Page */
+            page: number;
+        };
+        /** OrganizationItem */
+        OrganizationItem: {
+            /** Future Path */
+            future_path: string;
+            /** Headquarters */
+            headquarters?: string | null;
+            /** Homepage Url */
+            homepage_url?: string | null;
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "network" | "company";
+            /** Logo Url */
+            logo_url?: string | null;
+            /** Name */
+            name: string;
+            /** Origin Country */
+            origin_country?: string | null;
+            /** Provider Id */
+            provider_id: number;
+        };
+        /** PeopleDirectoryResponse */
+        PeopleDirectoryResponse: {
+            /** Department */
+            department?: string | null;
+            /** Items */
+            items?: components["schemas"]["PersonDirectoryItem"][];
+            /** Page */
+            page: number;
+            /** Total Pages */
+            total_pages: number;
+        };
+        /** PersonDirectoryItem */
+        PersonDirectoryItem: {
+            /** Future Path */
+            future_path: string;
+            /** Known For Department */
+            known_for_department?: string | null;
+            /** Name */
+            name: string;
+            /** Profile Url */
+            profile_url?: string | null;
+            /** Provider Id */
+            provider_id: number;
+        };
         /** ScriptLookupResponse */
         ScriptLookupResponse: {
             /**
@@ -1327,6 +1481,54 @@ export interface components {
              */
             status: "ready";
         };
+        /** TrailerLibraryCard */
+        TrailerLibraryCard: {
+            /** Future Path */
+            future_path: string;
+            /** Genre Ids */
+            genre_ids?: number[];
+            /**
+             * Media Type
+             * @enum {string}
+             */
+            media_type: "movie" | "tv";
+            /**
+             * Official
+             * @default false
+             */
+            official: boolean;
+            /** Poster Url */
+            poster_url?: string | null;
+            /** Provider Id */
+            provider_id: number;
+            /** Release Year */
+            release_year?: number | null;
+            /** Title */
+            title: string;
+            /** Video Language */
+            video_language?: string | null;
+            /** Video Name */
+            video_name: string;
+            /**
+             * Video Type
+             * @enum {string}
+             */
+            video_type: "Trailer" | "Teaser" | "Clip" | "Featurette" | "Behind the Scenes";
+            /** Youtube Key */
+            youtube_key: string;
+        };
+        /** TrailerLibraryResponse */
+        TrailerLibraryResponse: {
+            /**
+             * Has More
+             * @default false
+             */
+            has_more: boolean;
+            /** Items */
+            items?: components["schemas"]["TrailerLibraryCard"][];
+            /** Page */
+            page: number;
+        };
         /** ValidationError */
         ValidationError: {
             /** Context */
@@ -1400,6 +1602,7 @@ export interface operations {
                 media_type?: "all" | "movie" | "tv";
                 year?: number | null;
                 language?: string | null;
+                genre?: string | null;
                 sort?: string;
             };
             header?: never;
@@ -1597,7 +1800,11 @@ export interface operations {
     };
     v1_catalog_title_videos: {
         parameters: {
-            query?: never;
+            query?: {
+                video_key?: string | null;
+                video_language?: string | null;
+                video_type?: ("Trailer" | "Teaser" | "Clip" | "Featurette" | "Behind the Scenes") | null;
+            };
             header?: never;
             path: {
                 media_type: "movie" | "tv";
@@ -1614,6 +1821,137 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["CatalogVideosResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_catalog_trailer_library: {
+        parameters: {
+            query?: {
+                page?: number;
+                media_type?: "all" | "movie" | "tv";
+                genre?: string | null;
+                year?: number | null;
+                video_language?: string | null;
+                video_type?: ("Trailer" | "Teaser" | "Clip" | "Featurette" | "Behind the Scenes") | null;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TrailerLibraryResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_directory_organizations: {
+        parameters: {
+            query?: {
+                page?: number;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["OrganizationDirectoryResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_directory_people: {
+        parameters: {
+            query?: {
+                page?: number;
+                department?: ("Acting" | "Writing" | "Directing" | "Production") | null;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PeopleDirectoryResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    v1_directory_organization: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                kind: "network" | "company";
+                provider_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["OrganizationDetailResponse"];
                 };
             };
             /** @description Validation Error */

@@ -80,7 +80,7 @@ def main() -> int:
         'Retry season',
         'state === "empty"',
         '/under-development/stream-now',
-        '/under-development/tracks-',
+        '/under-development/music-tracks',
     ):
         if token not in title:
             fail(f"title experience missing R3 token: {token}")

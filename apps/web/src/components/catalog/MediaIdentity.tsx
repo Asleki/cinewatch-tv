@@ -14,7 +14,7 @@ const logos: Record<RatingSource, { src: string; alt: string }> = {
 export function RatingSourceLogo({ source }: { source: string }) {
   const logo = logos[source as RatingSource];
   if (!logo) return <span className={styles.ratingText}>{source}</span>;
-  return <img className={styles.ratingLogo} src={logo.src} alt={logo.alt} title={logo.alt} />;
+  return <span className={styles.ratingLogoFrame}><img className={styles.ratingLogo} src={logo.src} alt={logo.alt} title={logo.alt} /></span>;
 }
 
 export function MediaTypeIcon({ mediaType, withLabel = false }: { mediaType: "movie" | "tv"; withLabel?: boolean }) {

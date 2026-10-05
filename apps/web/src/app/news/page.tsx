@@ -23,21 +23,20 @@ export default async function NewsPage({ searchParams }: { searchParams: Promise
   const queryParams = await searchParams;
   const raw = queryParams.q;
   const query = typeof raw === "string" && raw.trim() ? raw.trim().slice(0, 200) : "film OR television";
-  const { payload, status } = await loadNews(query);
+  const { payload } = await loadNews(query);
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
-        <span className={styles.chip}>CineWatch News</span>
         <p className={styles.eyebrow}>CineWatch News</p>
-        <h1>Entertainment news, with its source intact.</h1>
-        <p>Entertainment headlines and stories from their original publishers.</p>
+        <h1>Entertainment News</h1>
+        <p>Headlines from their original publishers.</p>
         <form className={styles.form} action="/news" method="get">
           <input name="q" defaultValue={query} aria-label="News search" placeholder="Search a title, person or industry topic" />
           <button type="submit">Search News</button>
         </form>
       </section>
       {!payload ? (
-        <section className={styles.section}><div className={styles.error}><strong>News is unavailable.</strong><p>CineWatch News could not be loaded{status ? ` (${status})` : ""}.</p></div></section>
+        <section className={styles.section}><div className={styles.error}><strong>News is unavailable.</strong><p>Please try again later.</p></div></section>
       ) : payload.articles.length === 0 ? (
         <section className={styles.section}><p className={styles.muted}>No articles matched “{payload.query}”.</p></section>
       ) : (

@@ -7,7 +7,7 @@ import unicodedata
 from dataclasses import dataclass
 from typing import Literal
 
-EntityType = Literal["person", "network", "movie", "tv", "season", "episode"]
+EntityType = Literal["person", "network", "company", "watch_provider", "movie", "tv", "season", "episode"]
 AssetKind = Literal["profile", "logo", "poster", "backdrop", "still"]
 Remediation = Literal["AWAITING_HUMAN_RESEARCH", "GENERATION_ALLOWED"]
 
@@ -22,6 +22,8 @@ _DIRECTORY_BY_ASSET: dict[AssetKind, str] = {
 _ALLOWED: set[tuple[EntityType, AssetKind]] = {
     ("person", "profile"),
     ("network", "logo"),
+    ("company", "logo"),
+    ("watch_provider", "logo"),
     ("movie", "poster"),
     ("movie", "backdrop"),
     ("tv", "poster"),

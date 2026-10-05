@@ -96,16 +96,16 @@ export default function TitleDetails({ title, fullView = false }: Props) {
               <a href="#cast">Cast</a>
               {title.review_count ? <Link href={`${basePath}/reviews`}>Reviews</Link> : null}
               <Link href={`/where-to-watch?media_type=${title.media_type}&tmdb_id=${title.provider_id}&title=${encodeURIComponent(title.title)}`}>Where to Watch</Link>
-              <Link href={`/under-development/tracks-${title.media_type}-${title.provider_id}`}>Music & Tracks</Link>
+              <Link href="/under-development/music-tracks">Music & Tracks</Link>
               <Link href="/under-development/stream-now">Stream Now</Link>
             </div>
             {networks.length || watchProviders.length ? (
               <div className={styles.providers} aria-label="Networks and streaming providers">
-                {networks.slice(0, 5).map((network) => <span key={`n-${network.provider_id ?? network.name}`} title={network.name}>{network.logo_url ? <img src={network.logo_url} alt={`${network.name} logo`} /> : network.name}</span>)}
+                {networks.slice(0, 5).map((network) => network.provider_id ? <Link key={`n-${network.provider_id}`} href={`/${network.kind}/${network.provider_id}`} title={network.name}>{network.logo_url ? <img src={network.logo_url} alt={`${network.name} logo`} /> : network.name}</Link> : <span key={`n-${network.name}`}>{network.name}</span>)}
                 {watchProviders.slice(0, 6).map((provider) => <Link key={`w-${provider.provider_id}`} href={`/provider/${provider.provider_id}`} title={`${provider.name} · ${provider.monetization_type}`}>{provider.logo_url ? <img src={provider.logo_url} alt={`${provider.name} logo`} /> : provider.name}</Link>)}
               </div>
             ) : null}
-            {watchProviders.length ? <p className={styles.providerNote}>Availability is shown for discovery only. Stream Now remains a separate CineWatch experience.</p> : null}
+            {watchProviders.length ? <p className={styles.providerNote}>Find it on other services.</p> : null}
           </div>
         </div>
       </section>

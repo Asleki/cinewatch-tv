@@ -45,7 +45,7 @@ export function loadCatalogBrowse(
   query: Record<string, string | string[] | undefined>,
 ) {
   const params = new URLSearchParams();
-  for (const key of ["page", "media_type", "year", "language", "sort"]) {
+  for (const key of ["page", "media_type", "year", "language", "genre", "sort"]) {
     const value = query[key];
     if (typeof value === "string" && value) params.set(key, value);
   }
@@ -63,9 +63,15 @@ type CatalogVideo = {
 };
 type CatalogVideosPayload = { provider_id: number; media_type: "movie" | "tv"; videos: CatalogVideo[] };
 
-export function loadCatalogVideos(mediaType: string, providerId: string) {
+export function loadCatalogVideos(mediaType: string, providerId: string, selection: Record<string, string | string[] | undefined> = {}) {
   if ((mediaType !== "movie" && mediaType !== "tv") || !/^\d+$/.test(providerId)) {
     return Promise.resolve(null);
   }
-  return readJson<CatalogVideosPayload>(`/api/v1/catalog/title/${mediaType}/${providerId}/videos`);
+  const params = new URLSearchParams();
+  for (const key of ["video_key", "video_language", "video_type"]) {
+    const value = selection[key];
+    if (typeof value === "string") params.set(key, value);
+  }
+  const suffix = params.size ? `?${params}` : "";
+  return readJson<CatalogVideosPayload>(`/api/v1/catalog/title/${mediaType}/${providerId}/videos${suffix}`);
 }

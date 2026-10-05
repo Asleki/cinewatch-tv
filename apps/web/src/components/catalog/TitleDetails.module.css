@@ -15,7 +15,8 @@
 .peopleLine { margin:5px 0; color:#c2d3dd; font-size:.82rem; }
 .peopleLine b { color:#fff; }
 .actions { margin-top:18px; }
-.actions button,.actions a { min-height:42px; display:inline-flex; align-items:center; justify-content:center; padding:0 16px; border:1px solid #59798c; border-radius:9px; background:#071925d9; color:#fff; text-decoration:none; font-weight:850; cursor:pointer; }
+.actions button,.actions a { min-height:46px; display:inline-flex; align-items:center; justify-content:center; padding:0 16px; border:1px solid var(--cw-border); border-radius:10px; background:var(--cw-surface); color:var(--cw-text); text-decoration:none; font-weight:850; cursor:pointer; }
+.actions a:first-child{border-color:var(--cw-aqua);background:var(--cw-aqua);color:#021016}.actions a:hover{border-color:var(--cw-aqua)}
 .actions button { background:#f4fafb; color:#06131b; border:0; }
 .providers { margin-top:15px; }
 .providers span { min-width:40px; min-height:32px; display:grid; place-items:center; padding:4px 7px; border:1px solid #28485b; border-radius:7px; background:#071925df; font-size:.7rem; }

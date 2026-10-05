@@ -106,6 +106,7 @@ class HomeGenreEntry(BaseModel):
     slug: str = Field(min_length=1, max_length=120)
     movie_provider_id: int | None = Field(default=None, gt=0)
     tv_provider_id: int | None = Field(default=None, gt=0)
+    poster_url: str | None = None
     future_path: str = Field(min_length=1, max_length=300)
 
 

@@ -4,6 +4,18 @@
       "CatalogBrowseResponse": {
         "additionalProperties": false,
         "properties": {
+          "genre": {
+            "anyOf": [
+              {
+                "maxLength": 120,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Genre"
+          },
           "items": {
             "items": {
               "$ref": "#/components/schemas/CatalogMediaSummary"
@@ -386,6 +398,15 @@
       "CatalogNetwork": {
         "additionalProperties": false,
         "properties": {
+          "kind": {
+            "default": "network",
+            "enum": [
+              "network",
+              "company"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
           "logo_url": {
             "anyOf": [
               {
@@ -1800,6 +1821,17 @@
             "title": "Name",
             "type": "string"
           },
+          "poster_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poster Url"
+          },
           "slug": {
             "maxLength": 120,
             "minLength": 1,
@@ -2725,6 +2757,293 @@
         "title": "NewsSource",
         "type": "object"
       },
+      "OrganizationDetailResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "backdrop_media_type": {
+            "anyOf": [
+              {
+                "enum": [
+                  "movie",
+                  "tv"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Backdrop Media Type"
+          },
+          "backdrop_title_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Backdrop Title Id"
+          },
+          "backdrop_title_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Backdrop Title Name"
+          },
+          "backdrop_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Backdrop Url"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "movie_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Movie Count"
+          },
+          "organization": {
+            "$ref": "#/components/schemas/OrganizationItem"
+          },
+          "series_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Series Count"
+          }
+        },
+        "required": [
+          "organization"
+        ],
+        "title": "OrganizationDetailResponse",
+        "type": "object"
+      },
+      "OrganizationDirectoryResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "has_more": {
+            "default": false,
+            "title": "Has More",
+            "type": "boolean"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/OrganizationItem"
+            },
+            "maxItems": 100,
+            "title": "Items",
+            "type": "array"
+          },
+          "page": {
+            "minimum": 1.0,
+            "title": "Page",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "page"
+        ],
+        "title": "OrganizationDirectoryResponse",
+        "type": "object"
+      },
+      "OrganizationItem": {
+        "additionalProperties": false,
+        "properties": {
+          "future_path": {
+            "title": "Future Path",
+            "type": "string"
+          },
+          "headquarters": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Headquarters"
+          },
+          "homepage_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Homepage Url"
+          },
+          "kind": {
+            "enum": [
+              "network",
+              "company"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "logo_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Logo Url"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "origin_country": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Origin Country"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "provider_id",
+          "kind",
+          "name",
+          "future_path"
+        ],
+        "title": "OrganizationItem",
+        "type": "object"
+      },
+      "PeopleDirectoryResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "department": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Department"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/PersonDirectoryItem"
+            },
+            "maxItems": 20,
+            "title": "Items",
+            "type": "array"
+          },
+          "page": {
+            "minimum": 1.0,
+            "title": "Page",
+            "type": "integer"
+          },
+          "total_pages": {
+            "minimum": 0.0,
+            "title": "Total Pages",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "page",
+          "total_pages"
+        ],
+        "title": "PeopleDirectoryResponse",
+        "type": "object"
+      },
+      "PersonDirectoryItem": {
+        "additionalProperties": false,
+        "properties": {
+          "future_path": {
+            "title": "Future Path",
+            "type": "string"
+          },
+          "known_for_department": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Known For Department"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "profile_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Profile Url"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "provider_id",
+          "name",
+          "future_path"
+        ],
+        "title": "PersonDirectoryItem",
+        "type": "object"
+      },
       "ScriptLookupResponse": {
         "additionalProperties": false,
         "properties": {
@@ -3052,6 +3371,135 @@
         "title": "StatusResponse",
         "type": "object"
       },
+      "TrailerLibraryCard": {
+        "additionalProperties": false,
+        "properties": {
+          "future_path": {
+            "title": "Future Path",
+            "type": "string"
+          },
+          "genre_ids": {
+            "items": {
+              "type": "integer"
+            },
+            "title": "Genre Ids",
+            "type": "array"
+          },
+          "media_type": {
+            "enum": [
+              "movie",
+              "tv"
+            ],
+            "title": "Media Type",
+            "type": "string"
+          },
+          "official": {
+            "default": false,
+            "title": "Official",
+            "type": "boolean"
+          },
+          "poster_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poster Url"
+          },
+          "provider_id": {
+            "exclusiveMinimum": 0.0,
+            "title": "Provider Id",
+            "type": "integer"
+          },
+          "release_year": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Release Year"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "video_language": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Video Language"
+          },
+          "video_name": {
+            "title": "Video Name",
+            "type": "string"
+          },
+          "video_type": {
+            "enum": [
+              "Trailer",
+              "Teaser",
+              "Clip",
+              "Featurette",
+              "Behind the Scenes"
+            ],
+            "title": "Video Type",
+            "type": "string"
+          },
+          "youtube_key": {
+            "title": "Youtube Key",
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider_id",
+          "media_type",
+          "title",
+          "youtube_key",
+          "video_name",
+          "video_type",
+          "future_path"
+        ],
+        "title": "TrailerLibraryCard",
+        "type": "object"
+      },
+      "TrailerLibraryResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "has_more": {
+            "default": false,
+            "title": "Has More",
+            "type": "boolean"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/TrailerLibraryCard"
+            },
+            "maxItems": 24,
+            "title": "Items",
+            "type": "array"
+          },
+          "page": {
+            "minimum": 1.0,
+            "title": "Page",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "page"
+        ],
+        "title": "TrailerLibraryResponse",
+        "type": "object"
+      },
       "ValidationError": {
         "properties": {
           "ctx": {
@@ -3306,6 +3754,24 @@
                 }
               ],
               "title": "Language"
+            }
+          },
+          {
+            "in": "query",
+            "name": "genre",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 120,
+                  "minLength": 2,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Genre"
             }
           },
           {
@@ -3667,6 +4133,64 @@
               "title": "Provider Id",
               "type": "integer"
             }
+          },
+          {
+            "in": "query",
+            "name": "video_key",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 80,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Video Key"
+            }
+          },
+          {
+            "in": "query",
+            "name": "video_language",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z]{2}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Video Language"
+            }
+          },
+          {
+            "in": "query",
+            "name": "video_type",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "Trailer",
+                    "Teaser",
+                    "Clip",
+                    "Featurette",
+                    "Behind the Scenes"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Video Type"
+            }
           }
         ],
         "responses": {
@@ -3694,6 +4218,310 @@
         "summary": "CineWatch title videos",
         "tags": [
           "catalog"
+        ]
+      }
+    },
+    "/api/v1/catalog/trailers": {
+      "get": {
+        "operationId": "v1_catalog_trailer_library",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "maximum": 500,
+              "minimum": 1,
+              "title": "Page",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "media_type",
+            "required": false,
+            "schema": {
+              "default": "all",
+              "enum": [
+                "all",
+                "movie",
+                "tv"
+              ],
+              "title": "Media Type",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "genre",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 120,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Genre"
+            }
+          },
+          {
+            "in": "query",
+            "name": "year",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maximum": 2200,
+                  "minimum": 1880,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Year"
+            }
+          },
+          {
+            "in": "query",
+            "name": "video_language",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Video Language"
+            }
+          },
+          {
+            "in": "query",
+            "name": "video_type",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "Trailer",
+                    "Teaser",
+                    "Clip",
+                    "Featurette",
+                    "Behind the Scenes"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Video Type"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrailerLibraryResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Trailer Library",
+        "tags": [
+          "catalog"
+        ]
+      }
+    },
+    "/api/v1/directory/organizations": {
+      "get": {
+        "operationId": "v1_directory_organizations",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "maximum": 100,
+              "minimum": 1,
+              "title": "Page",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationDirectoryResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Organizations",
+        "tags": [
+          "directory"
+        ]
+      }
+    },
+    "/api/v1/directory/people": {
+      "get": {
+        "operationId": "v1_directory_people",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "maximum": 500,
+              "minimum": 1,
+              "title": "Page",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "department",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "Acting",
+                    "Writing",
+                    "Directing",
+                    "Production"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Department"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PeopleDirectoryResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "People",
+        "tags": [
+          "directory"
+        ]
+      }
+    },
+    "/api/v1/directory/{kind}/{provider_id}": {
+      "get": {
+        "operationId": "v1_directory_organization",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "kind",
+            "required": true,
+            "schema": {
+              "enum": [
+                "network",
+                "company"
+              ],
+              "title": "Kind",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "provider_id",
+            "required": true,
+            "schema": {
+              "exclusiveMinimum": 0,
+              "title": "Provider Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationDetailResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Organization",
+        "tags": [
+          "directory"
         ]
       }
     },

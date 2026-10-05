@@ -51,9 +51,9 @@ const footerGroups = [
     title: "Discover",
     items: [
       ["Genres", "/genres"],
-      ["Networks", "/under-development/networks"],
-      ["Countries & Cultures", "/under-development/countries-cultures"],
-      ["People", "/under-development/people-index"],
+      ["Networks", "/networks"],
+      ["Countries & Cultures", "/countries-cultures"],
+      ["People", "/people"],
       ["News", "/news"],
     ],
   },
@@ -257,7 +257,7 @@ function ProductSiteFrame({ children }: { children: ReactNode }) {
                 setSearchOpen(true);
               }}
               onFocus={() => setSearchOpen(true)}
-              placeholder="Search movies, TV, people, genres, providers..."
+              placeholder="Search CineWatch..."
               aria-label="Search CineWatch"
               autoComplete="off"
             />

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import re
+import time
 from datetime import date, datetime, timedelta, timezone
 from typing import Protocol
 
@@ -22,6 +23,9 @@ from cinewatch_api.contracts.home_experience import (
 )
 from cinewatch_api.home.aggregation import HomepageAggregator, _ImageConfiguration
 from cinewatch_api.providers.errors import ProviderError
+from cinewatch_api.providers.tmdb import TmdbClient
+
+_GENRE_CACHE: tuple[float, HomeGenresResponse] | None = None
 
 RAIL_LIMIT = 12
 TRAILER_RAIL_LIMIT = 4
@@ -231,6 +235,9 @@ class HomepageExperienceService:
         return HomeSearchResponse(query=normalized_query, suggestions=suggestions)
 
     async def genres(self) -> HomeGenresResponse:
+        global _GENRE_CACHE
+        if isinstance(self._tmdb, TmdbClient) and _GENRE_CACHE and _GENRE_CACHE[0] > time.monotonic():
+            return _GENRE_CACHE[1].model_copy(deep=True)
         movie_payload, tv_payload = await asyncio.gather(
             self._tmdb.get_json("/genre/movie/list", params={"language": "en-US"}),
             self._tmdb.get_json("/genre/tv/list", params={"language": "en-US"}),
@@ -240,17 +247,70 @@ class HomepageExperienceService:
         self._merge_genres(merged, movie_payload, "movie")
         self._merge_genres(merged, tv_payload, "tv")
 
+        posters: dict[tuple[str, int], str] = {}
+        try:
+            configuration, movie_titles, tv_titles = await asyncio.gather(
+                self._tmdb.get_json("/configuration"),
+                self._tmdb.get_json("/discover/movie", params={"sort_by": "popularity.desc", "include_adult": False, "page": 1}),
+                self._tmdb.get_json("/discover/tv", params={"sort_by": "popularity.desc", "include_adult": False, "page": 1}),
+            )
+            images = self._normalizer._image_configuration(configuration)
+            artwork_sources = (("movie", movie_titles), ("tv", tv_titles))
+        except (ProviderError, KeyError):
+            artwork_sources = ()
+        for media_type, payload in artwork_sources:
+            for row in payload.get("results", []):
+                if not isinstance(row, dict):
+                    continue
+                path = row.get("poster_path")
+                if not isinstance(path, str) or not path.startswith("/"):
+                    continue
+                artwork = self._normalizer._image_url(images.secure_base_url, images.poster_size, path)
+                if not artwork:
+                    continue
+                for genre_id in row.get("genre_ids", []):
+                    if isinstance(genre_id, int) and genre_id > 0:
+                        posters.setdefault((media_type, genre_id), artwork)
+        if artwork_sources:
+            missing = [
+                ("movie", int(record["movie_provider_id"])) if record.get("movie_provider_id") else ("tv", int(record["tv_provider_id"]))
+                for record in merged.values()
+                if not (
+                    record.get("movie_provider_id") and ("movie", record["movie_provider_id"]) in posters
+                    or record.get("tv_provider_id") and ("tv", record["tv_provider_id"]) in posters
+                )
+            ]
+            semaphore = asyncio.Semaphore(6)
+            async def fill(media_type: str, genre_id: int) -> None:
+                async with semaphore:
+                    try:
+                        payload = await self._tmdb.get_json(f"/discover/{media_type}", params={"with_genres": genre_id, "sort_by": "popularity.desc", "include_adult": False, "page": 1})
+                    except ProviderError:
+                        return
+                for row in payload.get("results", []):
+                    if isinstance(row, dict) and isinstance(row.get("poster_path"), str):
+                        artwork = self._normalizer._image_url(images.secure_base_url, images.poster_size, row["poster_path"])
+                        if artwork:
+                            posters[(media_type, genre_id)] = artwork
+                            break
+            await asyncio.gather(*(fill(media_type, genre_id) for media_type, genre_id in missing))
+
         genres = [
             HomeGenreEntry(
                 name=str(record["name"]),
                 slug=slug,
                 movie_provider_id=self._positive_int(record.get("movie_provider_id")),
                 tv_provider_id=self._positive_int(record.get("tv_provider_id")),
+                poster_url=(posters.get(("movie", record["movie_provider_id"])) if record.get("movie_provider_id") else None)
+                or (posters.get(("tv", record["tv_provider_id"])) if record.get("tv_provider_id") else None),
                 future_path=f"/genre/{slug}",
             )
             for slug, record in sorted(merged.items(), key=lambda pair: str(pair[1]["name"]).casefold())
         ]
-        return HomeGenresResponse(genres=genres)
+        result = HomeGenresResponse(genres=genres)
+        if isinstance(self._tmdb, TmdbClient):
+            _GENRE_CACHE = (time.monotonic() + 3600, result.model_copy(deep=True))
+        return result
 
     async def hero(self, media_type: str, provider_id: int) -> HomeHeroExperience:
         if media_type not in {"movie", "tv"}:

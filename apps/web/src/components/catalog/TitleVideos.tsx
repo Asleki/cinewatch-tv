@@ -22,7 +22,7 @@ export default function TitleVideos({ title, mediaType, providerId, videos }: { 
       <Link className={styles.back} href={`/title/${mediaType}/${providerId}`}>← Back to {title}</Link>
       <p className={styles.eyebrow}>YouTube · Trailers & Teasers</p>
       <h1>Trailers & Teasers</h1>
-      <p className={styles.intro}>CineWatch keeps trailers separate from Stream Now. Choose a trailer, teaser, clip or featurette for this title.</p>
+      <p className={styles.intro}>Choose a trailer, teaser, clip or featurette.</p>
       {!selected ? <div className={styles.empty}><strong>No video is available for this title.</strong><span>Try another title or return later.</span></div> : <>
         <section className={styles.player}>
           <iframe src={`https://www.youtube-nocookie.com/embed/${encodeURIComponent(selected.youtube_key)}?rel=0`} title={`${title}: ${selected.name}`} allow="encrypted-media; picture-in-picture; fullscreen" allowFullScreen />

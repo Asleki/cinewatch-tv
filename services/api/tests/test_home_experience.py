@@ -101,6 +101,18 @@ def test_genres_merge_movie_and_tv_authority():
     assert drama.future_path == "/genre/drama"
 
 
+def test_genre_art_is_taken_from_a_matching_title_not_the_genre_name():
+    tmdb = FakeTmdb({
+        "/genre/movie/list": {"genres": [{"id": 18, "name": "Drama"}]},
+        "/genre/tv/list": {"genres": []},
+        "/configuration": configuration(),
+        "/discover/movie": {"results": [{"id": 14, "poster_path": "/drama.jpg", "genre_ids": [18]}]},
+        "/discover/tv": {"results": []},
+    })
+    result = asyncio.run(HomepageExperienceService(tmdb).genres())
+    assert result.genres[0].poster_url == "https://image.tmdb.example/t/p/w500/drama.jpg"
+
+
 def test_search_carries_future_route_without_navigating():
     tmdb = FakeTmdb(
         {

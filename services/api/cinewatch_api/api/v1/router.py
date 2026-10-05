@@ -3,6 +3,7 @@
 from fastapi import APIRouter
 
 from cinewatch_api.api.v1.catalog import router as catalog_router
+from cinewatch_api.api.v1.directories import router as directory_router
 from cinewatch_api.api.v1.external import router as external_router
 from cinewatch_api.api.v1.home import router as home_router
 from cinewatch_api.api.v1.home_experience import router as home_experience_router
@@ -10,10 +11,13 @@ from cinewatch_api.api.v1.news import router as news_router
 from cinewatch_api.api.v1.search import router as search_router
 from cinewatch_api.api.v1.system import router as system_router
 from cinewatch_api.api.v1.voice import router as voice_router
+from cinewatch_api.api.v1.trailer_library import router as trailer_library_router
 
 router = APIRouter()
 router.include_router(system_router)
 router.include_router(catalog_router)
+router.include_router(directory_router)
+router.include_router(trailer_library_router)
 router.include_router(external_router)
 router.include_router(home_router)
 router.include_router(home_experience_router)

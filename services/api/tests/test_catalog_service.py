@@ -81,6 +81,7 @@ def test_movie_title_composes_ratings_cast_provider_and_recommendations():
     assert result.cast[0].future_path == "/person/7"
     assert result.watch_region == "KE"
     assert result.watch_providers[0].name == "Netflix"
+    assert result.networks[0].kind == "company"
     assert result.recommendations[0].future_path == "/title/movie/99"
     assert result.awards == "Won 2 awards."
 
@@ -131,6 +132,21 @@ def test_unknown_country_is_rejected_instead_of_rendering_fake_collection():
         assert "country" in str(exc).lower()
     else:
         raise AssertionError("unknown country should be rejected")
+
+
+def test_country_genre_filter_is_applied_to_both_media_types():
+    tmdb = FakeTmdb({
+        "/configuration": configuration(),
+        "/genre/movie/list": {"genres": [{"id": 80, "name": "Crime"}]},
+        "/genre/tv/list": {"genres": [{"id": 80, "name": "Crime"}]},
+        "/discover/movie": {"page": 1, "total_pages": 1, "total_results": 0, "results": []},
+        "/discover/tv": {"page": 1, "total_pages": 1, "total_results": 0, "results": []},
+    })
+    result = asyncio.run(CatalogService(tmdb).browse("country", "KE", genre="crime"))
+    assert result.genre == "crime"
+    discover = [params for path, params in tmdb.calls if path.startswith("/discover/")]
+    assert len(discover) == 2
+    assert all(params["with_genres"] == 80 and params["with_origin_country"] == "KE" for params in discover)
 
 def test_tv_title_prefers_latest_regular_season_trailer_and_exposes_seasons():
     tmdb = FakeTmdb({

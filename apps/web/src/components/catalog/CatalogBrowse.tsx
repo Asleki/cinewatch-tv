@@ -8,6 +8,7 @@ import styles from "./CatalogBrowse.module.css";
 type Props = {
   payload: CatalogBrowseResponse;
   basePath: string;
+  genreOptions?: { slug: string; name: string }[];
 };
 
 function pageHref(basePath: string, payload: CatalogBrowseResponse, page: number) {
@@ -16,16 +17,16 @@ function pageHref(basePath: string, payload: CatalogBrowseResponse, page: number
   if (payload.media_type !== "all") params.set("media_type", payload.media_type);
   if (payload.year) params.set("year", String(payload.year));
   if (payload.language) params.set("language", payload.language);
+  if (payload.genre) params.set("genre", payload.genre);
   if (payload.sort !== "popularity.desc") params.set("sort", payload.sort);
   return `${basePath}?${params.toString()}`;
 }
 
-export default function CatalogBrowse({ payload, basePath }: Props) {
+export default function CatalogBrowse({ payload, basePath, genreOptions = [] }: Props) {
   return (
     <main className={shared.page}>
       <p className={shared.eyebrow}>Discover</p>
       <h1>{payload.title}</h1>
-      <p className={shared.muted}>Page {payload.page}{payload.total_pages > 0 ? ` of ${payload.total_pages}` : ""}</p>
 
       <form className={styles.filters} method="get" action={basePath}>
         <label>Type
@@ -38,7 +39,7 @@ export default function CatalogBrowse({ payload, basePath }: Props) {
         <label>Year
           <input name="year" inputMode="numeric" pattern="[0-9]{4}" defaultValue={payload.year ?? ""} placeholder="Any year" />
         </label>
-        <label>Language
+        <label>Preferred language
           <select name="language" defaultValue={payload.language ?? ""}>
             <option value="">Any language</option>
             <option value="en">English</option>
@@ -52,6 +53,9 @@ export default function CatalogBrowse({ payload, basePath }: Props) {
             <option value="yo">Yoruba</option>
           </select>
         </label>
+        {genreOptions.length ? <label>Genre
+          <select name="genre" defaultValue={payload.genre ?? ""}><option value="">Any genre</option>{genreOptions.map((item) => <option value={item.slug} key={item.slug}>{item.name}</option>)}</select>
+        </label> : null}
         <label>Sort
           <select name="sort" defaultValue={payload.sort}>
             <option value="popularity.desc">Most popular</option>
