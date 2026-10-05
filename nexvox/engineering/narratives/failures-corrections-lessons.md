@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `682635524c4615e3b900212d649c83a11ec7f337`
+**Source commit:** `380d8390fdac6a1b91e47b9e863cb0244e4f568d`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
@@ -204,7 +204,23 @@ Failure: New interpreted delivery evidence initially inherited default TRAINING_
 
 Correction: Minimal discovery-delivery path classification now requires human training review, alongside unchanged SSM/security review gates; focused regression passed. No application source or dependency changed.
 
-## CWTV-FC-00026 - CWTV.V1.2.8
+## CWTV-FC-00026 - CWTV.V1.3.3.2.3
+
+State: `CORRECTED`
+
+Failure: Read-only SSM runtime inspection exited127 because the non-interactive ubuntu shell did not expose Node/npm through PATH; no production source/configuration was changed.
+
+Correction: Selected the existing systemd Node24.18.0 runtime path explicitly; governed npm12.0.2 and existing Python3.14.6 consistency passed without a host installation or configuration change.
+
+## CWTV-FC-00027 - CWTV.V1.3.3.2.3
+
+State: `CORRECTED`
+
+Failure: Native Chromium proxy trust failed; persistent multi-CA write was rejected by automatic review. Browser harness strict-selector/quoting/navigation/render timing failures were preserved; no production defect demonstrated.
+
+Correction: Used actual live responses with TLS-verified temporary transport and explicit render/count waits; isolated Genres proof and final29 browser checks passed. Owner Android independently confirmed Genres12/24/27.
+
+## CWTV-FC-00028 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -212,7 +228,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.
 
-## CWTV-FC-00027 - CWTV.V1.2.8
+## CWTV-FC-00029 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -220,7 +236,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance.
 
-## CWTV-FC-00028 - CWTV.V1.3.1
+## CWTV-FC-00030 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -228,7 +244,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00029 - CWTV.V1.3.1
+## CWTV-FC-00031 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -236,7 +252,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00030 - CWTV.V1.3.1
+## CWTV-FC-00032 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -244,7 +260,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.
 
-## CWTV-FC-00031 - CWTV.V1.3.1
+## CWTV-FC-00033 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -252,7 +268,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Added regression protection for the source/projection boundary defect exposed by malformed commit 3f9f175. Future commits marked NexVox-Projection true must fail validation if they contain ordinary source, architecture, workflow, or Chronicle paths.
 
-## CWTV-FC-00032 - CWTV.V1.3.3.2.1
+## CWTV-FC-00034 - CWTV.V1.3.3.2.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -260,7 +276,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion
 
-## CWTV-FC-00033 - CWTV.V1.3.3.2
+## CWTV-FC-00035 - CWTV.V1.3.3.2
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 

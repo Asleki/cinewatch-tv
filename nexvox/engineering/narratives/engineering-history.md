@@ -1,10 +1,10 @@
 # CineWatch Engineering History
 
-**Source commit:** `682635524c4615e3b900212d649c83a11ec7f337`
+**Source commit:** `380d8390fdac6a1b91e47b9e863cb0244e4f568d`
 
 This is a deterministic NexVox narrative projection. Git remains the canonical commit authority and `engineering-events.jsonl` remains the canonical engineering-activity ledger.
 
-The source history contains **59 reachable commits**, **421 current tracked files**, and **203 engineering events**.
+The source history contains **61 reachable commits**, **434 current tracked files**, and **213 engineering events**.
 
 ## Commit sequence
 
@@ -67,6 +67,8 @@ The source history contains **59 reachable commits**, **421 current tracked file
 - `6a4c428` - feat(discovery): reconcile CWTV V1.3.3.2.3 delivery 003 on secure Main
 - `22c1967` - chore(nexvox): project isolated 003 qualification candidate
 - `6826355` - docs: close D004 discovery promotion with governed engineering provenance
+- `f8e9c93` - chore(nexvox): project D004 engineering closure and multi-system provenance
+- `380d839` - docs: close CineWatch production release with live and Android evidence
 
 ## Milestone state
 
@@ -86,5 +88,5 @@ The source history contains **59 reachable commits**, **421 current tracked file
 - `CWTV.V1.3.3.1`: events=2, qualified=true, failures=0, corrections=1
 - `CWTV.V1.3.3.2`: events=17, qualified=true, failures=1, corrections=2
 - `CWTV.V1.3.3.2.1`: events=2, qualified=true, failures=0, corrections=1
-- `CWTV.V1.3.3.2.3`: events=22, qualified=true, failures=7, corrections=7
+- `CWTV.V1.3.3.2.3`: events=32, qualified=true, failures=9, corrections=9
 - `CWTV.V1.3.3.2.4`: events=9, qualified=true, failures=3, corrections=1
