@@ -1,0 +1,190 @@
+[
+  {
+    "gate": "ci-security-policy",
+    "command": [
+      "python",
+      "scripts/check_ci_security_quality.py"
+    ],
+    "started_at": "2026-10-05T14:52:34.096625+00:00",
+    "duration_seconds": 1.562,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "repository-policies",
+    "command": [
+      "bash",
+      "-c",
+      "set -e; for s in check_repository_tree check_backend_skeleton check_frontend_skeleton check_database_foundation check_contract_foundation check_provider_runtime check_termux_linux_workflow check_engineering_chronicle check_nexvox_engineering_corpus; do python scripts/$s.py; done"
+    ],
+    "started_at": "2026-10-05T14:52:35.659853+00:00",
+    "duration_seconds": 26.387,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "repository-tests",
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/repository",
+      "-p",
+      "test_*.py"
+    ],
+    "started_at": "2026-10-05T14:53:02.048385+00:00",
+    "duration_seconds": 29.696,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "openapi-parity",
+    "command": [
+      "python",
+      "scripts/export_openapi_contract.py",
+      "--check"
+    ],
+    "started_at": "2026-10-05T14:53:31.744931+00:00",
+    "duration_seconds": 2.33,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "contract-runtime",
+    "command": [
+      "bash",
+      "scripts/check_contract_runtime.sh"
+    ],
+    "started_at": "2026-10-05T14:53:34.075179+00:00",
+    "duration_seconds": 20.284,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "backend-runtime",
+    "command": [
+      "bash",
+      "scripts/check_backend_runtime.sh"
+    ],
+    "started_at": "2026-10-05T14:53:54.361036+00:00",
+    "duration_seconds": 6.718,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "frontend-runtime-build",
+    "command": [
+      "bash",
+      "scripts/check_frontend_runtime.sh"
+    ],
+    "started_at": "2026-10-05T14:54:01.080194+00:00",
+    "duration_seconds": 49.688,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "database-migrations",
+    "command": [
+      "bash",
+      "scripts/check_database_migrations.sh"
+    ],
+    "started_at": "2026-10-05T14:54:50.769179+00:00",
+    "duration_seconds": 4.174,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "tracked-secret-policy",
+    "command": [
+      "python",
+      "scripts/check_ci_security_quality.py",
+      "--scan-repository"
+    ],
+    "started_at": "2026-10-05T14:54:54.943357+00:00",
+    "duration_seconds": 0.804,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "python-dependency-consistency",
+    "command": [
+      "python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "started_at": "2026-10-05T14:54:55.748854+00:00",
+    "duration_seconds": 0.425,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "python-vulnerability-audit",
+    "command": [
+      "python",
+      "-m",
+      "pip_audit",
+      "--strict",
+      "services/api"
+    ],
+    "started_at": "2026-10-05T14:54:56.174596+00:00",
+    "duration_seconds": 0.726,
+    "exit_code": 1,
+    "required": true
+  },
+  {
+    "gate": "npm-production-audit",
+    "command": [
+      "npm",
+      "audit",
+      "--omit=dev",
+      "--audit-level=high"
+    ],
+    "started_at": "2026-10-05T14:54:56.901423+00:00",
+    "duration_seconds": 1.483,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "npm-full-advisory",
+    "command": [
+      "npm",
+      "audit",
+      "--audit-level=high"
+    ],
+    "started_at": "2026-10-05T14:54:58.385277+00:00",
+    "duration_seconds": 2.555,
+    "exit_code": 1,
+    "required": false
+  },
+  {
+    "gate": "whitespace",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "started_at": "2026-10-05T14:55:00.941052+00:00",
+    "duration_seconds": 0.019,
+    "exit_code": 0,
+    "required": true
+  },
+  {
+    "gate": "python-vulnerability-audit-retry",
+    "command": [
+      "python",
+      "-m",
+      "pip_audit",
+      "--strict",
+      "--cache-dir",
+      "/workspace/cinewatch-security-evidence/2026-10-05/pip-audit-cache",
+      "services/api"
+    ],
+    "recorded_at": "2026-10-05T14:57:09.693842+00:00",
+    "exit_code": 0,
+    "required": true,
+    "supersedes_bootstrap_failure": "python-vulnerability-audit"
+  }
+]

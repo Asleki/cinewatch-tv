@@ -6,13 +6,13 @@
 ## Current state
 
 - **Current milestone:** `CWTV.V1.3.3.2.3`
-- **Tracked milestones:** 17
-- **Qualified milestones:** 16
-- **Tracked milestone completion:** 94.1%
-- **Recorded failed events:** 15
-- **Recorded corrections:** 31
-- **Commit events:** 9
-- **Ledger head:** `CWTV-EVT-000174` / `a7a9ad10408b317b974ff37900046c2c4183be1fc93c11dd3a6eb13acdeef466`
+- **Tracked milestones:** 18
+- **Qualified milestones:** 17
+- **Tracked milestone completion:** 94.4%
+- **Recorded failed events:** 18
+- **Recorded corrections:** 32
+- **Commit events:** 10
+- **Ledger head:** `CWTV-EVT-000183` / `89ee6b4afef6de47ada3fdc416b909ac0268a70c0440b400d476e5be43938dcf`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -37,6 +37,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2` | QUALIFIED | 100% | 3.2/5 | 1 | 2 | 73h 50m 20s | 1m |
 | `CWTV.V1.3.3.2.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.3` | IN_PROGRESS | 60% | 1.5/5 | 0 | 0 | not preserved | not preserved |
+| `CWTV.V1.3.3.2.4` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 12m 14s | 1s |
 
 ## Failure and correction history
 
@@ -57,6 +58,9 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.2.8` | 2026-09-10T02:08:00+02:00 | npm-supply-chain | R1 dependency-resolution qualification failed because npm 12.0.2 recognized the Redocly-scoped js-yaml override but retained js-yaml 4.3.1 in the installed Redocly subtree. | — |
 | `CWTV.V1.3.1` | 2026-09-10T14:40:28Z | NEXVOX_ENGINEERING_KNOWLEDGE | Detected a NexVox source/projection boundary violation in commit 3f9f175: a commit marked NexVox-Projection true also contains the CineWatch Brand and Streaming Signature Authority and Chronicle source changes. The already-pushed commit is preserved as historical evidence and will not be rewritten. | — |
 | `CWTV.V1.3.3.2` | 2026-09-14T16:24:48Z | test-02-canonical-reconciliation | Remote Linux CI passed all runtime and migration gates but detected generated Next.js next-env.d.ts drift after the production build. | — |
+| `CWTV.V1.3.3.2.4` | 2026-10-05T11:11:53Z | dependency_security | Predecessor CI37301292042 failed production npm audit on critical Next.js GHSA-vcvr-r3jv-pc5j; failure retained after correction. | — |
+| `CWTV.V1.3.3.2.4` | 2026-10-05T14:54:56.174596+00:00 | dependency_security | Strict Python audit bootstrap failed before auditing: default cache directory was read-only; original failure is preserved. | — |
+| `CWTV.V1.3.3.2.4` | 2026-10-05T15:02:39Z | dependency_security | PR14 CI37329456030 checked out a synthetic merge SHA and failed NexVox HEAD binding; it is not a failure of the patched dependency. | — |
 
 ## Commit lineage
 
@@ -69,6 +73,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `74856ca2738afaa33d33ed7cb1983967fc0355bd` — fix: qualify CineWatch engineering dashboard visual experience (2026-09-08T05:25:09+02:00)
 - `e15752642ed22d30b99caadf546214eea15b730f` — feat: establish CineWatch V1 OpenAPI typed contract foundation (2026-09-09T06:58:32+02:00)
 - `50a453e1efccba0d963d2990b7c6a528fc35ffcf` — feat: establish CineWatch Termux Linux engineering workflow (2026-09-09T21:34:35+02:00)
+- `195005ee12c14be6401280319853aa2fa2ba33ff` — Committed minimal Next.js16.3.6 correction, eleven required lock entries and existing exact frontend policy; unrelated versions unchanged. (2026-10-05T14:56:38Z)
 
 ## Artifacts
 
@@ -295,6 +300,15 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-09-14T17:41:17Z** · `CWTV.V1.3.3.2` · `MILESTONE_QUALIFIED` · **QUALIFIED** — Qualified the canonical Test-02 product evolution into CineWatch after source reconciliation, security and rights-boundary preservation, provider qualification, browser approval, migration corrections, deterministic Next.js authority correction, NexVox governance, and exact remote CI acceptance. Evidence: Frozen Test-02 source authority reconciled into canonical CineWatch.; Human browser qualification passed.; GitHub Actions run 34873733655 concluded success for exact remote HEAD.; Linux quality gate passed.; Dependency and secret gate passed.
 - **2026-10-05T10:49:51Z** · `CWTV.V1.3.3.2.3` · `QUALIFICATION_BLOCKED` · **BLOCKED** — Codex SSM probe blocked before AWS API execution by connector authentication retry loop; owner-console proof remains separately attributed and 002 deployment is not authorized Evidence: docs/engineering/ssm-autonomy/2026-10-05/evidence.json
 - **2026-10-05T11:00:54.617377+00:00** · `CWTV.V1.3.3.2.3` · `TEST_PASSED` · **PASS** — Independent Codex read-only SSM command succeeded: expected host, clean detached source SHA, BUILD_ID and three active services; earlier connector/session blocker superseded, no 002 deployment Evidence: SSM Command cf8d1e3c-46dc-497d-ad06-cd9fc39f9a32; docs/engineering/ssm-autonomy/2026-10-05/codex-ssm-proof.json
+- **2026-10-05T14:52:34.096625+00:00** · `CWTV.V1.3.3.2.4` · `MILESTONE_STARTED` · **INFO** — First preserved timed local qualification phase for the dedicated Next.js GHSA-vcvr-r3jv-pc5j security correction; discovery002 is outside this milestone. Evidence: docs/engineering/dependency-security/2026-10-05/security-correction-evidence.json
+- **2026-10-05T11:11:53Z** · `CWTV.V1.3.3.2.4` · `TEST_FAILED` · **FAILED** — Predecessor CI37301292042 failed production npm audit on critical Next.js GHSA-vcvr-r3jv-pc5j; failure retained after correction. Evidence: https://github.com/Asleki/cinewatch-tv/actions/runs/37301292042; docs/engineering/dependency-security/2026-10-05/npm-audit-production-before.json
+- **2026-10-05T15:09:54.051358+00:00** · `CWTV.V1.3.3.2.4` · `ROOT_CAUSE_IDENTIFIED` · **INFO** — Recorded verified GitHub/Next.js advisory: installed16.3.4 is affected;16.3.6 is the minimum patched version. Evidence: docs/engineering/dependency-security/2026-10-05/advisory-github.json; docs/engineering/dependency-security/2026-10-05/advisory-nextjs.json
+- **2026-10-05T14:54:56.174596+00:00** · `CWTV.V1.3.3.2.4` · `TEST_FAILED` · **FAILED** — Strict Python audit bootstrap failed before auditing: default cache directory was read-only; original failure is preserved. Duration: 1s. Evidence: docs/engineering/dependency-security/2026-10-05/security-correction-evidence.json
+- **2026-10-05T15:09:54.062203+00:00** · `CWTV.V1.3.3.2.4` · `CORRECTION_APPLIED` · **PASS** — Recorded same strict Python audit retry with an explicit writable cache: no known vulnerabilities. No source or application dependency change. Evidence: docs/engineering/dependency-security/2026-10-05/security-correction-evidence.json
+- **2026-10-05T15:02:39Z** · `CWTV.V1.3.3.2.4` · `TEST_FAILED` · **FAILED** — PR14 CI37329456030 checked out a synthetic merge SHA and failed NexVox HEAD binding; it is not a failure of the patched dependency. Evidence: docs/engineering/dependency-security/2026-10-05/pr-synthetic-ci-result.json
+- **2026-10-05T14:56:38Z** · `CWTV.V1.3.3.2.4` · `COMMIT_CREATED` · **PASS** — Committed minimal Next.js16.3.6 correction, eleven required lock entries and existing exact frontend policy; unrelated versions unchanged. Evidence: docs/engineering/dependency-security/2026-10-05/security-correction-evidence.json
+- **2026-10-05T15:01:53Z** · `CWTV.V1.3.3.2.4` · `TEST_PASSED` · **PASS** — Independent exact-HEAD candidate CI37329234294 passed both required jobs before non-force Main promotion; it preceded the later PR synthetic-checkout failure. Evidence: docs/engineering/dependency-security/2026-10-05/candidate-ci-result.json
+- **2026-10-05T15:04:48Z** · `CWTV.V1.3.3.2.4` · `MILESTONE_QUALIFIED` · **QUALIFIED** — Main CI37329625428 passed Linux quality and dependency/secret gates; production npm audit has zero vulnerabilities. Scope is dependency correction only, with no002application or deployment. Evidence: docs/engineering/dependency-security/2026-10-05/main-security-ci-result.json; docs/engineering/dependency-security/2026-10-05/npm-audit-production-after.json
 
 ## Integrity and timing rules
 
