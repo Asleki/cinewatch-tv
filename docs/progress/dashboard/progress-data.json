@@ -1560,6 +1560,29 @@
       "summary": "Qualified Privacy/security source2fabbc96ed40ae77d5eec834defca9e8b0f24774 and dedicated projectiona3a07350ddb56c3e220a9e8698a3ef35670196eb preserve explicit source→projection ancestry and generator-only paths; mandatory PDF uploaded and independently downloaded/hash verified.",
       "timestamp_precision": "commit-derived",
       "timestamp_source": "exact Git source committer timestamp"
+    },
+    {
+      "artifact": null,
+      "commit": "7769eb87ff110503f96ad88c77a97566ff45b6ad",
+      "component": "Source-governance",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000359",
+      "event_sha256": "bed424b1ee4c0f70a138c6584d95597cd77d3696ada95079b41616552cf49fea",
+      "event_type": "COMMIT_CREATED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:23:08Z",
+      "previous_event_sha256": "23e9bd471795be44c26191988beec3c8b80bcb9637e598136d42fd811a482ac0",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 359,
+      "summary": "Qualified UI ordinarysource7769eb87 and15 reviewedpaths; originalprovider/brand assets and dependencies/API/DB unchanged.",
+      "timestamp_precision": "commit-derived",
+      "timestamp_source": "Git commit"
     }
   ],
   "events": [
@@ -10383,6 +10406,121 @@
       "summary": "Fresh supplementary64/64 checks PASS: actualnetwork411 whiteRTLlogo darkmatte in boththemes, companydetail, twoactualtitle/backdrop heroes at320/1440; locallycontrolled absent/brokenlogo meaningfulfallback and mixedartoriginalmattes. Allsourcebyte/mode/brand/API/securityboundaries preserved; no productiondeployment yet.",
       "timestamp_precision": "exact",
       "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": "7769eb87ff110503f96ad88c77a97566ff45b6ad",
+      "component": "Source-governance",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000359",
+      "event_sha256": "bed424b1ee4c0f70a138c6584d95597cd77d3696ada95079b41616552cf49fea",
+      "event_type": "COMMIT_CREATED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:23:08Z",
+      "previous_event_sha256": "23e9bd471795be44c26191988beec3c8b80bcb9637e598136d42fd811a482ac0",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 359,
+      "summary": "Qualified UI ordinarysource7769eb87 and15 reviewedpaths; originalprovider/brand assets and dependencies/API/DB unchanged.",
+      "timestamp_precision": "commit-derived",
+      "timestamp_source": "Git commit"
+    },
+    {
+      "artifact": null,
+      "commit": "8ef1fd0e4184745ff122d54b93b0eb900aa204ea",
+      "component": "Source-governance",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000360",
+      "event_sha256": "fc939666876a483de8be6b456491d83ed8b8ecf0037ab0e7097b103c78fa04a6",
+      "event_type": "NEXVOX_PROJECTION_QUALIFIED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:36:51Z",
+      "previous_event_sha256": "bed424b1ee4c0f70a138c6584d95597cd77d3696ada95079b41616552cf49fea",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 360,
+      "summary": "CineWatch-local sourceprojection8ef1fd0 generateddeterministically for exact7769eb87; source/projectionparent/purity/checksums/eligibility gates PASS.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": "8ef1fd0e4184745ff122d54b93b0eb900aa204ea",
+      "component": "Source-governance",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000361",
+      "event_sha256": "4e7f036355c0d080fa6f63f278f543809c777669cea3fdc0bdefad2d64a6a18e",
+      "event_type": "GITHUB_CI_PASSED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:36:51Z",
+      "previous_event_sha256": "fc939666876a483de8be6b456491d83ed8b8ecf0037ab0e7097b103c78fa04a6",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 361,
+      "summary": "Candidate37792588262 andordinaryMain37792983080 bothLinuxquality andDependency/secret GREEN at8ef1fd0; nonforcepublication preserved exactsource/projectionidentities.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": "7769eb87ff110503f96ad88c77a97566ff45b6ad",
+      "component": "Source-governance",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000362",
+      "event_sha256": "23893cee2d986772d8fe063504adf53b317221c10dd69dbe2bca996e758fe792",
+      "event_type": "PDF_ARCHIVED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:36:51Z",
+      "previous_event_sha256": "4e7f036355c0d080fa6f63f278f543809c777669cea3fdc0bdefad2d64a6a18e",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 362,
+      "summary": "Mandatorysource PDF Drive18LEb1oJBsrBdhMbwt-nS-9M9T38SW5XX downloadedbyte-identical SHA34d0cfa1b2f8bdffc43712476c33c0119bcdefad9a5414ee077df33bd9d32044; checksumcompanionpreserved; PDFoutsideGit.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": "8ef1fd0e4184745ff122d54b93b0eb900aa204ea",
+      "component": "Source-governance",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000363",
+      "event_sha256": "ecc826380f44f1e7ee3c4b8efb9f0e3d9481d3f3f8808e5ced24c974381e527d",
+      "event_type": "RELEASE_GOVERNANCE_PREPARED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:36:51Z",
+      "previous_event_sha256": "23893cee2d986772d8fe063504adf53b317221c10dd69dbe2bca996e758fe792",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 363,
+      "summary": "Light/darkUI sourcequalified andMainGREEN; sourceclosure willreceiveexactNexVoxprojection,PDFandPraxisbeforeauthorizedSSMdeployment. Production hasNOTbeenupdated; Androidacceptancepending. Separate missingmediaread-only review recordednoDBstateclaim or DBchange.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -11403,9 +11541,9 @@
     }
   ],
   "ledger": {
-    "event_count": 358,
-    "head_event_id": "CWTV-EVT-000358",
-    "head_sha256": "23e9bd471795be44c26191988beec3c8b80bcb9637e598136d42fd811a482ac0"
+    "event_count": 363,
+    "head_event_id": "CWTV-EVT-000363",
+    "head_sha256": "ecc826380f44f1e7ee3c4b8efb9f0e3d9481d3f3f8808e5ced24c974381e527d"
   },
   "milestones": [
     {
@@ -11893,22 +12031,22 @@
       "paused_label": "not preserved",
       "paused_seconds": null,
       "planned_complexity": null,
-      "progress_percent": 60,
+      "progress_percent": 95,
       "recorded_command_runtime_label": "3m 42s",
       "recorded_command_runtime_seconds": 222.019,
       "session_data_present": false,
       "status": "IN_PROGRESS"
     }
   ],
-  "projection_as_of": "2026-10-08T14:23:08+00:00",
+  "projection_as_of": "2026-10-08T14:36:51+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 51,
-    "commits": 12,
+    "commits": 13,
     "corrections": 55,
     "current_milestone": "CWTV.V1.3.3.2.6",
     "failed_events": 41,
-    "passed_events": 220,
+    "passed_events": 225,
     "qualified_milestones": 19,
     "tracked_completion_percent": 95.0,
     "tracked_milestones": 20

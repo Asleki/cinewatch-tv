@@ -11,8 +11,8 @@
 - **Tracked milestone completion:** 95.0%
 - **Recorded failed events:** 41
 - **Recorded corrections:** 55
-- **Commit events:** 12
-- **Ledger head:** `CWTV-EVT-000358` / `23e9bd471795be44c26191988beec3c8b80bcb9637e598136d42fd811a482ac0`
+- **Commit events:** 13
+- **Ledger head:** `CWTV-EVT-000363` / `ecc826380f44f1e7ee3c4b8efb9f0e3d9481d3f3f8808e5ced24c974381e527d`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -39,7 +39,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.3` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.4` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 12m 14s | 1s |
 | `CWTV.V1.3.3.2.5` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | 1h 2m 51s | 3m 20s |
-| `CWTV.V1.3.3.2.6` | IN_PROGRESS | 60% | 5.0/5 | 5 | 5 | not preserved | 3m 42s |
+| `CWTV.V1.3.3.2.6` | IN_PROGRESS | 95% | 5.0/5 | 5 | 5 | not preserved | 3m 42s |
 
 ## Failure and correction history
 
@@ -101,6 +101,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `195005ee12c14be6401280319853aa2fa2ba33ff` — Committed minimal Next.js16.3.6 correction, eleven required lock entries and existing exact frontend policy; unrelated versions unchanged. (2026-10-05T14:56:38Z)
 - `6a4c4280b2c190590990e5d58372bc9624f87887` — Existing qualified D003 source contains exactly the intended discovery delta and qualified tree; its identity is preserved through D004. (2026-10-05T16:41:22Z)
 - `2fabbc96ed40ae77d5eec834defca9e8b0f24774` — Qualified Privacy/security source2fabbc96ed40ae77d5eec834defca9e8b0f24774 and dedicated projectiona3a07350ddb56c3e220a9e8698a3ef35670196eb preserve explicit source→projection ancestry and generator-only paths; mandatory PDF uploaded and independently downloaded/hash verified. (2026-10-08T10:38:43Z)
+- `7769eb87ff110503f96ad88c77a97566ff45b6ad` — Qualified UI ordinarysource7769eb87 and15 reviewedpaths; originalprovider/brand assets and dependencies/API/DB unchanged. (2026-10-08T14:23:08Z)
 
 ## Artifacts
 
@@ -516,6 +517,11 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-10-08T14:17:57Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — diff qualification passed. Duration: 0s. Evidence: exit_code=0
 - **2026-10-08T14:19:44Z** · `CWTV.V1.3.3.2.6` · `SOURCE_QUALIFICATION_PASSED` · **PASS** — Fresh fullcurrent qualification:27repository,99API,3contract,6offlinemigration tests PASS; lint,typecheck,productionNextbuild,API/web/contract/trailerruntime,OpenAPI/TSparity,Chronicle/dashboard,secret/CIpolicies PASS. npmproduction0vulnerabilities;Pythonno known vulnerabilities;8existinghighdevelopmentadvisories retained. Alloriginalbrand/providerassets,dependency/API/contract/migrationauthorities and prior294events unchanged. Deploymentpending. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
 - **2026-10-08T14:23:08Z** · `CWTV.V1.3.3.2.6` · `SUPPLEMENTARY_UI_QUALIFICATION_PASSED` · **PASS** — Fresh supplementary64/64 checks PASS: actualnetwork411 whiteRTLlogo darkmatte in boththemes, companydetail, twoactualtitle/backdrop heroes at320/1440; locallycontrolled absent/brokenlogo meaningfulfallback and mixedartoriginalmattes. Allsourcebyte/mode/brand/API/securityboundaries preserved; no productiondeployment yet. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:23:08Z** · `CWTV.V1.3.3.2.6` · `COMMIT_CREATED` · **PASS** — Qualified UI ordinarysource7769eb87 and15 reviewedpaths; originalprovider/brand assets and dependencies/API/DB unchanged. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:36:51Z** · `CWTV.V1.3.3.2.6` · `NEXVOX_PROJECTION_QUALIFIED` · **PASS** — CineWatch-local sourceprojection8ef1fd0 generateddeterministically for exact7769eb87; source/projectionparent/purity/checksums/eligibility gates PASS. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:36:51Z** · `CWTV.V1.3.3.2.6` · `GITHUB_CI_PASSED` · **PASS** — Candidate37792588262 andordinaryMain37792983080 bothLinuxquality andDependency/secret GREEN at8ef1fd0; nonforcepublication preserved exactsource/projectionidentities. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:36:51Z** · `CWTV.V1.3.3.2.6` · `PDF_ARCHIVED` · **PASS** — Mandatorysource PDF Drive18LEb1oJBsrBdhMbwt-nS-9M9T38SW5XX downloadedbyte-identical SHA34d0cfa1b2f8bdffc43712476c33c0119bcdefad9a5414ee077df33bd9d32044; checksumcompanionpreserved; PDFoutsideGit. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:36:51Z** · `CWTV.V1.3.3.2.6` · `RELEASE_GOVERNANCE_PREPARED` · **PASS** — Light/darkUI sourcequalified andMainGREEN; sourceclosure willreceiveexactNexVoxprojection,PDFandPraxisbeforeauthorizedSSMdeployment. Production hasNOTbeenupdated; Androidacceptancepending. Separate missingmediaread-only review recordednoDBstateclaim or DBchange. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
 
 ## Integrity and timing rules
 
