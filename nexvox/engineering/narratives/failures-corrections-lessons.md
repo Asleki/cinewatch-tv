@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `2fabbc96ed40ae77d5eec834defca9e8b0f24774`
+**Source commit:** `100ba8ed7a1109bc416285748d7cd046728346bb`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
@@ -260,7 +260,23 @@ Failure: The unpublished Privacy draft reused milestone CWTV.V1.3.3.2.4, already
 
 Correction: Allocated unused CWTV.V1.3.3.2.5; preserved all 213 canonical predecessor events byte-for-byte and rebound only unpublished Privacy events retaining exact original timestamps/results. Original misassigned draft preserved externally with SHA256; no published history rewritten.
 
-## CWTV-FC-00033 - CWTV.V1.2.8
+## CWTV-FC-00033 - CWTV.V1.3.3.2.5
+
+State: `CORRECTED`
+
+Failure: A publication-preparation read ran before the asynchronous projection command finished; its expected projection-check log was not yet present, so the preparation stopped before any GitHub ref write. Workflow reread and command completion awaited.
+
+Correction: Awaited the projection process, verified its exact source identity/path purity/deterministic checks and clean tree, then published exact matching Git objects without recreating identities.
+
+## CWTV-FC-00034 - CWTV.V1.3.3.2.5
+
+State: `CORRECTED`
+
+Failure: Closure Chronicle checker rejected an unpublished COMMIT_CREATED event marked exact instead of mandatory commit-derived; no closure publication occurred.
+
+Correction: Used actual source Git committer time and commit-derived precision for the unpublished commit event. Preserved all canonical276 events byte-for-byte, original failed draft externally, and the checker unchanged.
+
+## CWTV-FC-00035 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -268,7 +284,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.
 
-## CWTV-FC-00034 - CWTV.V1.2.8
+## CWTV-FC-00036 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -276,7 +292,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance.
 
-## CWTV-FC-00035 - CWTV.V1.3.1
+## CWTV-FC-00037 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -284,7 +300,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00036 - CWTV.V1.3.1
+## CWTV-FC-00038 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -292,7 +308,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00037 - CWTV.V1.3.1
+## CWTV-FC-00039 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -300,7 +316,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.
 
-## CWTV-FC-00038 - CWTV.V1.3.1
+## CWTV-FC-00040 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -308,7 +324,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Added regression protection for the source/projection boundary defect exposed by malformed commit 3f9f175. Future commits marked NexVox-Projection true must fail validation if they contain ordinary source, architecture, workflow, or Chronicle paths.
 
-## CWTV-FC-00039 - CWTV.V1.3.3.2.1
+## CWTV-FC-00041 - CWTV.V1.3.3.2.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -316,7 +332,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion
 
-## CWTV-FC-00040 - CWTV.V1.3.3.2
+## CWTV-FC-00042 - CWTV.V1.3.3.2
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -324,7 +340,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Corrected the stale offline database migration qualification after reconciliation advanced the governed Alembic head from 0001_postgresql_foundation to 0002_missing_media_authority.
 
-## CWTV-FC-00041 - CWTV.V1.3.3.2.5
+## CWTV-FC-00043 - CWTV.V1.3.3.2.5
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
