@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `60b73b71a292792dc78a33c1469f5da2df9cf028`
+**Source commit:** `5f1b5254c1f53c935de5346df43852f068cd114e`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
@@ -332,7 +332,23 @@ Failure: Completedsevenwidthsbrowserpassrecorded326passed/eightfailed: sevenmatt
 
 Correction: Reread workflow; compare originalart/mattes by exactassetURL instead of nonunique displayname, and queryactualorganizationexternal action rather than substringname. This preserves source identity and verifies intended absentaction. Reexecuting entiresevenwidthsuite with unchanged application tree.
 
-## CWTV-FC-00042 - CWTV.V1.2.8
+## CWTV-FC-00042 - CWTV.V1.3.3.2.6
+
+State: `UNPAIRED_FAILURE`
+
+Failure: A transcribed closure SHA was invalid. git rev-list rejected it before GitHub mutation; no commit/ref was replaced.
+
+Correction: No paired correction recorded.
+
+## CWTV-FC-00043 - CWTV.V1.3.3.2.6
+
+State: `UNPAIRED_FAILURE`
+
+Failure: Praxis CI anonymous upstream reads failed while CineWatch was private. Tests, offline integrity and temporal checks passed; workspace authenticated access passed independently. This was an access boundary, not corrupted corpus or a production defect.
+
+Correction: No paired correction recorded.
+
+## CWTV-FC-00044 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -340,7 +356,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.
 
-## CWTV-FC-00043 - CWTV.V1.2.8
+## CWTV-FC-00045 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -348,7 +364,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance.
 
-## CWTV-FC-00044 - CWTV.V1.3.1
+## CWTV-FC-00046 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -356,7 +372,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00045 - CWTV.V1.3.1
+## CWTV-FC-00047 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -364,7 +380,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00046 - CWTV.V1.3.1
+## CWTV-FC-00048 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -372,7 +388,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.
 
-## CWTV-FC-00047 - CWTV.V1.3.1
+## CWTV-FC-00049 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -380,7 +396,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Added regression protection for the source/projection boundary defect exposed by malformed commit 3f9f175. Future commits marked NexVox-Projection true must fail validation if they contain ordinary source, architecture, workflow, or Chronicle paths.
 
-## CWTV-FC-00048 - CWTV.V1.3.3.2.1
+## CWTV-FC-00050 - CWTV.V1.3.3.2.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -388,7 +404,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion
 
-## CWTV-FC-00049 - CWTV.V1.3.3.2
+## CWTV-FC-00051 - CWTV.V1.3.3.2
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -396,7 +412,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Corrected the stale offline database migration qualification after reconciliation advanced the governed Alembic head from 0001_postgresql_foundation to 0002_missing_media_authority.
 
-## CWTV-FC-00050 - CWTV.V1.3.3.2.5
+## CWTV-FC-00052 - CWTV.V1.3.3.2.5
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -404,10 +420,26 @@ Failure: No FAILED ledger event recorded.
 
 Correction: With explicit owner scope approval, exact-pin Next16.3.8, retain eslint-config-next16.3.4/React/TypeScript/Node/npm, patch sharp0.35.5 with required platform/libvips packages and source-map-js1.2.2; all39 lock entries individually scoped, fresh production audit zero vulnerabilities.
 
-## CWTV-FC-00051 - CWTV.V1.3.3.2.6
+## CWTV-FC-00053 - CWTV.V1.3.3.2.6
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
 Failure: No FAILED ledger event recorded.
 
 Correction: Node native fetch through NODE_USE_ENV_PROXY=1 succeeds with configured CA; Next rewrite agent still attempts unavailable direct TCP. Local UI harness now transports unmodified real canonical API responses through TLS-verified httpx; Linux source/runtime tests independently cover actual Next rewrites. Production runtime/configuration unchanged.
+
+## CWTV-FC-00054 - CWTV.V1.3.3.2.6
+
+State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
+
+Failure: No FAILED ledger event recorded.
+
+Correction: Dashboard taxonomy reconciliation: the already-recorded exact-SHA publication correction in event 365 is classified with the established CORRECTION family, preserving the prior event and counting its real correction in generated history.
+
+## CWTV-FC-00055 - CWTV.V1.3.3.2.6
+
+State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
+
+Failure: No FAILED ledger event recorded.
+
+Correction: Dashboard taxonomy reconciliation: owner public-visibility correction and unchanged-candidate green reruns in events 367-368 use the established CORRECTION family. No checker was weakened, no source changed and no historical event was rewritten.
