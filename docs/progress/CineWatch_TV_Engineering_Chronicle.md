@@ -9,10 +9,10 @@
 - **Tracked milestones:** 21
 - **Qualified milestones:** 20
 - **Tracked milestone completion:** 95.2%
-- **Recorded failed events:** 51
-- **Recorded corrections:** 64
+- **Recorded failed events:** 53
+- **Recorded corrections:** 66
 - **Commit events:** 13
-- **Ledger head:** `CWTV-EVT-000435` / `cbd67599ea3c1608a48bd0f8d78c15f517c79fc0968a46c43ed0a9c3c0684469`
+- **Ledger head:** `CWTV-EVT-000440` / `0c623d2def93b82e29de7b07504902ab2d404c195bf82a20c74a8131a5894b4c`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -40,7 +40,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.4` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 12m 14s | 1s |
 | `CWTV.V1.3.3.2.5` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | 1h 2m 51s | 3m 20s |
 | `CWTV.V1.3.3.2.6` | QUALIFIED | 100% | 5.0/5 | 7 | 7 | 2h 47m 39s | 3m 42s |
-| `CWTV.V1.3.3.2.7` | IN_PROGRESS | 60% | 5.0/5 | 8 | 7 | not preserved | 4m 17s |
+| `CWTV.V1.3.3.2.7` | IN_PROGRESS | 60% | 5.0/5 | 10 | 9 | not preserved | 4m 17s |
 
 ## Failure and correction history
 
@@ -97,6 +97,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.7` | 2026-10-08T19:16:26Z | accessibility-review | Independent review and new red test demonstrated nested main landmark in route within established SiteFrame main. | — |
 | `CWTV.V1.3.3.2.7` | 2026-10-08T19:18:39Z | legacy-route | Real HTTP check showed Next streamed permanentRedirect as HTTP200 meta refresh after async layout; canonical destination correct but transport status was not permanent308. | — |
 | `CWTV.V1.3.3.2.7` | 2026-10-08T19:19:13Z | frontend | Final V2 route and routing-level redirect production build/runtime failed. | — |
+| `CWTV.V1.3.3.2.7` | 2026-10-08T19:31:36Z | candidate-branch-tool | update_ref cannot create an absent branch despite wrapper wording; API422 and workflow dispatch422 returned before ref/workflow existed. | — |
+| `CWTV.V1.3.3.2.7` | 2026-10-08T19:31:36Z | workspace | One local exec transport disconnected during CI inspection; no source/ref or AWS action executed from that failed request. | — |
 
 ## Commit lineage
 
@@ -605,6 +607,11 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-10-08T19:20:59Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — Final frontend smoke consumes streamed response correctly passed. Duration: 38s. Evidence: exit_code=0
 - **2026-10-08T19:21:01Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — Complete repository suite after review and streaming-smoke correction passed. Duration: 28s. Evidence: exit_code=0
 - **2026-10-08T19:21:46Z** · `CWTV.V1.3.3.2.7` · `SOURCE_QUALIFIED` · **PASS** — V2 source qualification complete: 34 repository,99 API,3 contract,6 migration,23 manifest/denial,33 private-player and63 built-route browser checks. Lint/types/build/runtime/audits/policies green;0 production npm vulnerabilities;8 unchanged dev advisories. Deployment/device acceptance pending. Evidence: https://drive.google.com/drive/folders/11zEs0Xakqm-bbe5QCe4P63oGqW54KZoP; /workspace/cinewatch-stream-now-evidence-20261008/source-qualification-receipt.json
+- **2026-10-08T19:31:36Z** · `CWTV.V1.3.3.2.7` · `PUBLICATION_FAILED` · **FAILED** — update_ref cannot create an absent branch despite wrapper wording; API422 and workflow dispatch422 returned before ref/workflow existed.
+- **2026-10-08T19:31:36Z** · `CWTV.V1.3.3.2.7` · `CORRECTION_APPLIED` · **PASS** — Reread workflow and API contract; explicitly created isolated ref non-force, preserved exact source/projection and Main. CI37831749542 then passed both jobs.
+- **2026-10-08T19:31:36Z** · `CWTV.V1.3.3.2.7` · `TOOL_TRANSPORT_FAILED` · **FAILED** — One local exec transport disconnected during CI inspection; no source/ref or AWS action executed from that failed request.
+- **2026-10-08T19:31:36Z** · `CWTV.V1.3.3.2.7` · `CORRECTION_APPLIED` · **PASS** — Read environment status and retried harmless pwd successfully. Existing Git/worktree/receipts intact; GitHub independently confirms completed CI. AWS identity was separately verified as alex-admin without another reconnection request.
+- **2026-10-08T19:31:37Z** · `CWTV.V1.3.3.2.7` · `REPOSITORY_AUTHORITY_QUALIFIED` · **PASS** — V2 source094fd4d and dedicated projectionbdd41da promoted non-force from094675a. Candidate37831749542 and Main37832273589 both required jobs GREEN. PDF SHA7303adf3b1ee18af6a7c8dcf0a64dcf801ce31778419f7cf73d7d0d64cf44c95 freshly verified in Drive. Production deployment and device acceptance remain pending. Evidence: https://github.com/Asleki/cinewatch-tv/actions/runs/37832273589; https://drive.google.com/file/d/1MA3NcHwaUNN0FT2nL6o1odOednqDDWdm/view; https://drive.google.com/drive/folders/11zEs0Xakqm-bbe5QCe4P63oGqW54KZoP
 
 ## Integrity and timing rules
 
