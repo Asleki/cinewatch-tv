@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `380d8390fdac6a1b91e47b9e863cb0244e4f568d`
+**Source commit:** `2fabbc96ed40ae77d5eec834defca9e8b0f24774`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
@@ -220,7 +220,47 @@ Failure: Native Chromium proxy trust failed; persistent multi-CA write was rejec
 
 Correction: Used actual live responses with TLS-verified temporary transport and explicit render/count waits; isolated Genres proof and final29 browser checks passed. Owner Android independently confirmed Genres12/24/27.
 
-## CWTV-FC-00028 - CWTV.V1.2.8
+## CWTV-FC-00028 - CWTV.V1.3.3.2.5
+
+State: `CORRECTED`
+
+Failure: Initial milestone command was rejected before append because its details key authorization is prohibited by the Chronicle secret-key guard; the value contained no credential. Workflow reread, guard retained, details renamed to execution_boundary and opening event appended successfully.
+
+Correction: Retained Chronicle sensitive-key validation and corrected the recording invocation; milestone/projections/hash chain verified, without rewriting prior events.
+
+## CWTV-FC-00029 - CWTV.V1.3.3.2.5
+
+State: `CORRECTED`
+
+Failure: frontend qualification failed.
+
+Correction: Use an external curl stdout buffer preserving real HTTP/TLS/error status and exact repository smoke assertions; select an unused isolated web test port. Repository scripts remain unchanged.
+
+## CWTV-FC-00030 - CWTV.V1.3.3.2.5
+
+State: `CORRECTED`
+
+Failure: security qualification failed.
+
+Correction: Select writable task-local XDG/PIP caches without changing dependencies, audit strictness, HOME or repository policy; rerun the original audit.
+
+## CWTV-FC-00031 - CWTV.V1.3.3.2.5
+
+State: `CORRECTED`
+
+Failure: npm-production qualification failed.
+
+Correction: Allocated unused CWTV.V1.3.3.2.5; preserved all 213 canonical predecessor events byte-for-byte and rebound only unpublished Privacy events retaining exact original timestamps/results. Original misassigned draft preserved externally with SHA256; no published history rewritten.
+
+## CWTV-FC-00032 - CWTV.V1.3.3.2.5
+
+State: `CORRECTED`
+
+Failure: The unpublished Privacy draft reused milestone CWTV.V1.3.3.2.4, already assigned to the prior Next.js security correction; its inherited qualified status was not valid Privacy progress.
+
+Correction: Allocated unused CWTV.V1.3.3.2.5; preserved all 213 canonical predecessor events byte-for-byte and rebound only unpublished Privacy events retaining exact original timestamps/results. Original misassigned draft preserved externally with SHA256; no published history rewritten.
+
+## CWTV-FC-00033 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -228,7 +268,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.
 
-## CWTV-FC-00029 - CWTV.V1.2.8
+## CWTV-FC-00034 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -236,7 +276,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance.
 
-## CWTV-FC-00030 - CWTV.V1.3.1
+## CWTV-FC-00035 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -244,7 +284,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00031 - CWTV.V1.3.1
+## CWTV-FC-00036 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -252,7 +292,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00032 - CWTV.V1.3.1
+## CWTV-FC-00037 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -260,7 +300,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.
 
-## CWTV-FC-00033 - CWTV.V1.3.1
+## CWTV-FC-00038 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -268,7 +308,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Added regression protection for the source/projection boundary defect exposed by malformed commit 3f9f175. Future commits marked NexVox-Projection true must fail validation if they contain ordinary source, architecture, workflow, or Chronicle paths.
 
-## CWTV-FC-00034 - CWTV.V1.3.3.2.1
+## CWTV-FC-00039 - CWTV.V1.3.3.2.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -276,10 +316,18 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion
 
-## CWTV-FC-00035 - CWTV.V1.3.3.2
+## CWTV-FC-00040 - CWTV.V1.3.3.2
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
 Failure: No FAILED ledger event recorded.
 
 Correction: Corrected the stale offline database migration qualification after reconciliation advanced the governed Alembic head from 0001_postgresql_foundation to 0002_missing_media_authority.
+
+## CWTV-FC-00041 - CWTV.V1.3.3.2.5
+
+State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
+
+Failure: No FAILED ledger event recorded.
+
+Correction: With explicit owner scope approval, exact-pin Next16.3.8, retain eslint-config-next16.3.4/React/TypeScript/Node/npm, patch sharp0.35.5 with required platform/libvips packages and source-map-js1.2.2; all39 lock entries individually scoped, fresh production audit zero vulnerabilities.
