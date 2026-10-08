@@ -1,0 +1,72 @@
+{
+  "milestone": "CWTV.V1.3.3.2.5",
+  "recorded_at": "2026-10-08T11:27:17.870839Z",
+  "deployed_sha": "80c919789c711cb3b45d5be089a65e8490d1dbe4",
+  "old_sha": "f8e9c935602a62e6215baaf568ba4e08834168c9",
+  "old_build_id": "T4hu6dODXs7idpnBM0R2C",
+  "new_build_id": "mcfGJlZrzs-5N-Dtv2A6w",
+  "ssm": {
+    "preflight": "3442087f-61db-47c0-b018-90db4509ed31",
+    "build": "0180a345-d7db-4148-bc7e-336d4a7c8b12",
+    "activation": "6270c642-4bad-4e81-be03-594c035ff0d0",
+    "runtime_proof": "92843e51-24c3-491c-9e72-24e85f5a8a76"
+  },
+  "target": {
+    "region": "eu-north-1",
+    "instance": "i-00547a7236a653a6b",
+    "checkout": "/srv/cinewatch"
+  },
+  "services": {
+    "cinewatch-web": "active; restarted",
+    "cinewatch-api": "active; not restarted",
+    "nginx": "active; not restarted"
+  },
+  "build_exit_code": 0,
+  "rollback_performed": false,
+  "production_npm_vulnerabilities": 0,
+  "health": "ok",
+  "status": "ready; existing local environment selector preserved",
+  "live_http_checks": 12,
+  "live_browser_checks": 12,
+  "live_browser_attempt": 3,
+  "live_browser_attempt3_response_count": 300,
+  "live_browser_attempt3_errors": 0,
+  "owner_acceptance": {
+    "source": "Owner browser observation returned through selectable chat prompt",
+    "observation_time": null,
+    "recorded_at": "2026-10-08T11:27:17.870839Z",
+    "url": "https://www.cinewatchtv.com/under-development/privacy?check=20261008-1124",
+    "confirmed": "Privacy heading, exact new sentence, Back and Home controls visible",
+    "home_click_owner_confirmation": false,
+    "home_navigation": "Verified by real live desktop and Android-sized automated browser"
+  },
+  "browser_discrepancy": {
+    "initial_owner_report": "Cinema Guide at Privacy URL",
+    "fresh_http_and_browser": "Privacy heading plus new sentence",
+    "cache_bypass_owner_result": "Correct Privacy content confirmed",
+    "exact_original_cause": "Unverified; stale client content is a possibility, not established"
+  },
+  "preserved_notices": [
+    "Pre-existing NeedDaemonReload=yes; loaded and disk non-secret service selectors agree; no daemon reload performed",
+    "First startup readiness curl failed before successful bounded readiness polling",
+    "Original browser relay raised ReadError; second attempt raised already-handled route during cleanup; third network-idle/drained run clean"
+  ],
+  "configuration_preserved": true,
+  "postrelease_bookkeeping_redeploy": false,
+  "source_main_ci": [
+    37765070517,
+    37765354745,
+    37766119514,
+    37766360003
+  ],
+  "source_tests": {
+    "api": 99,
+    "repository": 22,
+    "contracts": 3
+  },
+  "development_advisories": 8,
+  "python_audit": "No known vulnerabilities; dependency consistency passed",
+  "workflow": "ChatGPT Chat planning/review and owner decisions -> Codex execution -> GitHub canonical source -> Drive evidence; SSM separately governed production transport",
+  "evidence_folder": "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS",
+  "verdict": "DEPLOYED AND OWNER VISUALLY ACCEPTED; postrelease governance pending"
+}

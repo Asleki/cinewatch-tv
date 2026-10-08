@@ -8509,6 +8509,329 @@
       "summary": "Used actual source Git committer time and commit-derived precision for the unpublished commit event. Preserved all canonical276 events byte-for-byte, original failed draft externally, and the checker unchanged.",
       "timestamp_precision": "exact",
       "timestamp_source": "Codex-cloud-execution"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "NexVox-PDF",
+      "correction": "CWTV-PRIVACY-PDF-RUNTIME",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000283",
+      "event_sha256": "600a10e413be94909b1d48ff6b1d5319dfbc957577f78ab4b1a99a62ec21f580",
+      "event_type": "ARTIFACT_GENERATION_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "62b1e5fafdf6b7957cf29314eb7dbdfdf93f91dacc2249fbac9b0440ec269447",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 283,
+      "summary": "Governance PDF invocation used an absent guessed /usr/local/bin/python path and exited127; no source or projection replacement occurred.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "NexVox-PDF",
+      "correction": "CWTV-PRIVACY-PDF-RUNTIME",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000284",
+      "event_sha256": "c7e8b97a0b72e0cc0645fce7f817d2605357e08e587478d6f079f730c5ffc38a",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "600a10e413be94909b1d48ff6b1d5319dfbc957577f78ab4b1a99a62ec21f580",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 284,
+      "summary": "Reread standing workflow and used the observed ReportLab-capable runtime; the same governed PDF generator passed and Drive hash readback matched.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "SSM-CineWatch",
+      "correction": null,
+      "details": {
+        "command_id": "3442087f-61db-47c0-b018-90db4509ed31",
+        "old_build_id": "T4hu6dODXs7idpnBM0R2C",
+        "old_sha": "f8e9c935602a62e6215baaf568ba4e08834168c9"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000285",
+      "event_sha256": "6c0f87ee0364a6f55fb18f19a3e473a47d5f7af96c2cf33694451aee43bc1822",
+      "event_type": "DEPLOYMENT_PREFLIGHT_PASSED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "c7e8b97a0b72e0cc0645fce7f817d2605357e08e587478d6f079f730c5ffc38a",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 285,
+      "summary": "Bounded CineWatch-only preflight confirmed clean ubuntu checkout, healthy services and rollback evidence.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "SSM-CineWatch",
+      "correction": null,
+      "details": {
+        "command_id": "0180a345-d7db-4148-bc7e-336d4a7c8b12",
+        "duration": "PT1M26.917S",
+        "exit_code": 0,
+        "sha": "80c919789c711cb3b45d5be089a65e8490d1dbe4"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000286",
+      "event_sha256": "c1a6ecd4b1d1bbf1e2c34e896eeefa9966434368273b8a0acbe86bde06bb7af4",
+      "event_type": "PRODUCTION_BUILD_PASSED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:12:45.868Z",
+      "previous_event_sha256": "6c0f87ee0364a6f55fb18f19a3e473a47d5f7af96c2cf33694451aee43bc1822",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 286,
+      "summary": "Isolated exact-qualified-SHA production build as ubuntu succeeded with Node24.18.0/npm12.0.2 and canonical public selectors; source/configuration remained unchanged.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "AWS-SSM-execution-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "SSM-CineWatch",
+      "correction": null,
+      "details": {
+        "build_id": "mcfGJlZrzs-5N-Dtv2A6w",
+        "command_id": "6270c642-4bad-4e81-be03-594c035ff0d0",
+        "rollback": false,
+        "sha": "80c919789c711cb3b45d5be089a65e8490d1dbe4"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000287",
+      "event_sha256": "9d89489d7dbb9561b189160782ce1af4788dc185fb72cc4e70f36f6300ab4c64",
+      "event_type": "DEPLOYMENT_ACTIVATED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:14:25.078Z",
+      "previous_event_sha256": "c1a6ecd4b1d1bbf1e2c34e896eeefa9966434368273b8a0acbe86bde06bb7af4",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 287,
+      "summary": "Activated exact qualified SHA and new BUILD_ID; restarted only cinewatch-web, retained API/Nginx and configuration; bounded startup retry succeeded.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "AWS-SSM-execution-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Production-runtime",
+      "correction": null,
+      "details": {
+        "api_environment_preserved": "local",
+        "command_id": "92843e51-24c3-491c-9e72-24e85f5a8a76",
+        "preexisting_daemon_reload_notice": "Retained; loaded and disk selectors agree"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000288",
+      "event_sha256": "336634b79c87de89dcabbed7991a68fdbe50baddaa5f3c51168d04d999ba06a6",
+      "event_type": "RUNTIME_QUALIFICATION_PASSED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "9d89489d7dbb9561b189160782ce1af4788dc185fb72cc4e70f36f6300ab4c64",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 288,
+      "summary": "Post-deployment SHA/build proof, active web/API/Nginx, local web200, healthok/statusready and zero production npm vulnerabilities passed; no database/infrastructure mutation.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Workspace-live-browser-relay",
+      "correction": "CWTV-PRIVACY-LIVE-TRANSPORT",
+      "details": {
+        "attempt1_functional_checks": 12,
+        "attempt2_exit_code": 1,
+        "upstream_tls_verification": true
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000289",
+      "event_sha256": "064736f74e44a6b6f28f95833dfdf1e306a484f4c0e18e11e98a10a6559297ea",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "336634b79c87de89dcabbed7991a68fdbe50baddaa5f3c51168d04d999ba06a6",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 289,
+      "summary": "Original relay callback ReadError and second attempt already-handled route exceptions prevented clean harness completion; preserved both attempts. No application defect demonstrated.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Workspace-live-browser-relay",
+      "correction": "CWTV-PRIVACY-LIVE-TRANSPORT",
+      "details": {
+        "application_changed": false,
+        "fixtures_used": false,
+        "tls_verification_disabled": false
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000290",
+      "event_sha256": "75e2260a78456d07b95e20897925ee559badc255a548c018caa5e71e74094079",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "064736f74e44a6b6f28f95833dfdf1e306a484f4c0e18e11e98a10a6559297ea",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 290,
+      "summary": "Reread workflow; instrumented actual request failures and bounded transport retries; awaited network idle and drained callbacks before context cleanup. Third run passed12 checks with300 realHTTPS responses and no errors/cancellations.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Privacy-owner-journey",
+      "correction": null,
+      "details": {
+        "browser_checks": 12,
+        "http_checks": 12,
+        "image_optimizer_test": "Not run; no optimizer URL emitted in tested page",
+        "real_live_responses": true
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000291",
+      "event_sha256": "53a44e2c7508478f8ade7478d3ea42a0bc5baf6786854b11cd646bb41ef23eaf",
+      "event_type": "LIVE_ACCEPTANCE_PASSED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "75e2260a78456d07b95e20897925ee559badc255a548c018caa5e71e74094079",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 291,
+      "summary": "Live HTTPS checks12 and hydrated desktop/mobile browser checks12 passed: existing footer destination, Privacy heading/new sentence, Home navigation and unrelated-page exclusion.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Owner-browser",
+      "correction": null,
+      "details": {
+        "normalization": "Engineering facts only; no wholesale private transcript",
+        "reported_timestamp": null
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000292",
+      "event_sha256": "402c1567f7190ce72ccd236def8c1484a32807a6de6c4134cd57414cfd9a8d3c",
+      "event_type": "OWNER_DISCREPANCY_REPORTED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "53a44e2c7508478f8ade7478d3ea42a0bc5baf6786854b11cd646bb41ef23eaf",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 292,
+      "summary": "Owner initially reported Cinema Guide content at Privacy URL; fresh server HTML and hydrated browser showed correct Privacy content. Root cause of initial browser discrepancy remains unverified.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Owner-browser",
+      "correction": null,
+      "details": {
+        "confirmed": "Privacy heading, exact new sentence, Back and Home controls visible",
+        "home_click_owner_confirmation": false,
+        "home_navigation": "Verified by real live desktop and Android-sized automated browser",
+        "observation_time": null,
+        "recorded_at": "2026-10-08T11:27:17.870839Z",
+        "source": "Owner browser observation returned through selectable chat prompt",
+        "url": "https://www.cinewatchtv.com/under-development/privacy?check=20261008-1124"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000293",
+      "event_sha256": "9c5491b1bb58d253dd64cd1a9f54be1a38a43de52d0230ff7545d9b3dde949b4",
+      "event_type": "OWNER_ACCEPTANCE_CONFIRMED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "402c1567f7190ce72ccd236def8c1484a32807a6de6c4134cd57414cfd9a8d3c",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 293,
+      "summary": "Owner confirmed actual browser displays Privacy heading and exact new sentence with Home control using cache-bypass check URL; automated live Home navigation passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Privacy-release",
+      "correction": null,
+      "details": {
+        "application_payload_unchanged": true,
+        "build_id": "mcfGJlZrzs-5N-Dtv2A6w",
+        "deployed_sha": "80c919789c711cb3b45d5be089a65e8490d1dbe4",
+        "rollback_performed": false
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000294",
+      "event_sha256": "3b2eb12d2a25a9f76f9a88d0ad51ceb89f0d89d1a20fd66e7a0bda52d2fa94b7",
+      "event_type": "MILESTONE_QUALIFIED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "9c5491b1bb58d253dd64cd1a9f54be1a38a43de52d0230ff7545d9b3dde949b4",
+      "result": "QUALIFIED",
+      "schema_version": "1.0",
+      "sequence": 294,
+      "summary": "CWTV.V1.3.3.2.5 deployed and owner visually accepted. Preserve every failure/correction and rollback point; remaining postrelease Chronicle/NexVox/PDF/Praxis synchronization does not trigger another deployment.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
     }
   ],
   "failures": [
@@ -9359,12 +9682,62 @@
       "summary": "Closure Chronicle checker rejected an unpublished COMMIT_CREATED event marked exact instead of mandatory commit-derived; no closure publication occurred.",
       "timestamp_precision": "exact",
       "timestamp_source": "Codex-cloud-execution"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "NexVox-PDF",
+      "correction": "CWTV-PRIVACY-PDF-RUNTIME",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000283",
+      "event_sha256": "600a10e413be94909b1d48ff6b1d5319dfbc957577f78ab4b1a99a62ec21f580",
+      "event_type": "ARTIFACT_GENERATION_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "62b1e5fafdf6b7957cf29314eb7dbdfdf93f91dacc2249fbac9b0440ec269447",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 283,
+      "summary": "Governance PDF invocation used an absent guessed /usr/local/bin/python path and exited127; no source or projection replacement occurred.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Workspace-live-browser-relay",
+      "correction": "CWTV-PRIVACY-LIVE-TRANSPORT",
+      "details": {
+        "attempt1_functional_checks": 12,
+        "attempt2_exit_code": 1,
+        "upstream_tls_verification": true
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000289",
+      "event_sha256": "064736f74e44a6b6f28f95833dfdf1e306a484f4c0e18e11e98a10a6559297ea",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS"
+      ],
+      "milestone": "CWTV.V1.3.3.2.5",
+      "occurred_at": "2026-10-08T11:27:17.870839Z",
+      "previous_event_sha256": "336634b79c87de89dcabbed7991a68fdbe50baddaa5f3c51168d04d999ba06a6",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 289,
+      "summary": "Original relay callback ReadError and second attempt already-handled route exceptions prevented clean harness completion; preserved both attempts. No application defect demonstrated.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
     }
   ],
   "ledger": {
-    "event_count": 282,
-    "head_event_id": "CWTV-EVT-000282",
-    "head_sha256": "62b1e5fafdf6b7957cf29314eb7dbdfdf93f91dacc2249fbac9b0440ec269447"
+    "event_count": 294,
+    "head_event_id": "CWTV-EVT-000294",
+    "head_sha256": "3b2eb12d2a25a9f76f9a88d0ad51ceb89f0d89d1a20fd66e7a0bda52d2fa94b7"
   },
   "milestones": [
     {
@@ -9805,42 +10178,44 @@
       "active_session_seconds": null,
       "blocker_count": 1,
       "break_count": 0,
-      "correction_count": 7,
+      "correction_count": 9,
       "corrections": [
         "CWTV-PRIVACY-AUDIT-CACHE",
         "CWTV-PRIVACY-CHRONICLE-DETAIL-KEY",
         "CWTV-PRIVACY-CLOUD-PIPE",
         "CWTV-PRIVACY-COMMIT-TIMESTAMP",
+        "CWTV-PRIVACY-LIVE-TRANSPORT",
         "CWTV-PRIVACY-MILESTONE-IDENTITY",
         "CWTV-PRIVACY-NEW-PRODUCTION-ADVISORIES",
+        "CWTV-PRIVACY-PDF-RUNTIME",
         "CWTV-PRIVACY-SEQUENTIAL-CHECKPOINT"
       ],
-      "elapsed_label": "not preserved",
-      "elapsed_seconds": null,
-      "failure_count": 7,
+      "elapsed_label": "1h 2m 51s",
+      "elapsed_seconds": 3770.871,
+      "failure_count": 9,
       "milestone": "CWTV.V1.3.3.2.5",
       "observed_difficulty": 5.0,
       "paused_label": "not preserved",
       "paused_seconds": null,
       "planned_complexity": null,
-      "progress_percent": 98,
+      "progress_percent": 100,
       "recorded_command_runtime_label": "3m 20s",
       "recorded_command_runtime_seconds": 200.241,
       "session_data_present": false,
-      "status": "IN_PROGRESS"
+      "status": "QUALIFIED"
     }
   ],
-  "projection_as_of": "2026-10-08T10:47:58+00:00",
+  "projection_as_of": "2026-10-08T11:27:17.870839+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 51,
     "commits": 12,
-    "corrections": 48,
-    "current_milestone": "CWTV.V1.3.3.2.5",
-    "failed_events": 34,
-    "passed_events": 183,
-    "qualified_milestones": 18,
-    "tracked_completion_percent": 94.7,
+    "corrections": 50,
+    "current_milestone": null,
+    "failed_events": 36,
+    "passed_events": 192,
+    "qualified_milestones": 19,
+    "tracked_completion_percent": 100.0,
     "tracked_milestones": 19
   }
 }

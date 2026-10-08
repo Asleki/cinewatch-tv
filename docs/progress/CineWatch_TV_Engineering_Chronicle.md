@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `CWTV.V1.3.3.2.5`
+- **Current milestone:** `none`
 - **Tracked milestones:** 19
-- **Qualified milestones:** 18
-- **Tracked milestone completion:** 94.7%
-- **Recorded failed events:** 34
-- **Recorded corrections:** 48
+- **Qualified milestones:** 19
+- **Tracked milestone completion:** 100.0%
+- **Recorded failed events:** 36
+- **Recorded corrections:** 50
 - **Commit events:** 12
-- **Ledger head:** `CWTV-EVT-000282` / `62b1e5fafdf6b7957cf29314eb7dbdfdf93f91dacc2249fbac9b0440ec269447`
+- **Ledger head:** `CWTV-EVT-000294` / `3b2eb12d2a25a9f76f9a88d0ad51ceb89f0d89d1a20fd66e7a0bda52d2fa94b7`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -38,7 +38,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.3` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.4` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 12m 14s | 1s |
-| `CWTV.V1.3.3.2.5` | IN_PROGRESS | 98% | 5.0/5 | 7 | 7 | not preserved | 3m 20s |
+| `CWTV.V1.3.3.2.5` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | 1h 2m 51s | 3m 20s |
 
 ## Failure and correction history
 
@@ -78,6 +78,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.5` | 2026-10-08T10:33:38Z | Chronicle-milestone-identity | The unpublished Privacy draft reused milestone CWTV.V1.3.3.2.4, already assigned to the prior Next.js security correction; its inherited qualified status was not valid Privacy progress. | CWTV-PRIVACY-MILESTONE-IDENTITY |
 | `CWTV.V1.3.3.2.5` | 2026-10-08T10:46:29Z | source-projection-checkpoint | A publication-preparation read ran before the asynchronous projection command finished; its expected projection-check log was not yet present, so the preparation stopped before any GitHub ref write. Workflow reread and command completion awaited. | CWTV-PRIVACY-SEQUENTIAL-CHECKPOINT |
 | `CWTV.V1.3.3.2.5` | 2026-10-08T10:47:58Z | Chronicle-commit-provenance | Closure Chronicle checker rejected an unpublished COMMIT_CREATED event marked exact instead of mandatory commit-derived; no closure publication occurred. | CWTV-PRIVACY-COMMIT-TIMESTAMP |
+| `CWTV.V1.3.3.2.5` | 2026-10-08T11:27:17.870839Z | NexVox-PDF | Governance PDF invocation used an absent guessed /usr/local/bin/python path and exited127; no source or projection replacement occurred. | CWTV-PRIVACY-PDF-RUNTIME |
+| `CWTV.V1.3.3.2.5` | 2026-10-08T11:27:17.870839Z | Workspace-live-browser-relay | Original relay callback ReadError and second attempt already-handled route exceptions prevented clean harness completion; preserved both attempts. No application defect demonstrated. | CWTV-PRIVACY-LIVE-TRANSPORT |
 
 ## Commit lineage
 
@@ -432,6 +434,18 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-10-08T10:46:29Z** · `CWTV.V1.3.3.2.5` · `PUSH_COMPLETED` · **PASS** — Non-force expected-head Main advance preserved both source/projection identities. Candidate CI37765070517 and Main CI37765354745 both passed Linux quality and Dependency/secret gates. Source governance is qualified; production deployment and owner acceptance remain pending, so milestone is not closed. Evidence: https://github.com/Asleki/cinewatch-tv/actions/runs/37765354745
 - **2026-10-08T10:47:58Z** · `CWTV.V1.3.3.2.5` · `RECORDING_FAILED` · **FAILED** — Closure Chronicle checker rejected an unpublished COMMIT_CREATED event marked exact instead of mandatory commit-derived; no closure publication occurred.
 - **2026-10-08T10:47:58Z** · `CWTV.V1.3.3.2.5` · `CORRECTION_APPLIED` · **PASS** — Used actual source Git committer time and commit-derived precision for the unpublished commit event. Preserved all canonical276 events byte-for-byte, original failed draft externally, and the checker unchanged.
+- **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `ARTIFACT_GENERATION_FAILED` · **FAILED** — Governance PDF invocation used an absent guessed /usr/local/bin/python path and exited127; no source or projection replacement occurred. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `CORRECTION_APPLIED` · **PASS** — Reread standing workflow and used the observed ReportLab-capable runtime; the same governed PDF generator passed and Drive hash readback matched. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `DEPLOYMENT_PREFLIGHT_PASSED` · **PASS** — Bounded CineWatch-only preflight confirmed clean ubuntu checkout, healthy services and rollback evidence. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T11:12:45.868Z** · `CWTV.V1.3.3.2.5` · `PRODUCTION_BUILD_PASSED` · **PASS** — Isolated exact-qualified-SHA production build as ubuntu succeeded with Node24.18.0/npm12.0.2 and canonical public selectors; source/configuration remained unchanged. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T11:14:25.078Z** · `CWTV.V1.3.3.2.5` · `DEPLOYMENT_ACTIVATED` · **PASS** — Activated exact qualified SHA and new BUILD_ID; restarted only cinewatch-web, retained API/Nginx and configuration; bounded startup retry succeeded. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `RUNTIME_QUALIFICATION_PASSED` · **PASS** — Post-deployment SHA/build proof, active web/API/Nginx, local web200, healthok/statusready and zero production npm vulnerabilities passed; no database/infrastructure mutation. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `TEST_FAILED` · **FAILED** — Original relay callback ReadError and second attempt already-handled route exceptions prevented clean harness completion; preserved both attempts. No application defect demonstrated. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `CORRECTION_APPLIED` · **PASS** — Reread workflow; instrumented actual request failures and bounded transport retries; awaited network idle and drained callbacks before context cleanup. Third run passed12 checks with300 realHTTPS responses and no errors/cancellations. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `LIVE_ACCEPTANCE_PASSED` · **PASS** — Live HTTPS checks12 and hydrated desktop/mobile browser checks12 passed: existing footer destination, Privacy heading/new sentence, Home navigation and unrelated-page exclusion. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `OWNER_DISCREPANCY_REPORTED` · **INFO** — Owner initially reported Cinema Guide content at Privacy URL; fresh server HTML and hydrated browser showed correct Privacy content. Root cause of initial browser discrepancy remains unverified. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `OWNER_ACCEPTANCE_CONFIRMED` · **PASS** — Owner confirmed actual browser displays Privacy heading and exact new sentence with Home control using cache-bypass check URL; automated live Home navigation passed. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.3.3.2.5 deployed and owner visually accepted. Preserve every failure/correction and rollback point; remaining postrelease Chronicle/NexVox/PDF/Praxis synchronization does not trigger another deployment. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
 
 ## Integrity and timing rules
 
