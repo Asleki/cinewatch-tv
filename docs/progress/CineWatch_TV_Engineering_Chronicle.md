@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `none`
-- **Tracked milestones:** 19
+- **Current milestone:** `CWTV.V1.3.3.2.6`
+- **Tracked milestones:** 20
 - **Qualified milestones:** 19
-- **Tracked milestone completion:** 100.0%
-- **Recorded failed events:** 36
-- **Recorded corrections:** 50
+- **Tracked milestone completion:** 95.0%
+- **Recorded failed events:** 41
+- **Recorded corrections:** 55
 - **Commit events:** 12
-- **Ledger head:** `CWTV-EVT-000294` / `3b2eb12d2a25a9f76f9a88d0ad51ceb89f0d89d1a20fd66e7a0bda52d2fa94b7`
+- **Ledger head:** `CWTV-EVT-000358` / `23e9bd471795be44c26191988beec3c8b80bcb9637e598136d42fd811a482ac0`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -39,6 +39,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.3` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.4` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 12m 14s | 1s |
 | `CWTV.V1.3.3.2.5` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | 1h 2m 51s | 3m 20s |
+| `CWTV.V1.3.3.2.6` | IN_PROGRESS | 60% | 5.0/5 | 5 | 5 | not preserved | 3m 42s |
 
 ## Failure and correction history
 
@@ -80,6 +81,11 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.5` | 2026-10-08T10:47:58Z | Chronicle-commit-provenance | Closure Chronicle checker rejected an unpublished COMMIT_CREATED event marked exact instead of mandatory commit-derived; no closure publication occurred. | CWTV-PRIVACY-COMMIT-TIMESTAMP |
 | `CWTV.V1.3.3.2.5` | 2026-10-08T11:27:17.870839Z | NexVox-PDF | Governance PDF invocation used an absent guessed /usr/local/bin/python path and exited127; no source or projection replacement occurred. | CWTV-PRIVACY-PDF-RUNTIME |
 | `CWTV.V1.3.3.2.5` | 2026-10-08T11:27:17.870839Z | Workspace-live-browser-relay | Original relay callback ReadError and second attempt already-handled route exceptions prevented clean harness completion; preserved both attempts. No application defect demonstrated. | CWTV-PRIVACY-LIVE-TRANSPORT |
+| `CWTV.V1.3.3.2.6` | 2026-10-08T13:37:18Z | Theme-regressions | Test-first visibility regressions reproduced missing semantic text/focus/action roles and original-logo matte support; existing light muted text on tinted surface measured4.484:1. Existing22 repository tests remained green; five new tests intentionally red before implementation. | CWTV-THEME-VISIBILITY |
+| `CWTV.V1.3.3.2.6` | 2026-10-08T13:41:08Z | Local-UI-harness | Local browser first pass could not qualify provider-backed states: server start omitted canonical API selector, yielding500 local API rewrites and null home props. Concurrent standard qualification build replaces same local.next artifact. Preserved log; no production defect or production mutation. Historical baseline process interrupted across usage reset; partial screenshots retained. | CWTV-UI-LOCAL-RUNTIME |
+| `CWTV.V1.3.3.2.6` | 2026-10-08T13:53:52Z | Rendered-theme-regressions | Rendered browser and independent review caught legacy light CSS attribute-specificity overriding appended semantic rules: actual search placeholder3.539:1. News action remained19.6875px. Existing first-pass screenshots/metrics retained; no production publication. | CWTV-THEME-CASCADE |
+| `CWTV.V1.3.3.2.6` | 2026-10-08T14:11:28Z | Browser-qualification | Browser runs at14:00UTC received temporary503 responses; localSSRreturnednullcatalog and controlled fixture refused absenthero. FreshTLS-verified HTTP at14:07 returnedcanonicalhome200 andorganizations200, managednodeOnline. No production mutation. Partialchecks preserved as incomplete, not source/UI acceptance. | CWTV-UI-TEMPORARY-HTTP |
+| `CWTV.V1.3.3.2.6` | 2026-10-08T14:13:39Z | Browser-assertions | Completedsevenwidthsbrowserpassrecorded326passed/eightfailed: sevenmattecomparisonskeyedorganizationdisplayname collided on twoParamountrecordswithdifferentoriginalassets; fixturewebsitequerysubstringmatchedorganizationnameNoOfficialWebsiteAvailable. All actualcontrast/layout/control/logo checks passed; failures retained as harness assertions, no source changes. | CWTV-UI-ASSET-IDENTITY |
 
 ## Commit lineage
 
@@ -446,6 +452,70 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `OWNER_DISCREPANCY_REPORTED` · **INFO** — Owner initially reported Cinema Guide content at Privacy URL; fresh server HTML and hydrated browser showed correct Privacy content. Root cause of initial browser discrepancy remains unverified. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
 - **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `OWNER_ACCEPTANCE_CONFIRMED` · **PASS** — Owner confirmed actual browser displays Privacy heading and exact new sentence with Home control using cache-bypass check URL; automated live Home navigation passed. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
 - **2026-10-08T11:27:17.870839Z** · `CWTV.V1.3.3.2.5` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.3.3.2.5 deployed and owner visually accepted. Preserve every failure/correction and rollback point; remaining postrelease Chronicle/NexVox/PDF/Praxis synchronization does not trigger another deployment. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T12:54:35Z** · `CWTV.V1.3.3.2.6` · `MILESTONE_STARTED` · **INFO** — Light/dark UI visibility milestone authorized: read six Drive authorities and eight original screenshots; semantic colours, hero/mobile spacing and original-logo mattes; separate read-only missing-media source review; no database changes. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T13:37:18Z** · `CWTV.V1.3.3.2.6` · `SOURCE_REVIEW_COMPLETED` · **INFO** — Independent separate source review supports conditional lifecycle/approval/association concerns; actual method find_override. Production rows/configuration unverified; no database, migration, API or media-authority changes authorized or made. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T13:37:18Z** · `CWTV.V1.3.3.2.6` · `TEST_FAILED` · **FAILED** — Test-first visibility regressions reproduced missing semantic text/focus/action roles and original-logo matte support; existing light muted text on tinted surface measured4.484:1. Existing22 repository tests remained green; five new tests intentionally red before implementation. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T13:37:19Z** · `CWTV.V1.3.3.2.6` · `CORRECTION_APPLIED` · **PASS** — Added semantic text/fill/focus/control roles, locally protected hero copy with97-percent surface panel while reducing full-image washout,44px actions/shell targets and original-asset-specific mattes. Five numeric/metadata regressions now pass. TMDb lack of CORS avoids runtime canvas dependence; approved original-filename matte metadata preserves source image bytes. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T13:38:58Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — foundation qualification started.
+- **2026-10-08T13:38:59Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — foundation qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T13:38:59Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — repository qualification started.
+- **2026-10-08T13:39:22Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — repository qualification passed. Duration: 23s. Evidence: exit_code=0
+- **2026-10-08T13:39:22Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — backend qualification started.
+- **2026-10-08T13:39:28Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — backend qualification passed. Duration: 6s. Evidence: exit_code=0
+- **2026-10-08T13:39:28Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — contract qualification started.
+- **2026-10-08T13:39:41Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — contract qualification passed. Duration: 13s. Evidence: exit_code=0
+- **2026-10-08T13:39:41Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — frontend qualification started.
+- **2026-10-08T13:40:33Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — frontend qualification passed. Duration: 51s. Evidence: exit_code=0
+- **2026-10-08T13:40:33Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — database qualification started.
+- **2026-10-08T13:40:36Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — database qualification passed. Duration: 3s. Evidence: exit_code=0
+- **2026-10-08T13:40:37Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — discovery qualification started.
+- **2026-10-08T13:40:37Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — discovery qualification passed. Duration: 0s. Evidence: exit_code=0
+- **2026-10-08T13:40:37Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — trailer-runtime qualification started.
+- **2026-10-08T13:40:40Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — trailer-runtime qualification passed. Duration: 3s. Evidence: exit_code=0
+- **2026-10-08T13:40:40Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — chronicle qualification started.
+- **2026-10-08T13:40:42Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — chronicle qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T13:40:42Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — security qualification started.
+- **2026-10-08T13:41:04Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — security qualification passed. Duration: 22s. Evidence: exit_code=0
+- **2026-10-08T13:41:04Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — npm-production qualification started.
+- **2026-10-08T13:41:05Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — npm-production qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T13:41:08Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — diff qualification started.
+- **2026-10-08T13:41:08Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — diff qualification passed. Duration: 0s. Evidence: exit_code=0
+- **2026-10-08T13:41:08Z** · `CWTV.V1.3.3.2.6` · `TEST_FAILED` · **FAILED** — Local browser first pass could not qualify provider-backed states: server start omitted canonical API selector, yielding500 local API rewrites and null home props. Concurrent standard qualification build replaces same local.next artifact. Preserved log; no production defect or production mutation. Historical baseline process interrupted across usage reset; partial screenshots retained. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T13:41:09Z** · `CWTV.V1.3.3.2.6` · `CORRECTION_APPLIED` · **INFO** — Reread saved workflow; separated full build/runtime qualification from later UI browser run, and will use canonical API/site selectors consistently for both build and local server. Preserve production source and transport failures separately. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T13:49:16Z** · `CWTV.V1.3.3.2.6` · `CORRECTION_APPLIED` · **INFO** — Node native fetch through NODE_USE_ENV_PROXY=1 succeeds with configured CA; Next rewrite agent still attempts unavailable direct TCP. Local UI harness now transports unmodified real canonical API responses through TLS-verified httpx; Linux source/runtime tests independently cover actual Next rewrites. Production runtime/configuration unchanged. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T13:53:52Z** · `CWTV.V1.3.3.2.6` · `TEST_FAILED` · **FAILED** — Rendered browser and independent review caught legacy light CSS attribute-specificity overriding appended semantic rules: actual search placeholder3.539:1. News action remained19.6875px. Existing first-pass screenshots/metrics retained; no production publication. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T13:56:59Z** · `CWTV.V1.3.3.2.6` · `CORRECTION_APPLIED` · **INFO** — Reread workflow and matched semantic selector specificity to legacy light-theme selectors so later colour roles apply in both selected themes; raised News action to44px. Rendered regression metrics remain required; no checker weakened. Browser telemetry/drain now bounded with active real requests tracked separately. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:11:28Z** · `CWTV.V1.3.3.2.6` · `TEST_FAILED` · **FAILED** — Browser runs at14:00UTC received temporary503 responses; localSSRreturnednullcatalog and controlled fixture refused absenthero. FreshTLS-verified HTTP at14:07 returnedcanonicalhome200 andorganizations200, managednodeOnline. No production mutation. Partialchecks preserved as incomplete, not source/UI acceptance. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:11:28Z** · `CWTV.V1.3.3.2.6` · `CORRECTION_APPLIED` · **INFO** — Reread Drive workflow; bounded HTTP502/503/504 retries preserve originalstatus/body records; completed route disposal no longer rethrows recorded fixture failure. Default theme persistence now explicitly exercises userselection; all five reviewedlight artwork variants protected by unit samples. No source transport/API/security change. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:13:39Z** · `CWTV.V1.3.3.2.6` · `TEST_FAILED` · **FAILED** — Completedsevenwidthsbrowserpassrecorded326passed/eightfailed: sevenmattecomparisonskeyedorganizationdisplayname collided on twoParamountrecordswithdifferentoriginalassets; fixturewebsitequerysubstringmatchedorganizationnameNoOfficialWebsiteAvailable. All actualcontrast/layout/control/logo checks passed; failures retained as harness assertions, no source changes. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:13:39Z** · `CWTV.V1.3.3.2.6` · `CORRECTION_APPLIED` · **INFO** — Reread workflow; compare originalart/mattes by exactassetURL instead of nonunique displayname, and queryactualorganizationexternal action rather than substringname. This preserves source identity and verifies intended absentaction. Reexecuting entiresevenwidthsuite with unchanged application tree. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:16:13Z** · `CWTV.V1.3.3.2.6` · `BROWSER_QUALIFICATION_PASSED` · **PASS** — Fresh actualbuiltUI browser qualification334/334 checks passed across320,360,375,390,412,430,1440CSSpx, light/dark, actualcanonicaldata andoriginallogos. Additional eightcontrolled long/short/empty/error/retry/loading state groups pass bothmodes withnumericcontrast/touch/overflow checks. TransportTLSverified; noignoredcertificateerrors. IndependentreviewnoCritical/unresolvedImportant; noDB/API/dependency mutation. Fullcurrentqualification rerun next. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:16:13Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — foundation qualification started.
+- **2026-10-08T14:16:15Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — foundation qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T14:16:15Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — repository qualification started.
+- **2026-10-08T14:16:34Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — repository qualification passed. Duration: 19s. Evidence: exit_code=0
+- **2026-10-08T14:16:34Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — backend qualification started.
+- **2026-10-08T14:16:40Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — backend qualification passed. Duration: 6s. Evidence: exit_code=0
+- **2026-10-08T14:16:40Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — contract qualification started.
+- **2026-10-08T14:16:51Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — contract qualification passed. Duration: 10s. Evidence: exit_code=0
+- **2026-10-08T14:16:51Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — frontend qualification started.
+- **2026-10-08T14:17:28Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — frontend qualification passed. Duration: 37s. Evidence: exit_code=0
+- **2026-10-08T14:17:28Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — database qualification started.
+- **2026-10-08T14:17:32Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — database qualification passed. Duration: 4s. Evidence: exit_code=0
+- **2026-10-08T14:17:32Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — discovery qualification started.
+- **2026-10-08T14:17:32Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — discovery qualification passed. Duration: 0s. Evidence: exit_code=0
+- **2026-10-08T14:17:33Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — trailer-runtime qualification started.
+- **2026-10-08T14:17:36Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — trailer-runtime qualification passed. Duration: 3s. Evidence: exit_code=0
+- **2026-10-08T14:17:36Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — chronicle qualification started.
+- **2026-10-08T14:17:38Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — chronicle qualification passed. Duration: 2s. Evidence: exit_code=0
+- **2026-10-08T14:17:38Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — security qualification started.
+- **2026-10-08T14:17:54Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — security qualification passed. Duration: 16s. Evidence: exit_code=0
+- **2026-10-08T14:17:54Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — npm-production qualification started.
+- **2026-10-08T14:17:55Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — npm-production qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T14:17:57Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_STARTED` · **INFO** — diff qualification started.
+- **2026-10-08T14:17:57Z** · `CWTV.V1.3.3.2.6` · `QUALIFICATION_PASSED` · **PASS** — diff qualification passed. Duration: 0s. Evidence: exit_code=0
+- **2026-10-08T14:19:44Z** · `CWTV.V1.3.3.2.6` · `SOURCE_QUALIFICATION_PASSED` · **PASS** — Fresh fullcurrent qualification:27repository,99API,3contract,6offlinemigration tests PASS; lint,typecheck,productionNextbuild,API/web/contract/trailerruntime,OpenAPI/TSparity,Chronicle/dashboard,secret/CIpolicies PASS. npmproduction0vulnerabilities;Pythonno known vulnerabilities;8existinghighdevelopmentadvisories retained. Alloriginalbrand/providerassets,dependency/API/contract/migrationauthorities and prior294events unchanged. Deploymentpending. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:23:08Z** · `CWTV.V1.3.3.2.6` · `SUPPLEMENTARY_UI_QUALIFICATION_PASSED` · **PASS** — Fresh supplementary64/64 checks PASS: actualnetwork411 whiteRTLlogo darkmatte in boththemes, companydetail, twoactualtitle/backdrop heroes at320/1440; locallycontrolled absent/brokenlogo meaningfulfallback and mixedartoriginalmattes. Allsourcebyte/mode/brand/API/securityboundaries preserved; no productiondeployment yet. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
 
 ## Integrity and timing rules
 

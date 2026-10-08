@@ -8832,6 +8832,1557 @@
       "summary": "CWTV.V1.3.3.2.5 deployed and owner visually accepted. Preserve every failure/correction and rollback point; remaining postrelease Chronicle/NexVox/PDF/Praxis synchronization does not trigger another deployment.",
       "timestamp_precision": "exact",
       "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Light-dark-UI",
+      "correction": null,
+      "details": {
+        "scope": "UI-qualification-governance-Praxis-SSM-deployment-owner-acceptance",
+        "starting_main": "cd909b3fd7efdbc4bdeb8cb38ff3c436d52a085b"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000295",
+      "event_sha256": "c187409280d54793b1e937050e28669bb5168c3432a94db2706c90b6c2c83f2a",
+      "event_type": "MILESTONE_STARTED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T12:54:35Z",
+      "previous_event_sha256": "3b2eb12d2a25a9f76f9a88d0ad51ceb89f0d89d1a20fd66e7a0bda52d2fa94b7",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 295,
+      "summary": "Light/dark UI visibility milestone authorized: read six Drive authorities and eight original screenshots; semantic colours, hero/mobile spacing and original-logo mattes; separate read-only missing-media source review; no database changes.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Media-authority-review",
+      "correction": null,
+      "details": {
+        "scope": "read-only-source-review"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000296",
+      "event_sha256": "30ca09abdd9a04b5b9a17bf6732cfe53fa4e4ba25bc4a2bd70943194e44b87dc",
+      "event_type": "SOURCE_REVIEW_COMPLETED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:37:18Z",
+      "previous_event_sha256": "c187409280d54793b1e937050e28669bb5168c3432a94db2706c90b6c2c83f2a",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 296,
+      "summary": "Independent separate source review supports conditional lifecycle/approval/association concerns; actual method find_override. Production rows/configuration unverified; no database, migration, API or media-authority changes authorized or made.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Theme-regressions",
+      "correction": "CWTV-THEME-VISIBILITY",
+      "details": {
+        "test_intent": "expected-red-before-correction"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000297",
+      "event_sha256": "865e9fecbf751cad38904a73e2e81bb504653d28cf19a59216eabcd50fdbc6e7",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:37:18Z",
+      "previous_event_sha256": "30ca09abdd9a04b5b9a17bf6732cfe53fa4e4ba25bc4a2bd70943194e44b87dc",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 297,
+      "summary": "Test-first visibility regressions reproduced missing semantic text/focus/action roles and original-logo matte support; existing light muted text on tinted surface measured4.484:1. Existing22 repository tests remained green; five new tests intentionally red before implementation.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Theme-visibility",
+      "correction": "CWTV-THEME-VISIBILITY",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000298",
+      "event_sha256": "3e48f566235938353eb66eea2a4e95cb7402451ec2e0506ec09b1b48961edbc9",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:37:19Z",
+      "previous_event_sha256": "865e9fecbf751cad38904a73e2e81bb504653d28cf19a59216eabcd50fdbc6e7",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 298,
+      "summary": "Added semantic text/fill/focus/control roles, locally protected hero copy with97-percent surface panel while reducing full-image washout,44px actions/shell targets and original-asset-specific mattes. Five numeric/metadata regressions now pass. TMDb lack of CORS avoids runtime canvas dependence; approved original-filename matte metadata preserves source image bytes.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "foundation",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_ci_security_quality.py && python scripts/check_repository_tree.py && python scripts/check_backend_skeleton.py && python scripts/check_frontend_skeleton.py && python scripts/check_database_foundation.py && python scripts/check_contract_foundation.py && python scripts/check_provider_runtime.py && python scripts/check_termux_linux_workflow.py'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000299",
+      "event_sha256": "d97c023251acc7e88961b68dbb4ab7fb1a5cd68d563b8db8bcaafd5573a2a916",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:38:58Z",
+      "previous_event_sha256": "3e48f566235938353eb66eea2a4e95cb7402451ec2e0506ec09b1b48961edbc9",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 299,
+      "summary": "foundation qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "foundation",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_ci_security_quality.py && python scripts/check_repository_tree.py && python scripts/check_backend_skeleton.py && python scripts/check_frontend_skeleton.py && python scripts/check_database_foundation.py && python scripts/check_contract_foundation.py && python scripts/check_provider_runtime.py && python scripts/check_termux_linux_workflow.py'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 1.323,
+      "event_id": "CWTV-EVT-000300",
+      "event_sha256": "ead4b306159212ae02bf820ef4945d71b064e64b8cf77d65d027ff47c7abaef6",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:38:59Z",
+      "previous_event_sha256": "d97c023251acc7e88961b68dbb4ab7fb1a5cd68d563b8db8bcaafd5573a2a916",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 300,
+      "summary": "foundation qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "repository",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python -m unittest discover -s tests/repository -p \"test_*.py\"'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000301",
+      "event_sha256": "66fa851b6a1d415468e9c65eaf509f72fc84c03cd03920b7611413dc863baedb",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:38:59Z",
+      "previous_event_sha256": "ead4b306159212ae02bf820ef4945d71b064e64b8cf77d65d027ff47c7abaef6",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 301,
+      "summary": "repository qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "repository",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python -m unittest discover -s tests/repository -p \"test_*.py\"'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 22.508,
+      "event_id": "CWTV-EVT-000302",
+      "event_sha256": "2857f98ef2f5107a85c0f89a2c25931961e1dc7fe41c306a5d8be08c390cf231",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:39:22Z",
+      "previous_event_sha256": "66fa851b6a1d415468e9c65eaf509f72fc84c03cd03920b7611413dc863baedb",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 302,
+      "summary": "repository qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "backend",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_backend_runtime.sh'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000303",
+      "event_sha256": "efa7ef0c422411dc6e1664f01d61cc396f06e69b96046bf742612fb8171d1918",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:39:22Z",
+      "previous_event_sha256": "2857f98ef2f5107a85c0f89a2c25931961e1dc7fe41c306a5d8be08c390cf231",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 303,
+      "summary": "backend qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "backend",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_backend_runtime.sh'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 6.007,
+      "event_id": "CWTV-EVT-000304",
+      "event_sha256": "8ed364d5586981c717c69c5e409697f248f96c4928ea943d98b6047cd2a80133",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:39:28Z",
+      "previous_event_sha256": "efa7ef0c422411dc6e1664f01d61cc396f06e69b96046bf742612fb8171d1918",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 304,
+      "summary": "backend qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "contract",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_contract_runtime.sh'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000305",
+      "event_sha256": "b94235cbe4b46fe28a203b38066d193e5605dfb2db08791747a349f0e779a56d",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:39:28Z",
+      "previous_event_sha256": "8ed364d5586981c717c69c5e409697f248f96c4928ea943d98b6047cd2a80133",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 305,
+      "summary": "contract qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "contract",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_contract_runtime.sh'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 12.517,
+      "event_id": "CWTV-EVT-000306",
+      "event_sha256": "7ae426af7713d672a551050f5990bdf191af23d1629ec540ae1530ed0dffbcc7",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:39:41Z",
+      "previous_event_sha256": "b94235cbe4b46fe28a203b38066d193e5605dfb2db08791747a349f0e779a56d",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 306,
+      "summary": "contract qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "frontend",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_frontend_runtime.sh'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000307",
+      "event_sha256": "ec30cfa875ede0d2a735cab7de8902f9fecafe4f132eaea9eb52d960738dad64",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:39:41Z",
+      "previous_event_sha256": "7ae426af7713d672a551050f5990bdf191af23d1629ec540ae1530ed0dffbcc7",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 307,
+      "summary": "frontend qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "frontend",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_frontend_runtime.sh'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 51.356,
+      "event_id": "CWTV-EVT-000308",
+      "event_sha256": "09b1fb6bd766525aed9df358bf179bbba86866ab6a658099a5ac3d11d3053eab",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:40:33Z",
+      "previous_event_sha256": "ec30cfa875ede0d2a735cab7de8902f9fecafe4f132eaea9eb52d960738dad64",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 308,
+      "summary": "frontend qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "database",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_database_migrations.sh'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000309",
+      "event_sha256": "97b9a6ede157ed7e3b966c0050249227c7c16beaf0b1cf442a68e6b8cc472cef",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:40:33Z",
+      "previous_event_sha256": "09b1fb6bd766525aed9df358bf179bbba86866ab6a658099a5ac3d11d3053eab",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 309,
+      "summary": "database qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "database",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_database_migrations.sh'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 3.462,
+      "event_id": "CWTV-EVT-000310",
+      "event_sha256": "14e57ca549b7d9f02836a4f55cc5612239539c638e5830b0900baa8e7d7fab41",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:40:36Z",
+      "previous_event_sha256": "97b9a6ede157ed7e3b966c0050249227c7c16beaf0b1cf442a68e6b8cc472cef",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 310,
+      "summary": "database qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "discovery",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_catalog_experience.py && python scripts/check_refinement_regression.py && python scripts/reconcile_provider_fallbacks.py --check'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000311",
+      "event_sha256": "77dba446e54d6a6a94b2c5c16a1d05f469bb2e785a5570a86c2f3979b25f1379",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:40:37Z",
+      "previous_event_sha256": "14e57ca549b7d9f02836a4f55cc5612239539c638e5830b0900baa8e7d7fab41",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 311,
+      "summary": "discovery qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "discovery",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_catalog_experience.py && python scripts/check_refinement_regression.py && python scripts/reconcile_provider_fallbacks.py --check'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 0.139,
+      "event_id": "CWTV-EVT-000312",
+      "event_sha256": "63dd35445e5ea07b92e9c4f5f595107f86c70b04a4d3aff8b20494c90f582f5e",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:40:37Z",
+      "previous_event_sha256": "77dba446e54d6a6a94b2c5c16a1d05f469bb2e785a5570a86c2f3979b25f1379",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 312,
+      "summary": "discovery qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "trailer-runtime",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_trailer_navigation_runtime.py'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000313",
+      "event_sha256": "7612f48be1ab5357ed824dcfbc83628bc9cd742449e92f12bf6aed5f90932554",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:40:37Z",
+      "previous_event_sha256": "63dd35445e5ea07b92e9c4f5f595107f86c70b04a4d3aff8b20494c90f582f5e",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 313,
+      "summary": "trailer-runtime qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "trailer-runtime",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_trailer_navigation_runtime.py'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 3.096,
+      "event_id": "CWTV-EVT-000314",
+      "event_sha256": "01e2ced17de8ad2672cf9ffde3076ee64c45e8ae3f1dacdcd2d9de3c05f825a0",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:40:40Z",
+      "previous_event_sha256": "7612f48be1ab5357ed824dcfbc83628bc9cd742449e92f12bf6aed5f90932554",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 314,
+      "summary": "trailer-runtime qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "chronicle",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_engineering_chronicle.py && python scripts/build_progress_dashboard.py --check && bash scripts/check_progress_dashboard_runtime.sh'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000315",
+      "event_sha256": "39394dc1361db9af46b99b8ef1824513df2e079fcd3354638197ca036372ce17",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:40:40Z",
+      "previous_event_sha256": "01e2ced17de8ad2672cf9ffde3076ee64c45e8ae3f1dacdcd2d9de3c05f825a0",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 315,
+      "summary": "chronicle qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "chronicle",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_engineering_chronicle.py && python scripts/build_progress_dashboard.py --check && bash scripts/check_progress_dashboard_runtime.sh'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 1.185,
+      "event_id": "CWTV-EVT-000316",
+      "event_sha256": "4bbc010bf93eef1e961e87cbe6786abad1ed92fe2be5c519862beeac54d69c1c",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:40:42Z",
+      "previous_event_sha256": "39394dc1361db9af46b99b8ef1824513df2e079fcd3354638197ca036372ce17",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 316,
+      "summary": "chronicle qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "security",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_ci_security_quality.py --scan-repository && python -m pip check && python -m pip_audit --strict services/api'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000317",
+      "event_sha256": "aa12a936ca6a0e5ae20582d95dc933875e15a980df06162a51a30494e40bd3c3",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:40:42Z",
+      "previous_event_sha256": "4bbc010bf93eef1e961e87cbe6786abad1ed92fe2be5c519862beeac54d69c1c",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 317,
+      "summary": "security qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "security",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_ci_security_quality.py --scan-repository && python -m pip check && python -m pip_audit --strict services/api'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 22.151,
+      "event_id": "CWTV-EVT-000318",
+      "event_sha256": "32ef573dbf74b25970905694120ce42bfdb7a6c7a81eeae18d8c73514937ce41",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:41:04Z",
+      "previous_event_sha256": "aa12a936ca6a0e5ae20582d95dc933875e15a980df06162a51a30494e40bd3c3",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 318,
+      "summary": "security qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "npm-production",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'npm audit --omit=dev --audit-level=high'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000319",
+      "event_sha256": "d9a8493d6c494dacc5ab892201305d88c1a5708b18780d0b3a8f2407c0dc4b86",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:41:04Z",
+      "previous_event_sha256": "32ef573dbf74b25970905694120ce42bfdb7a6c7a81eeae18d8c73514937ce41",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 319,
+      "summary": "npm-production qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "npm-production",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'npm audit --omit=dev --audit-level=high'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 0.738,
+      "event_id": "CWTV-EVT-000320",
+      "event_sha256": "b99d9f288f7a29de9380fb11ef3fd216c9b8e5408566a4f8c49e79a7dba7b099",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:41:05Z",
+      "previous_event_sha256": "d9a8493d6c494dacc5ab892201305d88c1a5708b18780d0b3a8f2407c0dc4b86",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 320,
+      "summary": "npm-production qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "diff",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'git diff --check'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000321",
+      "event_sha256": "ad3ee0d563c3c53d506985f37fa6bbe84e438dadaa5555da325809f80c1029cc",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:41:08Z",
+      "previous_event_sha256": "b99d9f288f7a29de9380fb11ef3fd216c9b8e5408566a4f8c49e79a7dba7b099",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 321,
+      "summary": "diff qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "diff",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'git diff --check'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 0.025,
+      "event_id": "CWTV-EVT-000322",
+      "event_sha256": "e814de99508f5a7f8c40364dbbd27231ecc64a47aafa8efa0a887dae4fb267d9",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:41:08Z",
+      "previous_event_sha256": "ad3ee0d563c3c53d506985f37fa6bbe84e438dadaa5555da325809f80c1029cc",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 322,
+      "summary": "diff qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Local-UI-harness",
+      "correction": "CWTV-UI-LOCAL-RUNTIME",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000323",
+      "event_sha256": "b6bed5876559dc475cf277749dafb9706f81d5831df9425239a3b1a88c4c5173",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:41:08Z",
+      "previous_event_sha256": "e814de99508f5a7f8c40364dbbd27231ecc64a47aafa8efa0a887dae4fb267d9",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 323,
+      "summary": "Local browser first pass could not qualify provider-backed states: server start omitted canonical API selector, yielding500 local API rewrites and null home props. Concurrent standard qualification build replaces same local.next artifact. Preserved log; no production defect or production mutation. Historical baseline process interrupted across usage reset; partial screenshots retained.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Local-UI-harness",
+      "correction": "CWTV-UI-LOCAL-RUNTIME",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000324",
+      "event_sha256": "391c32b6f08cdf133b3c85b52e5948d65c8a80546e9969e1b3739d750be71e20",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:41:09Z",
+      "previous_event_sha256": "b6bed5876559dc475cf277749dafb9706f81d5831df9425239a3b1a88c4c5173",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 324,
+      "summary": "Reread saved workflow; separated full build/runtime qualification from later UI browser run, and will use canonical API/site selectors consistently for both build and local server. Preserve production source and transport failures separately.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Workspace-proxy",
+      "correction": "CWTV-UI-LOCAL-RUNTIME",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000325",
+      "event_sha256": "b7b6b601bb36764283b2f588b06250ec27fe86dcef202e6c622cd5a196045e7c",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:49:16Z",
+      "previous_event_sha256": "391c32b6f08cdf133b3c85b52e5948d65c8a80546e9969e1b3739d750be71e20",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 325,
+      "summary": "Node native fetch through NODE_USE_ENV_PROXY=1 succeeds with configured CA; Next rewrite agent still attempts unavailable direct TCP. Local UI harness now transports unmodified real canonical API responses through TLS-verified httpx; Linux source/runtime tests independently cover actual Next rewrites. Production runtime/configuration unchanged.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Rendered-theme-regressions",
+      "correction": "CWTV-THEME-CASCADE",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000326",
+      "event_sha256": "20105558bd2ae436bb8f7adb239e46b09a0cacbcc8c5ad28405e8c014ccec3fd",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:53:52Z",
+      "previous_event_sha256": "b7b6b601bb36764283b2f588b06250ec27fe86dcef202e6c622cd5a196045e7c",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 326,
+      "summary": "Rendered browser and independent review caught legacy light CSS attribute-specificity overriding appended semantic rules: actual search placeholder3.539:1. News action remained19.6875px. Existing first-pass screenshots/metrics retained; no production publication.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Theme-cascade",
+      "correction": "CWTV-THEME-CASCADE",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000327",
+      "event_sha256": "662d50b3bbb7b42c570e1a669a48162ae68534969d459585ab4332c0190f05e9",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:56:59Z",
+      "previous_event_sha256": "20105558bd2ae436bb8f7adb239e46b09a0cacbcc8c5ad28405e8c014ccec3fd",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 327,
+      "summary": "Reread workflow and matched semantic selector specificity to legacy light-theme selectors so later colour roles apply in both selected themes; raised News action to44px. Rendered regression metrics remain required; no checker weakened. Browser telemetry/drain now bounded with active real requests tracked separately.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Browser-qualification",
+      "correction": "CWTV-UI-TEMPORARY-HTTP",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000328",
+      "event_sha256": "0d190f513302724098443526c045dab92ceb9e87cb2147b5cba3bcd11937e0b6",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:11:28Z",
+      "previous_event_sha256": "662d50b3bbb7b42c570e1a669a48162ae68534969d459585ab4332c0190f05e9",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 328,
+      "summary": "Browser runs at14:00UTC received temporary503 responses; localSSRreturnednullcatalog and controlled fixture refused absenthero. FreshTLS-verified HTTP at14:07 returnedcanonicalhome200 andorganizations200, managednodeOnline. No production mutation. Partialchecks preserved as incomplete, not source/UI acceptance.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Browser-qualification",
+      "correction": "CWTV-UI-TEMPORARY-HTTP",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000329",
+      "event_sha256": "09577d932a0f1af8239e530f8be02614c54368ac5592fe54306ec3f9c3420c55",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:11:28Z",
+      "previous_event_sha256": "0d190f513302724098443526c045dab92ceb9e87cb2147b5cba3bcd11937e0b6",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 329,
+      "summary": "Reread Drive workflow; bounded HTTP502/503/504 retries preserve originalstatus/body records; completed route disposal no longer rethrows recorded fixture failure. Default theme persistence now explicitly exercises userselection; all five reviewedlight artwork variants protected by unit samples. No source transport/API/security change.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Browser-assertions",
+      "correction": "CWTV-UI-ASSET-IDENTITY",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000330",
+      "event_sha256": "2785eb73479698ba55bd9926c207cee65e689cffdba52afc85f128e59961dc30",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:13:39Z",
+      "previous_event_sha256": "09577d932a0f1af8239e530f8be02614c54368ac5592fe54306ec3f9c3420c55",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 330,
+      "summary": "Completedsevenwidthsbrowserpassrecorded326passed/eightfailed: sevenmattecomparisonskeyedorganizationdisplayname collided on twoParamountrecordswithdifferentoriginalassets; fixturewebsitequerysubstringmatchedorganizationnameNoOfficialWebsiteAvailable. All actualcontrast/layout/control/logo checks passed; failures retained as harness assertions, no source changes.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Browser-assertions",
+      "correction": "CWTV-UI-ASSET-IDENTITY",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000331",
+      "event_sha256": "6757c3f21d6433e437014cba0cd31aaf856e15f0a708369949c4089d46ca7082",
+      "event_type": "CORRECTION_APPLIED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:13:39Z",
+      "previous_event_sha256": "2785eb73479698ba55bd9926c207cee65e689cffdba52afc85f128e59961dc30",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 331,
+      "summary": "Reread workflow; compare originalart/mattes by exactassetURL instead of nonunique displayname, and queryactualorganizationexternal action rather than substringname. This preserves source identity and verifies intended absentaction. Reexecuting entiresevenwidthsuite with unchanged application tree.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "UI",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000332",
+      "event_sha256": "ae2db2b371703ad20999f790657c466f4fb0042153aca96430f4ffd1d78540d9",
+      "event_type": "BROWSER_QUALIFICATION_PASSED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:16:13Z",
+      "previous_event_sha256": "6757c3f21d6433e437014cba0cd31aaf856e15f0a708369949c4089d46ca7082",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 332,
+      "summary": "Fresh actualbuiltUI browser qualification334/334 checks passed across320,360,375,390,412,430,1440CSSpx, light/dark, actualcanonicaldata andoriginallogos. Additional eightcontrolled long/short/empty/error/retry/loading state groups pass bothmodes withnumericcontrast/touch/overflow checks. TransportTLSverified; noignoredcertificateerrors. IndependentreviewnoCritical/unresolvedImportant; noDB/API/dependency mutation. Fullcurrentqualification rerun next.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "foundation",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_ci_security_quality.py && python scripts/check_repository_tree.py && python scripts/check_backend_skeleton.py && python scripts/check_frontend_skeleton.py && python scripts/check_database_foundation.py && python scripts/check_contract_foundation.py && python scripts/check_provider_runtime.py && python scripts/check_termux_linux_workflow.py'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000333",
+      "event_sha256": "14afa9436f1da383b09dc17244dc87ea02eacb5e449ab9c75cb26b8bf7210871",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:16:13Z",
+      "previous_event_sha256": "ae2db2b371703ad20999f790657c466f4fb0042153aca96430f4ffd1d78540d9",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 333,
+      "summary": "foundation qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "foundation",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_ci_security_quality.py && python scripts/check_repository_tree.py && python scripts/check_backend_skeleton.py && python scripts/check_frontend_skeleton.py && python scripts/check_database_foundation.py && python scripts/check_contract_foundation.py && python scripts/check_provider_runtime.py && python scripts/check_termux_linux_workflow.py'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 1.324,
+      "event_id": "CWTV-EVT-000334",
+      "event_sha256": "34e5c26963eb7a3f363ddee66ffe290af7fad6ed30adf81458bae9956557775d",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:16:15Z",
+      "previous_event_sha256": "14afa9436f1da383b09dc17244dc87ea02eacb5e449ab9c75cb26b8bf7210871",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 334,
+      "summary": "foundation qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "repository",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python -m unittest discover -s tests/repository -p \"test_*.py\"'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000335",
+      "event_sha256": "3adf3bd719e301969f58b7b2eaae392ce0a8cf79112b70411eded27214c3b91d",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:16:15Z",
+      "previous_event_sha256": "34e5c26963eb7a3f363ddee66ffe290af7fad6ed30adf81458bae9956557775d",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 335,
+      "summary": "repository qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "repository",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python -m unittest discover -s tests/repository -p \"test_*.py\"'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 18.613,
+      "event_id": "CWTV-EVT-000336",
+      "event_sha256": "bcbce08030879e44dee41b7f7958ba41363344cffd64825dc6eb8737914b1439",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:16:34Z",
+      "previous_event_sha256": "3adf3bd719e301969f58b7b2eaae392ce0a8cf79112b70411eded27214c3b91d",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 336,
+      "summary": "repository qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "backend",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_backend_runtime.sh'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000337",
+      "event_sha256": "9a7ba3894c0a17a5319e541a1823c2429650aab24f854049a8a1a7b38e607066",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:16:34Z",
+      "previous_event_sha256": "bcbce08030879e44dee41b7f7958ba41363344cffd64825dc6eb8737914b1439",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 337,
+      "summary": "backend qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "backend",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_backend_runtime.sh'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 5.907,
+      "event_id": "CWTV-EVT-000338",
+      "event_sha256": "2744d7103e7a95826e7247ba17b3963859e99ae7e5be3d88fa1c3279bc633763",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:16:40Z",
+      "previous_event_sha256": "9a7ba3894c0a17a5319e541a1823c2429650aab24f854049a8a1a7b38e607066",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 338,
+      "summary": "backend qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "contract",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_contract_runtime.sh'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000339",
+      "event_sha256": "e8d7dcc32b6e94f023d661f3073bec8feea6168581129f6949d2bc3ddb47a897",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:16:40Z",
+      "previous_event_sha256": "2744d7103e7a95826e7247ba17b3963859e99ae7e5be3d88fa1c3279bc633763",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 339,
+      "summary": "contract qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "contract",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_contract_runtime.sh'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 10.489,
+      "event_id": "CWTV-EVT-000340",
+      "event_sha256": "8d35f65d1785ffe74a9bec4dc6e0115b3ebcf2b6682466527b70ff468009dbfb",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:16:51Z",
+      "previous_event_sha256": "e8d7dcc32b6e94f023d661f3073bec8feea6168581129f6949d2bc3ddb47a897",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 340,
+      "summary": "contract qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "frontend",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_frontend_runtime.sh'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000341",
+      "event_sha256": "67e0c8fe407872c46ae01882c7ad12c80f5ff3f6ff6f45862602e8f4e64eaebc",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:16:51Z",
+      "previous_event_sha256": "8d35f65d1785ffe74a9bec4dc6e0115b3ebcf2b6682466527b70ff468009dbfb",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 341,
+      "summary": "frontend qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "frontend",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_frontend_runtime.sh'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 36.595,
+      "event_id": "CWTV-EVT-000342",
+      "event_sha256": "d141716c1f31138decb246926aa6fed09eb2e49372762e6a93d1986f62c1832f",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:28Z",
+      "previous_event_sha256": "67e0c8fe407872c46ae01882c7ad12c80f5ff3f6ff6f45862602e8f4e64eaebc",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 342,
+      "summary": "frontend qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "database",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_database_migrations.sh'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000343",
+      "event_sha256": "31ed9e19a20dedb7cc032420232eca6107b6689a79bacdcadd4cf1031f6aee80",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:28Z",
+      "previous_event_sha256": "d141716c1f31138decb246926aa6fed09eb2e49372762e6a93d1986f62c1832f",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 343,
+      "summary": "database qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "database",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'bash scripts/check_database_migrations.sh'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 3.633,
+      "event_id": "CWTV-EVT-000344",
+      "event_sha256": "14051084e5c43ed029d466b2fb62be3490a797c215980da4ed2dee8334aabbcc",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:32Z",
+      "previous_event_sha256": "31ed9e19a20dedb7cc032420232eca6107b6689a79bacdcadd4cf1031f6aee80",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 344,
+      "summary": "database qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "discovery",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_catalog_experience.py && python scripts/check_refinement_regression.py && python scripts/reconcile_provider_fallbacks.py --check'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000345",
+      "event_sha256": "40ffc26b23322c43994aa5c75132929e16cf045f86a8b9dcc6201db51e0cb29a",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:32Z",
+      "previous_event_sha256": "14051084e5c43ed029d466b2fb62be3490a797c215980da4ed2dee8334aabbcc",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 345,
+      "summary": "discovery qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "discovery",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_catalog_experience.py && python scripts/check_refinement_regression.py && python scripts/reconcile_provider_fallbacks.py --check'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 0.175,
+      "event_id": "CWTV-EVT-000346",
+      "event_sha256": "fca459aa822ddc9dccf1c9ff42b2a57349bcf13c86087656a0e17e1b68e49dc8",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:32Z",
+      "previous_event_sha256": "40ffc26b23322c43994aa5c75132929e16cf045f86a8b9dcc6201db51e0cb29a",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 346,
+      "summary": "discovery qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "trailer-runtime",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_trailer_navigation_runtime.py'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000347",
+      "event_sha256": "9a9a22fd2819bcbaef4ec4a463547f9e8a6407d5a4c67743cdd9707dbadb888a",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:33Z",
+      "previous_event_sha256": "fca459aa822ddc9dccf1c9ff42b2a57349bcf13c86087656a0e17e1b68e49dc8",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 347,
+      "summary": "trailer-runtime qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "trailer-runtime",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_trailer_navigation_runtime.py'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 2.821,
+      "event_id": "CWTV-EVT-000348",
+      "event_sha256": "9320cd37e2b30b4d271f05723aa09b8328c35afc338353e1d95e669a010b4edd",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:36Z",
+      "previous_event_sha256": "9a9a22fd2819bcbaef4ec4a463547f9e8a6407d5a4c67743cdd9707dbadb888a",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 348,
+      "summary": "trailer-runtime qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "chronicle",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_engineering_chronicle.py && python scripts/build_progress_dashboard.py --check && bash scripts/check_progress_dashboard_runtime.sh'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000349",
+      "event_sha256": "e6bbfbbbc5d06933e86417075dec40d02ebdffb3a92037324fd443fb7df2d7c8",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:36Z",
+      "previous_event_sha256": "9320cd37e2b30b4d271f05723aa09b8328c35afc338353e1d95e669a010b4edd",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 349,
+      "summary": "chronicle qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "chronicle",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_engineering_chronicle.py && python scripts/build_progress_dashboard.py --check && bash scripts/check_progress_dashboard_runtime.sh'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 1.633,
+      "event_id": "CWTV-EVT-000350",
+      "event_sha256": "d364f0e4dc9b85f87eed12cde47e2f294d5ad92fac6fdd9227af78db79e21648",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:38Z",
+      "previous_event_sha256": "e6bbfbbbc5d06933e86417075dec40d02ebdffb3a92037324fd443fb7df2d7c8",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 350,
+      "summary": "chronicle qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "security",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_ci_security_quality.py --scan-repository && python -m pip check && python -m pip_audit --strict services/api'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000351",
+      "event_sha256": "3f12df2cddab394bd3df1f682d8389bcfdec293451e4b7b698767b09fa2f50e6",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:38Z",
+      "previous_event_sha256": "d364f0e4dc9b85f87eed12cde47e2f294d5ad92fac6fdd9227af78db79e21648",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 351,
+      "summary": "security qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "security",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'python scripts/check_ci_security_quality.py --scan-repository && python -m pip check && python -m pip_audit --strict services/api'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 15.616,
+      "event_id": "CWTV-EVT-000352",
+      "event_sha256": "ca35cf77609a8c253f1fbdeb7fcbe4d8135d7a155444c9be9ff66b0927ffb5f9",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:54Z",
+      "previous_event_sha256": "3f12df2cddab394bd3df1f682d8389bcfdec293451e4b7b698767b09fa2f50e6",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 352,
+      "summary": "security qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "npm-production",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'npm audit --omit=dev --audit-level=high'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000353",
+      "event_sha256": "08a80dfb732d46e59736b1255893be031c3ad8ecd019518ea9a0af7a461e6d7e",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:54Z",
+      "previous_event_sha256": "ca35cf77609a8c253f1fbdeb7fcbe4d8135d7a155444c9be9ff66b0927ffb5f9",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 353,
+      "summary": "npm-production qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "npm-production",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'npm audit --omit=dev --audit-level=high'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 0.678,
+      "event_id": "CWTV-EVT-000354",
+      "event_sha256": "fa0c5bfcdc42befcaece118c62ac0fbd5115940f8cc73f0155c2715443990dbe",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:55Z",
+      "previous_event_sha256": "08a80dfb732d46e59736b1255893be031c3ad8ecd019518ea9a0af7a461e6d7e",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 354,
+      "summary": "npm-production qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "diff",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'git diff --check'"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000355",
+      "event_sha256": "20acbc242846e12805d602ba772848150f12561f3a85a5e896157dd1646fd9a0",
+      "event_type": "QUALIFICATION_STARTED",
+      "evidence": [],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:57Z",
+      "previous_event_sha256": "fa0c5bfcdc42befcaece118c62ac0fbd5115940f8cc73f0155c2715443990dbe",
+      "result": "INFO",
+      "schema_version": "1.0",
+      "sequence": 355,
+      "summary": "diff qualification started.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "diff",
+      "correction": null,
+      "details": {
+        "command": "bash -c 'git diff --check'",
+        "exit_code": "0"
+      },
+      "duration_seconds": 0.028,
+      "event_id": "CWTV-EVT-000356",
+      "event_sha256": "bd4cb7981d89aba236c4f7358463011d61544483b721509ca31a4340a097d92b",
+      "event_type": "QUALIFICATION_PASSED",
+      "evidence": [
+        "exit_code=0"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:17:57Z",
+      "previous_event_sha256": "20acbc242846e12805d602ba772848150f12561f3a85a5e896157dd1646fd9a0",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 356,
+      "summary": "diff qualification passed.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "run_and_record"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "UI-security-runtime",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000357",
+      "event_sha256": "3db6b7f61494b4ec68b035a99d79180d67161c14778d376d74d204faad1c0890",
+      "event_type": "SOURCE_QUALIFICATION_PASSED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:19:44Z",
+      "previous_event_sha256": "bd4cb7981d89aba236c4f7358463011d61544483b721509ca31a4340a097d92b",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 357,
+      "summary": "Fresh fullcurrent qualification:27repository,99API,3contract,6offlinemigration tests PASS; lint,typecheck,productionNextbuild,API/web/contract/trailerruntime,OpenAPI/TSparity,Chronicle/dashboard,secret/CIpolicies PASS. npmproduction0vulnerabilities;Pythonno known vulnerabilities;8existinghighdevelopmentadvisories retained. Alloriginalbrand/providerassets,dependency/API/contract/migrationauthorities and prior294events unchanged. Deploymentpending.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "UI",
+      "correction": null,
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000358",
+      "event_sha256": "23e9bd471795be44c26191988beec3c8b80bcb9637e598136d42fd811a482ac0",
+      "event_type": "SUPPLEMENTARY_UI_QUALIFICATION_PASSED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:23:08Z",
+      "previous_event_sha256": "3db6b7f61494b4ec68b035a99d79180d67161c14778d376d74d204faad1c0890",
+      "result": "PASS",
+      "schema_version": "1.0",
+      "sequence": 358,
+      "summary": "Fresh supplementary64/64 checks PASS: actualnetwork411 whiteRTLlogo darkmatte in boththemes, companydetail, twoactualtitle/backdrop heroes at320/1440; locallycontrolled absent/brokenlogo meaningfulfallback and mixedartoriginalmattes. Allsourcebyte/mode/brand/API/securityboundaries preserved; no productiondeployment yet.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "failures": [
@@ -9732,12 +11283,129 @@
       "summary": "Original relay callback ReadError and second attempt already-handled route exceptions prevented clean harness completion; preserved both attempts. No application defect demonstrated.",
       "timestamp_precision": "exact",
       "timestamp_source": "Codex-recording-time"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Theme-regressions",
+      "correction": "CWTV-THEME-VISIBILITY",
+      "details": {
+        "test_intent": "expected-red-before-correction"
+      },
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000297",
+      "event_sha256": "865e9fecbf751cad38904a73e2e81bb504653d28cf19a59216eabcd50fdbc6e7",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:37:18Z",
+      "previous_event_sha256": "30ca09abdd9a04b5b9a17bf6732cfe53fa4e4ba25bc4a2bd70943194e44b87dc",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 297,
+      "summary": "Test-first visibility regressions reproduced missing semantic text/focus/action roles and original-logo matte support; existing light muted text on tinted surface measured4.484:1. Existing22 repository tests remained green; five new tests intentionally red before implementation.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Local-UI-harness",
+      "correction": "CWTV-UI-LOCAL-RUNTIME",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000323",
+      "event_sha256": "b6bed5876559dc475cf277749dafb9706f81d5831df9425239a3b1a88c4c5173",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:41:08Z",
+      "previous_event_sha256": "e814de99508f5a7f8c40364dbbd27231ecc64a47aafa8efa0a887dae4fb267d9",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 323,
+      "summary": "Local browser first pass could not qualify provider-backed states: server start omitted canonical API selector, yielding500 local API rewrites and null home props. Concurrent standard qualification build replaces same local.next artifact. Preserved log; no production defect or production mutation. Historical baseline process interrupted across usage reset; partial screenshots retained.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Rendered-theme-regressions",
+      "correction": "CWTV-THEME-CASCADE",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000326",
+      "event_sha256": "20105558bd2ae436bb8f7adb239e46b09a0cacbcc8c5ad28405e8c014ccec3fd",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T13:53:52Z",
+      "previous_event_sha256": "b7b6b601bb36764283b2f588b06250ec27fe86dcef202e6c622cd5a196045e7c",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 326,
+      "summary": "Rendered browser and independent review caught legacy light CSS attribute-specificity overriding appended semantic rules: actual search placeholder3.539:1. News action remained19.6875px. Existing first-pass screenshots/metrics retained; no production publication.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Browser-qualification",
+      "correction": "CWTV-UI-TEMPORARY-HTTP",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000328",
+      "event_sha256": "0d190f513302724098443526c045dab92ceb9e87cb2147b5cba3bcd11937e0b6",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:11:28Z",
+      "previous_event_sha256": "662d50b3bbb7b42c570e1a669a48162ae68534969d459585ab4332c0190f05e9",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 328,
+      "summary": "Browser runs at14:00UTC received temporary503 responses; localSSRreturnednullcatalog and controlled fixture refused absenthero. FreshTLS-verified HTTP at14:07 returnedcanonicalhome200 andorganizations200, managednodeOnline. No production mutation. Partialchecks preserved as incomplete, not source/UI acceptance.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
+    },
+    {
+      "artifact": null,
+      "commit": null,
+      "component": "Browser-assertions",
+      "correction": "CWTV-UI-ASSET-IDENTITY",
+      "details": {},
+      "duration_seconds": null,
+      "event_id": "CWTV-EVT-000330",
+      "event_sha256": "2785eb73479698ba55bd9926c207cee65e689cffdba52afc85f128e59961dc30",
+      "event_type": "TEST_FAILED",
+      "evidence": [
+        "https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM"
+      ],
+      "milestone": "CWTV.V1.3.3.2.6",
+      "occurred_at": "2026-10-08T14:13:39Z",
+      "previous_event_sha256": "09577d932a0f1af8239e530f8be02614c54368ac5592fe54306ec3f9c3420c55",
+      "result": "FAILED",
+      "schema_version": "1.0",
+      "sequence": 330,
+      "summary": "Completedsevenwidthsbrowserpassrecorded326passed/eightfailed: sevenmattecomparisonskeyedorganizationdisplayname collided on twoParamountrecordswithdifferentoriginalassets; fixturewebsitequerysubstringmatchedorganizationnameNoOfficialWebsiteAvailable. All actualcontrast/layout/control/logo checks passed; failures retained as harness assertions, no source changes.",
+      "timestamp_precision": "exact",
+      "timestamp_source": "manual"
     }
   ],
   "ledger": {
-    "event_count": 294,
-    "head_event_id": "CWTV-EVT-000294",
-    "head_sha256": "3b2eb12d2a25a9f76f9a88d0ad51ceb89f0d89d1a20fd66e7a0bda52d2fa94b7"
+    "event_count": 358,
+    "head_event_id": "CWTV-EVT-000358",
+    "head_sha256": "23e9bd471795be44c26191988beec3c8b80bcb9637e598136d42fd811a482ac0"
   },
   "milestones": [
     {
@@ -10203,19 +11871,46 @@
       "recorded_command_runtime_seconds": 200.241,
       "session_data_present": false,
       "status": "QUALIFIED"
+    },
+    {
+      "active_session_label": "not preserved",
+      "active_session_seconds": null,
+      "blocker_count": 0,
+      "break_count": 0,
+      "correction_count": 5,
+      "corrections": [
+        "CWTV-THEME-CASCADE",
+        "CWTV-THEME-VISIBILITY",
+        "CWTV-UI-ASSET-IDENTITY",
+        "CWTV-UI-LOCAL-RUNTIME",
+        "CWTV-UI-TEMPORARY-HTTP"
+      ],
+      "elapsed_label": "not preserved",
+      "elapsed_seconds": null,
+      "failure_count": 5,
+      "milestone": "CWTV.V1.3.3.2.6",
+      "observed_difficulty": 5.0,
+      "paused_label": "not preserved",
+      "paused_seconds": null,
+      "planned_complexity": null,
+      "progress_percent": 60,
+      "recorded_command_runtime_label": "3m 42s",
+      "recorded_command_runtime_seconds": 222.019,
+      "session_data_present": false,
+      "status": "IN_PROGRESS"
     }
   ],
-  "projection_as_of": "2026-10-08T11:27:17.870839+00:00",
+  "projection_as_of": "2026-10-08T14:23:08+00:00",
   "schema_version": "1.0",
   "summary": {
     "artifacts": 51,
     "commits": 12,
-    "corrections": 50,
-    "current_milestone": null,
-    "failed_events": 36,
-    "passed_events": 192,
+    "corrections": 55,
+    "current_milestone": "CWTV.V1.3.3.2.6",
+    "failed_events": 41,
+    "passed_events": 220,
     "qualified_milestones": 19,
-    "tracked_completion_percent": 100.0,
-    "tracked_milestones": 19
+    "tracked_completion_percent": 95.0,
+    "tracked_milestones": 20
   }
 }

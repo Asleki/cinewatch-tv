@@ -54,3 +54,15 @@
 
 .providers a{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:4px;border:1px solid transparent;border-radius:8px;color:var(--cw-text);text-decoration:none}.providers a:hover{border-color:var(--cw-aqua)}.providerNote{max-width:720px;margin:9px 0 0;color:var(--cw-muted);font-size:.72rem;line-height:1.5}.seasonFailure{display:flex;flex-wrap:wrap;align-items:center;gap:10px}.seasonFailure p{margin:0}.seasonFailure button{min-height:34px;padding:0 10px;border:1px solid var(--cw-border);border-radius:8px;background:var(--cw-surface-2);color:var(--cw-text);cursor:pointer}.reviewSource{display:block;margin-top:8px;color:var(--cw-aqua);font-size:.68rem}.actions a{text-decoration:none}
 .ratings span{display:inline-flex;align-items:center;gap:8px}.ratings span>b{color:var(--cw-text)}.sourceEyebrow{display:flex;align-items:center}.reviewSource{display:flex;align-items:center}
+
+:global(:root[data-theme]) .heroShade { background: linear-gradient(90deg, #020b1380, #020b1310 75%), linear-gradient(0deg, var(--cw-bg), transparent 50%); }
+:global(:root[data-theme="light"]) .heroShade { background: linear-gradient(90deg, #eef5f830, transparent 75%), linear-gradient(0deg, var(--cw-bg), transparent 50%); }
+:global(:root[data-theme]) .heroCopy { min-width: 0; padding: clamp(16px, 2.4vw, 28px); border: 1px solid var(--cw-border); border-radius: 16px; background: color-mix(in srgb, var(--cw-surface) 97%, transparent); color: var(--cw-text); text-shadow: none; overflow-wrap: anywhere; }
+:global(:root[data-theme]) .tagline, :global(:root[data-theme]) .overview, :global(:root[data-theme]) .peopleLine, :global(:root[data-theme]) .meta { color: var(--cw-muted); }
+:global(:root[data-theme]) .peopleLine b { color: var(--cw-text); }
+:global(:root[data-theme]) .eyebrow, :global(:root[data-theme]) .sectionHead p { color: var(--cw-accent-text); }
+:global(:root[data-theme]) .ratings span { color: var(--cw-text); background: var(--cw-surface-2); border-color: var(--cw-border); }
+:global(:root[data-theme]) .actions a { border-color: var(--cw-control-border); }
+:global(:root[data-theme]) .actions a:first-child { border-color: var(--cw-accent-fill); background: var(--cw-accent-fill); color: var(--cw-on-accent); }
+:global(:root[data-theme]) .watchInfoLink, :global(:root[data-theme]) .reviewSource, :global(:root[data-theme]) .reviews summary span { color: var(--cw-link); }
+.hero h1 { overflow-wrap: anywhere; }

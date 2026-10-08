@@ -241,3 +241,47 @@
 .seeAll{cursor:pointer}.trailerCard{text-decoration:none}.railError{display:flex;flex-wrap:wrap;align-items:center;gap:9px 14px;padding:14px;border:1px solid color-mix(in srgb,var(--cw-danger) 45%,var(--cw-border));border-radius:11px;background:var(--cw-surface);color:var(--cw-text)}.railError span{color:var(--cw-muted);font-size:.78rem}.railError button{margin-left:auto;min-height:36px;padding:0 12px;border:1px solid var(--cw-border);border-radius:8px;background:var(--cw-surface-2);color:var(--cw-text);cursor:pointer}@media(max-width:620px){.streamCallout{grid-template-columns:auto 1fr}.streamCallout>b{grid-column:2}.railError button{margin-left:0}}
 .cardMeta{display:flex!important;align-items:center;gap:7px;margin-top:3px}.cardMeta>span{display:inline-flex}.ratingBadge>span{display:inline-flex;align-items:center}.heroProviderError{margin:10px 0 0;color:#ffd29a;font-size:.76rem}.streamCallout{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:14px;border:1px solid var(--cw-border);border-radius:11px;background:var(--cw-surface);color:var(--cw-text);text-decoration:none}.streamCallout small{display:block;margin-top:3px;color:var(--cw-muted)}.streamCallout>b{font-size:.76rem;color:var(--cw-aqua)}.newsCallout{display:inline-flex;color:var(--cw-aqua);font-size:.82rem;font-weight:800;text-decoration:none}
 @media(max-width:560px){.genreGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Protect text locally rather than bleaching the complete cinematic backdrop. */
+:global(:root[data-theme]) .heroShade {
+  background: linear-gradient(90deg, #020b1380, #020b1310 75%), linear-gradient(0deg, var(--cw-bg), transparent 50%);
+}
+:global(:root[data-theme="light"]) .heroShade {
+  background: linear-gradient(90deg, #eef5f830, transparent 75%), linear-gradient(0deg, var(--cw-bg), transparent 50%);
+}
+:global(:root[data-theme]) .heroCopy {
+  min-width: 0;
+  padding: clamp(16px, 2.4vw, 28px);
+  border: 1px solid var(--cw-border);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--cw-surface) 97%, transparent);
+  color: var(--cw-text);
+  text-shadow: none;
+  overflow-wrap: anywhere;
+}
+:global(:root[data-theme]) .trendingLabel { color: var(--cw-accent-text); }
+:global(:root[data-theme]) .heroMeta,
+:global(:root[data-theme]) .synopsis p,
+:global(:root[data-theme]) .writers,
+:global(:root[data-theme]) .writers span { color: var(--cw-muted); }
+:global(:root[data-theme]) .ratingBadge { background: var(--cw-surface-2); border-color: var(--cw-border); color: var(--cw-text); }
+:global(:root[data-theme]) .synopsis button {
+  min-height: 44px; min-width: 44px; padding: 8px; margin-inline-start: 4px;
+  color: var(--cw-link); text-decoration: underline; text-underline-offset: 3px;
+}
+:global(:root[data-theme]) .primaryAction { background: var(--cw-accent-fill); color: var(--cw-on-accent); border-color: var(--cw-accent-fill); }
+:global(:root[data-theme]) .secondaryAction { background: var(--cw-surface); color: var(--cw-text); border-color: var(--cw-control-border); }
+:global(:root[data-theme]) .primaryAction:hover { background: var(--cw-aqua-strong); }
+:global(:root[data-theme]) .secondaryAction:hover { background: var(--cw-surface-2); }
+:global(:root[data-theme]) .seeAll { color: var(--cw-link); min-height: 44px; display: inline-flex; align-items: center; flex-shrink: 0; }
+:global(:root[data-theme]) .newsCallout, :global(:root[data-theme]) .streamCallout > b { color: var(--cw-link); }
+:global(:root[data-theme]) .newsCallout { min-height: 44px; align-items: center; }
+:global(:root[data-theme]) .streamMark { color: var(--cw-accent-text); border-color: var(--cw-accent-text); }
+:global(:root[data-theme]) .heroProviderError { color: var(--cw-muted); }
+:global(:root[data-theme]) .railError button { min-height: 44px; border-color: var(--cw-control-border); }
+@media (max-width: 620px) {
+  .heroContent { padding: 150px 12px 36px; }
+  .hero h1 { max-width: 100%; font-size: clamp(2.1rem, 10vw, 3.4rem); line-height: 1.02; }
+  .primaryAction, .secondaryAction { min-height: 44px; padding-inline: 12px; }
+  .heroActions { gap: 10px; }
+}

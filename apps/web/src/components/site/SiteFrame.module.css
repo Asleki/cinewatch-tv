@@ -11,3 +11,35 @@
 :global(:root[data-theme="light"]) .header{border-bottom-color:#98dfe3;background:#f8fcfedf}:global(:root[data-theme="light"]) .desktopNav a{color:#365565}:global(:root[data-theme="light"]) .desktopNav a:hover,:global(:root[data-theme="light"]) .desktopNav .activeNav{color:#081c28}:global(:root[data-theme="light"]) .searchBox{border-color:#a8c3d0;background:#fff;color:#244656}:global(:root[data-theme="light"]) .searchBox input{color:#102330}:global(:root[data-theme="light"]) .searchBox input::placeholder{color:#718c9c}:global(:root[data-theme="light"]) .searchBox button{color:#244656}:global(:root[data-theme="light"]) .suggestions{border-color:#a9c7d5;background:#fff;box-shadow:0 20px 55px #1734472b}:global(:root[data-theme="light"]) .suggestions>button{border-bottom-color:#dce9ef;color:#102330}:global(:root[data-theme="light"]) .suggestions>button:hover{background:#eaf6f8}:global(:root[data-theme="light"]) .suggestions p,:global(:root[data-theme="light"]) .suggestionCopy small{color:#617d8d}:global(:root[data-theme="light"]) .modeButton,:global(:root[data-theme="light"]) .accountButton{border-color:#aac5d2;background:#fff;color:#173545}:global(:root[data-theme="light"]) .footer{border-top-color:#b4d6df;background:#e6f1f5;color:#496474}:global(:root[data-theme="light"]) .footerBrand p,:global(:root[data-theme="light"]) .footerGroup a{color:#516d7d}:global(:root[data-theme="light"]) .footerMeta{border-top-color:#c6dce5;color:#698594}:global(:root[data-theme="light"]) .mobileNav{border-top-color:#a9ccd8;background:#f7fbfdf2}:global(:root[data-theme="light"]) .mobileNav a{color:#526d7b}:global(:root[data-theme="light"]) .mobileNav .mobileActive{color:#007d86}
 @media(prefers-reduced-motion:reduce){.readiness img{animation:none}}
 .inlineLoading{display:flex!important;align-items:center;gap:8px}.inlineLoading span{width:14px;height:14px;border:2px solid var(--cw-border);border-top-color:var(--cw-aqua);border-radius:50%;animation:cwspin .75s linear infinite}@keyframes cwspin{to{transform:rotate(360deg)}}
+
+/* Semantic roles apply to both modes; brand artwork is kept untouched. */
+:global(:root[data-theme]) .brand { display: flex; align-items: center; min-height: 44px; }
+:global(:root[data-theme]) .header { background: var(--cw-surface); }
+:global(:root[data-theme]) .desktopNav a { min-height: 44px; color: var(--cw-muted); }
+:global(:root[data-theme]) .desktopNav a:hover, :global(:root[data-theme]) .desktopNav .activeNav { color: var(--cw-text); }
+:global(:root[data-theme]) .searchBox { height: 48px; padding-inline: 8px 2px; gap: 4px; background: var(--cw-surface-2); color: var(--cw-text); border-color: var(--cw-control-border); }
+:global(:root[data-theme]) .searchBox input { height: 44px; color: var(--cw-text); }
+:global(:root[data-theme]) .searchBox input::placeholder { color: var(--cw-muted); opacity: 1; }
+:global(:root[data-theme]) .searchBox:focus-within { outline: 2px solid var(--cw-focus); outline-offset: 3px; }
+:global(:root[data-theme]) .searchBox button { min-width: 44px; min-height: 44px; color: var(--cw-text); border-radius: 50%; }
+:global(:root[data-theme]) .searchBox button:hover { background: var(--cw-surface); }
+:global(:root[data-theme]) .modeButton, :global(:root[data-theme]) .accountButton { width: 44px; height: 44px; min-width: 44px; min-height: 44px; border-color: var(--cw-control-border); background: var(--cw-surface-2); color: var(--cw-text); }
+:global(:root[data-theme]) .modeButton:hover, :global(:root[data-theme]) .accountButton:hover { border-color: var(--cw-focus); }
+:global(:root[data-theme]) .suggestions { background: var(--cw-surface); border-color: var(--cw-border); }
+:global(:root[data-theme]) .suggestions > button { min-height: 44px; color: var(--cw-text); border-bottom-color: var(--cw-border); }
+:global(:root[data-theme]) .suggestions > button:hover { background: var(--cw-surface-2); }
+:global(:root[data-theme]) .suggestions p, :global(:root[data-theme]) .suggestionCopy small { color: var(--cw-muted); }
+:global(:root[data-theme]) .entityBadge { color: var(--cw-accent-text); border-color: var(--cw-control-border); }
+:global(:root[data-theme]) .footer { background: var(--cw-surface); border-top-color: var(--cw-border); }
+:global(:root[data-theme]) .footerGroup h2 { color: var(--cw-accent-text); }
+:global(:root[data-theme]) .footerBrand p, :global(:root[data-theme]) .footerBrand small, :global(:root[data-theme]) .footerGroup a, :global(:root[data-theme]) .footerMeta { color: var(--cw-muted); }
+:global(:root[data-theme]) .footerGroup a:hover { color: var(--cw-link); }
+@media (min-width: 1181px) { .header { grid-template-columns: minmax(132px,auto) minmax(0,auto) minmax(240px,1fr) 44px 44px; } }
+@media (max-width: 1180px) { .header { grid-template-columns: auto minmax(0,1fr) 44px 44px; } }
+@media (max-width: 620px) {
+  .shell { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+  .header { grid-template-columns: minmax(0,auto) minmax(0,1fr) 44px 44px; }
+  :global(:root[data-theme]) .mobileNav { background: var(--cw-surface); border-top-color: var(--cw-control-border); }
+  :global(:root[data-theme]) .mobileNav a { min-height: 44px; justify-content: center; color: var(--cw-muted); }
+  :global(:root[data-theme]) .mobileNav .mobileActive { color: var(--cw-accent-text); }
+}

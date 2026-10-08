@@ -161,7 +161,7 @@ function Hero({
             {hero.rating ? <span className={styles.ratingBadge}><RatingSourceLogo source="tmdb" /><span>{hero.rating.value.toFixed(1)}/10</span></span> : null}
           </div>
           {experience?.quote ? <blockquote>“{experience.quote}”</blockquote> : null}
-          {synopsis ? <div className={styles.synopsis}><p>{visibleSynopsis}</p>{shouldCollapse ? <button type="button" onClick={onToggleSynopsis}>{expandedSynopsis ? "Less" : "More"}</button> : null}</div> : null}
+          {synopsis ? <div className={styles.synopsis}><p>{visibleSynopsis}</p>{shouldCollapse ? <button type="button" aria-expanded={expandedSynopsis} onClick={onToggleSynopsis}>{expandedSynopsis ? "Less" : "More"}</button> : null}</div> : null}
           {experience?.writers?.length ? <p className={styles.writers}><span>Written / Created by</span> {experience.writers.join(", ")}</p> : null}
           {experienceState === "error" ? <p className={styles.heroProviderError}>More details could not be loaded right now.</p> : null}
           <div className={styles.heroActions}>

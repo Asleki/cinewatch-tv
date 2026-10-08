@@ -1,7 +1,7 @@
 "use client";
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { useState } from "react";
+import LogoArtwork from "./LogoArtwork";
 import styles from "./OrganizationDirectory.module.css";
 
 export type Organization = { provider_id: number; kind: "network" | "company"; name: string; logo_url: string | null; origin_country: string | null; headquarters: string | null; homepage_url: string | null; future_path: string };
@@ -26,13 +26,13 @@ export function OrganizationDirectory({ initial }: { initial: { page: number; ha
   }
   return <main className={styles.page}><p className={styles.eyebrow}>Discover</p><h1>Networks & Companies</h1><p className={styles.intro}>Explore the networks and production companies connected to CineWatch titles.</p>
     {items.length ? <div className={styles.grid}>{items.map((item) => <article className={styles.card} key={`${item.kind}-${item.provider_id}`}>
-      <Link href={item.future_path} className={styles.logo} aria-label={`Explore ${item.name}`}>{item.logo_url ? <img src={item.logo_url} alt={`${item.name} logo`} /> : <span className={styles.fallback}>C</span>}</Link>
+      <Link href={item.future_path} className={styles.logo} aria-label={`Explore ${item.name}`}><LogoArtwork src={item.logo_url} name={item.name} /></Link>
       <Link href={item.future_path} className={styles.name}>{item.name}</Link>
       <small>{item.kind === "network" ? "TV network" : "Production company"}</small>
       {item.headquarters || item.origin_country ? <p>{item.headquarters || item.origin_country}</p> : null}
       {item.homepage_url ? <a className={styles.external} href={item.homepage_url} target="_blank" rel="noopener noreferrer">Official website ↗</a> : null}
     </article>)}</div> : <p>Organizations are temporarily unavailable.</p>}
-    {error ? <p className={styles.intro}>More organizations could not be loaded. <button type="button" onClick={() => void load()}>Retry</button></p> : null}
+    {error ? <p className={styles.intro} role="status">More organizations could not be loaded. <button className={styles.retry} type="button" disabled={busy} onClick={() => void load()}>Retry</button></p> : null}
     {hasMore ? <div className={styles.more}><button type="button" disabled={busy} onClick={() => void load()}>{busy ? "Loading…" : "Load more"}</button></div> : null}
   </main>;
 }
@@ -43,7 +43,7 @@ export function OrganizationPage({ detail }: { detail: OrganizationDetail }) {
     <section className={styles.hero} style={detail.backdrop_url ? { backgroundImage: `linear-gradient(90deg,var(--cw-bg) 4%,transparent 130%),url(${detail.backdrop_url})` } : undefined}>
       <div className={styles.heroText}><p className={styles.eyebrow}>{org.kind === "network" ? "TV network" : "Production company"}</p><h1>{org.name}</h1>
         <Link className={styles.info} href="#about">More Info</Link></div>
-      <div className={styles.heroSide}><div className={styles.heroLogo}>{org.logo_url ? <img src={org.logo_url} alt={`${org.name} logo`} /> : <span className={styles.fallback}>C</span>}</div>
+      <div className={styles.heroSide}><div className={styles.heroLogo}><LogoArtwork src={org.logo_url} name={org.name} /></div>
         {detail.movie_count !== null ? <strong>{detail.movie_count.toLocaleString()} movies</strong> : null}
         {detail.series_count !== null ? <strong>{detail.series_count.toLocaleString()} series</strong> : null}</div>
     </section>
