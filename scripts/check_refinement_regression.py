@@ -60,7 +60,7 @@ def main() -> int:
             'title="Trending Now"',
             'title="Popular Movies"',
             'title="Popular TV Shows"',
-            'Stream Now is under development',
+            '<strong>Stream Now</strong>',
         ),
         "homepage",
     )
@@ -77,7 +77,7 @@ def main() -> int:
             'state === "empty"',
             'state === "error"',
             "/where-to-watch?media_type=",
-            "/under-development/stream-now",
+            "/stream-now",
         ),
         "title experience",
     )

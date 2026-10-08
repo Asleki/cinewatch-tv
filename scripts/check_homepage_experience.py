@@ -43,7 +43,7 @@ def main() -> int:
     frame = read("apps/web/src/components/site/SiteFrame.tsx")
     for token in (
         'href: "/"',
-        'href: "/under-development/stream-now"',
+        'href: "/stream-now"',
         'href: "/discover/trending"',
         'href: "/genres"',
         'href: "/cinema-guide"',
@@ -66,7 +66,7 @@ def main() -> int:
     homepage = read("apps/web/src/components/home/HomepageExperience.tsx")
     for token in (
         'title="Stream Now"',
-        '/under-development/stream-now',
+        '/stream-now',
         'title="Trending Now"',
         'title="Popular Movies"',
         'title="Popular TV Shows"',
@@ -74,7 +74,7 @@ def main() -> int:
         '<LazyRail slug="kenyan-stories" />',
         '<LazyRail slug="tyler-perry" />',
         'href={`/title/${item.media_type}/${item.provider_id}/trailers`}',
-        'Stream Now is under development',
+        '<strong>Stream Now</strong>',
         'state === "empty"',
         'Open CineWatch News',
     ):

@@ -100,10 +100,10 @@ export default function HomepageExperience({ initialHome }: Props) {
 
       <section className={styles.section}>
         <SectionHeading title="Stream Now" />
-        <Link className={styles.streamCallout} href="/under-development/stream-now">
+        <Link className={styles.streamCallout} href="/stream-now">
           <span className={styles.streamMark}>C</span>
-          <span><strong>Stream Now is under development</strong><small>Playback will appear here when CineWatch content is ready.</small></span>
-          <b>View status →</b>
+          <span><strong>Stream Now</strong></span>
+          <b>Explore →</b>
         </Link>
       </section>
 

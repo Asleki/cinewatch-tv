@@ -30,7 +30,7 @@ type IconName = "search" | "mic" | "sun" | "moon" | "user" | "home" | "play" | "
 
 const primaryNavigation = [
   { label: "Home", href: "/" },
-  { label: "Stream Now", href: "/under-development/stream-now" },
+  { label: "Stream Now", href: "/stream-now" },
   { label: "Discover", href: "/discover/trending" },
   { label: "Genres", href: "/genres" },
   { label: "Cinema Guide", href: "/cinema-guide" },
@@ -40,7 +40,7 @@ const footerGroups = [
   {
     title: "Watch",
     items: [
-      ["Stream Now", "/under-development/stream-now"],
+      ["Stream Now", "/stream-now"],
       ["Movies", "/discover/popular-movies?media_type=movie"],
       ["TV Shows", "/discover/popular-tv?media_type=tv"],
       ["Trailers", "/trailers"],
@@ -113,7 +113,6 @@ function entityLabel(type: SearchEntityType): string {
 function isRouteActive(pathname: string | null, href: string): boolean {
   if (!pathname) return false;
   if (href === "/") return pathname === "/";
-  if (href.startsWith("/under-development/stream-now")) return pathname.includes("stream-now");
   return pathname.startsWith(href.split("?")[0]);
 }
 

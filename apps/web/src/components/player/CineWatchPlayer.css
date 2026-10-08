@@ -1,0 +1,596 @@
+/* Player Lab be46e3a engine styles, scoped to the player; no lab/catalogue CSS. */
+.player-shell {
+  margin-top: 28px;
+}
+.player-shell .player-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.player-shell .player-header h1 {
+  margin: 4px 0 0;
+  font-size: clamp(1.25rem, 5vw, 2rem);
+}
+.player-shell .player-eyebrow {
+  margin: 0;
+  color: #9ba7b7;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.player-shell .episode-label {
+  color: #c8d0da;
+  font-size: 0.9rem;
+}
+.player-shell .video-frame {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #303743;
+  border-radius: 18px;
+  background: #000;
+}
+.player-shell .video-element {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.player-shell .player-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 12px;
+  color: #8693a5;
+  font-size: 0.8rem;
+}
+@media (max-width: 640px) {
+.player-shell .player-header {
+    align-items: start;
+    flex-direction: column;
+  }
+.player-shell .video-frame {
+    border-radius: 12px;
+  }
+}
+.player-shell .cinewatch-video-frame {
+  position: relative;
+}
+.player-shell .video-element {
+  object-fit: contain;
+}
+.player-shell .player-controls {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 48px 18px 16px;
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 0, 0, 0.3) 20%,
+      rgba(0, 0, 0, 0.92)
+    );
+}
+.player-shell .player-seek {
+  width: 100%;
+  margin: 0;
+  accent-color: #ffffff;
+  cursor: pointer;
+}
+.player-shell .player-time-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 4px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+.player-shell .player-control-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 10px;
+}
+.player-shell .player-control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.player-shell .player-control-group-right {
+  justify-content: flex-end;
+}
+.player-shell .player-control-button, .player-shell .player-select {
+  min-height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(13, 17, 23, 0.86);
+  color: #ffffff;
+  font: inherit;
+}
+.player-shell .player-control-button {
+  min-width: 40px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.player-shell .player-control-button:hover, .player-shell .player-control-button:focus-visible, .player-shell .player-select:focus-visible {
+  border-color: rgba(255, 255, 255, 0.7);
+  outline: none;
+}
+.player-shell .player-skip-button {
+  min-width: 48px;
+  font-variant-numeric: tabular-nums;
+}
+.player-shell .player-select {
+  padding: 0 9px;
+  cursor: pointer;
+}
+.player-shell .player-speed {
+  min-width: 64px;
+}
+.player-shell .player-volume {
+  width: 90px;
+  accent-color: #ffffff;
+}
+.player-shell .player-center-action {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 76px;
+  height: 76px;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #07090c;
+  font-size: 2rem;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+.player-shell .player-buffering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+.player-shell .player-error {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  left: 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 120, 120, 0.7);
+  border-radius: 12px;
+  background: rgba(45, 8, 8, 0.92);
+  color: #ffffff;
+}
+.player-shell:focus {
+  outline: none;
+}
+.player-shell:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 6px;
+  border-radius: 12px;
+}
+.player-shell .cinewatch-video-frame:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  aspect-ratio: auto;
+  border: 0;
+  border-radius: 0;
+  background: #000000;
+}
+.player-shell .cinewatch-video-frame:fullscreen .video-element {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 760px) {
+.player-shell .player-controls {
+    padding: 40px 10px 10px;
+  }
+.player-shell .player-control-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+.player-shell .player-control-group, .player-shell .player-control-group-right {
+    justify-content: space-between;
+    width: 100%;
+  }
+.player-shell .player-volume {
+    flex: 1;
+    min-width: 54px;
+  }
+.player-shell .player-select {
+    min-width: 0;
+    max-width: 132px;
+  }
+.player-shell .player-center-action {
+    width: 66px;
+    height: 66px;
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 430px) {
+.player-shell .player-control-button {
+    min-width: 36px;
+    padding: 0 7px;
+  }
+.player-shell .player-skip-button {
+    min-width: 44px;
+  }
+.player-shell .player-volume {
+    display: none;
+  }
+.player-shell .player-select {
+    font-size: 0.78rem;
+  }
+}
+.player-shell .player-controls {
+  z-index: 3;
+}
+.player-shell .player-caption-layer {
+  position: absolute;
+  right: 7%;
+  bottom: 150px;
+  left: 7%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  text-align: center;
+}
+.player-shell .player-caption-text {
+  max-width: 100%;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.78);
+  color: #ffffff;
+  font-size: clamp(0.9rem, 2.8vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.28;
+  white-space: pre-line;
+  text-shadow:
+    0 1px 2px #000000,
+    0 0 3px #000000;
+}
+.player-shell .player-center-action, .player-shell .player-buffering, .player-shell .player-error {
+  z-index: 4;
+}
+@media (max-width: 760px) {
+.player-shell .player-caption-layer {
+    right: 5%;
+    bottom: 168px;
+    left: 5%;
+  }
+}
+@media (max-width: 430px) {
+.player-shell .player-caption-layer {
+    bottom: 160px;
+  }
+.player-shell .player-caption-text {
+    font-size: 0.82rem;
+  }
+}
+.player-shell .cinewatch-video-frame:fullscreen .player-caption-layer {
+  right: 8%;
+  bottom: 165px;
+  left: 8%;
+}
+.player-shell .cinewatch-video-frame:fullscreen .player-caption-text {
+  font-size: clamp(1rem, 3.3vw, 1.6rem);
+}
+.player-shell .video-element {
+  transition: filter 120ms linear;
+}
+.player-shell .player-gesture-surface {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.player-shell .player-controls {
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+.player-shell .player-controls--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+}
+.player-shell .cinewatch-video-frame.controls-hidden .player-caption-layer {
+  bottom: 7%;
+}
+.player-shell .cinewatch-video-frame.controls-hidden:fullscreen .player-caption-layer {
+  bottom: 6%;
+}
+.player-shell .player-gesture-hud {
+  position: absolute;
+  top: 50%;
+  z-index: 6;
+  display: grid;
+  width: min(180px, 38%);
+  gap: 8px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 14px;
+  background: rgba(5, 7, 10, 0.82);
+  color: #ffffff;
+  pointer-events: none;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+.player-shell .player-gesture-hud strong {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.player-shell .player-gesture-hud--left {
+  left: 18%;
+  transform: translate(-50%, -50%);
+}
+.player-shell .player-gesture-hud--center {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.player-shell .player-gesture-hud--right {
+  right: 18%;
+  transform: translate(50%, -50%);
+}
+.player-shell .player-gesture-meter {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+}
+.player-shell .player-gesture-meter > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #ffffff;
+  transition: width 60ms linear;
+}
+.player-shell .player-screenshot-flash {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  background: #ffffff;
+  pointer-events: none;
+  animation:
+    cinewatch-screenshot-flash
+    170ms ease-out forwards;
+}
+@keyframes cinewatch-screenshot-flash {
+  0% {
+    opacity: 0;
+  }
+
+  28% {
+    opacity: 0.82;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@media (max-width: 760px) {
+.player-shell .player-gesture-hud {
+    width: min(150px, 42%);
+    padding: 10px 12px;
+  }
+.player-shell .player-gesture-hud--left {
+    left: 23%;
+  }
+.player-shell .player-gesture-hud--right {
+    right: 23%;
+  }
+}
+@media (max-width: 430px) {
+.player-shell .player-gesture-hud {
+    width: min(138px, 44%);
+    border-radius: 12px;
+  }
+.player-shell .player-gesture-hud strong {
+    font-size: 0.78rem;
+  }
+}
+.player-shell .player-runtime-message, .player-shell .player-network-state {
+  position: absolute;
+  z-index: 5;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  background: rgba(5, 7, 10, 0.82);
+  color: #ffffff;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+.player-shell .player-runtime-message {
+  top: 50%;
+  left: 50%;
+  padding: 10px 16px;
+  transform: translate(-50%, -50%);
+}
+.player-shell .player-network-state {
+  top: 14px;
+  left: 14px;
+  padding: 7px 10px;
+  font-size: 0.78rem;
+}
+.player-shell .player-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.player-shell .player-retry-button {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+.player-shell .player-retry-button:focus-visible, .player-shell .player-retry-button:hover {
+  border-color: #ffffff;
+  outline: none;
+}
+.player-shell .player-cast-button--active {
+  border-color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.18);
+}
+@media (max-width: 430px) {
+.player-shell .player-error {
+    align-items: stretch;
+    flex-direction: column;
+  }
+.player-shell .player-retry-button {
+    align-self: flex-end;
+  }
+}
+.player-shell { margin-top: 0; }
+.player-shell .player-header { align-items: center; margin-bottom: 8px; }
+.player-shell .player-header h1 { margin: 0; font-size: clamp(1.05rem, 3vw, 1.45rem); font-weight: 650; }
+.player-shell .episode-label { font-size: .78rem; }
+.player-shell .player-controls { padding: 40px 12px 10px; }
+.player-shell .player-time-row { margin-top: 2px; font-size: .72rem; }
+.player-shell .player-control-row { gap: 10px; margin-top: 6px; }
+.player-shell .player-control-group { gap: 5px; }
+.player-shell .player-control-button, .player-shell .player-select { min-height: 34px; border-radius: 9px; }
+.player-shell .player-control-button { display: inline-grid; min-width: 34px; width: 34px; height: 34px; padding: 0; place-items: center; }
+.player-shell .player-skip-button { min-width: 34px; }
+.player-shell .player-control-icon { display: block; width: 18px; height: 18px; pointer-events: none; }
+.player-shell .player-control-icon--skip { width: 20px; height: 20px; }
+.player-shell .player-select { padding: 0 7px; font-size: .75rem; }
+.player-shell .player-speed { min-width: 54px; }
+.player-shell .player-volume { width: 74px; }
+.player-shell .player-center-action { width: 58px; height: 58px; font-size: 0; transition: transform 150ms ease, background 150ms ease; }
+.player-shell .player-center-action .player-control-icon { width: 24px; height: 24px; }
+.player-shell .player-center-action:hover, .player-shell .player-center-action:focus-visible { transform: translate(-50%, -50%) scale(1.04); }
+.player-shell .player-replay-button { position: absolute; top: 50%; left: 50%; z-index: 7; display: grid; width: 66px; height: 66px; padding: 0; place-items: center; border: 1px solid rgba(255,255,255,.34); border-radius: 50%; background: rgba(5,7,10,.78); color: #fff; cursor: pointer; transform: translate(-50%, -50%); backdrop-filter: blur(10px); transition: background 150ms ease, border-color 150ms ease, transform 150ms ease; }
+.player-shell .player-replay-button:hover, .player-shell .player-replay-button:focus-visible { border-color: rgba(255,255,255,.78); background: rgba(15,19,25,.92); outline: none; transform: translate(-50%, -50%) scale(1.04); }
+.player-shell .player-replay-button:disabled { cursor: default; }
+.player-shell .player-replay-icon { width: 42px; height: 42px; }
+.player-shell .player-replay-ring { transform-box: view-box; transform-origin: center; }
+.player-shell .player-replay-button--active .player-replay-ring { animation: cinewatch-replay-ring 520ms cubic-bezier(.2,.72,.2,1); }
+@keyframes cinewatch-replay-ring { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.player-shell .player-cast-button--active { box-shadow: inset 0 0 0 1px rgba(255,255,255,.28); }
+.player-shell .cinewatch-video-frame:fullscreen .player-replay-button { width: 74px; height: 74px; }
+.player-shell .cinewatch-video-frame:fullscreen .player-replay-icon { width: 48px; height: 48px; }
+@media (max-width: 760px) {
+.player-shell .player-header { margin-bottom: 6px; }
+.player-shell .player-controls { padding: 34px 8px 8px; }
+.player-shell .player-control-row { gap: 6px; margin-top: 5px; }
+.player-shell .player-control-group, .player-shell .player-control-group-right { gap: 5px; }
+.player-shell .player-control-button { min-width: 38px; width: 38px; height: 38px; }
+.player-shell .player-skip-button { min-width: 38px; }
+.player-shell .player-select { min-height: 38px; max-width: 126px; }
+.player-shell .player-volume { min-width: 50px; }
+.player-shell .player-center-action { width: 56px; height: 56px; }
+.player-shell .player-replay-button { width: 62px; height: 62px; }
+.player-shell .player-replay-icon { width: 39px; height: 39px; }
+}
+@media (max-width: 430px) {
+.player-shell .player-header h1 { font-size: 1.05rem; }
+.player-shell .player-control-button { min-width: 36px; width: 36px; height: 36px; padding: 0; }
+.player-shell .player-skip-button { min-width: 36px; }
+.player-shell .player-select { min-height: 36px; font-size: .72rem; }
+.player-shell .player-speed { min-width: 50px; }
+}
+.player-shell .player-seek-shell {
+  position: relative;
+  width: 100%;
+}
+.player-shell .player-seek-preview {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  z-index: 9;
+  overflow: hidden;
+  width: 160px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  background: rgba(5, 7, 10, 0.94);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.42);
+  pointer-events: none;
+  transform: translateX(-50%);
+  backdrop-filter: blur(10px);
+}
+.player-shell .player-seek-preview-frame {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.015)
+    ),
+    #05070a;
+}
+.player-shell .player-seek-preview-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.player-shell .player-seek-preview-placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.09),
+      transparent 58%
+    );
+}
+.player-shell .player-seek-preview-time {
+  display: block;
+  padding: 5px 8px 6px;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  text-align: center;
+}
+.player-shell .cinewatch-video-frame:fullscreen .player-seek-preview {
+  width: 190px;
+}
+@media (max-width: 760px) {
+.player-shell .player-seek-preview {
+    bottom: calc(100% + 8px);
+    width: 132px;
+    border-radius: 9px;
+  }
+.player-shell .player-seek-preview-time {
+    padding: 4px 7px 5px;
+    font-size: 0.68rem;
+  }
+}
+@media (max-width: 430px) {
+.player-shell .player-seek-preview {
+    width: 118px;
+  }
+}
+
+.player-shell .player-control-button, .player-shell .player-select { min-width: 44px; min-height: 44px; }
+.player-shell .player-control-button:focus-visible, .player-shell .player-select:focus-visible,
+.player-shell .player-retry-button:focus-visible { outline: 2px solid var(--cw-focus); outline-offset: 2px; }

@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import styles from "@/app/r3-page.module.css";
 
 const descriptions: Record<string, { title: string; reason: string }> = {
-  "stream-now": { title: "Stream Now is under development", reason: "CineWatch playback will appear here only when content is cleared and ready to play directly inside CineWatch." },
   "cinema-guide": { title: "Cinema Guide is under development", reason: "Cinema and showtime information is not ready for live use yet." },
   "music-tracks": { title: "Music & Tracks is under development", reason: "Music connected to titles is not ready for live use yet. CineWatch will not guess which song belongs to a film or episode." },
   "account": { title: "Account is under development", reason: "Account features are still being prepared." },

@@ -79,7 +79,7 @@ def main() -> int:
         '/provider/${provider.provider_id}',
         'Retry season',
         'state === "empty"',
-        '/under-development/stream-now',
+        '/stream-now',
         '/under-development/music-tracks',
     ):
         if token not in title:

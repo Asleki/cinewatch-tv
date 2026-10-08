@@ -97,7 +97,7 @@ export default function TitleDetails({ title, fullView = false }: Props) {
               {title.review_count ? <Link href={`${basePath}/reviews`}>Reviews</Link> : null}
               <Link href={`/where-to-watch?media_type=${title.media_type}&tmdb_id=${title.provider_id}&title=${encodeURIComponent(title.title)}`}>Where to Watch</Link>
               <Link href="/under-development/music-tracks">Music & Tracks</Link>
-              <Link href="/under-development/stream-now">Stream Now</Link>
+              <Link href="/stream-now">Stream Now</Link>
             </div>
             {networks.length || watchProviders.length ? (
               <div className={styles.providers} aria-label="Networks and streaming providers">

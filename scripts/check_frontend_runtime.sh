@@ -61,7 +61,7 @@ for _ in $(seq 1 60); do
   sleep 1
 done
 
-curl -fsS "http://$HOST:$PORT/" | grep -Fq 'CineWatch TV' || fail "frontend root smoke response missing CineWatch TV"
+curl -fsS "http://$HOST:$PORT/" | grep -F 'CineWatch TV' >/dev/null || fail "frontend root smoke response missing CineWatch TV"
 printf 'PASS  live /\n'
 
 robots="$(curl -fsS "http://$HOST:$PORT/robots.txt")"

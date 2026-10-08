@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `none`
-- **Tracked milestones:** 20
+- **Current milestone:** `CWTV.V1.3.3.2.7`
+- **Tracked milestones:** 21
 - **Qualified milestones:** 20
-- **Tracked milestone completion:** 100.0%
-- **Recorded failed events:** 43
-- **Recorded corrections:** 57
+- **Tracked milestone completion:** 95.2%
+- **Recorded failed events:** 51
+- **Recorded corrections:** 64
 - **Commit events:** 13
-- **Ledger head:** `CWTV-EVT-000381` / `f13bd461a932f8e003c3fda6fb3e2837fbfaad9743d32674e1d0c7c2a4990453`
+- **Ledger head:** `CWTV-EVT-000435` / `cbd67599ea3c1608a48bd0f8d78c15f517c79fc0968a46c43ed0a9c3c0684469`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -40,6 +40,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.4` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 12m 14s | 1s |
 | `CWTV.V1.3.3.2.5` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | 1h 2m 51s | 3m 20s |
 | `CWTV.V1.3.3.2.6` | QUALIFIED | 100% | 5.0/5 | 7 | 7 | 2h 47m 39s | 3m 42s |
+| `CWTV.V1.3.3.2.7` | IN_PROGRESS | 60% | 5.0/5 | 8 | 7 | not preserved | 4m 17s |
 
 ## Failure and correction history
 
@@ -88,6 +89,14 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.6` | 2026-10-08T14:13:39Z | Browser-assertions | Completedsevenwidthsbrowserpassrecorded326passed/eightfailed: sevenmattecomparisonskeyedorganizationdisplayname collided on twoParamountrecordswithdifferentoriginalassets; fixturewebsitequerysubstringmatchedorganizationnameNoOfficialWebsiteAvailable. All actualcontrast/layout/control/logo checks passed; failures retained as harness assertions, no source changes. | CWTV-UI-ASSET-IDENTITY |
 | `CWTV.V1.3.3.2.6` | 2026-10-08T14:40:48.092977+00:00 | Release-governance | A transcribed closure SHA was invalid. git rev-list rejected it before GitHub mutation; no commit/ref was replaced. | — |
 | `CWTV.V1.3.3.2.6` | 2026-10-08T15:05:16Z | Release-governance | Praxis CI anonymous upstream reads failed while CineWatch was private. Tests, offline integrity and temporal checks passed; workspace authenticated access passed independently. This was an access boundary, not corrupted corpus or a production defect. | — |
+| `CWTV.V1.3.3.2.7` | 2026-10-08T16:55:02Z | chronicle | Initial milestone append rejected sensitive-key metadata name; no ledger mutation occurred. | — |
+| `CWTV.V1.3.3.2.7` | 2026-10-08T16:56:40Z | stream-now | V2 missing-feature red regression before implementation failed. | — |
+| `CWTV.V1.3.3.2.7` | 2026-10-08T19:11:14Z | qualification-tools | Fresh-worktree npm used unwritable default cache; CSS extraction tool absent. Both failed before substantive qualification. | — |
+| `CWTV.V1.3.3.2.7` | 2026-10-08T19:14:27Z | private-player-harness | Generated media loaded and played, but seek test failed; server returned HTTP200 to range request and browser seekable range was [0,0]. | — |
+| `CWTV.V1.3.3.2.7` | 2026-10-08T19:15:48Z | route-browser-harness | Browser harness assumed aria-current, while established navigation signals active route through CSS classes; selector failed after first five UI assertions passed. | — |
+| `CWTV.V1.3.3.2.7` | 2026-10-08T19:16:26Z | accessibility-review | Independent review and new red test demonstrated nested main landmark in route within established SiteFrame main. | — |
+| `CWTV.V1.3.3.2.7` | 2026-10-08T19:18:39Z | legacy-route | Real HTTP check showed Next streamed permanentRedirect as HTTP200 meta refresh after async layout; canonical destination correct but transport status was not permanent308. | — |
+| `CWTV.V1.3.3.2.7` | 2026-10-08T19:19:13Z | frontend | Final V2 route and routing-level redirect production build/runtime failed. | — |
 
 ## Commit lineage
 
@@ -542,6 +551,60 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-10-08T15:42:14Z** · `CWTV.V1.3.3.2.6` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.3.3.2.6 light/dark UI visibility DEPLOYED AND ACCEPTED. All source/CI/live/device gates passed; original branding/provider artwork retained; 11 UI paths only, no dependency/API/DB changes. Separate missing-media source review makes no database-state claim. No demonstrated production defect or rollback. Preserve optional connector limitation externally; it does not invalidate completed mandatory deployment proof. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
 - **2026-10-08T15:44:25Z** · `CWTV.V1.3.3.2.6` · `CORRECTION_APPLIED` · **PASS** — Dashboard taxonomy reconciliation: the already-recorded exact-SHA publication correction in event 365 is classified with the established CORRECTION family, preserving the prior event and counting its real correction in generated history. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
 - **2026-10-08T15:44:25Z** · `CWTV.V1.3.3.2.6` · `CORRECTION_APPLIED` · **PASS** — Dashboard taxonomy reconciliation: owner public-visibility correction and unchanged-candidate green reruns in events 367-368 use the established CORRECTION family. No checker was weakened, no source changed and no historical event was rewritten. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T16:55:02Z** · `CWTV.V1.3.3.2.7` · `MILESTONE_STARTED` · **INFO** — Owner-corrected V2: dormant qualified player, animation-only Stream Now, governed qualification and deployment; no DB/R2/infrastructure/donor edits. Evidence: https://docs.google.com/document/d/1vmaYVdRgRGRwBnwiu3RAu0Jy-FbdMiD5H2KAkYaDe9M/edit
+- **2026-10-08T16:55:02Z** · `CWTV.V1.3.3.2.7` · `TOOLING_FAILED` · **FAILED** — Initial milestone append rejected sensitive-key metadata name; no ledger mutation occurred. Evidence: record_engineering_activity exit 1 before append; scope sentence retained without forbidden metadata key
+- **2026-10-08T16:55:03Z** · `CWTV.V1.3.3.2.7` · `CORRECTION_APPLIED` · **PASS** — Reread workflow/schema; scope recorded in supported summary/evidence fields; opening appended successfully.
+- **2026-10-08T16:56:40Z** · `CWTV.V1.3.3.2.7` · `TEST_STARTED` · **INFO** — V2 missing-feature red regression before implementation started.
+- **2026-10-08T16:56:40Z** · `CWTV.V1.3.3.2.7` · `TEST_FAILED` · **FAILED** — V2 missing-feature red regression before implementation failed. Duration: 0s. Evidence: exit_code=1
+- **2026-10-08T19:10:23Z** · `CWTV.V1.3.3.2.7` · `TEST_STARTED` · **INFO** — V2 focused policy and real contract validation started.
+- **2026-10-08T19:10:24Z** · `CWTV.V1.3.3.2.7` · `TEST_PASSED` · **PASS** — V2 focused policy and real contract validation passed. Duration: 0s. Evidence: exit_code=0
+- **2026-10-08T19:11:14Z** · `CWTV.V1.3.3.2.7` · `BOOTSTRAP_FAILED` · **FAILED** — Fresh-worktree npm used unwritable default cache; CSS extraction tool absent. Both failed before substantive qualification. Evidence: /workspace/cinewatch-stream-now-evidence-20261008/npm-install.log
+- **2026-10-08T19:11:15Z** · `CWTV.V1.3.3.2.7` · `CORRECTION_APPLIED` · **PASS** — Reread standing workflow; reused governed npm workspace cache, installed isolated pinned CSS parser outside source. No dependency or lockfile change.
+- **2026-10-08T19:11:15Z** · `CWTV.V1.3.3.2.7` · `IMPLEMENTATION_COMPLETED` · **PASS** — Dormant donor engine port, server-only zero-source resolver, animation and canonical links implemented. Five focused regressions, 23 real manifest/denial checks, lint and typecheck pass. Evidence: /workspace/cinewatch-stream-now-evidence-20261008/authority-port-verification.json
+- **2026-10-08T19:11:15Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — foundation qualification started.
+- **2026-10-08T19:11:16Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — foundation qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T19:11:16Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — repository qualification started.
+- **2026-10-08T19:11:36Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — repository qualification passed. Duration: 20s. Evidence: exit_code=0
+- **2026-10-08T19:11:37Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — backend qualification started.
+- **2026-10-08T19:11:42Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — backend qualification passed. Duration: 5s. Evidence: exit_code=0
+- **2026-10-08T19:11:42Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — contract qualification started.
+- **2026-10-08T19:11:54Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — contract qualification passed. Duration: 11s. Evidence: exit_code=0
+- **2026-10-08T19:11:54Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — frontend qualification started.
+- **2026-10-08T19:12:43Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — frontend qualification passed. Duration: 48s. Evidence: exit_code=0
+- **2026-10-08T19:12:43Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — database qualification started.
+- **2026-10-08T19:12:51Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — database qualification passed. Duration: 8s. Evidence: exit_code=0
+- **2026-10-08T19:12:51Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — discovery qualification started.
+- **2026-10-08T19:12:51Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — discovery qualification passed. Duration: 0s. Evidence: exit_code=0
+- **2026-10-08T19:12:52Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — trailer-runtime qualification started.
+- **2026-10-08T19:12:54Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — trailer-runtime qualification passed. Duration: 2s. Evidence: exit_code=0
+- **2026-10-08T19:12:54Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — chronicle qualification started.
+- **2026-10-08T19:12:56Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — chronicle qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T19:12:56Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — security qualification started.
+- **2026-10-08T19:13:21Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — security qualification passed. Duration: 24s. Evidence: exit_code=0
+- **2026-10-08T19:13:21Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — npm-production qualification started.
+- **2026-10-08T19:13:21Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — npm-production qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T19:13:29Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — diff qualification started.
+- **2026-10-08T19:13:29Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — diff qualification passed. Duration: 0s. Evidence: exit_code=0
+- **2026-10-08T19:14:27Z** · `CWTV.V1.3.3.2.7` · `TEST_FAILED` · **FAILED** — Generated media loaded and played, but seek test failed; server returned HTTP200 to range request and browser seekable range was [0,0]. Evidence: /workspace/cinewatch-stream-now-evidence-20261008/private-player-range-failure.json
+- **2026-10-08T19:14:27Z** · `CWTV.V1.3.3.2.7` · `ROOT_CAUSE_IDENTIFIED` · **INFO** — Donor seek engine unchanged; private SimpleHTTPRequestHandler lacked byte ranges. Added ranges only to synthetic qualification server, not production.
+- **2026-10-08T19:15:48Z** · `CWTV.V1.3.3.2.7` · `CORRECTION_APPLIED` · **PASS** — Range-capable private synthetic server restores seeking; actual engine passes 22 browser checks for movie/episode, controls, subtitles, fullscreen, network and retry. Evidence: /workspace/cinewatch-stream-now-evidence-20261008/private-player-results.json
+- **2026-10-08T19:15:48Z** · `CWTV.V1.3.3.2.7` · `TEST_FAILED` · **FAILED** — Browser harness assumed aria-current, while established navigation signals active route through CSS classes; selector failed after first five UI assertions passed. Evidence: /workspace/cinewatch-stream-now-evidence-20261008/local-stream-active-selector-failure.json
+- **2026-10-08T19:15:48Z** · `CWTV.V1.3.3.2.7` · `CORRECTION_APPLIED` · **PASS** — Reread workflow/source; assert established activeNav/mobileActive classes instead of changing tested active-route behavior.
+- **2026-10-08T19:16:26Z** · `CWTV.V1.3.3.2.7` · `TEST_FAILED` · **FAILED** — Independent review and new red test demonstrated nested main landmark in route within established SiteFrame main. Evidence: /workspace/cinewatch-stream-now-evidence-20261008/landmark-red.log
+- **2026-10-08T19:16:26Z** · `CWTV.V1.3.3.2.7` · `CORRECTION_APPLIED` · **PASS** — Changed only route wrapper to labelled section; six focused tests pass. Expanded engine browser qualification for gesture/PiP/keyboard review gaps.
+- **2026-10-08T19:16:26Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — Final accessible Stream Now production build/runtime started.
+- **2026-10-08T19:16:59Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — Final accessible Stream Now production build/runtime passed. Duration: 33s. Evidence: exit_code=0
+- **2026-10-08T19:18:39Z** · `CWTV.V1.3.3.2.7` · `TEST_FAILED` · **FAILED** — Real HTTP check showed Next streamed permanentRedirect as HTTP200 meta refresh after async layout; canonical destination correct but transport status was not permanent308. Evidence: /workspace/cinewatch-stream-now-evidence-20261008/local-stream/results.json
+- **2026-10-08T19:18:39Z** · `CWTV.V1.3.3.2.7` · `CORRECTION_APPLIED` · **PASS** — Added narrow Next routing-level permanent redirect before rendering; retained page fallback. No Nginx/DNS changes; red policy regression demonstrates missing rule.
+- **2026-10-08T19:18:39Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — Final V2 route and routing-level redirect production build/runtime started.
+- **2026-10-08T19:19:13Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_FAILED` · **FAILED** — Final V2 route and routing-level redirect production build/runtime failed. Duration: 34s. Evidence: exit_code=1
+- **2026-10-08T19:20:21Z** · `CWTV.V1.3.3.2.7` · `ROOT_CAUSE_IDENTIFIED` · **INFO** — Final build passed but root smoke failed because grep -q closes streamed HTML early: reproduced curl/grep PIPESTATUS 23/0; new two-megabyte stream test fails on old gate. Evidence: /workspace/cinewatch-stream-now-evidence-20261008/streaming-smoke-red.log
+- **2026-10-08T19:20:21Z** · `CWTV.V1.3.3.2.7` · `CORRECTION_APPLIED` · **PASS** — Root branding predicate retained; grep now consumes full HTTP stream under pipefail. New large-stream regression passes; no application/dependency change.
+- **2026-10-08T19:20:21Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — Final frontend smoke consumes streamed response correctly started.
+- **2026-10-08T19:20:33Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_STARTED` · **INFO** — Complete repository suite after review and streaming-smoke correction started.
+- **2026-10-08T19:20:59Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — Final frontend smoke consumes streamed response correctly passed. Duration: 38s. Evidence: exit_code=0
+- **2026-10-08T19:21:01Z** · `CWTV.V1.3.3.2.7` · `QUALIFICATION_PASSED` · **PASS** — Complete repository suite after review and streaming-smoke correction passed. Duration: 28s. Evidence: exit_code=0
+- **2026-10-08T19:21:46Z** · `CWTV.V1.3.3.2.7` · `SOURCE_QUALIFIED` · **PASS** — V2 source qualification complete: 34 repository,99 API,3 contract,6 migration,23 manifest/denial,33 private-player and63 built-route browser checks. Lint/types/build/runtime/audits/policies green;0 production npm vulnerabilities;8 unchanged dev advisories. Deployment/device acceptance pending. Evidence: https://drive.google.com/drive/folders/11zEs0Xakqm-bbe5QCe4P63oGqW54KZoP; /workspace/cinewatch-stream-now-evidence-20261008/source-qualification-receipt.json
 
 ## Integrity and timing rules
 
