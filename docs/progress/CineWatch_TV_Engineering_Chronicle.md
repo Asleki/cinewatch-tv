@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `CWTV.V1.3.3.2.6`
+- **Current milestone:** `none`
 - **Tracked milestones:** 20
-- **Qualified milestones:** 19
-- **Tracked milestone completion:** 95.0%
-- **Recorded failed events:** 41
-- **Recorded corrections:** 55
+- **Qualified milestones:** 20
+- **Tracked milestone completion:** 100.0%
+- **Recorded failed events:** 43
+- **Recorded corrections:** 57
 - **Commit events:** 13
-- **Ledger head:** `CWTV-EVT-000363` / `ecc826380f44f1e7ee3c4b8efb9f0e3d9481d3f3f8808e5ced24c974381e527d`
+- **Ledger head:** `CWTV-EVT-000381` / `f13bd461a932f8e003c3fda6fb3e2837fbfaad9743d32674e1d0c7c2a4990453`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -39,7 +39,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.3` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.4` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 12m 14s | 1s |
 | `CWTV.V1.3.3.2.5` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | 1h 2m 51s | 3m 20s |
-| `CWTV.V1.3.3.2.6` | IN_PROGRESS | 95% | 5.0/5 | 5 | 5 | not preserved | 3m 42s |
+| `CWTV.V1.3.3.2.6` | QUALIFIED | 100% | 5.0/5 | 7 | 7 | 2h 47m 39s | 3m 42s |
 
 ## Failure and correction history
 
@@ -86,6 +86,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.6` | 2026-10-08T13:53:52Z | Rendered-theme-regressions | Rendered browser and independent review caught legacy light CSS attribute-specificity overriding appended semantic rules: actual search placeholder3.539:1. News action remained19.6875px. Existing first-pass screenshots/metrics retained; no production publication. | CWTV-THEME-CASCADE |
 | `CWTV.V1.3.3.2.6` | 2026-10-08T14:11:28Z | Browser-qualification | Browser runs at14:00UTC received temporary503 responses; localSSRreturnednullcatalog and controlled fixture refused absenthero. FreshTLS-verified HTTP at14:07 returnedcanonicalhome200 andorganizations200, managednodeOnline. No production mutation. Partialchecks preserved as incomplete, not source/UI acceptance. | CWTV-UI-TEMPORARY-HTTP |
 | `CWTV.V1.3.3.2.6` | 2026-10-08T14:13:39Z | Browser-assertions | Completedsevenwidthsbrowserpassrecorded326passed/eightfailed: sevenmattecomparisonskeyedorganizationdisplayname collided on twoParamountrecordswithdifferentoriginalassets; fixturewebsitequerysubstringmatchedorganizationnameNoOfficialWebsiteAvailable. All actualcontrast/layout/control/logo checks passed; failures retained as harness assertions, no source changes. | CWTV-UI-ASSET-IDENTITY |
+| `CWTV.V1.3.3.2.6` | 2026-10-08T14:40:48.092977+00:00 | Release-governance | A transcribed closure SHA was invalid. git rev-list rejected it before GitHub mutation; no commit/ref was replaced. | — |
+| `CWTV.V1.3.3.2.6` | 2026-10-08T15:05:16Z | Release-governance | Praxis CI anonymous upstream reads failed while CineWatch was private. Tests, offline integrity and temporal checks passed; workspace authenticated access passed independently. This was an access boundary, not corrupted corpus or a production defect. | — |
 
 ## Commit lineage
 
@@ -522,6 +524,24 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-10-08T14:36:51Z** · `CWTV.V1.3.3.2.6` · `GITHUB_CI_PASSED` · **PASS** — Candidate37792588262 andordinaryMain37792983080 bothLinuxquality andDependency/secret GREEN at8ef1fd0; nonforcepublication preserved exactsource/projectionidentities. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
 - **2026-10-08T14:36:51Z** · `CWTV.V1.3.3.2.6` · `PDF_ARCHIVED` · **PASS** — Mandatorysource PDF Drive18LEb1oJBsrBdhMbwt-nS-9M9T38SW5XX downloadedbyte-identical SHA34d0cfa1b2f8bdffc43712476c33c0119bcdefad9a5414ee077df33bd9d32044; checksumcompanionpreserved; PDFoutsideGit. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
 - **2026-10-08T14:36:51Z** · `CWTV.V1.3.3.2.6` · `RELEASE_GOVERNANCE_PREPARED` · **PASS** — Light/darkUI sourcequalified andMainGREEN; sourceclosure willreceiveexactNexVoxprojection,PDFandPraxisbeforeauthorizedSSMdeployment. Production hasNOTbeenupdated; Androidacceptancepending. Separate missingmediaread-only review recordednoDBstateclaim or DBchange. Evidence: https://drive.google.com/drive/folders/1vnguuuWdqfzlmkQxRRbrE6b9xzrr3ckM
+- **2026-10-08T14:40:48.092977+00:00** · `CWTV.V1.3.3.2.6` · `PUBLICATION_INPUT_FAILED` · **FAILED** — A transcribed closure SHA was invalid. git rev-list rejected it before GitHub mutation; no commit/ref was replaced. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T14:40:48.092977+00:00** · `CWTV.V1.3.3.2.6` · `PUBLICATION_INPUT_CORRECTED` · **PASS** — Reread the saved workflow, read the exact SHA from verified authority metadata, asserted local HEAD, and published the unchanged qualified commits non-force. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:05:16Z** · `CWTV.V1.3.3.2.6` · `PRAXIS_UPSTREAM_ACCESS_FAILED` · **FAILED** — Praxis CI anonymous upstream reads failed while CineWatch was private. Tests, offline integrity and temporal checks passed; workspace authenticated access passed independently. This was an access boundary, not corrupted corpus or a production defect. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:19:56.803845+00:00** · `CWTV.V1.3.3.2.6` · `OWNER_VISIBILITY_CORRECTED` · **PASS** — Owner restored CineWatch public visibility. Verified public metadata and unchanged Main; reran failed jobs at the identical Praxis candidate without changing source, checkers, permissions or secrets. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:42:12Z** · `CWTV.V1.3.3.2.6` · `PRAXIS_PREDEPLOYMENT_QUALIFIED` · **PASS** — Filtered successor ING-CWTV-20261008-f8cbc848e65f: 28 files, 6496 normalized records, 66 tests, 232 upstream files verified. Candidate runs 37797451044/37797451096 attempt 2 and Main 37800624427/37800624566 both GREEN. Non-force Main 84d8550f0d5e999b194f1c1cda4b6b7e2888f9d4; all predecessors preserved; no NexVox AI writes. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:26:13.718Z** · `CWTV.V1.3.3.2.6` · `PRODUCTION_PREFLIGHT_PASSED` · **PASS** — CineWatch-only preflight: clean ubuntu-owned checkout, rollback SHA 80c919789c711cb3b45d5be089a65e8490d1dbe4, old BUILD_ID mcfGJlZrzs-5N-Dtv2A6w; services active, capacity adequate and health/status ready. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:32:17.987Z** · `CWTV.V1.3.3.2.6` · `PRODUCTION_BUILD_PASSED` · **PASS** — Built exact origin/Main f8cbc848e65f58cf87250aa53c0169a6cab66825 as ubuntu in an isolated detached worktree. Canonical public selectors, Node 24.18.0/npm 12.0.2, production npm audit zero; rollback build and dependency artifacts retained. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:33:32.891Z** · `CWTV.V1.3.3.2.6` · `PRODUCTION_DEPLOYMENT_PASSED` · **PASS** — Activated exact qualified SHA f8cbc848e65f58cf87250aa53c0169a6cab66825 with BUILD_ID uypQNkVvO4FSxkCSkeQLx. Only cinewatch-web restarted; API/nginx active, local web and health/status ready; configuration hashes unchanged. No rollback performed and no database/infrastructure changes. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:42:13Z** · `CWTV.V1.3.3.2.6` · `ACTIVATION_WARNINGS_REVIEWED` · **INFO** — Preserved systemd unit-cache warning and one expected startup curl retry from the successful activation receipt. Unit files/API environment hashes remained unchanged; all services and readiness checks passed. No Nginx/API restart or daemon-reload performed. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:42:13Z** · `CWTV.V1.3.3.2.6` · `OPTIONAL_RECEIPT_CONNECTOR_BLOCKED` · **BLOCKED** — A later optional read-only SSM receipt request returned connector UNAUTHORIZED / oauth_token_endpoint_unauthorized before any AWS API result or guest execution. Earlier build/activation proof and mandatory deployed SHA/BUILD_ID/service/config/health proof succeeded. No inference of AWS, SSM or CineWatch infrastructure failure; no reconnection requested. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:34:54.964540+00:00** · `CWTV.V1.3.3.2.6` · `LIVE_HTTP_ACCEPTANCE_PASSED` · **PASS** — 78/78 real HTTPS/API checks passed: activated BUILD_ID, canonical/apex behavior, health/status, provider search, Genres/browse, People/person, networks/companies, countries, News, movie/TV/Spanish/Clip selection, invalid selection rejection and pages 499/500/501. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:35:14.880231+00:00** · `CWTV.V1.3.3.2.6` · `LIVE_BROWSER_ACCEPTANCE_PASSED` · **PASS** — 29/29 live browser checks passed: search navigation, Genres 12 to 24 to 27 with Load more removed, People pagination, title/person/organization/country/trailer navigation, rating containment, hero action styling and mobile layout. Actual live TLS-verified responses; no fixtures or uncaught application errors. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:37:14.586863+00:00** · `CWTV.V1.3.3.2.6` · `LIVE_THEME_QUALIFICATION_PASSED` · **PASS** — 330/330 actual live UI checks passed in both themes at widths 320, 360, 375, 390, 412, 430 and 1440: semantic contrast, original logo mattes, focus/control presentation, mobile spacing and overflow. 2416 actual responses, no unrecovered transport errors; no synthetic production responses. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:40:09.389555+00:00** · `CWTV.V1.3.3.2.6` · `ANDROID_ACCEPTANCE_PASSED` · **PASS** — Owner independently refreshed the live site and confirmed 100% pass for Home/Networks in light and dark mode: text, search hint, hero actions, original logos and mobile layout. Earlier not-yet-checked reply was not treated as acceptance. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:42:14Z** · `CWTV.V1.3.3.2.6` · `ENGINEERING_PROVENANCE_PRESERVED` · **PASS** — ChatGPT Chat is planning/review/authorization; Codex executes and qualifies; GitHub is source authority; Drive preserves artifacts/PDFs/checksums/receipts; AWS/SSM is the separately authorized transport. Preserve failures/corrections and facts, not complete private chats. Post-release local NexVox/PDF/Praxis bookkeeping will not redeploy or change the accepted application. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:42:14Z** · `CWTV.V1.3.3.2.6` · `MILESTONE_QUALIFIED` · **QUALIFIED** — CWTV.V1.3.3.2.6 light/dark UI visibility DEPLOYED AND ACCEPTED. All source/CI/live/device gates passed; original branding/provider artwork retained; 11 UI paths only, no dependency/API/DB changes. Separate missing-media source review makes no database-state claim. No demonstrated production defect or rollback. Preserve optional connector limitation externally; it does not invalidate completed mandatory deployment proof. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:44:25Z** · `CWTV.V1.3.3.2.6` · `CORRECTION_APPLIED` · **PASS** — Dashboard taxonomy reconciliation: the already-recorded exact-SHA publication correction in event 365 is classified with the established CORRECTION family, preserving the prior event and counting its real correction in generated history. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
+- **2026-10-08T15:44:25Z** · `CWTV.V1.3.3.2.6` · `CORRECTION_APPLIED` · **PASS** — Dashboard taxonomy reconciliation: owner public-visibility correction and unchanged-candidate green reruns in events 367-368 use the established CORRECTION family. No checker was weakened, no source changed and no historical event was rewritten. Evidence: https://drive.google.com/drive/folders/12kN4CuwLII_x_qAFvM4DaHTuzWnRGv-P
 
 ## Integrity and timing rules
 
