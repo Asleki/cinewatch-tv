@@ -150,3 +150,35 @@ CWTV-EVT-000357,357,CWTV.V1.3.3.2.6,SOURCE_QUALIFICATION_PASSED,PASS,2026-10-08T
 CWTV-EVT-000358,358,CWTV.V1.3.3.2.6,SUPPLEMENTARY_UI_QUALIFICATION_PASSED,PASS,2026-10-08T14:23:08Z,,"Fresh supplementary64/64 checks PASS: actualnetwork411 whiteRTLlogo darkmatte in boththemes, companydetail, twoactualtitle/backdrop heroes at320/1440; locallycontrolled absent/brokenlogo meaningfulfallback and mixedartoriginalmattes. Allsourcebyte/mode/brand/API/securityboundaries preserved; no productiondeployment yet."
 CWTV-EVT-000376,376,CWTV.V1.3.3.2.6,LIVE_THEME_QUALIFICATION_PASSED,PASS,2026-10-08T15:37:14.586863+00:00,f8cbc848e65f58cf87250aa53c0169a6cab66825,"330/330 actual live UI checks passed in both themes at widths 320, 360, 375, 390, 412, 430 and 1440: semantic contrast, original logo mattes, focus/control presentation, mobile spacing and overflow. 2416 actual responses, no unrecovered transport errors; no synthetic production responses."
 CWTV-EVT-000379,379,CWTV.V1.3.3.2.6,MILESTONE_QUALIFIED,QUALIFIED,2026-10-08T15:42:14Z,f8cbc848e65f58cf87250aa53c0169a6cab66825,"CWTV.V1.3.3.2.6 light/dark UI visibility DEPLOYED AND ACCEPTED. All source/CI/live/device gates passed; original branding/provider artwork retained; 11 UI paths only, no dependency/API/DB changes. Separate missing-media source review makes no database-state claim. No demonstrated production defect or rollback. Preserve optional connector limitation externally; it does not invalidate completed mandatory deployment proof."
+CWTV-EVT-000392,392,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:11:15Z,,foundation qualification started.
+CWTV-EVT-000393,393,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:11:16Z,,foundation qualification passed.
+CWTV-EVT-000394,394,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:11:16Z,,repository qualification started.
+CWTV-EVT-000395,395,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:11:36Z,,repository qualification passed.
+CWTV-EVT-000396,396,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:11:37Z,,backend qualification started.
+CWTV-EVT-000397,397,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:11:42Z,,backend qualification passed.
+CWTV-EVT-000398,398,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:11:42Z,,contract qualification started.
+CWTV-EVT-000399,399,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:11:54Z,,contract qualification passed.
+CWTV-EVT-000400,400,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:11:54Z,,frontend qualification started.
+CWTV-EVT-000401,401,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:12:43Z,,frontend qualification passed.
+CWTV-EVT-000402,402,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:12:43Z,,database qualification started.
+CWTV-EVT-000403,403,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:12:51Z,,database qualification passed.
+CWTV-EVT-000404,404,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:12:51Z,,discovery qualification started.
+CWTV-EVT-000405,405,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:12:51Z,,discovery qualification passed.
+CWTV-EVT-000406,406,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:12:52Z,,trailer-runtime qualification started.
+CWTV-EVT-000407,407,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:12:54Z,,trailer-runtime qualification passed.
+CWTV-EVT-000408,408,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:12:54Z,,chronicle qualification started.
+CWTV-EVT-000409,409,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:12:56Z,,chronicle qualification passed.
+CWTV-EVT-000410,410,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:12:56Z,,security qualification started.
+CWTV-EVT-000411,411,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:13:21Z,,security qualification passed.
+CWTV-EVT-000412,412,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:13:21Z,,npm-production qualification started.
+CWTV-EVT-000413,413,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:13:21Z,,npm-production qualification passed.
+CWTV-EVT-000414,414,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:13:29Z,,diff qualification started.
+CWTV-EVT-000415,415,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:13:29Z,,diff qualification passed.
+CWTV-EVT-000423,423,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:16:26Z,,Final accessible Stream Now production build/runtime started.
+CWTV-EVT-000424,424,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:16:59Z,,Final accessible Stream Now production build/runtime passed.
+CWTV-EVT-000427,427,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:18:39Z,,Final V2 route and routing-level redirect production build/runtime started.
+CWTV-EVT-000428,428,CWTV.V1.3.3.2.7,QUALIFICATION_FAILED,FAILED,2026-10-08T19:19:13Z,,Final V2 route and routing-level redirect production build/runtime failed.
+CWTV-EVT-000431,431,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:20:21Z,,Final frontend smoke consumes streamed response correctly started.
+CWTV-EVT-000432,432,CWTV.V1.3.3.2.7,QUALIFICATION_STARTED,INFO,2026-10-08T19:20:33Z,,Complete repository suite after review and streaming-smoke correction started.
+CWTV-EVT-000433,433,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:20:59Z,,Final frontend smoke consumes streamed response correctly passed.
+CWTV-EVT-000434,434,CWTV.V1.3.3.2.7,QUALIFICATION_PASSED,PASS,2026-10-08T19:21:01Z,,Complete repository suite after review and streaming-smoke correction passed.
