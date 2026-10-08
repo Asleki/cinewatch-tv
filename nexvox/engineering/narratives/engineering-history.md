@@ -1,10 +1,10 @@
 # CineWatch Engineering History
 
-**Source commit:** `100ba8ed7a1109bc416285748d7cd046728346bb`
+**Source commit:** `d86b10d1e5d24858dcdc627eaebe055538b3cc2c`
 
 This is a deterministic NexVox narrative projection. Git remains the canonical commit authority and `engineering-events.jsonl` remains the canonical engineering-activity ledger.
 
-The source history contains **65 reachable commits**, **442 current tracked files**, and **282 engineering events**.
+The source history contains **67 reachable commits**, **443 current tracked files**, and **294 engineering events**.
 
 ## Commit sequence
 
@@ -73,6 +73,8 @@ The source history contains **65 reachable commits**, **442 current tracked file
 - `2fabbc9` - feat: add Privacy navigation note and patch audited runtime dependencies
 - `a3a0735` - chore(nexvox): project Privacy milestone source qualification
 - `100ba8e` - docs: record Privacy source qualification and engineering governance
+- `80c9197` - chore(nexvox): project Privacy source governance closure
+- `d86b10d` - docs: close accepted Privacy deployment and preserve correction evidence
 
 ## Milestone state
 
@@ -94,4 +96,4 @@ The source history contains **65 reachable commits**, **442 current tracked file
 - `CWTV.V1.3.3.2.1`: events=2, qualified=true, failures=0, corrections=1
 - `CWTV.V1.3.3.2.3`: events=32, qualified=true, failures=9, corrections=9
 - `CWTV.V1.3.3.2.4`: events=9, qualified=true, failures=3, corrections=1
-- `CWTV.V1.3.3.2.5`: events=69, qualified=false, failures=7, corrections=7
+- `CWTV.V1.3.3.2.5`: events=81, qualified=true, failures=9, corrections=9
