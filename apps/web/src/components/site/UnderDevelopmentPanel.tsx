@@ -29,6 +29,7 @@ export default function UnderDevelopmentPanel({ feature }: { feature: string }) 
         <p className={styles.eyebrow}>CineWatch TV</p>
         <h1>{title}</h1>
         <p>{reason}</p>
+        {feature === "privacy" && <p>You can return to the homepage using the Home button below.</p>}
         <div className={styles.actions}>
           <button type="button" className={styles.buttonSecondary} onClick={() => router.back()}>← Back</button>
           <Link className={styles.button} href="/">Home</Link>

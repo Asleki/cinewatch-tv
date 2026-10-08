@@ -5,14 +5,14 @@
 
 ## Current state
 
-- **Current milestone:** `none`
-- **Tracked milestones:** 18
+- **Current milestone:** `CWTV.V1.3.3.2.5`
+- **Tracked milestones:** 19
 - **Qualified milestones:** 18
-- **Tracked milestone completion:** 100.0%
-- **Recorded failed events:** 27
-- **Recorded corrections:** 41
+- **Tracked milestone completion:** 94.7%
+- **Recorded failed events:** 32
+- **Recorded corrections:** 46
 - **Commit events:** 11
-- **Ledger head:** `CWTV-EVT-000213` / `eb3af897480217571ffbb6097fa42bdd9130370da0f1369705654a8e73a6d03b`
+- **Ledger head:** `CWTV-EVT-000276` / `655c2dd6bbee7b7010d08c12a23924ba127e04ec2f22c6d4965f41480bd69d9b`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -38,6 +38,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.3` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.4` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 12m 14s | 1s |
+| `CWTV.V1.3.3.2.5` | IN_PROGRESS | 60% | 5.0/5 | 5 | 5 | not preserved | 3m 20s |
 
 ## Failure and correction history
 
@@ -70,6 +71,11 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.3` | 2026-10-05T18:22:09.031625+00:00 | discovery_delivery_governance | New interpreted delivery evidence initially inherited default TRAINING_ELIGIBLE; focused regression demonstrated the missing review gate for the new evidence namespace. | CWTV-E004-REVIEW-GATE |
 | `CWTV.V1.3.3.2.3` | 2026-10-05T19:30:28.049252+00:00 | Production release and acceptance | Read-only SSM runtime inspection exited127 because the non-interactive ubuntu shell did not expose Node/npm through PATH; no production source/configuration was changed. | CWTV-SSM-NODE-SELECTOR |
 | `CWTV.V1.3.3.2.3` | 2026-10-05T19:30:28.077120+00:00 | Production release and acceptance | Native Chromium proxy trust failed; persistent multi-CA write was rejected by automatic review. Browser harness strict-selector/quoting/navigation/render timing failures were preserved; no production defect demonstrated. | CWTV-LIVE-BROWSER-TRANSPORT-HARNESS |
+| `CWTV.V1.3.3.2.5` | 2026-10-08T10:24:27Z | Chronicle | Initial milestone command was rejected before append because its details key authorization is prohibited by the Chronicle secret-key guard; the value contained no credential. Workflow reread, guard retained, details renamed to execution_boundary and opening event appended successfully. | CWTV-PRIVACY-CHRONICLE-DETAIL-KEY |
+| `CWTV.V1.3.3.2.5` | 2026-10-08T10:27:07Z | frontend | frontend qualification failed. | — |
+| `CWTV.V1.3.3.2.5` | 2026-10-08T10:29:36Z | security | security qualification failed. | — |
+| `CWTV.V1.3.3.2.5` | 2026-10-08T10:31:09Z | npm-production | npm-production qualification failed. | — |
+| `CWTV.V1.3.3.2.5` | 2026-10-08T10:33:38Z | Chronicle-milestone-identity | The unpublished Privacy draft reused milestone CWTV.V1.3.3.2.4, already assigned to the prior Next.js security correction; its inherited qualified status was not valid Privacy progress. | CWTV-PRIVACY-MILESTONE-IDENTITY |
 
 ## Commit lineage
 
@@ -354,6 +360,69 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-10-05T19:30:28.083765+00:00** · `CWTV.V1.3.3.2.3` · `CORRECTION_APPLIED` · **PASS** — Used actual live responses with TLS-verified temporary transport and explicit render/count waits; isolated Genres proof and final29 browser checks passed. Owner Android independently confirmed Genres12/24/27. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/live-browser-acceptance.json; docs/engineering/discovery-delivery/2026-10-05/production-release/isolated-genre-browser-proof.json
 - **2026-10-05T19:30:28.089579+00:00** · `CWTV.V1.3.3.2.3` · `ANDROID_ACCEPTANCE` · **PASS** — Owner confirmed updated presentation/search/Genres/Trailers on Android, then specifically confirmed Genres12→24→27 and terminal Load more removal. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/android-owner-acceptance.json
 - **2026-10-05T19:30:28.094448+00:00** · `CWTV.V1.3.3.2.3` · `MILESTONE_CLOSED` · **QUALIFIED** — CWTV.V1.3.3.2.3 — DEPLOYED AND CLOSED. Exact qualified source is live, 78 real HTTP/API and29 browser checks passed, owner Android acceptance confirmed; no rollback or D005. Chronicle/NexVox/Praxis now record post-release history only. Evidence: docs/engineering/discovery-delivery/2026-10-05/production-release/deployment-receipt.json; https://drive.google.com/drive/folders/1qbQZPFAPVxOR4DFiH94tUYai2FGP_IZT
+- **2026-10-08T10:24:27Z** · `CWTV.V1.3.3.2.5` · `MILESTONE_STARTED` · **INFO** — Privacy Page Addition and Live Deployment Test: one navigation note on the existing footer Privacy destination; governed source qualification, Chronicle/NexVox/PDF/Praxis closure, exact-SHA SSM deployment and owner acceptance. Evidence: https://drive.google.com/file/d/17QBnRcyr35XZjLXIrP76VEQ-k4yPWFGo/view
+- **2026-10-08T10:24:27Z** · `CWTV.V1.3.3.2.5` · `RECORDING_FAILED` · **FAILED** — Initial milestone command was rejected before append because its details key authorization is prohibited by the Chronicle secret-key guard; the value contained no credential. Workflow reread, guard retained, details renamed to execution_boundary and opening event appended successfully.
+- **2026-10-08T10:24:53Z** · `CWTV.V1.3.3.2.5` · `CORRECTION_APPLIED` · **PASS** — Retained Chronicle sensitive-key validation and corrected the recording invocation; milestone/projections/hash chain verified, without rewriting prior events.
+- **2026-10-08T10:26:03Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — foundation qualification started.
+- **2026-10-08T10:26:04Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — foundation qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T10:26:04Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — repository qualification started.
+- **2026-10-08T10:26:22Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — repository qualification passed. Duration: 18s. Evidence: exit_code=0
+- **2026-10-08T10:26:22Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — backend qualification started.
+- **2026-10-08T10:26:27Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — backend qualification passed. Duration: 5s. Evidence: exit_code=0
+- **2026-10-08T10:26:27Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — contract qualification started.
+- **2026-10-08T10:26:35Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — contract qualification passed. Duration: 8s. Evidence: exit_code=0
+- **2026-10-08T10:26:35Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — frontend qualification started.
+- **2026-10-08T10:27:07Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_FAILED` · **FAILED** — frontend qualification failed. Duration: 32s. Evidence: exit_code=1
+- **2026-10-08T10:29:02Z** · `CWTV.V1.3.3.2.5` · `ROOT_CAUSE_IDENTIFIED` · **INFO** — Frontend smoke grep matched while upstream curl exited23 on the workspace short pipe (PIPESTATUS23,0); built HTTP Privacy note and Account exclusion passed. A follow-up diagnostic hit the orphaned test port3100; isolated port3194 served the correct build.
+- **2026-10-08T10:29:02Z** · `CWTV.V1.3.3.2.5` · `CORRECTION_APPLIED` · **PASS** — Use an external curl stdout buffer preserving real HTTP/TLS/error status and exact repository smoke assertions; select an unused isolated web test port. Repository scripts remain unchanged.
+- **2026-10-08T10:29:02Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — frontend qualification started.
+- **2026-10-08T10:29:28Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — frontend qualification passed. Duration: 26s. Evidence: exit_code=0
+- **2026-10-08T10:29:28Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — database qualification started.
+- **2026-10-08T10:29:31Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — database qualification passed. Duration: 3s. Evidence: exit_code=0
+- **2026-10-08T10:29:31Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — discovery qualification started.
+- **2026-10-08T10:29:31Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — discovery qualification passed. Duration: 0s. Evidence: exit_code=0
+- **2026-10-08T10:29:31Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — trailer-runtime qualification started.
+- **2026-10-08T10:29:33Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — trailer-runtime qualification passed. Duration: 2s. Evidence: exit_code=0
+- **2026-10-08T10:29:33Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — chronicle qualification started.
+- **2026-10-08T10:29:34Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — chronicle qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T10:29:34Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — security qualification started.
+- **2026-10-08T10:29:36Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_FAILED` · **FAILED** — security qualification failed. Duration: 1s. Evidence: exit_code=1
+- **2026-10-08T10:30:46Z** · `CWTV.V1.3.3.2.5` · `ROOT_CAUSE_IDENTIFIED` · **INFO** — pip-audit could not start because its default cache directory /home/agent/.cache/pip-audit is read-only in the managed cloud; no vulnerability verdict was produced.
+- **2026-10-08T10:30:46Z** · `CWTV.V1.3.3.2.5` · `CORRECTION_APPLIED` · **PASS** — Select writable task-local XDG/PIP caches without changing dependencies, audit strictness, HOME or repository policy; rerun the original audit.
+- **2026-10-08T10:30:46Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — security qualification started.
+- **2026-10-08T10:31:07Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — security qualification passed. Duration: 20s. Evidence: exit_code=0
+- **2026-10-08T10:31:07Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — npm-production qualification started.
+- **2026-10-08T10:31:09Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_FAILED` · **FAILED** — npm-production qualification failed. Duration: 2s. Evidence: exit_code=1
+- **2026-10-08T10:32:26Z** · `CWTV.V1.3.3.2.5` · `BLOCKER_IDENTIFIED` · **BLOCKED** — Fresh production npm audit failed on high-severity Next/sharp/source-map-js advisories independently confirmed at GitHub; existing Next16.3.6 remains affected by the new October7 advisory. Owner scope decision requested via selectable prompt before any dependency mutation; Privacy-only implementation remains isolated and production unchanged. Evidence: https://github.com/advisories/GHSA-cjq9-62q9-8jv4; https://github.com/advisories/GHSA-wq5f-xc86-pv6w; https://github.com/advisories/GHSA-68fv-2mgg-jv7q
+- **2026-10-08T10:33:38Z** · `CWTV.V1.3.3.2.5` · `RECONCILIATION_FAILED` · **FAILED** — The unpublished Privacy draft reused milestone CWTV.V1.3.3.2.4, already assigned to the prior Next.js security correction; its inherited qualified status was not valid Privacy progress.
+- **2026-10-08T10:33:38Z** · `CWTV.V1.3.3.2.5` · `CORRECTION_APPLIED` · **PASS** — Allocated unused CWTV.V1.3.3.2.5; preserved all 213 canonical predecessor events byte-for-byte and rebound only unpublished Privacy events retaining exact original timestamps/results. Original misassigned draft preserved externally with SHA256; no published history rewritten.
+- **2026-10-08T10:35:27Z** · `CWTV.V1.3.3.2.5` · `SCOPE_AUTHORIZED` · **INFO** — Owner explicitly approved the minimal dependency security correction, full requalification and deployment through the selectable prompt; Privacy remains the only visible page change.
+- **2026-10-08T10:36:18Z** · `CWTV.V1.3.3.2.5` · `CORRECTION_APPLIED` · **PASS** — With explicit owner scope approval, exact-pin Next16.3.8, retain eslint-config-next16.3.4/React/TypeScript/Node/npm, patch sharp0.35.5 with required platform/libvips packages and source-map-js1.2.2; all39 lock entries individually scoped, fresh production audit zero vulnerabilities.
+- **2026-10-08T10:36:18Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — foundation qualification started.
+- **2026-10-08T10:36:20Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — foundation qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T10:36:20Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — repository qualification started.
+- **2026-10-08T10:36:35Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — repository qualification passed. Duration: 15s. Evidence: exit_code=0
+- **2026-10-08T10:36:35Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — backend qualification started.
+- **2026-10-08T10:36:39Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — backend qualification passed. Duration: 4s. Evidence: exit_code=0
+- **2026-10-08T10:36:40Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — contract qualification started.
+- **2026-10-08T10:36:49Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — contract qualification passed. Duration: 9s. Evidence: exit_code=0
+- **2026-10-08T10:36:49Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — frontend qualification started.
+- **2026-10-08T10:37:28Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — frontend qualification passed. Duration: 39s. Evidence: exit_code=0
+- **2026-10-08T10:37:28Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — database qualification started.
+- **2026-10-08T10:37:31Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — database qualification passed. Duration: 3s. Evidence: exit_code=0
+- **2026-10-08T10:37:31Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — discovery qualification started.
+- **2026-10-08T10:37:31Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — discovery qualification passed. Duration: 0s. Evidence: exit_code=0
+- **2026-10-08T10:37:31Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — trailer-runtime qualification started.
+- **2026-10-08T10:37:34Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — trailer-runtime qualification passed. Duration: 2s. Evidence: exit_code=0
+- **2026-10-08T10:37:34Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — chronicle qualification started.
+- **2026-10-08T10:37:35Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — chronicle qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T10:37:35Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — security qualification started.
+- **2026-10-08T10:37:41Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — security qualification passed. Duration: 6s. Evidence: exit_code=0
+- **2026-10-08T10:37:42Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — npm-production qualification started.
+- **2026-10-08T10:37:42Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — npm-production qualification passed. Duration: 1s. Evidence: exit_code=0
+- **2026-10-08T10:37:43Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — diff qualification started.
+- **2026-10-08T10:37:43Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — diff qualification passed. Duration: 0s. Evidence: exit_code=0
+- **2026-10-08T10:38:41Z** · `CWTV.V1.3.3.2.5` · `SOURCE_QUALIFICATION_PASSED` · **PASS** — Fresh corrected-tree qualification passed99 API tests,22 repository tests,3 contract tests, lint/typecheck/Next16.3.8 build, real local web/API smokes, migrations, discovery/trailer identity bounds, Chronicle/dashboard, secret/policy scan, strict Python audit and zero-vulnerability production npm audit; eight existing development advisories remain informational. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
 
 ## Integrity and timing rules
 

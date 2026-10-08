@@ -1,0 +1,142 @@
+{
+  "milestone": "CWTV.V1.3.3.2.5",
+  "source_base": "fdc8fecb3e3f206b1567ad1d50063fc77ebe5a8d",
+  "api_tests": 99,
+  "repository_tests": 22,
+  "contract_tests": 3,
+  "production_vulnerabilities": 0,
+  "existing_nonblocking_development_advisories": 8,
+  "gates": [
+    {
+      "gate": "foundation",
+      "command": "python scripts/check_ci_security_quality.py && python scripts/check_repository_tree.py && python scripts/check_backend_skeleton.py && python scripts/check_frontend_skeleton.py && python scripts/check_database_foundation.py && python scripts/check_contract_foundation.py && python scripts/check_provider_runtime.py && python scripts/check_termux_linux_workflow.py",
+      "exit_code": 0,
+      "duration_seconds": 1.634,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/foundation-secure.log"
+    },
+    {
+      "gate": "repository",
+      "command": "python -m unittest discover -s tests/repository -p \"test_*.py\"",
+      "exit_code": 0,
+      "duration_seconds": 14.986,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/repository-secure.log"
+    },
+    {
+      "gate": "backend",
+      "command": "bash scripts/check_backend_runtime.sh",
+      "exit_code": 0,
+      "duration_seconds": 4.691,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/backend-secure.log"
+    },
+    {
+      "gate": "contract",
+      "command": "bash scripts/check_contract_runtime.sh",
+      "exit_code": 0,
+      "duration_seconds": 9.117,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/contract-secure.log"
+    },
+    {
+      "gate": "frontend",
+      "command": "bash scripts/check_frontend_runtime.sh",
+      "exit_code": 0,
+      "duration_seconds": 39.579,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/frontend-secure.log"
+    },
+    {
+      "gate": "database",
+      "command": "bash scripts/check_database_migrations.sh",
+      "exit_code": 0,
+      "duration_seconds": 2.859,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/database-secure.log"
+    },
+    {
+      "gate": "discovery",
+      "command": "python scripts/check_catalog_experience.py && python scripts/check_refinement_regression.py && python scripts/reconcile_provider_fallbacks.py --check",
+      "exit_code": 0,
+      "duration_seconds": 0.393,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/discovery-secure.log"
+    },
+    {
+      "gate": "trailer-runtime",
+      "command": "python scripts/check_trailer_navigation_runtime.py",
+      "exit_code": 0,
+      "duration_seconds": 2.289,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/trailer-runtime-secure.log"
+    },
+    {
+      "gate": "chronicle",
+      "command": "python scripts/check_engineering_chronicle.py && python scripts/build_progress_dashboard.py --check && bash scripts/check_progress_dashboard_runtime.sh",
+      "exit_code": 0,
+      "duration_seconds": 1.271,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/chronicle-secure.log"
+    },
+    {
+      "gate": "security",
+      "command": "python scripts/check_ci_security_quality.py --scan-repository && python -m pip check && python -m pip_audit --strict services/api",
+      "exit_code": 0,
+      "duration_seconds": 6.522,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/security-secure.log"
+    },
+    {
+      "gate": "npm-production",
+      "command": "npm audit --omit=dev --audit-level=high",
+      "exit_code": 0,
+      "duration_seconds": 0.762,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/npm-production-secure.log"
+    },
+    {
+      "gate": "npm-advisory",
+      "command": "npm audit --audit-level=high",
+      "exit_code": 1,
+      "duration_seconds": 0.846,
+      "nonblocking": true,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/npm-advisory-secure.log"
+    },
+    {
+      "gate": "diff",
+      "command": "git diff --check",
+      "exit_code": 0,
+      "duration_seconds": 0.337,
+      "nonblocking": false,
+      "log": "/workspace/cinewatch-privacy-evidence-20261008/qualification/diff-secure.log"
+    }
+  ],
+  "privacy_browser": {
+    "observed_at": "2026-10-08T10:38:41.784337+00:00",
+    "checks": [
+      {
+        "name": "Footer Privacy destination",
+        "pass": true
+      },
+      {
+        "name": "Privacy note visible through actual footer navigation",
+        "pass": true
+      },
+      {
+        "name": "Mobile no horizontal overflow",
+        "pass": true
+      },
+      {
+        "name": "Existing Home action works",
+        "pass": true
+      },
+      {
+        "name": "Other unfinished page excludes new note",
+        "pass": true
+      }
+    ]
+  },
+  "workflow_reread_on_failures": true,
+  "production_deployment_occurred": false
+}
