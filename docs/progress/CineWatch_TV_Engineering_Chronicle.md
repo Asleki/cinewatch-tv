@@ -9,10 +9,10 @@
 - **Tracked milestones:** 19
 - **Qualified milestones:** 18
 - **Tracked milestone completion:** 94.7%
-- **Recorded failed events:** 32
-- **Recorded corrections:** 46
-- **Commit events:** 11
-- **Ledger head:** `CWTV-EVT-000276` / `655c2dd6bbee7b7010d08c12a23924ba127e04ec2f22c6d4965f41480bd69d9b`
+- **Recorded failed events:** 34
+- **Recorded corrections:** 48
+- **Commit events:** 12
+- **Ledger head:** `CWTV-EVT-000282` / `62b1e5fafdf6b7957cf29314eb7dbdfdf93f91dacc2249fbac9b0440ec269447`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -38,7 +38,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.1` | QUALIFIED | 100% | 1.4/5 | 0 | 1 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.3` | QUALIFIED | 100% | 5.0/5 | 9 | 9 | not preserved | not preserved |
 | `CWTV.V1.3.3.2.4` | QUALIFIED | 100% | 3.9/5 | 3 | 1 | 12m 14s | 1s |
-| `CWTV.V1.3.3.2.5` | IN_PROGRESS | 60% | 5.0/5 | 5 | 5 | not preserved | 3m 20s |
+| `CWTV.V1.3.3.2.5` | IN_PROGRESS | 98% | 5.0/5 | 7 | 7 | not preserved | 3m 20s |
 
 ## Failure and correction history
 
@@ -76,6 +76,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.5` | 2026-10-08T10:29:36Z | security | security qualification failed. | — |
 | `CWTV.V1.3.3.2.5` | 2026-10-08T10:31:09Z | npm-production | npm-production qualification failed. | — |
 | `CWTV.V1.3.3.2.5` | 2026-10-08T10:33:38Z | Chronicle-milestone-identity | The unpublished Privacy draft reused milestone CWTV.V1.3.3.2.4, already assigned to the prior Next.js security correction; its inherited qualified status was not valid Privacy progress. | CWTV-PRIVACY-MILESTONE-IDENTITY |
+| `CWTV.V1.3.3.2.5` | 2026-10-08T10:46:29Z | source-projection-checkpoint | A publication-preparation read ran before the asynchronous projection command finished; its expected projection-check log was not yet present, so the preparation stopped before any GitHub ref write. Workflow reread and command completion awaited. | CWTV-PRIVACY-SEQUENTIAL-CHECKPOINT |
+| `CWTV.V1.3.3.2.5` | 2026-10-08T10:47:58Z | Chronicle-commit-provenance | Closure Chronicle checker rejected an unpublished COMMIT_CREATED event marked exact instead of mandatory commit-derived; no closure publication occurred. | CWTV-PRIVACY-COMMIT-TIMESTAMP |
 
 ## Commit lineage
 
@@ -90,6 +92,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `50a453e1efccba0d963d2990b7c6a528fc35ffcf` — feat: establish CineWatch Termux Linux engineering workflow (2026-09-09T21:34:35+02:00)
 - `195005ee12c14be6401280319853aa2fa2ba33ff` — Committed minimal Next.js16.3.6 correction, eleven required lock entries and existing exact frontend policy; unrelated versions unchanged. (2026-10-05T14:56:38Z)
 - `6a4c4280b2c190590990e5d58372bc9624f87887` — Existing qualified D003 source contains exactly the intended discovery delta and qualified tree; its identity is preserved through D004. (2026-10-05T16:41:22Z)
+- `2fabbc96ed40ae77d5eec834defca9e8b0f24774` — Qualified Privacy/security source2fabbc96ed40ae77d5eec834defca9e8b0f24774 and dedicated projectiona3a07350ddb56c3e220a9e8698a3ef35670196eb preserve explicit source→projection ancestry and generator-only paths; mandatory PDF uploaded and independently downloaded/hash verified. (2026-10-08T10:38:43Z)
 
 ## Artifacts
 
@@ -423,6 +426,12 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-10-08T10:37:43Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_STARTED` · **INFO** — diff qualification started.
 - **2026-10-08T10:37:43Z** · `CWTV.V1.3.3.2.5` · `QUALIFICATION_PASSED` · **PASS** — diff qualification passed. Duration: 0s. Evidence: exit_code=0
 - **2026-10-08T10:38:41Z** · `CWTV.V1.3.3.2.5` · `SOURCE_QUALIFICATION_PASSED` · **PASS** — Fresh corrected-tree qualification passed99 API tests,22 repository tests,3 contract tests, lint/typecheck/Next16.3.8 build, real local web/API smokes, migrations, discovery/trailer identity bounds, Chronicle/dashboard, secret/policy scan, strict Python audit and zero-vulnerability production npm audit; eight existing development advisories remain informational. Evidence: https://drive.google.com/drive/folders/14-5_HbnTMsIPlAJ6sz6B2iuzV4UX87yS
+- **2026-10-08T10:46:29Z** · `CWTV.V1.3.3.2.5` · `EXECUTION_FAILED` · **FAILED** — A publication-preparation read ran before the asynchronous projection command finished; its expected projection-check log was not yet present, so the preparation stopped before any GitHub ref write. Workflow reread and command completion awaited.
+- **2026-10-08T10:46:29Z** · `CWTV.V1.3.3.2.5` · `CORRECTION_APPLIED` · **PASS** — Awaited the projection process, verified its exact source identity/path purity/deterministic checks and clean tree, then published exact matching Git objects without recreating identities.
+- **2026-10-08T10:38:43Z** · `CWTV.V1.3.3.2.5` · `COMMIT_CREATED` · **PASS** — Qualified Privacy/security source2fabbc96ed40ae77d5eec834defca9e8b0f24774 and dedicated projectiona3a07350ddb56c3e220a9e8698a3ef35670196eb preserve explicit source→projection ancestry and generator-only paths; mandatory PDF uploaded and independently downloaded/hash verified. Evidence: https://drive.google.com/file/d/1a_V9BDrSOulJlnUdYTrKKJ7cBmFsWgb4/view
+- **2026-10-08T10:46:29Z** · `CWTV.V1.3.3.2.5` · `PUSH_COMPLETED` · **PASS** — Non-force expected-head Main advance preserved both source/projection identities. Candidate CI37765070517 and Main CI37765354745 both passed Linux quality and Dependency/secret gates. Source governance is qualified; production deployment and owner acceptance remain pending, so milestone is not closed. Evidence: https://github.com/Asleki/cinewatch-tv/actions/runs/37765354745
+- **2026-10-08T10:47:58Z** · `CWTV.V1.3.3.2.5` · `RECORDING_FAILED` · **FAILED** — Closure Chronicle checker rejected an unpublished COMMIT_CREATED event marked exact instead of mandatory commit-derived; no closure publication occurred.
+- **2026-10-08T10:47:58Z** · `CWTV.V1.3.3.2.5` · `CORRECTION_APPLIED` · **PASS** — Used actual source Git committer time and commit-derived precision for the unpublished commit event. Preserved all canonical276 events byte-for-byte, original failed draft externally, and the checker unchanged.
 
 ## Integrity and timing rules
 
