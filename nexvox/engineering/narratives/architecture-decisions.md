@@ -1,6 +1,6 @@
 # CineWatch Architecture and Decisions
 
-**Source commit:** `7769eb87ff110503f96ad88c77a97566ff45b6ad`
+**Source commit:** `60b73b71a292792dc78a33c1469f5da2df9cf028`
 
 This projection summarizes ADRs and architecture evidence; source documents remain authoritative.
 
