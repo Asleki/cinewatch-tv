@@ -9,10 +9,10 @@
 - **Tracked milestones:** 23
 - **Qualified milestones:** 21
 - **Tracked milestone completion:** 91.3%
-- **Recorded failed events:** 66
-- **Recorded corrections:** 75
+- **Recorded failed events:** 68
+- **Recorded corrections:** 77
 - **Commit events:** 13
-- **Ledger head:** `CWTV-EVT-000487` / `8077c0a038e08a742fa77a5f090263a44feb2ca877ceb4dca8b2997a18dc7fe4`
+- **Ledger head:** `CWTV-EVT-000494` / `a588e2a2e567e564d7d0032267bce41dd1dd9576dfeb5147d30f2395cd653f02`
 
 Tracked completion intentionally excludes future milestones that have not started.
 
@@ -42,7 +42,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.6` | QUALIFIED | 100% | 5.0/5 | 7 | 7 | 2h 47m 39s | 3m 42s |
 | `CWTV.V1.3.3.2.7` | QUALIFIED | 100% | 5.0/5 | 13 | 13 | 8h 32m 29s | 4m 17s |
 | `CWTV.V1.3.3.2.8` | IN_PROGRESS | 5% | 5.0/5 | 3 | 1 | not preserved | not preserved |
-| `CWTV.V1.3.3.2.9` | IN_PROGRESS | 0% | 5.0/5 | 7 | 4 | not preserved | not preserved |
+| `CWTV.V1.3.3.2.9` | IN_PROGRESS | 35% | 5.0/5 | 9 | 6 | not preserved | not preserved |
 
 ## Failure and correction history
 
@@ -114,6 +114,8 @@ Tracked completion intentionally excludes future milestones that have not starte
 | `CWTV.V1.3.3.2.9` | 2026-10-09T23:47:24Z | browser-harness | Local browser test stopped before opening a page: Playwright Chromium binary absent from current runtime cache. Installing in workspace; no production failure demonstrated. | — |
 | `CWTV.V1.3.3.2.9` | 2026-10-10T00:03:37Z | owner-sign-in-handoff | Fresh regression found cookie-fallback regex contained an escaped control character, denying valid native owner cookie handoff. Header assertion route passed. Failure occurred locally before publication. | — |
 | `CWTV.V1.3.3.2.9` | 2026-10-10T00:18:14Z | governance | Progress checkpoint append rejected before mutation because lowercase verification violated the uppercase event_type schema. Re-read Workflow and event schema; retain checker unchanged. | — |
+| `CWTV.V1.3.3.2.9` | 2026-10-10T03:12:33Z | engineering-pdf | Source PDF export in Python 3.14 test virtualenv failed because optional ReportLab is absent there; no application dependency or source changed. | — |
+| `CWTV.V1.3.3.2.9` | 2026-10-10T03:12:34Z | candidate-publication | Exact source commit object 85262229 was uploaded and SHA verified; later projection blob upload failed. No branch ref or Main moved. Original helper hid stderr, so preserved log and used diagnostic copy to expose bounded API error without printing payload. | — |
 
 ## Commit lineage
 
@@ -185,6 +187,7 @@ Tracked completion intentionally excludes future milestones that have not starte
 - `004.zip` — SHA-256 `c1bf11f13e831b3c76b9c16ce9630180449cfaf39d556c1b3fabab2a5445a7a4` — CORRECTION_APPLIED (time not preserved)
 - `004.zip` — SHA-256 `c1bf11f13e831b3c76b9c16ce9630180449cfaf39d556c1b3fabab2a5445a7a4` — MILESTONE_QUALIFIED (2026-10-05T18:17:37Z)
 - `R2_240P_20261010T005010Z_c28b0d9a.json` — SHA-256 `5cddecfa7eb47a9fc7585554a52025011c342a6b22f375b52e43975d31166ef5` — MEDIA_RENDITION_QUALIFICATION (2026-10-10T02:59:21Z)
+- `CineWatch_NexVox_Bonanza_Watch_Source_85262229_20261010.pdf` — SHA-256 `c859854cc1ee0e140744dd8e6aca6e3fed4182a18d2cf010cc0d5dc6e7c15f6c` — CORRECTION_APPLIED (2026-10-10T03:12:34Z)
 
 ## Event timeline
 
@@ -675,6 +678,13 @@ Tracked completion intentionally excludes future milestones that have not starte
 - **2026-10-10T00:18:15Z** · `CWTV.V1.3.3.2.9` · `MEDIA_RENDITION_PROGRESS` · **INFO** — Approved source-account notebook upload verified. Executed code AST matches approved source. Latest private 240p receipt records five of sixteen verified entries, overall STARTED; release remains blocked pending complete evidence. Evidence: https://drive.google.com/file/d/1YouGy57JrxBjTNk3AMCSMMBblqV2dWfv/view; https://drive.google.com/file/d/1XOVPECTuJr8kRi-Mm1_8pKvlYMPF-ItH/view
 - **2026-10-10T02:59:21Z** · `CWTV.V1.3.3.2.9` · `MEDIA_RENDITION_QUALIFICATION` · **PASS** — Independent final Colab receipt checksum, all sixteen source hashes/immutable derivative keys, H.264 240p probes, durations, full decode and R2 readback records passed. Imported verified rendition identities; complete registry gate now passes. Original files and restricted E15-E17 unchanged. Evidence: https://drive.google.com/file/d/1vEpyboV4DBR8-B5adERs6UL_-cQNVruW/view
 - **2026-10-10T03:07:46Z** · `CWTV.V1.3.3.2.9` · `SOURCE_QUALIFICATION` · **PASS** — Fresh final local qualification passed: 133 API tests, 42 repository tests, 17 gateway regressions also passed against bundled Worker, and 30 built-browser synthetic-media checks. Policies, OpenAPI/TypeScript, contracts, backend/frontend runtime, production build, migrations and whitespace passed. Production npm zero vulnerabilities, strict API Python audit clean; full npm advisory reports 16 development entries. Real gateway installation and live/device acceptance remain pending. Evidence: https://drive.google.com/drive/folders/1p8urza64Hx_fCknlC7MVvxD7qrxGjxO8
+- **2026-10-10T03:12:33Z** · `CWTV.V1.3.3.2.9` · `ARTIFACT_GENERATION` · **FAILED** — Source PDF export in Python 3.14 test virtualenv failed because optional ReportLab is absent there; no application dependency or source changed.
+- **2026-10-10T03:12:34Z** · `CWTV.V1.3.3.2.9` · `CORRECTION_APPLIED` · **PASS** — Re-read Workflow and used existing document runtime Python 3.12 with ReportLab 4.4.9. Source-pinned PDF generated and independently downloaded from dedicated Drive folder with identical SHA-256. Evidence: https://drive.google.com/file/d/1VtLQ_CGLZHjDVVO_L74-HOZO2EOXm2TG/view
+- **2026-10-10T03:12:34Z** · `CWTV.V1.3.3.2.9` · `PUBLICATION_FAILED` · **FAILED** — Exact source commit object 85262229 was uploaded and SHA verified; later projection blob upload failed. No branch ref or Main moved. Original helper hid stderr, so preserved log and used diagnostic copy to expose bounded API error without printing payload.
+- **2026-10-10T03:12:59Z** · `CWTV.V1.3.3.2.9` · `CORRECTION_APPLIED` · **PASS** — Bounded diagnostic retry uploaded exact projection cbc3a58fc9c1cab6af4587b29544f1439ea1b1c6, independently matching local Git tree, parent and commit identity. Original failure cause remains unavailable because old helper discarded API stderr; no fabricated authentication/infrastructure diagnosis. No Main movement.
+- **2026-10-10T03:17:37Z** · `CWTV.V1.3.3.2.9` · `CANDIDATE_CI_QUALIFIED` · **PASS** — Exact-head candidate CI38019774974 succeeded for projection cbc3a58fc9c1cab6af4587b29544f1439ea1b1c6 and source85262229e0c54998dfb8f6adc5e375f3e691a42b. Linux quality and Dependency/secret gates GREEN. Full npm development advisory step remains informational with 16 entries; production audit zero. Candidate branch only; Main, production, gateway installation and Praxis ingestion pending. Evidence: https://github.com/Asleki/cinewatch-tv/actions/runs/38019774974
+- **2026-10-10T03:21:28Z** · `CWTV.V1.3.3.2.9` · `MAIN_CI_QUALIFIED` · **PASS** — Non-force expected-head promotion advanced Main from ebf7b927 to exact qualified projection cbc3a58f. Ordinary push CI38020099259 passed Linux quality and Dependency/secret gates. Source/projection identities85262229/cbc3a58f preserved. Production release and native protected delivery acceptance pending. Evidence: https://github.com/Asleki/cinewatch-tv/actions/runs/38020099259
+- **2026-10-10T03:21:28Z** · `CWTV.V1.3.3.2.9` · `DELIVERY_INSTALLATION_PENDING` · **BLOCKED** — Protected gateway bundle095bfb01 passes17 regressions, original/private quality registries complete. Connected Cloudflare API code writes denied earlier; live settings still contain only SYNTHETIC_GRANT and no MEDIA binding. Owner dashboard installation requested. Keep AWS production untouched until native protected media delivery verified. Evidence: https://drive.google.com/file/d/1eTa4ays0kiwLsHRVNoFNDt5B3VEKXuYB/view
 
 ## Integrity and timing rules
 
