@@ -13,7 +13,7 @@ dependencies = [
     "pydantic-settings==2.15.0",
     "uvicorn>=0.48,<0.53",
     "SQLAlchemy==2.0.52",
-    "alembic==1.19.2",
+    "alembic==1.20.0",
     "psycopg[binary]==3.3.5",
     "httpx==0.28.1",
 ]
