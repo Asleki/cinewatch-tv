@@ -1,10 +1,10 @@
 # CineWatch Engineering History
 
-**Source commit:** `f0d0ed11afac32b014add6e1a0e7c07c291a656c`
+**Source commit:** `85262229e0c54998dfb8f6adc5e375f3e691a42b`
 
 This is a deterministic NexVox narrative projection. Git remains the canonical commit authority and `engineering-events.jsonl` remains the canonical engineering-activity ledger.
 
-The source history contains **79 reachable commits**, **460 current tracked files**, and **456 engineering events**.
+The source history contains **81 reachable commits**, **485 current tracked files**, and **487 engineering events**.
 
 ## Commit sequence
 
@@ -87,6 +87,8 @@ The source history contains **79 reachable commits**, **460 current tracked file
 - `c4475c8` - docs: record Stream Now V2 source qualification and governance
 - `745cdbb` - chore(nexvox): project Stream Now source governance for c4475c8
 - `f0d0ed1` - docs: close accepted Stream Now deployment and preserve release evidence
+- `ebf7b92` - chore(nexvox): project accepted Stream Now post-release history
+- `8526222` - feat(watch): add owner-only Bonanza season player and verified private qualities
 
 ## Milestone state
 
@@ -111,3 +113,5 @@ The source history contains **79 reachable commits**, **460 current tracked file
 - `CWTV.V1.3.3.2.5`: events=81, qualified=true, failures=9, corrections=9
 - `CWTV.V1.3.3.2.6`: events=87, qualified=true, failures=7, corrections=8
 - `CWTV.V1.3.3.2.7`: events=75, qualified=true, failures=13, corrections=13
+- `CWTV.V1.3.3.2.8`: events=14, qualified=false, failures=3, corrections=1
+- `CWTV.V1.3.3.2.9`: events=17, qualified=false, failures=7, corrections=4
