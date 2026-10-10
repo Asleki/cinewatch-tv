@@ -13,7 +13,7 @@ export function assertPlayableManifest(value: unknown): PlayableManifest {
     catch { return false; }
   };
   if (!text(manifest.playableId) || !text(manifest.title)) throw new Error("Playable identity and title required");
-  if (manifest.kind !== "movie" && manifest.kind !== "episode") throw new Error("Invalid playable kind");
+  if (manifest.kind !== "movie" && manifest.kind !== "episode" && manifest.kind !== "clip") throw new Error("Invalid playable kind");
   if (manifest.episodeLabel !== undefined && !text(manifest.episodeLabel)) throw new Error("Invalid episode label");
   if (!Array.isArray(manifest.sources) || !manifest.sources.length) throw new Error("Playback source required");
   const ids = new Set<string>();

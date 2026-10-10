@@ -154,6 +154,7 @@ class CatalogService:
             runtime_minutes=self._runtime(details, media_type),
             status=self._text(details.get("status")),
             original_language=self._text(details.get("original_language")),
+            origin_countries=[code for code in details.get("origin_country", []) if isinstance(code, str) and len(code) == 2 and code.isascii() and code.isalpha() and code.isupper()][:20] if isinstance(details.get("origin_country"), list) else [],
             genres=self._genre_names(details.get("genres")),
             poster_url=self._image(images.secure_base_url, images.poster_size, details.get("poster_path")),
             backdrop_url=self._image(images.secure_base_url, images.backdrop_size, details.get("backdrop_path")),

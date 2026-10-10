@@ -328,3 +328,23 @@ def test_discovery_scope_rechecks_provider_language_and_year_anomalies():
         )
     )
     assert [item.title for item in result.items] == ["Correct Swahili", "Eligible Fallback"]
+
+
+def test_title_preserves_only_source_backed_origin_country_codes():
+    tmdb = FakeTmdb({
+        "/configuration": configuration(),
+        "/tv/1018": {"id": 1018, "name": "Bonanza", "origin_country": ["US", "USA", "U1", None, 4], "seasons": []},
+        "/tv/1018/watch/providers": {"results": {}},
+    })
+    result = asyncio.run(CatalogService(tmdb).title("tv", 1018))
+    assert result.origin_countries == ["US"]
+
+
+def test_absent_origin_country_does_not_infer_from_language_or_provider():
+    tmdb = FakeTmdb({
+        "/configuration": configuration(),
+        "/tv/1018": {"id": 1018, "name": "Bonanza", "original_language": "en", "seasons": []},
+        "/tv/1018/watch/providers": {"results": {}},
+    })
+    result = asyncio.run(CatalogService(tmdb).title("tv", 1018))
+    assert result.origin_countries == []

@@ -1082,6 +1082,14 @@
             "title": "Networks",
             "type": "array"
           },
+          "origin_countries": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 20,
+            "title": "Origin Countries",
+            "type": "array"
+          },
           "original_language": {
             "anyOf": [
               {
@@ -5183,6 +5191,180 @@
         "summary": "Stage an explicitly accepted NexVox WAV sample",
         "tags": [
           "voice-lab"
+        ]
+      }
+    },
+    "/api/v1/watch/manifest/{content_id}": {
+      "get": {
+        "operationId": "v1_watch_manifest",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "content_id",
+            "required": true,
+            "schema": {
+              "title": "Content Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Manifest",
+        "tags": [
+          "watch"
+        ]
+      }
+    },
+    "/api/v1/watch/media/{content_id}/{quality}": {
+      "get": {
+        "operationId": "v1_watch_media",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "content_id",
+            "required": true,
+            "schema": {
+              "title": "Content Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "quality",
+            "required": true,
+            "schema": {
+              "title": "Quality",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Media",
+        "tags": [
+          "watch"
+        ]
+      },
+      "head": {
+        "operationId": "v1_watch_media_head",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "content_id",
+            "required": true,
+            "schema": {
+              "title": "Content Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "quality",
+            "required": true,
+            "schema": {
+              "title": "Quality",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Media",
+        "tags": [
+          "watch"
+        ]
+      }
+    },
+    "/api/v1/watch/session": {
+      "post": {
+        "operationId": "v1_watch_session",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Session",
+        "tags": [
+          "watch"
+        ]
+      }
+    },
+    "/api/v1/watch/sign-in": {
+      "get": {
+        "operationId": "v1_watch_sign_in",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Sign In",
+        "tags": [
+          "watch"
         ]
       }
     },

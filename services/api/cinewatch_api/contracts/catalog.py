@@ -139,6 +139,7 @@ class CatalogTitleResponse(BaseModel):
     runtime_minutes: int | None = Field(default=None, ge=0)
     status: str | None = Field(default=None, max_length=120)
     original_language: str | None = Field(default=None, max_length=20)
+    origin_countries: list[str] = Field(default_factory=list, max_length=20)
     genres: list[str] = Field(default_factory=list)
     poster_url: str | None = None
     backdrop_url: str | None = None

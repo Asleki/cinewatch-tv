@@ -44,6 +44,14 @@ REFERENCE_ONLY_EXACT = {
 REVIEW_REQUIRED_EXACT = {
     "docs/governance/CineWatch_TV_V1_API_Content_Rights_Qualification_Register_001.md",
     "docs/architecture/CineWatch_TV_V1_Competitive_Design_Intelligence_001.md",
+    # Media identity registries do not establish training rights to the source titles.
+    "apps/web/src/lib/watch/registry.json",
+    "apps/web/src/lib/watch/renditions.json",
+    "services/api/cinewatch_api/watch/originals.json",
+    "services/api/cinewatch_api/watch/renditions.json",
+    "infra/cloudflare/original-registry.json",
+    "infra/cloudflare/registry.mjs",
+    "infra/cloudflare/renditions.mjs",
 }
 
 TEXT_SUFFIXES = {

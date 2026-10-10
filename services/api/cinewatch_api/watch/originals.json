@@ -1,0 +1,191 @@
+{
+  "S02_CLIP01": {
+    "bytes": 3330379,
+    "sha256": "a96d689ef4be64e18497cd204a7cf9cd8650a1b311b49a33620ac188cdcd399d",
+    "key": "simulated-rights/bonanza/S02_CLIP01/a96d689ef4be64e18497cd204a7cf9cd8650a1b311b49a33620ac188cdcd399d.mp4",
+    "height": 240,
+    "title": "CLIP01 Bloopers",
+    "available": true,
+    "duration_seconds": "84.125896"
+  },
+  "S02_CLIP02": {
+    "bytes": 15079615,
+    "sha256": "0efea9b9382bc560ef5321c356705da2db9a5ea3c2d7feefc46a725d3eee7a51",
+    "key": "simulated-rights/bonanza/S02_CLIP02/0efea9b9382bc560ef5321c356705da2db9a5ea3c2d7feefc46a725d3eee7a51.mp4",
+    "height": 240,
+    "title": "CLIP02 Behind The Scenes",
+    "available": true,
+    "duration_seconds": "423.996372"
+  },
+  "S02_CLIP03": {
+    "bytes": 7945453,
+    "sha256": "3ae0e37f33364707bcca7b40b11b47a935556e441bcc5868af97e99e6b9fe007",
+    "key": "simulated-rights/bonanza/S02_CLIP03/3ae0e37f33364707bcca7b40b11b47a935556e441bcc5868af97e99e6b9fe007.mp4",
+    "height": 480,
+    "title": "CLIP03 The Official Second Season Volume Two",
+    "available": true,
+    "duration_seconds": "75.070113"
+  },
+  "S02_CLIP04": {
+    "bytes": 11624996,
+    "sha256": "1450fae23a8ae539f17f83f7d7bedf477aecfc6a372b29db2864d5cfbd168039",
+    "key": "simulated-rights/bonanza/S02_CLIP04/1450fae23a8ae539f17f83f7d7bedf477aecfc6a372b29db2864d5cfbd168039.mp4",
+    "height": 1080,
+    "title": "CLIP04 Season 2 Best Of Adam",
+    "available": true,
+    "duration_seconds": "45.766531"
+  },
+  "S02E01": {
+    "bytes": 201795476,
+    "sha256": "1674d5c627133c98750813b8526afa0c8e2dc2666f2eb86b065eb72ba6a56fab",
+    "key": "simulated-rights/bonanza/S02E01/1674d5c627133c98750813b8526afa0c8e2dc2666f2eb86b065eb72ba6a56fab.mp4",
+    "height": 360,
+    "title": "Showdown",
+    "available": true,
+    "duration_seconds": "2932.401633"
+  },
+  "S02E02": {
+    "bytes": 215442446,
+    "sha256": "48a9c4a554549ab16b3d834a7fcd18285222b302e4fdc553ff78a9c058f7347c",
+    "key": "simulated-rights/bonanza/S02E02/48a9c4a554549ab16b3d834a7fcd18285222b302e4fdc553ff78a9c058f7347c.mp4",
+    "height": 360,
+    "title": "The Mission",
+    "available": true,
+    "duration_seconds": "2912.037732"
+  },
+  "S02E03": {
+    "bytes": 209326315,
+    "sha256": "edb0444bc7fd37a158dba495e2e5da38a668881f67b05fa825361a0fb3dc2090",
+    "key": "simulated-rights/bonanza/S02E03/edb0444bc7fd37a158dba495e2e5da38a668881f67b05fa825361a0fb3dc2090.mp4",
+    "height": 480,
+    "title": "Badge Without Honor",
+    "available": true,
+    "duration_seconds": "2893.020590"
+  },
+  "S02E04": {
+    "bytes": 275736324,
+    "sha256": "c031a58b8f40c94ac7efde8da6cf5e28af235142ea6da7395b6abf4ea35fbfb9",
+    "key": "simulated-rights/bonanza/S02E04/c031a58b8f40c94ac7efde8da6cf5e28af235142ea6da7395b6abf4ea35fbfb9.mp4",
+    "height": 480,
+    "title": "The Mill",
+    "available": true,
+    "duration_seconds": "2888.446259"
+  },
+  "S02E05": {
+    "bytes": 297229173,
+    "sha256": "42658d8f86ddfdf1cc6e53daf95d266e23624a470c7d9ca17222ad2b552d0ca7",
+    "key": "simulated-rights/bonanza/S02E05/42658d8f86ddfdf1cc6e53daf95d266e23624a470c7d9ca17222ad2b552d0ca7.mp4",
+    "height": 384,
+    "title": "The Hopefuls",
+    "available": true,
+    "duration_seconds": "2964.297631"
+  },
+  "S02E06": {
+    "bytes": 191706111,
+    "sha256": "7f14a7e890e060a46abafa3ca5dd93355e26facf288bdafd27d48911ed5681ba",
+    "key": "simulated-rights/bonanza/S02E06/7f14a7e890e060a46abafa3ca5dd93355e26facf288bdafd27d48911ed5681ba.mp4",
+    "height": 480,
+    "title": "Denver McKee",
+    "available": true,
+    "duration_seconds": "2890.001995"
+  },
+  "S02E07": {
+    "bytes": 301333451,
+    "sha256": "93d215545fa474ad0fd99a940eed035576ed83da08747cd74b910bf8213b03b7",
+    "key": "simulated-rights/bonanza/S02E07/93d215545fa474ad0fd99a940eed035576ed83da08747cd74b910bf8213b03b7.mp4",
+    "height": 384,
+    "title": "Day Of Reckoning",
+    "available": true,
+    "duration_seconds": "2965.832499"
+  },
+  "S02E08": {
+    "bytes": 299660153,
+    "sha256": "323f3ebe71745d1e90a2a1e6a171a5018435e194602b6d0cbab94fe78ac55e68",
+    "key": "simulated-rights/bonanza/S02E08/323f3ebe71745d1e90a2a1e6a171a5018435e194602b6d0cbab94fe78ac55e68.mp4",
+    "height": 480,
+    "title": "The Abduction",
+    "available": true,
+    "duration_seconds": "2959.174240"
+  },
+  "S02E09": {
+    "bytes": 290408070,
+    "sha256": "673a7a8c0da107603a0e5110476fa4b28f65cfb500276ca86c5ccb1fe78a7ee7",
+    "key": "simulated-rights/bonanza/S02E09/673a7a8c0da107603a0e5110476fa4b28f65cfb500276ca86c5ccb1fe78a7ee7.mp4",
+    "height": 320,
+    "title": "Breed Of Violence",
+    "available": true,
+    "duration_seconds": "2953.687020"
+  },
+  "S02E10": {
+    "bytes": 270690993,
+    "sha256": "b595029ee2ef8dacac0daa64560f8aebcd2c882fc7e97ead7158feefe6d7fb61",
+    "key": "simulated-rights/bonanza/S02E10/b595029ee2ef8dacac0daa64560f8aebcd2c882fc7e97ead7158feefe6d7fb61.mp4",
+    "height": 480,
+    "title": "The Last Viking",
+    "available": true,
+    "duration_seconds": "2891.209433"
+  },
+  "S02E11": {
+    "bytes": 297321098,
+    "sha256": "524662e150df333e77480fe9486e1d494ea0925c310fbbf04ba67899eff2e6c6",
+    "key": "simulated-rights/bonanza/S02E11/524662e150df333e77480fe9486e1d494ea0925c310fbbf04ba67899eff2e6c6.mp4",
+    "height": 352,
+    "title": "The Trail Gang",
+    "available": true,
+    "duration_seconds": "2957.290624"
+  },
+  "S02E12": {
+    "bytes": 296763605,
+    "sha256": "e5490384cc8c567e9c580fdec23b29567d83384ea19d053af1554c4d8bad9617",
+    "key": "simulated-rights/bonanza/S02E12/e5490384cc8c567e9c580fdec23b29567d83384ea19d053af1554c4d8bad9617.mp4",
+    "height": 320,
+    "title": "The Savage",
+    "available": true,
+    "duration_seconds": "2963.997331"
+  },
+  "S02E13": {
+    "bytes": 298343444,
+    "sha256": "79cc35678a99f1b7b5a07bb5c3a584a459091033d738efb68a5a1dc4336e6c96",
+    "key": "simulated-rights/bonanza/S02E13/79cc35678a99f1b7b5a07bb5c3a584a459091033d738efb68a5a1dc4336e6c96.mp4",
+    "height": 336,
+    "title": "Silent Thunder",
+    "available": true,
+    "duration_seconds": "2960.560561"
+  },
+  "S02E14": {
+    "bytes": 304362584,
+    "sha256": "9f518fe4a8a1c5c7b4fedf343fc059e5309064deb98833b457de96b527406615",
+    "key": "simulated-rights/bonanza/S02E14/9f518fe4a8a1c5c7b4fedf343fc059e5309064deb98833b457de96b527406615.mp4",
+    "height": 384,
+    "title": "The Ape",
+    "available": true,
+    "duration_seconds": "2964.964965"
+  },
+  "S02E15": {
+    "bytes": 293477494,
+    "sha256": "b0885d0be1bbb8b8d53ab00b0dc690bf4d635fb6bdb9a6d3f27b46510eb2db49",
+    "key": "simulated-rights/bonanza/S02E15/b0885d0be1bbb8b8d53ab00b0dc690bf4d635fb6bdb9a6d3f27b46510eb2db49.mp4",
+    "height": 464,
+    "title": "The Blood Line",
+    "available": false,
+    "duration_seconds": "2977.977978"
+  },
+  "S02E16": {
+    "bytes": 293038391,
+    "sha256": "0990366ed040adf4c764ed4ae1992bb9dd6b5808a7f6b6eb4019bc13c9a34322",
+    "key": "simulated-rights/bonanza/S02E16/0990366ed040adf4c764ed4ae1992bb9dd6b5808a7f6b6eb4019bc13c9a34322.mp4",
+    "height": 368,
+    "title": "The Courtship",
+    "available": false,
+    "duration_seconds": "2960.927594"
+  },
+  "S02E17": {
+    "bytes": 293749956,
+    "sha256": "d167224a98d1c47d5b15bb2ccd9801ef5c1cd33da12d398b9e35234e2fe4e733",
+    "key": "simulated-rights/bonanza/S02E17/d167224a98d1c47d5b15bb2ccd9801ef5c1cd33da12d398b9e35234e2fe4e733.mp4",
+    "height": 352,
+    "title": "The Spitfire",
+    "available": false,
+    "duration_seconds": "2963.678065"
+  }
+}

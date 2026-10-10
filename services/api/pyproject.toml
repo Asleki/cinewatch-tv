@@ -47,3 +47,6 @@ files = ["cinewatch_api", "tests"]
 testpaths = ["tests"]
 addopts = "-ra --strict-config --strict-markers"
 pythonpath = ["."]
+
+[tool.setuptools.package-data]
+"cinewatch_api.watch" = ["*.json"]

@@ -1,4 +1,4 @@
-export type PlayableKind = "movie" | "episode";
+export type PlayableKind = "movie" | "episode" | "clip";
 
 export type PlaybackSource = {
   id: string;

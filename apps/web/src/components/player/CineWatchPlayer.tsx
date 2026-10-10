@@ -15,6 +15,8 @@ import { assertPlayableManifest } from "@/lib/playable/validate";
 
 type CineWatchPlayerProps = {
   manifest: PlayableManifest;
+  autoPlay?: boolean;
+  initiallyMuted?: boolean;
 };
 
 type PiPDocument = Document & {
@@ -294,6 +296,8 @@ function ReplayIcon() {
 
 export function CineWatchPlayer({
   manifest,
+  autoPlay = false,
+  initiallyMuted = false,
 }: CineWatchPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const frameRef = useRef<HTMLDivElement>(null);
@@ -317,6 +321,7 @@ export function CineWatchPlayer({
 
   const gestureRef = useRef<GestureSession | null>(null);
   const recoveryRef = useRef<RecoverySnapshot | null>(null);
+  const previousPlayableRef = useRef<string | null>(null);
 
   const tapStateRef = useRef({
     count: 0,
@@ -334,6 +339,9 @@ export function CineWatchPlayer({
     playable.subtitles[0]?.id ??
     "off";
 
+  const [selectedSourceId, setSelectedSourceId] = useState(playable.sources[0].id);
+  const hasQualityChoices = playable.sources.length > 1 && playable.sources.every(source => source.id === "original" || source.id === "240p");
+  const activeSource = playable.sources.find(source => source.id === selectedSourceId) ?? playable.sources[0];
   const [isPlaying, setIsPlaying] = useState(false);
   const [isBuffering, setIsBuffering] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
@@ -341,7 +349,7 @@ export function CineWatchPlayer({
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(initiallyMuted);
   const [brightness, setBrightness] = useState(1);
   const [playbackRate, setPlaybackRate] = useState(1);
   const [selectedSubtitle, setSelectedSubtitle] =
@@ -860,6 +868,7 @@ export function CineWatchPlayer({
 
       applySubtitleSelection(snapshot.subtitleId);
 
+      if (!snapshot.shouldPlay) video.pause();
       if (snapshot.shouldPlay) {
         void video.play().catch(() => {
           setRuntimeState("paused");
@@ -871,6 +880,37 @@ export function CineWatchPlayer({
     },
     [applySubtitleSelection],
   );
+
+  // Keep the same media element (and fullscreen/PiP context) across episodes.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const changed = previousPlayableRef.current !== playable.playableId;
+    previousPlayableRef.current = playable.playableId;
+    if (changed) {
+      recoveryRef.current = {
+        currentTime: 0, shouldPlay: autoPlay,
+        volume: video.volume, muted: initiallyMuted,
+        playbackRate: video.playbackRate, subtitleId: defaultSubtitle,
+      };
+    }
+    video.autoplay = changed && autoPlay;
+    video.pause();
+    video.load();
+    let cancelled = false;
+    queueMicrotask(() => {
+      if (cancelled) return;
+      setErrorMessage(null);
+      setRuntimeState("loading");
+      setIsBuffering(true);
+      if (changed) {
+        setCurrentTime(0); setDuration(0); setHasStarted(false);
+        setIsReplaying(false); setIsPlaying(false); setIsMuted(initiallyMuted);
+        setSeekPreview(null); setGestureHud(null);
+      }
+    });
+    return () => { cancelled = true; };
+  }, [activeSource.src, playable.playableId, autoPlay, initiallyMuted, defaultSubtitle]);
 
   const retryPlayback = useCallback(() => {
     const video = videoRef.current;
@@ -1496,7 +1536,7 @@ export function CineWatchPlayer({
 
     const sourceValue =
       video.currentSrc ||
-      playable.sources[0]?.src ||
+      activeSource.src ||
       "";
 
     let receiverReachable = true;
@@ -1550,7 +1590,7 @@ export function CineWatchPlayer({
         1000,
       );
     }
-  }, [playable.sources, showGestureHud]);
+  }, [activeSource.src, showGestureHud]);
 
   const toggleControlsFromTap = useCallback(() => {
     const video = videoRef.current;
@@ -2139,6 +2179,8 @@ export function CineWatchPlayer({
           ref={videoRef}
           className="video-element"
           playsInline
+          autoPlay={autoPlay}
+          muted={isMuted}
           preload="metadata"
           style={{
             filter:
@@ -2312,15 +2354,7 @@ export function CineWatchPlayer({
             );
           }}
         >
-          {playable.sources.map(
-            (source) => (
-              <source
-                key={source.id}
-                src={source.src}
-                type={source.mimeType}
-              />
-            ),
-          )}
+          {(hasQualityChoices ? [activeSource] : playable.sources).map(source => <source key={source.id} src={source.src} type={source.mimeType} />)}
 
           {playable.subtitles.map(
             (subtitle) => (
@@ -2684,6 +2718,18 @@ export function CineWatchPlayer({
                       </option>
                     ),
                   )}
+                </select>
+              ) : null}
+
+              {hasQualityChoices ? (
+                <select className="player-select player-quality" aria-label="Video quality" value={activeSource.id} onChange={event => {
+                  const video = videoRef.current;
+                  if (!video) return;
+                  recoveryRef.current = { currentTime: video.currentTime, shouldPlay: !video.paused && !video.ended, volume: video.volume, muted: video.muted, playbackRate: video.playbackRate, subtitleId: selectedSubtitle };
+                  video.pause();
+                  setSelectedSourceId(event.currentTarget.value);
+                }}>
+                  {playable.sources.map(source => <option key={source.id} value={source.id}>{source.label}</option>)}
                 </select>
               ) : null}
 

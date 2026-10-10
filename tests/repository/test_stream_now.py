@@ -11,16 +11,21 @@ SRC = ROOT / 'apps/web/src'
 
 
 class StreamNowTests(unittest.TestCase):
-    def test_real_route_and_dormant_server_boundary(self):
+    def test_real_route_and_private_watch_boundary(self):
         page = SRC / 'app/stream-now/page.tsx'
         self.assertTrue(page.is_file(), 'V2 real Stream Now route missing')
-        self.assertIn('resolveAuthorizedPlayback', page.read_text())
+        self.assertIn('watchMetadata', page.read_text())
+        self.assertIn('BONANZA.path', page.read_text())
+        self.assertNotIn('StreamNowAnimation', page.read_text())
+        manifest = (ROOT / 'services/api/cinewatch_api/api/v1/watch.py').read_text()
+        self.assertIn('verified_owner', manifest)
+        self.assertIn('watch_manifest', manifest)
         self.assertIn('import "server-only"', (SRC / 'lib/playable/authority.ts').read_text())
 
     def test_route_does_not_nest_site_main_landmark(self):
         page = (SRC / "app/stream-now/page.tsx").read_text()
         self.assertNotIn("<main", page)
-        self.assertIn('<section aria-label="Stream Now">', page)
+        self.assertIn('<section aria-label="Stream Now"', page)
 
     def test_all_navigation_uses_canonical_route(self):
         for name in ['components/site/SiteFrame.tsx', 'components/home/HomepageExperience.tsx', 'components/catalog/TitleDetails.tsx']:
@@ -55,6 +60,10 @@ class StreamNowTests(unittest.TestCase):
         component = (SRC / 'components/stream/StreamNowAnimation.tsx').read_text()
         for forbidden in ['<video', '<audio', '<button', '<iframe', 'database', 'R2', 'available', 'ready', 'Awaiting']:
             self.assertNotIn(forbidden, component)
+
+    def test_private_gateway_and_owner_signature_regressions(self):
+        result = subprocess.run(["node", "--test", "tests/watch/gateway.test.mjs"], cwd=ROOT, text=True, capture_output=True)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def test_real_manifest_validation_and_unauthorized_denial(self):
         script = ROOT / 'scripts/check_stream_now_contract.mjs'

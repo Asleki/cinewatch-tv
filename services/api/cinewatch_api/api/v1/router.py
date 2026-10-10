@@ -13,6 +13,8 @@ from cinewatch_api.api.v1.system import router as system_router
 from cinewatch_api.api.v1.voice import router as voice_router
 from cinewatch_api.api.v1.trailer_library import router as trailer_library_router
 
+from cinewatch_api.api.v1.watch import router as watch_router
+
 router = APIRouter()
 router.include_router(system_router)
 router.include_router(catalog_router)
@@ -24,3 +26,5 @@ router.include_router(home_experience_router)
 router.include_router(search_router)
 router.include_router(news_router)
 router.include_router(voice_router)
+
+router.include_router(watch_router)
