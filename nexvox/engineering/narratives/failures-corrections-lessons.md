@@ -1,6 +1,6 @@
 # CineWatch Failures, Corrections and Lessons
 
-**Source commit:** `85262229e0c54998dfb8f6adc5e375f3e691a42b`
+**Source commit:** `3ae47092c83ae8a2ebd0d846efbe5cf2ee1d4dbc`
 
 Failures are preserved rather than rewritten away. A correction without a recorded FAILED ledger event remains explicitly marked as such.
 
@@ -478,61 +478,77 @@ Correction: No paired correction recorded.
 
 ## CWTV-FC-00060 - CWTV.V1.3.3.2.9
 
-State: `UNPAIRED_FAILURE`
+State: `CORRECTED`
 
 Failure: First watch typecheck rejected optional ratings/poster/backdrop values from catalog contract. No production change; corrected explicit empty/null fallbacks without invented metadata.
 
-Correction: No paired correction recorded.
+Correction: Re-read Workflow and used existing document runtime Python 3.12 with ReportLab 4.4.9. Source-pinned PDF generated and independently downloaded from dedicated Drive folder with identical SHA-256.
 
 ## CWTV-FC-00061 - CWTV.V1.3.3.2.9
 
-State: `UNPAIRED_FAILURE`
+State: `CORRECTED`
 
 Failure: Lint rejected synchronous initial state updates inside an effect. Initial network selection now starts asynchronously with cancellation; lint passes.
 
-Correction: No paired correction recorded.
+Correction: Re-read Workflow and used existing document runtime Python 3.12 with ReportLab 4.4.9. Source-pinned PDF generated and independently downloaded from dedicated Drive folder with identical SHA-256.
 
 ## CWTV-FC-00062 - CWTV.V1.3.3.2.9
 
-State: `UNPAIRED_FAILURE`
+State: `CORRECTED`
 
 Failure: Contract generation shell used npm 11.16 instead of governed npm 12.0.2; correcting command selection, preserving dependencies.
 
-Correction: No paired correction recorded.
+Correction: Re-read Workflow and used existing document runtime Python 3.12 with ReportLab 4.4.9. Source-pinned PDF generated and independently downloaded from dedicated Drive folder with identical SHA-256.
 
 ## CWTV-FC-00063 - CWTV.V1.3.3.2.9
 
-State: `UNPAIRED_FAILURE`
+State: `CORRECTED`
 
 Failure: Repository tests rejected draft Next.js watch API routes; FastAPI owns application API authority. Re-read standing Workflow and retain gate unchanged.
 
-Correction: No paired correction recorded.
+Correction: Re-read Workflow and used existing document runtime Python 3.12 with ReportLab 4.4.9. Source-pinned PDF generated and independently downloaded from dedicated Drive folder with identical SHA-256.
 
 ## CWTV-FC-00064 - CWTV.V1.3.3.2.9
 
-State: `UNPAIRED_FAILURE`
+State: `CORRECTED`
 
 Failure: Local browser test stopped before opening a page: Playwright Chromium binary absent from current runtime cache. Installing in workspace; no production failure demonstrated.
 
-Correction: No paired correction recorded.
+Correction: Re-read Workflow and used existing document runtime Python 3.12 with ReportLab 4.4.9. Source-pinned PDF generated and independently downloaded from dedicated Drive folder with identical SHA-256.
 
 ## CWTV-FC-00065 - CWTV.V1.3.3.2.9
 
-State: `UNPAIRED_FAILURE`
+State: `CORRECTED`
 
 Failure: Fresh regression found cookie-fallback regex contained an escaped control character, denying valid native owner cookie handoff. Header assertion route passed. Failure occurred locally before publication.
 
-Correction: No paired correction recorded.
+Correction: Re-read Workflow and used existing document runtime Python 3.12 with ReportLab 4.4.9. Source-pinned PDF generated and independently downloaded from dedicated Drive folder with identical SHA-256.
 
 ## CWTV-FC-00066 - CWTV.V1.3.3.2.9
 
-State: `UNPAIRED_FAILURE`
+State: `CORRECTED`
 
 Failure: Progress checkpoint append rejected before mutation because lowercase verification violated the uppercase event_type schema. Re-read Workflow and event schema; retain checker unchanged.
 
-Correction: No paired correction recorded.
+Correction: Re-read Workflow and used existing document runtime Python 3.12 with ReportLab 4.4.9. Source-pinned PDF generated and independently downloaded from dedicated Drive folder with identical SHA-256.
 
-## CWTV-FC-00067 - CWTV.V1.2.8
+## CWTV-FC-00067 - CWTV.V1.3.3.2.9
+
+State: `CORRECTED`
+
+Failure: Source PDF export in Python 3.14 test virtualenv failed because optional ReportLab is absent there; no application dependency or source changed.
+
+Correction: Re-read Workflow and used existing document runtime Python 3.12 with ReportLab 4.4.9. Source-pinned PDF generated and independently downloaded from dedicated Drive folder with identical SHA-256.
+
+## CWTV-FC-00068 - CWTV.V1.3.3.2.9
+
+State: `CORRECTED`
+
+Failure: Exact source commit object 85262229 was uploaded and SHA verified; later projection blob upload failed. No branch ref or Main moved. Original helper hid stderr, so preserved log and used diagnostic copy to expose bounded API error without printing payload.
+
+Correction: Bounded diagnostic retry uploaded exact projection cbc3a58fc9c1cab6af4587b29544f1439ea1b1c6, independently matching local Git tree, parent and commit identity. Original failure cause remains unavailable because old helper discarded API stderr; no fabricated authentication/infrastructure diagnosis. No Main movement.
+
+## CWTV-FC-00069 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -540,7 +556,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Removed the R1/R2 js-yaml override experiments and restored CineWatch package and lockfile authority to the qualified pre-experiment state.
 
-## CWTV-FC-00068 - CWTV.V1.2.8
+## CWTV-FC-00070 - CWTV.V1.2.8
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -548,7 +564,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Locked the final V1.2.8 audit boundary: runtime/production vulnerabilities block; development/tooling advisories remain visible and are handled by dependency maintenance.
 
-## CWTV-FC-00069 - CWTV.V1.3.1
+## CWTV-FC-00071 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -556,7 +572,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the competitive design intelligence candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00070 - CWTV.V1.3.1
+## CWTV-FC-00072 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -564,7 +580,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Normalized trailing whitespace in the design system and asset foundation candidate after the staged diff whitespace gate identified Markdown hard-break spacing.
 
-## CWTV-FC-00071 - CWTV.V1.3.1
+## CWTV-FC-00073 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -572,7 +588,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Corrected scripts/README.md so the local-only NexVox PDF lifecycle matches the approved mandatory regeneration rule for every ordinary non-projection source commit.
 
-## CWTV-FC-00072 - CWTV.V1.3.1
+## CWTV-FC-00074 - CWTV.V1.3.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -580,7 +596,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Added regression protection for the source/projection boundary defect exposed by malformed commit 3f9f175. Future commits marked NexVox-Projection true must fail validation if they contain ordinary source, architecture, workflow, or Chronicle paths.
 
-## CWTV-FC-00073 - CWTV.V1.3.3.2.1
+## CWTV-FC-00075 - CWTV.V1.3.3.2.1
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -588,7 +604,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Neutralized stale skeleton-only OpenAPI test after governed /api/v1/home contract expansion
 
-## CWTV-FC-00074 - CWTV.V1.3.3.2
+## CWTV-FC-00076 - CWTV.V1.3.3.2
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -596,7 +612,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Corrected the stale offline database migration qualification after reconciliation advanced the governed Alembic head from 0001_postgresql_foundation to 0002_missing_media_authority.
 
-## CWTV-FC-00075 - CWTV.V1.3.3.2.5
+## CWTV-FC-00077 - CWTV.V1.3.3.2.5
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -604,7 +620,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: With explicit owner scope approval, exact-pin Next16.3.8, retain eslint-config-next16.3.4/React/TypeScript/Node/npm, patch sharp0.35.5 with required platform/libvips packages and source-map-js1.2.2; all39 lock entries individually scoped, fresh production audit zero vulnerabilities.
 
-## CWTV-FC-00076 - CWTV.V1.3.3.2.6
+## CWTV-FC-00078 - CWTV.V1.3.3.2.6
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -612,7 +628,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Node native fetch through NODE_USE_ENV_PROXY=1 succeeds with configured CA; Next rewrite agent still attempts unavailable direct TCP. Local UI harness now transports unmodified real canonical API responses through TLS-verified httpx; Linux source/runtime tests independently cover actual Next rewrites. Production runtime/configuration unchanged.
 
-## CWTV-FC-00077 - CWTV.V1.3.3.2.6
+## CWTV-FC-00079 - CWTV.V1.3.3.2.6
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -620,7 +636,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Dashboard taxonomy reconciliation: the already-recorded exact-SHA publication correction in event 365 is classified with the established CORRECTION family, preserving the prior event and counting its real correction in generated history.
 
-## CWTV-FC-00078 - CWTV.V1.3.3.2.6
+## CWTV-FC-00080 - CWTV.V1.3.3.2.6
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
@@ -628,7 +644,7 @@ Failure: No FAILED ledger event recorded.
 
 Correction: Dashboard taxonomy reconciliation: owner public-visibility correction and unchanged-candidate green reruns in events 367-368 use the established CORRECTION family. No checker was weakened, no source changed and no historical event was rewritten.
 
-## CWTV-FC-00079 - CWTV.V1.3.3.2.7
+## CWTV-FC-00081 - CWTV.V1.3.3.2.7
 
 State: `CORRECTION_WITHOUT_LEDGER_FAILURE`
 
